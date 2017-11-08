@@ -1,0 +1,926 @@
+# (c) Copyright 1999-2014  Cadence Design Systems, Inc.  All Rights Reserved.
+# DFII-VCAR Interface Version : sub-version 5.10.41.500.6.137
+# Virtuoso Version           : version 5.1.0 07/26/2009 22:40 (cicln04) $
+# VCAR Version                : 11.1.33
+# Date Created   : Fri Oct 31 21:25:49 2014
+# VCAR File Name  : /home/zxw6805/ee620/.zxw_bsra08781/zxw_bsr5.wir (wiring)
+# Rules Template : /classes/ee620/ami05_vcr.rule
+(wiring
+ (wire
+  (rect M3 176.1 5.65 177.1 6.45)
+  (net Shiftout)
+  (type protect)
+ )
+ (wire
+  (path M3 0.8 164.65 248.75 164.65 240.95 164.7 240.95)
+  (type protect)
+ )
+ (wire
+  (path M3 0.8 138.35 248.45 138.35 240.05 138.4 240.05)
+  (type protect)
+ )
+ (wire
+  (path M3 0.8 93.6 248.8 93.6 234.55)
+  (type protect)
+ )
+ (wire
+  (path M3 0.8 67.3 248.8 67.3 238.85)
+  (type protect)
+ )
+ (wire
+  (path M3 0.8 38.45 248.8 38.45 234.55)
+  (type protect)
+ )
+ (wire
+  (path M3 0.8 14.45 248.8 14.45 240.4)
+  (type protect)
+ )
+ (wire
+  (path M3 0.8 59.45 287.15 59.45 296.15)
+  (net shiftIn)
+  (type protect)
+ )
+ (wire
+  (path M3 0.8 105.05 296.15 105.05 311.2)
+  (net shiftIn)
+  (type protect)
+ )
+ (wire
+  (path M3 0.8 19.2 8.6 19.2 0.8)
+  (net out5)
+  (type protect)
+ )
+ (wire
+  (path M3 0.8 113.1 69.15 113.1 0.8)
+  (net out4)
+  (type protect)
+ )
+ (wire
+  (path M3 0.8 19.2 70.95 19.2 69.15)
+  (net out4)
+  (type protect)
+ )
+ (wire
+  (path M3 0.8 145.45 35.5 145.45 0.8)
+  (net out3)
+  (type protect)
+ )
+ (wire
+  (path M3 0.8 53.05 35.5 53.05 132.9)
+  (net out3)
+  (type protect)
+ )
+ (wire
+  (path M3 0.8 62.7 0.8 62.7 195.3)
+  (net out2)
+  (type protect)
+ )
+ (wire
+  (path M3 0.8 47.65 241.6 48 241.6 48 0.8 48.45 0.8)
+  (net out1)
+  (type protect)
+ )
+ (wire
+  (path M3 0.8 62.65 242.8 62.65 241.1)
+  (net net47)
+  (type protect)
+ )
+ (wire
+  (path M3 0.8 64.8 195.75 64.8 178.95)
+  (net net37)
+  (type protect)
+ )
+ (wire
+  (path M3 0.8 64.8 133.35 64.8 116.55)
+  (net net27)
+  (type protect)
+ )
+ (wire
+  (path M3 0.8 64.8 70.95 64.8 54.2)
+  (net net17)
+  (type protect)
+ )
+ (wire
+  (path M3 0.8 40.35 287.6 40.35 311.2)
+  (net mode)
+  (type protect)
+ )
+ (wire
+  (path M3 0.8 14.45 78.35 14.45 53.8)
+  (type protect)
+ )
+ (wire
+  (path M3 0.8 14.45 203.15 14.45 178.55)
+  (type protect)
+ )
+ (wire
+  (path M3 0.8 14.45 140.75 14.45 116.15)
+  (type protect)
+ )
+ (wire
+  (path M3 0.8 88.85 46.45 88.85 311.2)
+  (net in5)
+  (type protect)
+ )
+ (wire
+  (path M3 0.8 72.7 99.45 72.7 311.2)
+  (net in4)
+  (type protect)
+ )
+ (wire
+  (path M3 0.8 56.55 161.8 56.55 311.2)
+  (net in3)
+  (type protect)
+ )
+ (wire
+  (path M3 0.8 24.25 224.25 24.25 311.2)
+  (net in2)
+  (type protect)
+ )
+ (wire
+  (path M3 0.8 8.1 287.25 8.1 311.2)
+  (net in1)
+  (type protect)
+ )
+ (wire
+  (path M3 0.8 125.9 288.05 125.9 311.2)
+  (net UDR2)
+  (type protect)
+ )
+ (wire
+  (path M3 0.8 67.3 78.35 67.3 52.25)
+  (type protect)
+ )
+ (wire
+  (path M3 0.8 67.3 203.15 67.3 177)
+  (type protect)
+ )
+ (wire
+  (path M3 0.8 67.3 140.75 67.3 114.6)
+  (type protect)
+ )
+ (wire
+  (path M3 0.8 130.85 287.15 130.85 309.65)
+  (net UDR1)
+  (type protect)
+ )
+ (wire
+  (path M3 0.8 154.1 307.55 153.55 307.55 153.55 311.2)
+  (net UDR1)
+  (type protect)
+ )
+ (wire
+  (path M3 0.8 93.6 78.35 93.6 47.95)
+  (type protect)
+ )
+ (wire
+  (path M3 0.8 93.6 203.15 93.6 172.7)
+  (type protect)
+ )
+ (wire
+  (path M3 0.8 93.6 140.75 93.6 110.3)
+  (type protect)
+ )
+ (wire
+  (path M3 0.8 176.7 8.6 176.7 5.3 175.65 5.3)
+  (net Shiftout)
+  (type protect)
+ )
+ (wire
+  (path M3 0.8 177.35 5.3 177.35 0.8 177.9 0.8)
+  (net Shiftout)
+  (type protect)
+ )
+ (wire
+  (path M3 0.8 83.25 287.15 83.25 309.65)
+  (net ShiftDR)
+  (type protect)
+ )
+ (wire
+  (path M3 0.8 121.2 303.25 121.2 311.2)
+  (net ShiftDR)
+  (type protect)
+ )
+ (wire
+  (path M3 0.8 38.45 78.35 38.45 47.95)
+  (type protect)
+ )
+ (wire
+  (path M3 0.8 38.45 203.15 38.45 172.7)
+  (type protect)
+ )
+ (wire
+  (path M3 0.8 38.45 140.75 38.45 110.3)
+  (type protect)
+ )
+ (wire
+  (path M3 0.8 159.35 287.6 159.35 311.2)
+  (net CDR2)
+  (type protect)
+ )
+ (wire
+  (path M3 0.8 138.35 78.35 138.35 53.8 138.4 53.8)
+  (type protect)
+ )
+ (wire
+  (path M3 0.8 138.35 203.15 138.35 178.55 138.4 178.55)
+  (type protect)
+ )
+ (wire
+  (path M3 0.8 138.35 140.75 138.35 116.15 138.4 116.15)
+  (type protect)
+ )
+ (wire
+  (path M3 0.8 185.85 287.6 185.85 311.2)
+  (net CDR1)
+  (type protect)
+ )
+ (wire
+  (path M3 0.8 164.65 78.35 164.65 53.8 164.7 53.8)
+  (type protect)
+ )
+ (wire
+  (path M3 0.8 164.65 203.15 164.65 178.55 164.7 178.55)
+  (type protect)
+ )
+ (wire
+  (path M3 0.8 164.65 140.75 164.65 116.15 164.7 116.15)
+  (type protect)
+ )
+ (wire
+  (rect M2 185.4 310.25 186.3 310.95)
+  (net CDR1)
+  (type protect)
+ )
+ (wire
+  (rect M2 176.9 0.35 177.45 1.25)
+  (net Shiftout)
+  (type protect)
+ )
+ (wire
+  (rect M2 72.25 310.2 73.15 310.95)
+  (net in4)
+  (type protect)
+ )
+ (wire
+  (rect M2 56.95 310.25 57 310.95)
+  (net in3)
+  (type protect)
+ )
+ (wire
+  (rect M2 56.1 310.25 56.95 310.95)
+  (net in3)
+  (type protect)
+ )
+ (wire
+  (rect M2 47.5 0.35 48 1.25)
+  (net out1)
+  (type protect)
+ )
+ (wire
+  (rect M2 39.9 310.25 40.8 310.95)
+  (net mode)
+  (type protect)
+ )
+ (wire
+  (rect M2 23.8 310.25 24.7 310.95)
+  (net in2)
+  (type protect)
+ )
+ (wire
+  (rect M2 7.65 310.2 8.55 310.95)
+  (net in1)
+  (type protect)
+ )
+ (wire
+  (rect M2 7.65 285.45 8.55 285.95)
+  (net in1)
+  (type protect)
+ )
+ (wire
+  (rect M2 185.4 311.65 186.3 312.15)
+  (net CDR1)
+  (type protect)
+ )
+ (wire
+  (rect M2 186.3 287.15 186.8 288.05)
+  (net CDR1)
+  (type protect)
+ )
+ (wire
+  (rect M2 178.35 0.35 178.85 1.25)
+  (net Shiftout)
+  (type protect)
+ )
+ (wire
+  (rect M2 154.55 307.1 155.05 308)
+  (net UDR1)
+  (type protect)
+ )
+ (wire
+  (rect M2 153.1 311.65 154 312.25)
+  (net UDR1)
+  (type protect)
+ )
+ (wire
+  (rect M2 145.8 35.05 146.4 35.95)
+  (net out3)
+  (type protect)
+ )
+ (wire
+  (rect M2 145 -0.15 145.9 0.35)
+  (net out3)
+  (type protect)
+ )
+ (wire
+  (rect M2 120.75 311.65 121.65 312.15)
+  (net ShiftDR)
+  (type protect)
+ )
+ (wire
+  (rect M2 121.65 302.8 122.15 303.7)
+  (net ShiftDR)
+  (type protect)
+ )
+ (wire
+  (rect M2 113.55 68.7 114.05 69.6)
+  (net out4)
+  (type protect)
+ )
+ (wire
+  (rect M2 112.65 -0.15 113.55 0.35)
+  (net out4)
+  (type protect)
+ )
+ (wire
+  (rect M2 104.6 311.65 105.5 312.15)
+  (net shiftIn)
+  (type protect)
+ )
+ (wire
+  (rect M2 105.5 295.7 106 296.6)
+  (net shiftIn)
+  (type protect)
+ )
+ (wire
+  (rect M2 88.4 311.65 89.3 312.15)
+  (net in5)
+  (type protect)
+ )
+ (wire
+  (rect M2 82.8 310.1 83.7 310.6)
+  (net ShiftDR)
+  (type protect)
+ )
+ (wire
+  (rect M2 72.25 311.65 73.15 312.15)
+  (net in4)
+  (type protect)
+ )
+ (wire
+  (rect M2 61.75 0.35 62.25 1.25)
+  (net out2)
+  (type protect)
+ )
+ (wire
+  (rect M2 58.5 295.7 59 296.6)
+  (net shiftIn)
+  (type protect)
+ )
+ (wire
+  (rect M2 56.1 311.65 57 312.15)
+  (net in3)
+  (type protect)
+ )
+ (wire
+  (rect M2 53.5 132.45 54 133.35)
+  (net out3)
+  (type protect)
+ )
+ (wire
+  (rect M2 48.85 0.35 49.4 1.25)
+  (net out1)
+  (type protect)
+ )
+ (wire
+  (rect M2 39.9 311.65 40.8 312.15)
+  (net mode)
+  (type protect)
+ )
+ (wire
+  (rect M2 40.8 287.15 41.3 288.05)
+  (net mode)
+  (type protect)
+ )
+ (wire
+  (rect M2 23.8 311.65 24.7 312.15)
+  (net in2)
+  (type protect)
+ )
+ (wire
+  (rect M2 18.25 68.7 18.75 69.6)
+  (net out4)
+  (type protect)
+ )
+ (wire
+  (rect M2 19.65 0.35 20.15 1.25)
+  (net out5)
+  (type protect)
+ )
+ (wire
+  (rect M2 7.65 311.65 8.55 312.15)
+  (net in1)
+  (type protect)
+ )
+ (wire
+  (rect M2 36.2 286.95 37.1 287.25)
+  (net mode)
+  (type protect)
+ )
+ (wire
+  (rect M2 35.2 286.45 36.45 286.6)
+  (net mode)
+  (type protect)
+ )
+ (wire
+  (rect M2 35.2 286.6 36.45 287.25)
+  (net mode)
+  (type protect)
+ )
+ (wire
+  (rect M2 35.2 286.8 36.45 287.25)
+  (net mode)
+  (type protect)
+ )
+ (wire
+  (rect M2 62.3 241.55 63.1 242.35)
+  (net net47)
+  (type protect)
+ )
+ (wire
+  (rect M2 178 286.95 179 287.95)
+  (net CDR1)
+  (type protect)
+ )
+ (wire
+  (rect M2 178 286.95 179 287.95)
+  (net CDR1)
+  (type protect)
+ )
+ (wire
+  (rect M2 154.2 286.95 155.2 287.95)
+  (net CDR2)
+  (type protect)
+ )
+ (wire
+  (rect M2 154.2 286.95 155.2 287.95)
+  (net CDR2)
+  (type protect)
+ )
+ (wire
+  (rect M2 47.1 194.95 48.1 196)
+  (net out2)
+  (type protect)
+ )
+ (wire
+  (rect M2 47.1 132.55 48.1 133.6)
+  (net out3)
+  (type protect)
+ )
+ (wire
+  (rect M2 47.1 194.95 48.1 195.95)
+  (net out2)
+  (type protect)
+ )
+ (wire
+  (rect M2 48.05 132.55 48.1 133.55)
+  (net out3)
+  (type protect)
+ )
+ (wire
+  (rect M2 47.1 132.55 48.05 133.55)
+  (net out3)
+  (type protect)
+ )
+ (wire
+  (rect M2 35.2 286.95 36.2 287.95)
+  (net mode)
+  (type protect)
+ )
+ (wire
+  (path M2 0.7 59.45 296.15 105.05 296.15)
+  (net shiftIn)
+  (type protect)
+ )
+ (wire
+  (path M2 0.7 19.2 0.8 19.2 0.7 16.3 0.7)
+  (net out5)
+  (type protect)
+ )
+ (wire
+  (path M2 0.7 113.1 69.15 19.2 69.15)
+  (net out4)
+  (type protect)
+ )
+ (wire
+  (path M2 0.7 145.45 35.5 53.05 35.5)
+  (net out3)
+  (type protect)
+ )
+ (wire
+  (path M2 0.7 47.75 132.9 53.05 132.9)
+  (net out3)
+  (type protect)
+ )
+ (wire
+  (path M2 0.7 62.7 0.8 62.7 0.7 80.7 0.7)
+  (net out2)
+  (type protect)
+ )
+ (wire
+  (path M2 0.7 47.75 195.3 62.7 195.3)
+  (net out2)
+  (type protect)
+ )
+ (wire
+  (path M2 0.7 59.65 241.1 62.65 241.1)
+  (net net47)
+  (type protect)
+ )
+ (wire
+  (path M2 0.7 59.65 178.95 64.8 178.95)
+  (net net37)
+  (type protect)
+ )
+ (wire
+  (path M2 0.7 59.65 116.55 64.8 116.55)
+  (net net27)
+  (type protect)
+ )
+ (wire
+  (path M2 0.7 59.65 54.2 64.8 54.2)
+  (net net17)
+  (type protect)
+ )
+ (wire
+  (path M2 0.7 35.85 287.6 40.35 287.6)
+  (net mode)
+  (type protect)
+ )
+ (wire
+  (path M2 0.7 88.85 46.45 26.4 46.45 26.4 46.35)
+  (net in5)
+  (type protect)
+ )
+ (wire
+  (path M2 0.7 26.4 99.45 72.7 99.45)
+  (net in4)
+  (type protect)
+ )
+ (wire
+  (path M2 0.7 26.4 161.85 26.4 161.8 56.55 161.8)
+  (net in3)
+  (type protect)
+ )
+ (wire
+  (path M2 0.7 107.15 288.05 125.9 288.05)
+  (net UDR2)
+  (type protect)
+ )
+ (wire
+  (path M2 0.7 125.9 311.2 125.9 311.3 137.25 311.3)
+  (net UDR2)
+  (type protect)
+ )
+ (wire
+  (path M2 0.7 130.85 309.65 130.85 307.55 154.1 307.55)
+  (net UDR1)
+  (type protect)
+ )
+ (wire
+  (path M2 0.7 175.65 5.3 177.35 5.3)
+  (net Shiftout)
+  (type protect)
+ )
+ (wire
+  (path M2 0.7 83.25 309.65 83.25 303.25 121.2 303.25)
+  (net ShiftDR)
+  (type protect)
+ )
+ (wire
+  (path M2 0.7 154.85 287.6 159.35 287.6)
+  (net CDR2)
+  (type protect)
+ )
+ (wire
+  (path M2 0.7 159.35 311.2 159.35 311.3 169.6 311.3)
+  (net CDR2)
+  (type protect)
+ )
+ (wire
+  (path M2 0.7 178.65 287.6 185.85 287.6)
+  (net CDR1)
+  (type protect)
+ )
+ (wire
+  (rect M2 39.9 311 40.9 312)
+  (net mode)
+  (io_port normal mode_mode)
+  (property (signal_direction input))
+ )
+ (wire
+  (rect M2 136.9 311 137.9 312)
+  (net UDR2)
+  (io_port normal UDR2_UDR2)
+  (property (signal_direction input))
+ )
+ (wire
+  (rect M2 153.1 311 154.1 312)
+  (net UDR1)
+  (io_port normal UDR1_UDR1)
+  (property (signal_direction input))
+ )
+ (wire
+  (rect M2 169.25 311 170.25 312)
+  (net CDR2)
+  (io_port normal CDR2_CDR2)
+  (property (signal_direction input))
+ )
+ (wire
+  (rect M2 185.4 311 186.4 312)
+  (net CDR1)
+  (io_port normal CDR1_CDR1)
+  (property (signal_direction input))
+ )
+ (wire
+  (rect M2 120.75 311 121.75 312)
+  (net ShiftDR)
+  (io_port normal ShiftDR_ShiftDR)
+  (property (signal_direction input))
+ )
+ (wire
+  (rect M2 48 0 49 1)
+  (net out1)
+  (io_port normal out1_out1)
+  (property (signal_direction output))
+ )
+ (wire
+  (rect M2 80.35 0 81.35 1)
+  (net out2)
+  (io_port normal out2_out2)
+  (property (signal_direction output))
+ )
+ (wire
+  (rect M2 145 0 146 1)
+  (net out3)
+  (io_port normal out3_out3)
+  (property (signal_direction output))
+ )
+ (wire
+  (rect M2 112.65 0 113.65 1)
+  (net out4)
+  (io_port normal out4_out4)
+  (property (signal_direction output))
+ )
+ (wire
+  (rect M2 15.65 0 16.65 1)
+  (net out5)
+  (io_port normal out5_out5)
+  (property (signal_direction output))
+ )
+ (wire
+  (rect M2 177.35 0 178.35 1)
+  (net Shiftout)
+  (io_port normal Shiftout_Shiftout)
+  (property (signal_direction output))
+ )
+ (wire
+  (rect M2 104.6 311 105.6 312)
+  (net shiftIn)
+  (io_port normal shiftIn_shiftIn)
+  (property (signal_direction input))
+ )
+ (wire
+  (rect M2 88.4 311 89.4 312)
+  (net in5)
+  (io_port normal in5_in5)
+  (property (signal_direction input))
+ )
+ (wire
+  (rect M2 72.25 311 73.25 312)
+  (net in4)
+  (io_port normal in4_in4)
+  (property (signal_direction input))
+ )
+ (wire
+  (rect M2 56.1 311 57.1 312)
+  (net in3)
+  (io_port normal in3_in3)
+  (property (signal_direction input))
+ )
+ (wire
+  (rect M2 23.75 311 24.75 312)
+  (net in2)
+  (io_port normal in2_in2)
+  (property (signal_direction input))
+ )
+ (wire
+  (rect M2 7.6 311 8.6 312)
+  (net in1)
+  (io_port normal in1_in1)
+  (property (signal_direction input))
+ )
+ (via VIA2 (va_config 1 1) 47.65 241.3
+  (net out1)
+  (type protect)
+ )
+ (via VIA2 (va_config 1 1) 8.1 286.4
+  (net in1)
+  (type protect)
+ )
+ (via VIA2 (va_config 1 1) 59.45 296.15
+  (net shiftIn)
+  (type protect)
+ )
+ (via VIA2 (va_config 1 1) 105.05 296.15
+  (net shiftIn)
+  (type protect)
+ )
+ (via VIA2 (va_config 1 1) 105.05 311.2
+  (net shiftIn)
+  (type protect)
+ )
+ (via VIA2 (va_config 1 1) 19.2 0.8
+  (net out5)
+  (type protect)
+ )
+ (via VIA2 (va_config 1 1) 113.1 69.15
+  (net out4)
+  (type protect)
+ )
+ (via VIA2 (va_config 1 1) 113.1 0.8
+  (net out4)
+  (type protect)
+ )
+ (via VIA2 (va_config 1 1) 19.2 69.15
+  (net out4)
+  (type protect)
+ )
+ (via VIA2 (va_config 1 1) 145.45 35.5
+  (net out3)
+  (type protect)
+ )
+ (via VIA2 (va_config 1 1) 145.45 0.8
+  (net out3)
+  (type protect)
+ )
+ (via VIA2 (va_config 1 1) 53.05 35.5
+  (net out3)
+  (type protect)
+ )
+ (via VIA2 (va_config 1 1) 53.05 132.9
+  (net out3)
+  (type protect)
+ )
+ (via VIA2 (va_config 1 1) 62.7 0.8
+  (net out2)
+  (type protect)
+ )
+ (via VIA2 (va_config 1 1) 62.7 195.3
+  (net out2)
+  (type protect)
+ )
+ (via VIA2 (va_config 1 1) 48.45 0.8
+  (net out1)
+  (type protect)
+ )
+ (via VIA2 (va_config 1 1) 62.65 242.8
+  (net net47)
+  (type protect)
+ )
+ (via VIA2 (va_config 1 1) 62.65 241.1
+  (net net47)
+  (type protect)
+ )
+ (via VIA2 (va_config 1 1) 64.8 178.95
+  (net net37)
+  (type protect)
+ )
+ (via VIA2 (va_config 1 1) 64.8 116.55
+  (net net27)
+  (type protect)
+ )
+ (via VIA2 (va_config 1 1) 64.8 54.2
+  (net net17)
+  (type protect)
+ )
+ (via VIA2 (va_config 1 1) 40.35 287.6
+  (net mode)
+  (type protect)
+ )
+ (via VIA2 (va_config 1 1) 40.35 311.2
+  (net mode)
+  (type protect)
+ )
+ (via VIA2 (va_config 1 1) 88.85 46.45
+  (net in5)
+  (type protect)
+ )
+ (via VIA2 (va_config 1 1) 88.85 311.2
+  (net in5)
+  (type protect)
+ )
+ (via VIA2 (va_config 1 1) 26.4 46.35
+  (net in5)
+  (type protect)
+ )
+ (via VIA2 (va_config 1 1) 72.7 99.45
+  (net in4)
+  (type protect)
+ )
+ (via VIA2 (va_config 1 1) 72.7 311.2
+  (net in4)
+  (type protect)
+ )
+ (via VIA2 (va_config 1 1) 56.55 161.8
+  (net in3)
+  (type protect)
+ )
+ (via VIA2 (va_config 1 1) 56.55 311.2
+  (net in3)
+  (type protect)
+ )
+ (via VIA2 (va_config 1 1) 24.25 224.25
+  (net in2)
+  (type protect)
+ )
+ (via VIA2 (va_config 1 1) 24.25 311.2
+  (net in2)
+  (type protect)
+ )
+ (via VIA2 (va_config 1 1) 8.1 311.2
+  (net in1)
+  (type protect)
+ )
+ (via VIA2 (va_config 1 1) 125.9 288.05
+  (net UDR2)
+  (type protect)
+ )
+ (via VIA2 (va_config 1 1) 125.9 311.2
+  (net UDR2)
+  (type protect)
+ )
+ (via VIA2 (va_config 1 1) 130.85 309.65
+  (net UDR1)
+  (type protect)
+ )
+ (via VIA2 (va_config 1 1) 154.1 307.55
+  (net UDR1)
+  (type protect)
+ )
+ (via VIA2 (va_config 1 1) 153.55 311.2
+  (net UDR1)
+  (type protect)
+ )
+ (via VIA2 (va_config 1 1) 175.65 5.3
+  (net Shiftout)
+  (type protect)
+ )
+ (via VIA2 (va_config 1 1) 177.35 5.3
+  (net Shiftout)
+  (type protect)
+ )
+ (via VIA2 (va_config 1 1) 177.9 0.8
+  (net Shiftout)
+  (type protect)
+ )
+ (via VIA2 (va_config 1 1) 83.25 309.65
+  (net ShiftDR)
+  (type protect)
+ )
+ (via VIA2 (va_config 1 1) 121.2 303.25
+  (net ShiftDR)
+  (type protect)
+ )
+ (via VIA2 (va_config 1 1) 121.2 311.2
+  (net ShiftDR)
+  (type protect)
+ )
+ (via VIA2 (va_config 1 1) 159.35 287.6
+  (net CDR2)
+  (type protect)
+ )
+ (via VIA2 (va_config 1 1) 159.35 311.2
+  (net CDR2)
+  (type protect)
+ )
+ (via VIA2 (va_config 1 1) 185.85 287.6
+  (net CDR1)
+  (type protect)
+ )
+ (via VIA2 (va_config 1 1) 185.85 311.2
+  (net CDR1)
+  (type protect)
+ )
+)
+# end wiring

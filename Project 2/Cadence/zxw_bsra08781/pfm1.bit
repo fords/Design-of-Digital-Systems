@@ -1,0 +1,9 @@
+#define pfm1_width 16
+#define pfm1_height 16
+
+static char pfm1_bits[] = {
+      0x4,    0,  0x8,    0,    0,    0,    0,    0, 
+     0x40,    0, 0x80,    0,    0,    0,    0,    0, 
+        0,  0x4,    0,  0x8,    0,    0,    0,    0, 
+        0,    0,    0, 0x40,    0, 0x80,    0,    0
+};

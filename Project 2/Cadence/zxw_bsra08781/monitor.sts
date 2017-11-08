@@ -1,0 +1,9 @@
+#Virtuoso Chip Assembly Router V11.2.41.500.6.65 made 2009/03/26 at 22:32:16 (32bit addresses)
+#Host 15817180 Estimated Mips = 4000.0
+#ROUTING STATUS <<< /home/zxw6805/ee620/.zxw_bsra08781/zxw_bsr5.dsn >>>
+Start  Time: Fri Oct 31 21:25:51 2014
+Report Time: Fri Oct 31 21:25:51 2014
+
+Nets         =       22   Connections         =       99
+Current Wire =        0   Reroute wires       =      146
+Completion   =   90.91%   Unconnections       =        9

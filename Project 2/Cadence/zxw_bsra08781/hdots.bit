@@ -1,0 +1,6 @@
+#define hdots_width 8
+#define hdots_height 8
+
+static char hdots_bits[] = {
+        0,    0, 0x24,    0,    0, 0x24,    0,    0
+};

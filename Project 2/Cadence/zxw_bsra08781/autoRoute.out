@@ -1,0 +1,84 @@
+# 
+# ===============================================================================
+#                          Virtuoso Chip Assembly Router                         
+# Copyright 1990-2009 Cadence Design Systems, Inc.  All Rights Reserved.
+# ===============================================================================
+# 
+# Software licensed for sale by Cadence Design Systems, Inc.
+# Current time = Fri Oct 31 21:25:51 2014
+# 
+# Virtuoso Chip Assembly Router V11.2.41.500.6.65 made 2009/03/26 at 22:32:16 (32bit addresses)
+# Running on: vlsi-legacy, OS Version: Linux2.6.18-398.el5*#1 SMP Tue Sep 16 20:50:52 EDT 2014, Architecture: x86_64
+# No graphics will be displayed.
+# Design Name /home/zxw6805/ee620/.zxw_bsra08781/zxw_bsr5.dsn
+# Batch File Name: /home/zxw6805/ee620/.zxw_bsra08781/zxw_bsr5Constraints.do
+# Batch File Name: /classes/ee620/ami05_vcr.do
+# Batch File Name: /home/zxw6805/ee620/.zxw_bsra08781/autoRoute.do
+# Output Log File Name: /home/zxw6805/ee620/.zxw_bsra08781/autoRoute.out
+# Estimated Mips Rate = 4000.0
+# Did File Name: /home/zxw6805/ee620/.zxw_bsra08781/1031212551.did
+# Checked out license feature Cadence_chip_assembly_router
+# Current time = Fri Oct 31 21:25:51 2014
+# IC /home/zxw6805/ee620/.zxw_bsra08781
+# Master Unit set up as: um 1000
+# IC Limits xlo=  0.0000 ylo=  0.0000 xhi=194.0000 yhi=312.0000
+# 
+#   VIA     M3   VIA2     M2    VIA     M1    CNT  POLY1    TUB    DIF
+# 
+#    M3  -----  -----  VIA2   -----  -----  -----  -----  -----  -----
+#  VIA2  -----  -----  -----  -----  -----  -----  -----  -----  -----
+#    M2  VIA2   -----  -----  -----   VIA   -----  -----  -----  -----
+#   VIA  -----  -----  -----  -----  -----  -----  -----  -----  -----
+#    M1  -----  -----   VIA   -----  -----  -----  M1PLY  -----  -----
+#   CNT  -----  -----  -----  -----  -----  -----  -----  -----  -----
+# POLY1  -----  -----  -----  -----  M1PLY  -----  -----  -----  -----
+#   TUB  -----  -----  -----  -----  -----  -----  -----  -----  -----
+#   DIF  -----  -----  -----  -----  -----  -----  -----  -----  -----
+# 
+# Wires Processed 146, Vias Processed 48
+# Using colormap in design file.
+# Layers Processed: Signal Layers 9
+# Components Placed 5, Images Processed 1, Via Images Processed 13
+# Nets Processed 22, Net Terminals 169
+# IC Area=60528.000
+# Signal Connections Created 9
+# 
+# Design Rules --------------------------------------------
+# Via Grid 0.0500 with offset 0.0000
+# Layer M3 Horz Signal Wire Grid 0.0500 with offset 0.0000, Width= 0.8000, Clearance= 0.7000
+# Layer VIA2 Off  Signal Wire Grid 0.0500 with offset 0.0000, Width= 0.5000, Clearance= 0.8000
+# Layer M2 Vert Signal Wire Grid 0.0500 with offset 0.0000, Width= 0.7000, Clearance= 0.7000
+# Layer VIA Off  Signal Wire Grid 0.0500 with offset 0.0000, Width= 0.5000, Clearance= 0.6000
+# Layer M1 Horz Signal Wire Grid 0.0500 with offset 0.0000, Width= 0.6000, Clearance= 0.6000
+# Layer CNT Off  Signal Wire Grid 0.0500 with offset 0.0000, Width= 0.5000, Clearance= 0.5000
+# Layer POLY1 Orth Signal Wire Grid 0.0500 with offset 0.0000, Width= 0.6000, Clearance= 0.6000
+# Layer TUB Off  Signal Wire Grid 0.0500 with offset 0.0000, Width= 2.5000, Clearance= 4.0000
+# Layer DIF Off  Signal Wire Grid 0.0500 with offset 0.0000, Width= 0.5000, Clearance= 0.9000
+# CHECK RESULTS: 0 pins are smaller than minimum process width
+# CHECK RESULTS: 0 pins are off wire grid
+# CHECK RESULTS: 0 pins are off manufacturing grid
+# CHECK RESULTS: 0 pin or I/O port spacing violations
+# Cpu Time = 0:00:00  Elapsed Time = 0:00:00
+# 
+# Wiring Statistics ----------------- /home/zxw6805/ee620/.zxw_bsra08781/zxw_bsr5.dsn
+# Nets 22 Connections 99 Unroutes 9
+# Signal Layers 9
+# Wire Junctions 30, at vias 30 Total Vias 153
+# Percent Connected   90.91
+# Manhattan Length 2632.3000 Horizontal 682.5930 Vertical 1949.7070
+# Routed Length 2724.1500 Horizontal 553.2000 Vertical 2170.9500
+# Ratio Actual / Manhattan   1.0349
+# Unconnected Length 183.4750 Horizontal   5.4500 Vertical 178.0250
+# Total Conflicts: 0 (Cross: 0, Clear: 0, Xtalk: 0, Length: 0, Polygon Clear: 0 )
+# Cpu Time = 0:00:00  Elapsed Time = 0:00:00
+rule ic (stack_via any_overlap)
+unselect layer POLY1
+# <<WARNING:>> IRoute: Interactive layer(s) disabled for autorouting: POLY1
+unselect layer M3
+# <<WARNING:>> IRoute: Interactive layer(s) disabled for autorouting: M3
+cost layer POLY1 forbidden (type length)
+write session zxw_bsr5.ses
+# Session Files Saved as zxw_bsr5.ses
+# Session file saved as zxw_bsr5.ses zxw_lib zxw_bsr5 layout
+echo Session file saved as zxw_bsr5.ses zxw_lib zxw_bsr5 layout
+quit
