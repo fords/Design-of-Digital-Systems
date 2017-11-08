@@ -1,0 +1,58 @@
+# (c) Copyright 1999-2014  Cadence Design Systems, Inc.  All Rights Reserved.
+# DFII-VCAR Interface Version : sub-version 5.10.41.500.6.137
+# Virtuoso Version           : version 5.1.0 07/26/2009 22:40 (cicln04) $
+# VCAR Version                : 11.1.33
+# Date Created   : Wed Nov  5 10:17:45 2014
+# VCAR File Name  : /home/zxw6805/ee620/zxw_bssum.net (network)
+# Rules Template : /classes/ee620/ami05_vcr.rule
+(network
+ (net ShiftIn
+  (pins |I0-shiftIn)
+ )
+ (net gnd!
+  (pins |I0-in1 |I0-in2 |I0-in3)
+ )
+ (net net17
+  (pins |I0-in4 |I1-SUM)
+ )
+ (net CDR1
+  (pins |I0-CDR1)
+ )
+ (net UDR1
+  (pins |I0-UDR1)
+ )
+ (net net16
+  (pins |I0-in5 |I1-Cout)
+ )
+ (net net11
+  (pins |I0-out1 |I1-A)
+ )
+ (net net29
+  (pins |I0-out2 |I1-B)
+ )
+ (net CDR2
+  (pins |I0-CDR2)
+ )
+ (net UDR2
+  (pins |I0-UDR2)
+ )
+ (net net28
+  (pins |I0-out3 |I1-Cin)
+ )
+ (net net27
+  (pins |I0-out4)
+ )
+ (net ShiftDR
+  (pins |I0-ShiftDR)
+ )
+ (net mode
+  (pins |I0-mode)
+ )
+ (net net26
+  (pins |I0-out5)
+ )
+ (net Shiftout
+  (pins |I0-ShiftOut)
+ )
+)
+# end network

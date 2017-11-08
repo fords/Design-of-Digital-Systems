@@ -1,0 +1,38 @@
+# 4
+pmos(MOS): pmos(MOS)
+= D D B
+= G G B
+= S S B
+= B B B
+# 4
+nmos(MOS): nmos(MOS)
+= D D B
+= G G B
+= S S B
+= B B B
+# 24
+zxw_dff schematic zxw_lib: zxw_dff layout zxw_lib
+= net0268 avC22
+= net0346 avC11
+= net0183 avC12
+= net076 avC10
+= net0260 avC21
+= net0130 avC15
+= net0255 avC17
+= net0261 avC16
+= net0216 avC23
+= net0286 avC8
+= net0187 avC7
+= net0220 avC9
+= net0208 avC24
+= net0211 avC13
+= net0132 avC14
+= vdd! avC19 I
+= net0339 avC20
+= net0283 avC18
+= gnd! gnd! I
+= D D I
+= Q Q O
+= Qbar Qbar O
+= phi1 phi1 I
+= phi2 phi2 I

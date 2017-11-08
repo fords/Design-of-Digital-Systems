@@ -1,0 +1,40 @@
+# 0
+pmos(MOS): pmos(MOS)
+# 0
+nmos(MOS): nmos(MOS)
+# 34
+backupdiff schematic zxw_lib: backupdiff layout zxw_lib
+D M31 avD62_8
+D M30 avD62_7
+D M22 avD62_15
+D M24 avD62_16
+D M27 avD62_5
+S M20 avD62_14
+D M10 avD62_1
+D M11 avD62_4
+S M12 avD62_2
+S M13 avD62_3
+S M14 avD62_17
+D M26 avD62_6
+D M9 avD62_10
+D M7 avD62_13
+S M6 avD62_11
+S M5 avD62_12
+S M4 avD62_9
+D M32 avD63_8
+D M33 avD63_7
+D M23 avD63_15
+D M25 avD63_16
+S M21 avD63_14
+D M28 avD63_6
+D M29 avD63_5
+D M15 avD63_1
+S M16 avD63_3
+S M17 avD63_4
+D M18 avD63_17
+D M19 avD63_2
+D M8 avD63_10
+S M3 avD63_12
+S M2 avD63_13
+D M1 avD63_9
+D M0 avD63_11

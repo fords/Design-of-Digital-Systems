@@ -1,0 +1,4 @@
+!<alc> v1 24
+0    3    0 zxw_xor2 layout zxw_lib
+0    2    0 zxw_nand2 layout zxw_lib
+0    4    0 zxw_fa layout zxw_lib

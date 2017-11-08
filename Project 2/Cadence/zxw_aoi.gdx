@@ -1,0 +1,14 @@
+# 0
+nmos(MOS): nmos(MOS)
+# 0
+pmos(MOS): pmos(MOS)
+# 8
+zxw_aoi schematic zxw_lib: zxw_aoi layout zxw_lib
+S M8 avD63_4
+S M7 avD63_3
+D M6 avD63_2
+D M5 avD63_1
+S M4 avD62_2
+S M3 avD62_3
+D M1 avD62_4
+D M0 avD62_1

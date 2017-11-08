@@ -1,0 +1,22 @@
+# Cadence Design Systems, Inc.
+# Virtuoso Chip Assembly Router Automatic Router
+# Virtuoso Chip Assembly Router V11.2.41.500.6.65 made 2009/03/26 at 22:32:16 (32bit addresses)
+# Running on host 15817180
+# 
+#            Command Line Parameters
+#            -----------------------
+# Design File Name : /home/zxw6805/ee620/zxw_fa2.dsn
+# Initialization options:
+#   -do /home/zxw6805/ee620/zxw_fa2Constraints.do
+#   -do /classes/ee620/ami05_vcr.do
+# Status File Name : /home/zxw6805/ee620/monitor.sts
+# -noclean specified . Orphan shapes not removed.
+# Use Colormap In Design File.
+#
+#
+#
+#
+rule ic (stack_via any_overlap)
+unselect layer POLY1
+unselect layer M3
+cost layer POLY1 forbidden (type length)

@@ -1,0 +1,60 @@
+# (c) Copyright 1999-2014  Cadence Design Systems, Inc.  All Rights Reserved.
+# DFII-VCAR Interface Version : sub-version 5.10.41.500.6.137
+# Virtuoso Version           : version 5.1.0 07/26/2009 22:40 (cicln04) $
+# VCAR Version                : 11.1.33
+# Date Created   : Mon Oct 13 18:32:58 2014
+# VCAR File Name  : /home/zxw6805/ee620/zxw_tut2.net (network)
+# Rules Template : /classes/ee620/ami05_vcr.rule
+(network
+ (net Y6
+  (pins |I12-out1)
+ )
+ (net Y2
+  (pins |I2-out1 |I3-in1)
+ )
+ (net net9
+  (pins |I11-out1 |I12-in1)
+ )
+ (net gnd!
+  (pins |I7-gnd! |I8-gnd! |I9-gnd! |I10-gnd! |I11-gnd! |I12-gnd!
+  |I6-gnd! |I5-gnd! |I1-gnd! |I2-gnd! |I3-gnd! |I4-gnd!)
+ )
+ (net net20
+  (pins |I7-out1 |I8-in1)
+ )
+ (net A
+  (pins |I1-in1)
+ )
+ (net Y3
+  (pins |I5-out1)
+ )
+ (net Y4
+  (pins |I5-in1 |I4-out1)
+ )
+ (net B
+  (pins |I9-in1)
+ )
+ (net net16
+  (pins |I9-out1 |I10-in1)
+ )
+ (net Y5
+  (pins |I8-out1)
+ )
+ (net Y1
+  (pins |I3-out1)
+ )
+ (net net11
+  (pins |I10-out1 |I11-in1)
+ )
+ (net net21
+  (pins |I6-in1 |I1-out1 |I2-in1 |I4-in1)
+ )
+ (net net22
+  (pins |I7-in1 |I6-out1)
+ )
+ (net vdd!
+  (pins |I7-vdd! |I8-vdd! |I9-vdd! |I10-vdd! |I11-vdd! |I12-vdd!
+  |I6-vdd! |I5-vdd! |I1-vdd! |I2-vdd! |I3-vdd! |I4-vdd!)
+ )
+)
+# end network

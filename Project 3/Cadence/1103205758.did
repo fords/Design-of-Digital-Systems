@@ -1,0 +1,55 @@
+# Cadence Design Systems, Inc.
+# Virtuoso Chip Assembly Router Automatic Router
+# Virtuoso Chip Assembly Router V11.2.41.500.6.65 made 2009/03/26 at 22:32:16 (32bit addresses)
+# Running on host 15817180
+# 
+#            Command Line Parameters
+#            -----------------------
+# Design File Name : /home/zxw6805/ee620/zxw_bsc.dsn
+# Initialization options:
+#   -do /home/zxw6805/ee620/zxw_bscConstraints.do
+#   -do /classes/ee620/ami05_vcr.do
+# Status File Name : /home/zxw6805/ee620/monitor.sts
+# -noclean specified . Orphan shapes not removed.
+# Use Colormap In Design File.
+#
+#
+#
+#
+rule ic (stack_via any_overlap)
+unselect layer POLY1
+unselect layer M3
+cost layer POLY1 forbidden (type length)
+direction M2 horizontal
+select layer M2
+direction M3 vertical
+select layer M3
+cost layer M3 forbidden  (type way)
+cost layer M2 forbidden  (type way)
+cost layer M2 forbidden  (type way)
+route 20
+clean 15
+write session(permission (group read write) (public read nowrite)) /home/zxw6805/ee620/zxw_bsc.ses
+measure 41.5 72.5 41.5 72.5
+unselect layer M1
+route 40
+clean 25
+zoom coord 49.9 54.7 119.6 28.6
+zoom all
+zoom coord 38.3 59.5 121.3 31
+zoom all
+vset system Place_error on
+repaint
+cost layer M2 forbidden  (type way)
+cost layer M3 forbidden  (type way)
+cost layer M3 forbidden  (type way)
+route 30
+clean 29
+zoom coord 55 56.4 103 35.6
+delete selected
+measure 72.7 45.7 72.7 45.7
+measure 71.5 45.8 71.5 45.8
+measure 75.8 46.4 75.8 46.4
+measure 76.9 45.8 76.9 45.8
+zoom all
+quit -c

@@ -1,0 +1,30 @@
+# (c) Copyright 1999-2014  Cadence Design Systems, Inc.  All Rights Reserved.
+# DFII-VCAR Interface Version : sub-version 5.10.41.500.6.137
+# Virtuoso Version           : version 5.1.0 07/26/2009 22:40 (cicln04) $
+# VCAR Version                : 11.1.33
+# Date Created   : Wed Nov  5 10:17:44 2014
+# VCAR File Name  : /home/zxw6805/ee620/zxw_bssum.img (library)
+# Rules Template : /classes/ee620/ami05_vcr.rule
+(library (unit um)
+ (via_array_template VIA2
+  (cut
+   (cut_layer VIA2) (cut_size 0.5) (clear 0.8)
+   (overhang M2 0.2) (overhang M3 0.2)
+  )
+ )
+ (via_array_template VIA
+  (cut
+   (cut_layer VIA) (cut_size 0.5) (clear 0.6)
+   (overhang M1 0.2) (overhang M2 0.2)
+  )
+ )
+ (via_array_template M1PLY
+  (cut
+   (cut_layer CNT) (cut_size 0.5) (clear 0.5)
+   (overhang POLY1 0.2) (overhang M1 0.2)
+  )
+ )
+ (directory $/zxw_bssumImages)
+ (extra_image_directory $/zxw_bssumExtraImages)
+)
+# end library

@@ -1,0 +1,8 @@
+Schematic                   | Layout                   | Status
+-------------------------------------------------------------------------------
+zxw_inv2 schematic zxw_lib  | zxw_inv2 layout zxw_lib  | matched            
+zxw_inv3 schematic3 zxw_lib | zxw_inv3 layout zxw_lib  | matched, pin errs   *
+
+Mismatch between Schematic and Layout
+   1 cell matched with pin errors
+   1 cell matched

@@ -1,0 +1,70 @@
+# (c) Copyright 1999-2014  Cadence Design Systems, Inc.  All Rights Reserved.
+# DFII-VCAR Interface Version : sub-version 5.10.41.500.6.137
+# Virtuoso Version           : version 5.1.0 07/26/2009 22:40 (cicln04) $
+# VCAR Version                : 11.1.33
+# Date Created   : Tue Nov  4 15:11:30 2014
+# VCAR File Name  : /home/zxw6805/ee620/zxw_bsc4.wir (wiring)
+# Rules Template : /classes/ee620/ami05_vcr.rule
+(wiring
+ (wire
+  (rect M2 136.3 0 137.3 1)
+  (net out)
+  (io_port normal out_out)
+  (property (signal_direction output))
+ )
+ (wire
+  (rect M2 45.1 0 46.1 1)
+  (net Sout)
+  (io_port normal Sout_Sout)
+  (property (signal_direction output))
+ )
+ (wire
+  (rect M2 170.5 45.8 171.5 46.8)
+  (net ShiftDR)
+  (io_port normal ShiftDR_ShiftDR)
+  (property (signal_direction input))
+ )
+ (wire
+  (rect M2 147.7 45.8 148.7 46.8)
+  (net SIN)
+  (io_port normal SIN_SIN)
+  (property (signal_direction input))
+ )
+ (wire
+  (rect M2 124.9 45.8 125.9 46.8)
+  (net Mode_control)
+  (io_port normal Mode_control_Mode_control)
+  (property (signal_direction input))
+ )
+ (wire
+  (rect M2 102.1 45.8 103.1 46.8)
+  (net In)
+  (io_port normal In_In)
+  (property (signal_direction input))
+ )
+ (wire
+  (rect M2 79.3 45.8 80.3 46.8)
+  (net ClockDR)
+  (io_port normal ClockDR_ClockDR)
+  (property (signal_direction input))
+ )
+ (wire
+  (rect M2 56.5 45.8 57.5 46.8)
+  (net ClockDR2)
+  (io_port normal ClockDR2_ClockDR2)
+  (property (signal_direction input))
+ )
+ (wire
+  (rect M2 33.7 45.8 34.7 46.8)
+  (net UpdateDR)
+  (io_port normal UpdateDR_UpdateDR)
+  (property (signal_direction input))
+ )
+ (wire
+  (rect M2 10.9 45.8 11.9 46.8)
+  (net UpdateDR2)
+  (io_port normal UpdateDR2_UpdateDR2)
+  (property (signal_direction input))
+ )
+)
+# end wiring

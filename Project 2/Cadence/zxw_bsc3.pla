@@ -1,0 +1,18 @@
+# (c) Copyright 1999-2014  Cadence Design Systems, Inc.  All Rights Reserved.
+# DFII-VCAR Interface Version : sub-version 5.10.41.500.6.137
+# Virtuoso Version           : version 5.1.0 07/26/2009 22:40 (cicln04) $
+# VCAR Version                : 11.1.33
+# Date Created   : Tue Nov  4 14:52:29 2014
+# VCAR File Name  : /home/zxw6805/ee620/zxw_bsc3.pla (placement)
+# Rules Template : /classes/ee620/ami05_vcr.rule
+(placement
+ (component zxw_dff
+  (place |I2 67.2 7.8 front 0)
+  (place |I3 0 7.8 front 0)
+ )
+ (component zxw_mux2
+  (place |I0 158.4 7.8 front 0)
+  (place |I1 134.4 7.8 front 0)
+ )
+)
+# end placement

@@ -1,0 +1,58 @@
+# Cadence Design Systems, Inc.
+# Virtuoso Chip Assembly Router Automatic Router
+# Virtuoso Chip Assembly Router V11.2.41.500.6.65 made 2009/03/26 at 22:32:16 (32bit addresses)
+# Running on host 15817180
+# 
+#            Command Line Parameters
+#            -----------------------
+# Design File Name : /home/zxw6805/ee620/zxw_fa.dsn
+# Initialization options:
+#   -do /home/zxw6805/ee620/zxw_faConstraints.do
+#   -do /classes/ee620/ami05_vcr.do
+# Status File Name : /home/zxw6805/ee620/monitor.sts
+# -noclean specified . Orphan shapes not removed.
+# Use Colormap In Design File.
+#
+#
+#
+#
+rule ic (stack_via any_overlap)
+unselect layer POLY1
+unselect layer M3
+cost layer POLY1 forbidden (type length)
+direction M3 vertical
+select layer M3
+direction M2 horizontal
+select layer M2
+unselect layer M1
+cost layer M3 forbidden  (type way)
+cost layer M2 forbidden  (type way)
+cost layer M2 forbidden  (type way)
+measure 20 83.2 20 83.2
+zoom all
+route 30
+clean 25
+write session(permission (group read write) (public read nowrite)) /home/zxw6805/ee620/zxw_fa.ses
+measure 49.2 -30.2 49.2 -30.2
+measure 29.15 -14.3 29.15 -14.3
+measure 101.8 -38.2 101.8 -37.7
+zoom coord -3.9 36.8 97 1.1
+zoom coord 10 38.5 54.5 11.1
+zoom coord 19.16 34.23 38.92 21.09
+zoom all
+zoom coord -1.2 52.8 88.3 -6.6
+zoom coord 7.9 37.1 51 11.5
+zoom all
+measure 36.2 -16.7 35.7 -16.7
+write session(permission (group read write) (public read nowrite)) /home/zxw6805/ee620/zxw_fa.ses
+measure 52.8 63.1 52.8 63.1
+zoom all
+zoom coord 7.9 51.6 90.2 -11.7
+zoom coord 11.6 48.6 21.3 40
+zoom all
+zoom coord 41.7 17.3 77.2 -6.3
+zoom all
+zoom coord 67.3 11.5 77.4 -2.5
+zoom coord 66.65 3.27 70.76 0.06
+zoom all
+quit -c

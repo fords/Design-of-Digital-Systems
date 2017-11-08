@@ -1,0 +1,276 @@
+text M1TEXTPIN attach m1NoRes
+text M2TEXTPIN attach m2NoRes
+text M3TEXTPIN attach m3NoRes
+text M1TEXT attach m1NoRes
+text M2TEXT attach m2NoRes
+text M3TEXT attach m3NoRes
+connect ntubiNotRes nsd by nTubTie
+connect ntubiNotRes ntubNotRes_S by nTubTie
+connect nsd ntubNotRes_S by nTubTie
+connect ptubs_S psd by pTubTie
+connect pfield psd by pfieldTie
+connect m1NoRes psd by paaCnt
+connect m1NoRes nsd by naaCnt
+connect m1NoRes poly1NoRes by p1Cnt
+connect m2NoRes m1NoRes by VIA
+connect m3NoRes m2NoRes by VI2
+connect m1NoRes poly2NoRes by p2Cnt
+stamp hyTerm_S by poly2NoRes
+stamp nlTerm_S by poly1NoRes
+stamp m1Term_S by m1NoRes
+stamp m2Term_S by m2NoRes
+stamp m3Term_S by m3NoRes
+stamp probeM1_S by m1NoRes
+stamp probeM2_S by m2NoRes
+stamp probeM3_S by m3NoRes
+model=generic[probe],probe
+dfiimodel=generic[probe],probe
+element generic[probe] probeM1MRK_Device_1 probeM1_S[vin] 
+model=generic[probe_av2],probe
+dfiimodel=generic[probe_av2],probe
+element generic[probe_av2] probeM2MRK_Device_2 probeM2_S[vin] 
+model=generic[probe_av3],probe
+dfiimodel=generic[probe_av3],probe
+element generic[probe_av3] probeM3MRK_Device_3 probeM3_S[vin] 
+stamp m1ThruTerm_S by m1NoRes
+stamp m2ThruTerm_S by m2NoRes
+stamp m3ThruTerm_S by m3NoRes
+model=generic[thru],thru
+dfiimodel=generic[thru],thru#20auLvs#20AMI_Lib
+element generic[thru] m1ThruBody_Device_4 m1ThruTerm_S[TERM1] m1ThruTerm_S[TERM2] 
+model=generic[thru_av2],thru
+dfiimodel=generic[thru_av2],thru#20auLvs#20AMI_Lib
+element generic[thru_av2] m2ThruBody_Device_5 m2ThruTerm_S[TERM1] m2ThruTerm_S[TERM2] 
+model=generic[thru_av3],thru
+dfiimodel=generic[thru_av3],thru#20auLvs#20AMI_Lib
+element generic[thru_av3] m3ThruBody_Device_6 m3ThruTerm_S[TERM1] m3ThruTerm_S[TERM2] 
+stamp v5M1_S by m1NoRes
+stamp v5M2_S by m2NoRes
+stamp v5M3_S by m3NoRes
+model=generic[v5],v5
+dfiimodel=generic[v5],v5
+element generic[v5] v5M1MRK_Device_7 v5M1_S[vin] 
+model=generic[v5_av2],v5
+dfiimodel=generic[v5_av2],v5
+element generic[v5_av2] v5M2MRK_Device_8 v5M2_S[vin] 
+model=generic[v5_av3],v5
+dfiimodel=generic[v5_av3],v5
+element generic[v5_av3] v5M3MRK_Device_9 v5M3_S[vin] 
+stamp v12M1_S by m1NoRes
+stamp v12M2_S by m2NoRes
+stamp v12M3_S by m3NoRes
+model=generic[v12],v12
+dfiimodel=generic[v12],v12
+element generic[v12] v12M1MRK_Device_10 v12M1_S[vin] 
+model=generic[v12_av2],v12
+dfiimodel=generic[v12_av2],v12
+element generic[v12_av2] v12M2MRK_Device_11 v12M2_S[vin] 
+model=generic[v12_av3],v12
+dfiimodel=generic[v12_av3],v12
+element generic[v12_av3] v12M3MRK_Device_12 v12M3_S[vin] 
+stamp v20M1_S by m1NoRes
+stamp v20M2_S by m2NoRes
+stamp v20M3_S by m3NoRes
+model=generic[v20],v20
+dfiimodel=generic[v20],v20
+element generic[v20] v20M1MRK_Device_13 v20M1_S[vin] 
+model=generic[v20_av2],v20
+dfiimodel=generic[v20_av2],v20
+element generic[v20_av2] v20M2MRK_Device_14 v20M2_S[vin] 
+model=generic[v20_av3],v20
+dfiimodel=generic[v20_av3],v20
+element generic[v20_av3] v20M3MRK_Device_15 v20M3_S[vin] 
+stamp v40M1_S by m1NoRes
+stamp v40M2_S by m2NoRes
+stamp v40M3_S by m3NoRes
+model=generic[v40],v40
+dfiimodel=generic[v40],v40
+element generic[v40] v40M1MRK_Device_16 v40M1_S[vin] 
+model=generic[v40_av2],v40
+dfiimodel=generic[v40_av2],v40
+element generic[v40_av2] v40M2MRK_Device_17 v40M2_S[vin] 
+model=generic[v40_av3],v40
+dfiimodel=generic[v40_av3],v40
+element generic[v40_av3] v40M3MRK_Device_18 v40M3_S[vin] 
+stamp extM1_S by m1NoRes
+stamp extM2_S by m2NoRes
+stamp extM3_S by m3NoRes
+model=generic[ext],ext
+dfiimodel=generic[ext],ext
+element generic[ext] extM1MRK_Device_19 extM1_S[vin] 
+model=generic[ext_av2],ext
+dfiimodel=generic[ext_av2],ext
+element generic[ext_av2] extM2MRK_Device_20 extM2_S[vin] 
+model=generic[ext_av3],ext
+dfiimodel=generic[ext_av3],ext
+element generic[ext_av3] extM3MRK_Device_21 extM3_S[vin] 
+stamp nyTerm_S by poly2NoRes
+stamp ndTerm_S by nsd
+stamp nwTermAll_S by nsd
+stamp pdTerm_S by psd
+stamp nd3Term_S by nsd
+stamp pd3Term_S by psd
+model=res[pd3],pd3
+dfiimodel=res[pd3],pres-3#20auLvs#20ami500hxtx
+element res[pd3] pd3ResBody_RES_22 pd3Term_S ntubNotRes_S 
+model=res[pd],pd
+dfiimodel=res[pd],res#20auLvs#20ami500hxtx
+element res[pd] pdResBody_RES_23 pdTerm_S 
+model=res[nd3],nd3
+dfiimodel=res[nd3],res-3#20auLvs#20ami500hxtx
+element res[nd3] nd3ResBody_RES_24 nd3Term_S ptubs_S 
+model=res[nd],nd
+dfiimodel=res[nd],res#20auLvs#20ami500hxtx
+element res[nd] ndResBody_RES_25 ndTerm_S 
+model=res[nw3],nw3
+dfiimodel=res[nw3],res-3#20auLvs#20ami500hxtx
+element res[nw3] nw3ResBody_RES_26 nwTermAll_S ptubs_S 
+model=res[nw],nw
+dfiimodel=res[nw],res#20auLvs#20ami500hxtx
+element res[nw] nwResBody_RES_27 nwTermAll_S 
+stamp nl3NWTerm_S by poly1NoRes
+stamp nl3Term_S by poly1NoRes
+model=res[nl3],nl3
+dfiimodel=res[nl3],res-3#20auLvs#20ami500hxtx
+element res[nl3] nl3ResBody_RES_28 nl3Term_S ptubs_S 
+model=res[nl3_av2],nl3
+dfiimodel=res[nl3_av2],res-3#20auLvs#20ami500hxtx
+element res[nl3_av2] nl3NWResBody_RES_29 nl3NWTerm_S ntubNotRes_S 
+model=res[nl],nl
+dfiimodel=res[nl],res#20auLvs#20ami500hxtx
+element res[nl] nlResBody_RES_30 nlTerm_S 
+stamp ny3Term_S by poly2NoRes
+stamp ny3NWTerm_S by poly2NoRes
+model=res[ny3],ny3
+dfiimodel=res[ny3],res-3#20auLvs#20ami500hxtx
+element res[ny3] ny3ResBody_RES_31 ny3Term_S ptubs_S 
+model=res[ny3_av2],ny3
+dfiimodel=res[ny3_av2],res-3#20auLvs#20ami500hxtx
+element res[ny3_av2] ny3NWResBody_RES_32 ny3NWTerm_S ntubNotRes_S 
+model=res[ny],ny
+dfiimodel=res[ny],res#20auLvs#20ami500hxtx
+element res[ny] nyResBody_RES_33 nyTerm_S 
+stamp hy3Term_S by poly2NoRes
+stamp hy3NWTerm_S by poly2NoRes
+model=res[hy3],hy3
+dfiimodel=res[hy3],res-3#20auLvs#20ami500hxtx
+element res[hy3] hy3ResBody_RES_34 hy3Term_S ptubs_S 
+model=res[hy3_av2],hy3
+dfiimodel=res[hy3_av2],res-3#20auLvs#20ami500hxtx
+element res[hy3_av2] hy3NWResBody_RES_35 hy3NWTerm_S ntubNotRes_S 
+model=res[hy],hy
+dfiimodel=res[hy],res#20auLvs#20ami500hxtx
+element res[hy] hyResBody_RES_36 hyTerm_S 
+model=res[mr],mr
+dfiimodel=res[mr],res#20auLvs#20ami500hxtx
+element res[mr] m1ResBody_RES_37 m1Term_S 
+model=res[or],or
+dfiimodel=res[or],res#20auLvs#20ami500hxtx
+element res[or] m2ResBody_RES_38 m2Term_S 
+model=res[qr],qr
+dfiimodel=res[qr],res#20auLvs#20ami500hxtx
+element res[qr] m3ResBody_RES_39 m3Term_S 
+stamp ppBotCap_S by poly1NoRes
+stamp ppTopCap_S by poly2NoRes
+model=cap[pp],pp
+dfiimodel=cap[pp],cap#20auLvs#20ami500hxtx
+element cap[pp] ppCapBody_CAP_40 ppTopCap_S ppBotCap_S 
+model=generic[cnvar],cnvar
+dfiimodel=generic[cnvar],cnvar#20auLvs#20ami500hxtx
+element generic[cnvar] cnvarNmos_Device_41 poly1NoRes[G] nsd[SD] ptubs_S[B] 
+stamp cnDiff_S by nsd
+model=cap[cn],cn
+dfiimodel=cap[cn],cn#20auLvs#20ami500hxtx
+element cap[cn] cnCapBody_CAP_42 poly1NoRes cnDiff_S 
+stamp cpDiff_S by psd
+model=cap[cp],cp
+dfiimodel=cap[cp],cp#20auLvs#20ami500hxtx
+element cap[cp] cpCapBody_CAP_43 poly1NoRes cpDiff_S 
+stamp esqNwell_S by nsd
+stamp esqMos_S by poly2NoRes
+stamp esqNsd_S by nsd
+model=generic[esqNameMapping],esqNameMapping
+dfiimodel=generic[esqNameMapping],esq#20auLvs#20ami500hxtx
+element generic[esqNameMapping] esqRec_Device_44 esqMos_S[G] esqNsd_S[D] esqNsd_S[S] ptubs_S[B] esqNwell_S[NW] 
+stamp shkAnode_S by psd
+stamp shkCath_S by nsd
+model=generic[dschottky],dschottky
+dfiimodel=generic[dschottky],dschottky#20auLvs#20ami500hxtx
+element generic[dschottky] shkNwell_Device_45 shkAnode_S[PLUS] shkCath_S[MINUS] ptubs_S[SUBSTRATE] 
+stamp pnpBase_S by nsd
+stamp pnpEmitter_S by psd
+stamp pnpCollector_S by psd
+model=bjt[pnp],pnp
+dfiimodel=bjt[pnp],pnp#20auLvs#20ami500hxtx
+element bjt[pnp] pnpRec_BJT_46 pnpCollector_S pnpBase_S pnpEmitter_S 
+stamp pzxtDrain_S by psd
+stamp pzxtSource_S by psd
+model=mos[pzthn],pzthn
+dfiimodel=mos[pzthn],pzthn#20auLvs#20ami500hxtx
+element mos[pzthn] pzthnMos_MOS_47 poly1NoRes pzxtDrain_S ntubNotRes_S 
+model=mos[pz],pz
+dfiimodel=mos[pz],pz#20auLvs#20ami500hxtx
+element mos[pz] pzMos_MOS_48 poly1NoRes pzxtDrain_S ntubNotRes_S 
+model=ldd[px],px
+dfiimodel=ldd[px],px#20auLvs#20ami500hxtx
+element ldd[px] pxMos_LDD_49 poly1NoRes pzxtDrain_S pzxtSource_S ntubNotRes_S 
+model=ldd[pt],pt
+dfiimodel=ldd[pt],pt#20auLvs#20ami500hxtx
+element ldd[pt] ptMos_LDD_50 poly1NoRes pzxtDrain_S pzxtSource_S ntubNotRes_S 
+stamp pvuDrain_S by psd
+stamp pvuSource_S by psd
+model=mos[pv],pv
+dfiimodel=mos[pv],pv#20auLvs#20ami500hxtx
+element mos[pv] pvMos_MOS_51 poly1NoRes pvuDrain_S ntubNotRes_S 
+model=ldd[pu],pu
+dfiimodel=ldd[pu],pu#20auLvs#20ami500hxtx
+element ldd[pu] puMos_LDD_52 poly1NoRes pvuDrain_S pvuSource_S ntubNotRes_S 
+stamp nzxDrain_S by nsd
+stamp nzxSource_S by nsd
+model=mos[nz],nz
+dfiimodel=mos[nz],nz#20auLvs#20ami500hxtx
+element mos[nz] nzMos_MOS_53 poly1NoRes nzxDrain_S ptubs_S 
+model=mos[nzthn],nzthn
+dfiimodel=mos[nzthn],nzthn#20auLvs#20ami500hxtx
+element mos[nzthn] nzthnMos_MOS_54 poly1NoRes nzxDrain_S ptubs_S 
+model=ldd[nx],nx
+dfiimodel=ldd[nx],nx#20auLvs#20ami500hxtx
+element ldd[nx] nxMos_LDD_55 poly1NoRes nzxDrain_S nzxSource_S ptubs_S 
+stamp ntDrain_S by nsd
+stamp ntSource_S by nsd
+model=ldd[nt],nt
+dfiimodel=ldd[nt],nt#20auLvs#20ami500hxtx
+element ldd[nt] ntMos_LDD_56 poly1NoRes ntDrain_S ntSource_S ptubs_S 
+stamp nvuDrain_S by nsd
+stamp nvuSource_S by nsd
+model=mos[nv],nv
+dfiimodel=mos[nv],nv#20auLvs#20ami500hxtx
+element mos[nv] nvMos_MOS_57 poly1NoRes nvuDrain_S ptubs_S 
+model=ldd[nu],nu
+dfiimodel=ldd[nu],nu#20auLvs#20ami500hxtx
+element ldd[nu] nuMos_LDD_58 poly1NoRes nvuDrain_S nvuSource_S ptubs_S 
+stamp mp2llSD_S by psd
+stamp mp2llGate_S by poly2NoRes
+model=mos[mp2llNameMapping],mp2llNameMapping
+dfiimodel=mos[mp2llNameMapping],mp2ll#20auLvs#20ami500hxtx
+element mos[mp2llNameMapping] mp2llRec_MOS_59 mp2llGate_S mp2llSD_S ntubNotRes_S 
+stamp mp40vSource_S by psd
+stamp mp40vDrain_S by psd
+stamp mp40vPoly1_S by poly1NoRes
+model=ldd[mp40v],mp40v
+dfiimodel=ldd[mp40v],mp40v#20auLvs#20ami500hxtx
+element ldd[mp40v] mp40vRec_LDD_60 mp40vPoly1_S mp40vDrain_S mp40vSource_S ntubNotRes_S 
+stamp mn40vGate_S by poly1NoRes
+stamp mn40vDrain_S by nsd
+stamp mn40vSource_S by nsd
+model=ldd[mn40v],mn40v
+dfiimodel=ldd[mn40v],mn40v#20auLvs#20ami500hxtx
+element ldd[mn40v] mn40vMos_LDD_61 mn40vGate_S mn40vDrain_S mn40vSource_S ptubs_S 
+stamp nmosSd_S by nsd
+stamp pmosSd_S by psd
+model=mos[nmos],nmos
+dfiimodel=mos[nmos],n#20auLvs#20ami500hxtx
+element mos[nmos] nMos_MOS_62 poly1NoRes nmosSd_S ptubs_S 
+model=mos[pmos],pmos
+dfiimodel=mos[pmos],p#20auLvs#20ami500hxtx
+element mos[pmos] pMos_MOS_63 poly1NoRes pmosSd_S ntubNotRes_S 

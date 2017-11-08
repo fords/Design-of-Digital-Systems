@@ -1,0 +1,7 @@
+"zxw_mux2 layout zxw_lib" "zxw_mux2 schematic zxw_lib" "nmos(MOS)" "pmos(MOS)"
+"zxw_dff layout zxw_lib" "zxw_dff schematic zxw_lib" "nmos(MOS)" "pmos(MOS)"
+"zxw_bsc layout zxw_lib" "zxw_bsc schematic zxw_lib"
+"pmos(MOS)" "pmos(MOS)"
+"nmos(MOS)" "nmos(MOS)"
+"zxw_bsr5 layout zxw_lib" "zxw_bsr5 schematic zxw_lib"
+Devices filtered from layout

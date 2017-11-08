@@ -1,0 +1,5 @@
+!<alc> v1 23
+0    3    0 zxw_mux2 layout zxw_lib
+0    2    0 zxw_dff layout zxw_lib
+0    4    0 zxw_bsc layout zxw_lib
+0    5    0 zxw_bsr5 layout zxw_lib

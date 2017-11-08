@@ -1,0 +1,4 @@
+"pmos(MOS)" "pmos(MOS)"
+"nmos(MOS)" "nmos(MOS)"
+"zxw_mux2to1 layout zxw_lib" "zxw_mux2to1 schematic zxw_lib" "nmos(MOS)" "pmos(MOS)"
+Devices filtered from layout

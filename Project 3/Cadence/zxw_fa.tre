@@ -1,0 +1,10 @@
+.SUBCIRCUIT =zxw_xor2 schematic zxw_lib
+.SUBCIRCUIT =zxw_nand2 schematic zxw_lib
+.SUBCIRCUIT =zxw_fa schematic zxw_lib
+zxw_xor2 schematic zxw_lib ( \
+I6 , \
+I5 )
+zxw_nand2 schematic zxw_lib ( \
+I2 , \
+I3 , \
+I4 )

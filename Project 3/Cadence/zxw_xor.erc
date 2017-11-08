@@ -1,0 +1,17 @@
+
+***** Begin Label Report *****
+
+ Label in cell 'zxw_xor layout zxw_lib':
+  info: Assign net label "A" at (4.850, 12.900) to layer `m3NoRes'.
+  info: Assign net label "B" at (21.600, 13.350) to layer `m3NoRes'.
+  info: Assign net label "Y" at (9.600, 13.050) to layer `m3NoRes'.
+  info: Assign net label "gnd!" at (6.000, 4.800) to layer `m1NoRes'.
+  info: Assign net label "vdd!" at (4.800, 26.400) to layer `m1NoRes'.
+  info: Assign pin label "A" at (4.850, 12.900) to layer `m3NoRes'.
+  info: Assign pin label "B" at (21.600, 13.350) to layer `m3NoRes'.
+  info: Assign pin label "Y" at (9.600, 13.050) to layer `m3NoRes'.
+  info: Assign pin label "gnd!" at (6.000, 4.800) to layer `m1NoRes'.
+  info: Assign pin label "vdd!" at (4.800, 26.400) to layer `m1NoRes'.
+
+***** End of Label Report *****
+

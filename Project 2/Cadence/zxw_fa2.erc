@@ -1,0 +1,21 @@
+
+***** Begin Label Report *****
+
+ Label in cell 'zxw_fa2 layout zxw_lib':
+  info: Assign net label "SUM" at (22.450, 0.500) to layer `m2NoRes'.
+  info: Assign net label "Cout" at (67.300, 0.500) to layer `m2NoRes'.
+  info: Assign net label "B" at (44.850, 46.300) to layer `m2NoRes'.
+  info: Assign net label "A" at (14.950, 46.300) to layer `m2NoRes'.
+  info: Assign net label "Cin" at (74.750, 46.300) to layer `m2NoRes'.
+  info: Assign net label "vdd!" at (87.450, 37.750) to layer `m1NoRes'.
+  info: Assign net label "gnd!" at (1.900, 9.400) to layer `m1NoRes'.
+  info: Assign pin label "SUM" at (22.450, 0.500) to layer `m2NoRes'.
+  info: Assign pin label "Cout" at (67.300, 0.500) to layer `m2NoRes'.
+  info: Assign pin label "B" at (44.850, 46.300) to layer `m2NoRes'.
+  info: Assign pin label "A" at (14.950, 46.300) to layer `m2NoRes'.
+  info: Assign pin label "Cin" at (74.750, 46.300) to layer `m2NoRes'.
+  info: Assign pin label "vdd!" at (87.450, 37.750) to layer `m1NoRes'.
+  info: Assign pin label "gnd!" at (1.900, 9.400) to layer `m1NoRes'.
+
+***** End of Label Report *****
+

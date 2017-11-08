@@ -1,0 +1,98 @@
+;----------------------------------------------------------------------------
+; @(#)$CDS: assura version av3.2:Production:dfII5.1.41:5.10.41_USR6.18 11/06/08 10:14 (logavt05) $
+; sub-version 3.2_USR1_HF1
+;----------------------------------------------------------------------------
+
+
+;----------------------------------------------------------------------------
+; avParameter Section
+; Created by the Assura UI
+;----------------------------------------------------------------------------
+
+avParameters(
+  ?inputLayout ( "df2" "zxw_lib" )
+  ?cellName "zxw_fa"
+  ?viewName "layout"
+  ?rulesFile "/classes/ee620/ami500hakx.6.11/Rev6.11/assura/dxp_ext.rul"
+  ?avrpt t
+)
+
+
+
+
+;----------------------------------------------------------------------------
+; avCompareRules Section from Rules Files
+; Specified in the Assura UI
+;----------------------------------------------------------------------------
+
+;#####
+; avCompareRules (AMIS Technology Development)
+; $AMI/tech/common/current/assura/compare.rul (AMIS)
+; 03/26/2002 Updated BRD
+; 04/20/2002  DAS  Fixed path to box.cdl
+; 04/22/2002  BRD  Restored path to box.cdl
+; 05/15/2002  BRD  noMerge series caps, merge parallel
+; 07/08/2002  BRD  added back bind.rul
+; 09/05/2002  BRD  added swapPins for caps
+; 09/13/2002  BRD  added filterDevices for presistor and pcapacitor
+;                  to filter from schematics
+; 10/16/2002  BRD  Set bind.rul path from beta to current
+; 11/06/2002  BRD  added ls,ml,om,qo swapPins
+; 12/18/2002  BRD  changed compare percents to 0.5 from 0.005
+;                  added pdiode filter
+; 01/08/2003  DBM  Jake tested the changes to follow.  
+;		   added cdl versions of pdiode and pcap
+;		   added commented out versions of a filter
+;		   statment and bindfile as well as the 
+;		   listXRef() and upped the autoPinSwap().  
+;                  
+;
+;#####
+avCompareRules(
+
+  mergeSplitGate( sameOrder )
+
+  mergeParallel( MOS merge )
+  mergeParallel( RES merge )
+  mergeParallel( CAP merge )
+  mergeParallel( BJT merge )
+  mergeParallel( LDD merge )
+
+  mergeSeries( MOS merge )
+  mergeSeries( BJT noMerge )
+;  mergeSeries( RES noMerge )
+  mergeSeries( RES merge )
+  mergeSeries( CAP noMerge )
+  mergeSeries( LDD merge )
+
+  compareParameter( MOS percent( "w" 0.05 "l" 0.05 ) )
+  compareParameter( RES percent( "VALUE" 0.05 ) )
+  compareParameter( BJT percent( "EA" 0.05 ) )
+  compareParameter( CAP percent( "VALUE" 0.05 ) )
+  compareParameter( LDD percent( "w" 0.05 "l" 0.05 ) )
+
+  listXRef()
+  listFilteredDevices()
+  filterReduceStatistics()
+  formGate(none)
+  autoPinSwap( t 1000000)
+;  bindingFile( strcat(getShellEnvVar("AMI") "/assura/bind.rul" ))
+;  filter( "BCOFGPX")
+;  bindingFile( "lvs.bind")
+) ; end of avCompareRules (AMIS Technology Development)
+
+
+;----------------------------------------------------------------------------
+; avCompareRules Section from Run Submit Form
+; Created by the Assura UI
+;----------------------------------------------------------------------------
+
+avCompareRules(
+schematic(
+netlist( dfII "/home/zxw6805/ee620/zxw_fa.vlr" )
+)
+)
+
+
+avLVS()
+

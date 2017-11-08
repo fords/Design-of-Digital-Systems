@@ -1,0 +1,34 @@
+# (c) Copyright 1999-2014  Cadence Design Systems, Inc.  All Rights Reserved.
+# DFII-VCAR Interface Version : sub-version 5.10.41.500.6.137
+# Virtuoso Version           : version 5.1.0 07/26/2009 22:40 (cicln04) $
+# VCAR Version                : 11.1.33
+# Date Created   : Mon Nov  3 19:29:26 2014
+# VCAR File Name  : /home/zxw6805/ee620/zxw_fa2.net (network)
+# Rules Template : /classes/ee620/ami05_vcr.rule
+(network
+ (net SUM
+  (pins |I6-Y)
+ )
+ (net net11
+  (pins |I3-out1 |I4-in1)
+ )
+ (net net20
+  (pins |I3-in2 |I6-A |I5-Y)
+ )
+ (net A
+  (pins |I2-in1 |I5-A)
+ )
+ (net B
+  (pins |I2-in2 |I5-B)
+ )
+ (net Cout
+  (pins |I4-out1)
+ )
+ (net net14
+  (pins |I2-out1 |I4-in2)
+ )
+ (net Cin
+  (pins |I3-in1 |I6-B)
+ )
+)
+# end network

@@ -1,0 +1,78 @@
+# (c) Copyright 1999-2014  Cadence Design Systems, Inc.  All Rights Reserved.
+# DFII-VCAR Interface Version : sub-version 5.10.41.500.6.137
+# Virtuoso Version           : version 5.1.0 07/26/2009 22:40 (cicln04) $
+# VCAR Version                : 11.1.33
+# Date Created   : Wed Nov  5 09:32:24 2014
+# VCAR File Name  : /home/zxw6805/ee620/zxw_bsr5.net (network)
+# Rules Template : /classes/ee620/ami05_vcr.rule
+(network
+ (net out2
+  (pins |I1-out)
+ )
+ (net in2
+  (pins |I1-In)
+ )
+ (net out1
+  (pins |I0-out)
+ )
+ (net shiftIn
+  (pins |I0-SIN)
+ )
+ (net net26
+  (pins |I3-SIN |I2-Sout)
+ )
+ (net net46
+  (pins |I1-SIN |I0-Sout)
+ )
+ (net in3
+  (pins |I2-In)
+ )
+ (net ShiftOut
+  (pins |I4-Sout)
+ )
+ (net out3
+  (pins |I2-out)
+ )
+ (net CDR2
+  (pins |I4-ClockDR2 |I3-ClockDR2 |I2-ClockDR2 |I1-ClockDR2 |I0-ClockDR2)
+ )
+ (net UDR1
+  (pins |I4-UpdateDR |I3-UpdateDR |I2-UpdateDR |I1-UpdateDR |I0-UpdateDR)
+ )
+ (net net16
+  (pins |I4-SIN |I3-Sout)
+ )
+ (net in4
+  (pins |I3-In)
+ )
+ (net out4
+  (pins |I3-out)
+ )
+ (net in1
+  (pins |I0-In)
+ )
+ (net UDR2
+  (pins |I4-UpdateDR2 |I3-UpdateDR2 |I2-UpdateDR2 |I1-UpdateDR2
+  |I0-UpdateDR2)
+ )
+ (net net36
+  (pins |I2-SIN |I1-Sout)
+ )
+ (net in5
+  (pins |I4-In)
+ )
+ (net out5
+  (pins |I4-out)
+ )
+ (net mode
+  (pins |I4-Mode_control |I3-Mode_control |I2-Mode_control |I1-Mode_control
+  |I0-Mode_control)
+ )
+ (net ShiftDR
+  (pins |I4-ShiftDR |I3-ShiftDR |I2-ShiftDR |I1-ShiftDR |I0-ShiftDR)
+ )
+ (net CDR1
+  (pins |I4-ClockDR |I3-ClockDR |I2-ClockDR |I1-ClockDR |I0-ClockDR)
+ )
+)
+# end network

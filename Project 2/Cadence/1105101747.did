@@ -1,0 +1,51 @@
+# Cadence Design Systems, Inc.
+# Virtuoso Chip Assembly Router Automatic Router
+# Virtuoso Chip Assembly Router V11.2.41.500.6.65 made 2009/03/26 at 22:32:16 (32bit addresses)
+# Running on host 15817180
+# 
+#            Command Line Parameters
+#            -----------------------
+# Design File Name : /home/zxw6805/ee620/zxw_bssum.dsn
+# Initialization options:
+#   -do /home/zxw6805/ee620/zxw_bssumConstraints.do
+#   -do /classes/ee620/ami05_vcr.do
+# Status File Name : /home/zxw6805/ee620/monitor.sts
+# -noclean specified . Orphan shapes not removed.
+# Use Colormap In Design File.
+#
+#
+#
+#
+rule ic (stack_via any_overlap)
+unselect layer POLY1
+unselect layer M3
+cost layer POLY1 forbidden (type length)
+direction M3 vertical
+select layer M3
+direction M2 horizontal
+select layer M2
+unselect layer M1
+cost layer M3 forbidden  (type way)
+cost layer M2 forbidden  (type way)
+cost layer M2 forbidden  (type way)
+zoom all
+route 30
+clean 20
+measure -195.7 173.7 -195.7 173.7
+zoom coord -39.1 393.1 252.2 286.3
+zoom all
+measure -185.1 266.25 -185.1 266.25
+zoom coord -37.7 403.7 195.2 320.4
+zoom coord 33.8 405 139.5 375.1
+zoom coord 112.3 393.8 124.3 384.4
+zoom left
+zoom left
+zoom left
+zoom left
+zoom left
+zoom left
+zoom left
+zoom all
+zoom coord 10 13.5 40 0.7
+zoom all
+write session(permission (group read write) (public read nowrite)) /home/zxw6805/ee620/zxw_bssum.ses

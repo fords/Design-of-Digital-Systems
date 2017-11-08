@@ -1,0 +1,2240 @@
+
+            Assura (tm) Physical Verification Version av3.2:Production:dfII5.1.41:5.10.41_USR6.18
+            Release 3.2_USR1_HF1
+
+Copyright (c) Cadence Design Systems. All rights reserved.
+@(#)$CDS: assura version av3.2:Production:dfII5.1.41:5.10.41_USR6.18 11/06/2008 10:57 (logavt05) $
+sub-version 3.2_USR1_HF1, integ signature 2008-11-05-1153
+
+run on vlsi-legacy from /tools/cadence/ASSURA/3.2-5141/tools.lnx86/assura/bin/32bit/assura on Wed Nov  5 18:47:56 2014
+
+
+Starting /tools/cadence/ASSURA/current/tools/assura/bin/aveng /home/zxw6805/ee620/zxw_bstest.rsf -exec1 -LVS -cdslib /home/zxw6805/ee620/cds.lib
+@(#)$CDS: aveng version av3.2:Production:dfII5.1.41:5.10.41_USR6.18 11/06/2008 10:59 (logavt05) $
+sub-version 3.2_USR1_HF1, integ signature 2008-11-05-1153
+
+run on vlsi-legacy from /tools/cadence/ASSURA/3.2-5141/tools.lnx86/assura/bin/32bit/aveng on Wed Nov  5 18:47:56 2014
+
+ Summary Report: zxw_bstest.sum
+ RSF           : /home/zxw6805/ee620/zxw_bstest.rsf
+ Library Name  : zxw_lib
+ CDSLIB Path   : "/home/zxw6805/ee620/cds.lib"
+ Cell Name     : zxw_bstest
+ View Name     : layout
+ Rules File    : /classes/ee620/ami500hakx.6.11/Rev6.11/assura/dxp_ext.rul
+ Options       : -exec1 -LVS -cdslib /home/zxw6805/ee620/cds.lib 
+ Work Directory: .
+ Operating Mode: Legacy Mode is Off
+     Increased use of dataReduction is On
+     New hierarchical select is On
+
+
+Starting dfIIToVdb...
+@(#)$CDS: dfIIToVdb version av3.2:Production:dfII5.1.41:5.10.41_USR6.18 11/06/2008 11:03 (logavt05) $
+sub-version 3.2_USR1_HF1, integ signature 2008-11-05-1153
+
+run on vlsi-legacy from /tools/cadence/ASSURA/3.2-5141/tools.lnx86/assura/bin/32bit/dfIIToVdb on Wed Nov  5 18:47:57 2014
+
+*WARNING* '/home/zxw6805/ee620/cds.lib', Line 8: Skipping: ''
+Compiling rules...
+
+warn:   LVS Run detected.
+Non-legacy mode has been disabled for this LVS run
+
+Reading the design data...
+
+
+
+Finished dfIIToVdb.
+
+Building the VDB part 2 in background mode.
+
+Building tables for LVS Preprocessing in background mode.
+
+
+Starting /tools/cadence/ASSURA/current/tools/assura/bin/vdbToCells . zxw_bstest
+
+Finished /tools/cadence/ASSURA/current/tools/assura/bin/vdbToCells
+
+Starting Nvn PreExtraction...
+
+Starting /tools/cadence/ASSURA/current/tools/assura/bin/nvn /home/zxw6805/ee620/zxw_bstest.rsf -preExtract -exec1 -cdslib /home/zxw6805/ee620/cds.lib
+@(#)$CDS: nvn version av3.2:Production:dfII5.1.41:5.10.41_USR6.18 11/06/2008 11:06 (logavt05) $
+sub-version 3.2_USR1_HF1, integ signature 2008-11-05-1153
+run on vlsi-legacy at Wed Nov  5 18:48:00 2014
+Reading schematic network
+ running dfIIToVldb -cdslib /home/zxw6805/ee620/cds.lib /home/zxw6805/ee620/zxw_bstest.vlr /home/zxw6805/ee620/zxw_bstest.rsf
+*WARNING* Syntax error : in cds lib file /home/zxw6805/ee620/cds.lib, line 8:
+	  
+@(#)$CDS: dfIIToVldb version av3.2:Production:dfII5.1.41:5.10.41_USR6.18 11/06/2008 11:02 (logavt05) $
+sub-version 3.2_USR1_HF1, integ signature 2008-11-05-1153
+
+run on vlsi-legacy from /tools/cadence/ASSURA/3.2-5141/tools.lnx86/assura/bin/32bit/dfIIToVldb on Wed Nov  5 18:48:00 2014
+
+Library Name: "zxw_lib"
+Cell Name: "zxw_bstest"
+Cell View: "schematic"
+Output Data Base Name: "/home/zxw6805/ee620/zxw_bstest.sdb"
+Simulator Name: "auLvs"
+View List: "auLvs schematic symbol"
+Stop List: "auLvs"
+*WARNING* '/home/zxw6805/ee620/cds.lib', Line 8: Skipping: ''
+Net Listing Mode is Analog
+Global net vdd! found
+Global net gnd! found
+writing /home/zxw6805/ee620/zxw_bstest.sdb
+ inputting /home/zxw6805/ee620/zxw_bstest.sdb
+Reading layout network
+ inputting network zxw_bstest.ldb
+Preprocessing schematic network phase 1
+Preprocessing layout network phase 1
+Preprocessing schematic network phase 2
+Preprocessing layout network phase 2
+cpu=0.00m  wall=0.02m  mem=14.85mb
+
+Finished /tools/cadence/ASSURA/current/tools/assura/bin/nvn
+
+Building the VDB part 3 in background mode.
+
+Finished building the VDB. VDB build times for main process:
+cpu: 0.14  elap: 5  pf: 0  in: 0  out: 0  virt: 0M  phys: 0M
+
+Running the Task Processor, 10 cells, 2467 steps...
+
+Top Cell is 'zxw_bstest layout zxw_lib'
+
+Executing: BULK = geomBkgnd()
+
+Executing: drecNotTerm = geomAndNot(DREC TERM_1)
+
+Executing: resNotTerm = geomAndNot(RES TERM_1)
+
+Executing: rrecNotTerm = geomOr(drecNotTerm resNotTerm)
+
+Executing: resMRK = geomGetTexted(resNotTerm RESTXT "*")
+
+Executing: dresNotTerm = geomAndNot(resNotTerm resMRK)
+
+Executing: aaRES = geomAnd(dresNotTerm ACT)
+
+Executing: RESn_1 = geomAndNot(dresNotTerm aaRES)
+
+Executing: p1RES = geomAnd(RESn_1 POLY1)
+
+Executing: RESn_2 = geomAndNot(RESn_1 p1RES)
+
+Executing: p2NotPpls = geomAndNot(POLY2 PPLS)
+
+Executing: p2RES = geomAnd(RESn_2 p2NotPpls)
+
+Executing: RESn = geomAndNot(RESn_2 p2RES)
+
+Executing: nwRES = geomAnd(RESn NWELL)
+
+Executing: pzthnMRK = geomGetTexted(drecNotTerm DRECTXT "pzthn")
+
+Executing: pzMRK = geomGetTexted(drecNotTerm DRECTXT "pz")
+
+Executing: pxMRK = geomGetTexted(drecNotTerm DRECTXT "px")
+
+Executing: ptMRK = geomGetTexted(drecNotTerm DRECTXT "pt")
+
+Executing: puMRK = geomGetTexted(drecNotTerm DRECTXT "pu")
+
+Executing: pvMRK = geomGetTexted(drecNotTerm DRECTXT "pv")
+
+Executing: pzxMRK = geomOr(pzMRK pxMRK)
+
+Executing: pzxtMRK_1 = geomOr(pzxMRK ptMRK)
+
+Executing: pzxtMRK = geomOr(pzxtMRK_1 pzthnMRK)
+
+Executing: nDiffForNwTerm_1 = geomAndNot(ACT PPLS)
+
+Executing: nDiffForNwTerm = geomAnd(rrecNotTerm nDiffForNwTerm_1)
+
+Executing: nwRec_1 = geomAnd(rrecNotTerm NWELL)
+
+Executing: nwRec = geomAndNot(nwRec_1 nDiffForNwTerm)
+
+Executing: nwMRK_1 = geomGetTexted(nwRec RESTXT "nw")
+
+Executing: nw3MRK_1 = geomGetTexted(nwRec RESTXT "nw3")
+
+Executing: nwMRK_2 = geomOr(nwRES nwMRK_1)
+
+Executing: nwMRK = geomAndNot(nwMRK_2 nw3MRK_1)
+
+Executing: nw3MRK = geomAndNot(nw3MRK_1 nwMRK)
+
+Executing: nwResBodyWNdiff = geomAnd(NWELL nwMRK)
+
+Executing: nw3ResBodyWNdiff = geomAnd(NWELL nw3MRK)
+
+Executing: nwResBody = geomAndNot(nwResBodyWNdiff nDiffForNwTerm)
+
+Executing: nw3ResBody = geomAndNot(nw3ResBodyWNdiff nDiffForNwTerm)
+
+Executing: nwOrNw3Res = geomOr(nw3ResBody nwResBody)
+
+Executing: ntubNotResbody = geomAndNot(NWELL nwOrNw3Res)
+
+Executing: ntubNotRes = geomAvoiding(NWELL nwOrNw3Res)
+
+Executing: CNT = geomAndNot(CNT_1 DELDIF_1)
+
+Executing: DELDIF = geomAndNot(DELDIF_1 TERM_1)
+
+Executing: TERM = geomAndNot(TERM_1 DELDIF_1)
+
+Executing: diff = geomOr(ACT EXDIF)
+
+Executing: dschottkyMRK = geomGetTexted(drecNotTerm DRECTXT "dschottky")
+
+Executing: shkNpls = geomOverlap(NPLS dschottkyMRK)
+
+Executing: pplsOrShkNpls = geomOr(PPLS shkNpls)
+
+Executing: pDiff = geomAnd(diff pplsOrShkNpls)
+
+Executing: nDiff = geomAndNot(diff pDiff)
+
+Executing: pDiffForPRes1 = geomAnd(pDiff ntubNotRes)
+
+Executing: nDiffForNRes1 = geomAndNot(nDiff ntubNotRes)
+
+Executing: pDiffForPRes = geomAndNot(pDiffForPRes1 POLY1)
+
+Executing: nDiffForNRes = geomAndNot(nDiffForNRes1 POLY1)
+
+Executing: p1Gate = geomAnd(POLY1 ACT)
+
+Executing: pP1Gate = geomAnd(p1Gate PPLS)
+
+Executing: nP1Gate = geomAndNot(p1Gate pP1Gate)
+
+Executing: nuMRK = geomGetTexted(drecNotTerm DRECTXT "nu")
+
+Executing: nvMRK = geomGetTexted(drecNotTerm DRECTXT "nv")
+
+Executing: nvuMRK = geomOr(nvMRK nuMRK)
+
+Executing: nvuNwell = geomOverlap(NWELL nvuMRK)
+
+Executing: ntMRK = geomGetTexted(drecNotTerm DRECTXT "nt")
+
+Executing: nzMRK = geomGetTexted(drecNotTerm DRECTXT "nz")
+
+Executing: nzthnMRK = geomGetTexted(drecNotTerm DRECTXT "nzthn")
+
+Executing: nxMRK = geomGetTexted(drecNotTerm DRECTXT "nx")
+
+Executing: nzxMRK = geomOr(nzMRK nzthnMRK nxMRK)
+
+Executing: ntNwell = geomOverlap(NWELL ntMRK)
+
+Executing: nzxNwell = geomOverlap(NWELL nzxMRK)
+
+Executing: nwMRKs = geomOr(nwMRK nw3MRK)
+
+Executing: nwNwell = geomOverlap(NWELL nwMRKs)
+
+Executing: Nnwell = geomOr(nzxNwell nvuNwell ntNwell nwNwell)
+
+Executing: PNwell_1 = geomAndNot(NWELL Nnwell)
+
+Executing: PNwell = geomOr(DNW PNwell_1)
+
+Executing: ptubs = geomAndNot(BULK PNwell)
+
+Executing: nRec = geomAnd(rrecNotTerm nDiffForNRes)
+
+Executing: ndMRK_1 = geomGetTexted(nRec RESTXT "nd")
+
+Executing: nsMRK_1 = geomGetTexted(nRec RESTXT "ns")
+
+Executing: ndMRK_2 = geomOr(aaRES ndMRK_1)
+
+Executing: nsMRK_2 = geomOr(aaRES nsMRK_1)
+
+Executing: nd3MRK_1 = geomGetTexted(nRec RESTXT "nd3")
+
+Executing: ns3MRK_1 = geomGetTexted(nRec RESTXT "ns3")
+
+Executing: ndMRK = geomAndNot(ndMRK_2 nd3MRK_1)
+
+Executing: nd3MRK = geomAndNot(nd3MRK_1 ndMRK)
+
+Executing: nsMRK = geomAndNot(nsMRK_2 ns3MRK_1)
+
+Executing: ns3MRK = geomAndNot(ns3MRK_1 nsMRK)
+
+Executing: pRec = geomAnd(rrecNotTerm pDiffForPRes)
+
+Executing: pdMRK_1 = geomGetTexted(pRec RESTXT "pd")
+
+Executing: psMRK_1 = geomGetTexted(pRec RESTXT "ps")
+
+Executing: pdMRK_2 = geomOr(aaRES pdMRK_1)
+
+Executing: psMRK_2 = geomOr(aaRES psMRK_1)
+
+Executing: pd3MRK_1 = geomGetTexted(pRec RESTXT "pd3")
+
+Executing: ps3MRK_1 = geomGetTexted(pRec RESTXT "ps3")
+
+Executing: pdMRK = geomAndNot(pdMRK_2 pd3MRK_1)
+
+Executing: pd3MRK = geomAndNot(pd3MRK_1 pdMRK)
+
+Executing: psMRK = geomAndNot(psMRK_2 ps3MRK_1)
+
+Executing: ps3MRK = geomAndNot(ps3MRK_1 psMRK)
+
+Executing: ndAllResMRK = geomOr(ndMRK nd3MRK)
+
+Executing: nDiffResMRK = geomOr(ndMRK nd3MRK nsMRK ns3MRK)
+
+Executing: pdAllResMRK = geomOr(pdMRK pd3MRK)
+
+Executing: pDiffResMRK = geomOr(pdMRK pd3MRK psMRK ps3MRK)
+
+Executing: diffResMRK = geomOr(nDiffResMRK pDiffResMRK)
+
+Executing: diffNotRes = geomAndNot(diff diffResMRK)
+
+Executing: sd = geomAndNot(diffNotRes POLY1)
+
+Executing: psd_1 = geomAnd(sd pplsOrShkNpls)
+
+Executing: nsd_1 = geomAndNot(sd psd_1)
+
+Executing: nDiffForTerm = geomButtOrOver(nsd_1 nDiffResMRK)
+
+Executing: nDiffTerm = geomCat(nDiffForTerm)
+
+Executing: nDiffOCnt = geomOverlap(nDiff CNT)
+
+Executing: pDiffOCnt = geomOverlap(pDiff CNT)
+
+Executing: nTubTie = geomAnd(nDiffOCnt ntubNotRes)
+
+Executing: pTubTie = geomAnd(pDiffOCnt ptubs)
+
+Executing: pDiffForTerm = geomButtOrOver(psd_1 pDiffResMRK)
+
+Executing: pDiffTerm = geomAnd(pDiffForTerm ntubNotResbody)
+
+Executing: nResDiff = geomAndNot(nDiff p1Gate)
+
+Executing: pResDiff = geomAndNot(pDiff p1Gate)
+
+Executing: ndRes = geomAnd(nResDiff ndMRK)
+
+Executing: pdRes = geomAnd(pResDiff pdMRK)
+
+Executing: nd3Res = geomAnd(nResDiff nd3MRK)
+
+Executing: pd3Res = geomAnd(pResDiff pd3MRK)
+
+Executing: pdTermInt_1 = geomButtOrOver(pDiffTerm pdAllResMRK)
+
+Executing: pdTermInt = geomAnd(pdTermInt_1 TERM)
+
+Executing: pdResMain = geomAndNot(pdAllResMRK POLY1)
+
+Executing: pdTermMos = geomGetEdge(pdResMain butting p1Gate)
+
+Executing: pdTermDevBig = geomSize(pdTermMos 0.05)
+
+Executing: pdTerm2 = geomOr(pdTermInt pdTermDevBig)
+
+Executing: pdTerm = geomButtOrOver(pdTerm2 pdMRK)
+
+Executing: pd3Term = geomButtOrOver(pdTerm2 pd3MRK)
+
+Executing: pdAllTerm = geomOr(pdTerm pd3Term)
+
+Executing: ndTermInt_1 = geomButtOrOver(nDiffTerm ndAllResMRK)
+
+Executing: ndTermInt = geomAnd(ndTermInt_1 TERM)
+
+Executing: ndResMain = geomAndNot(ndAllResMRK POLY1)
+
+Executing: ndTermRes1 = geomGetEdge(ndResMain butting nwOrNw3Res)
+
+Executing: ndTermRes1_1 = geomSize(ndTermRes1 0.05)
+
+Executing: ndTermMos = geomGetEdge(ndResMain butting p1Gate)
+
+Executing: ndTermMos_1 = geomSize(ndTermMos 0.05)
+
+Executing: ndTermDevBig = geomOr(ndTermMos_1 ndTermRes1_1)
+
+Executing: ndTerm2 = geomOr(ndTermInt ndTermDevBig)
+
+Executing: ndTerm = geomButtOrOver(ndTerm2 ndMRK)
+
+Executing: nd3Term = geomButtOrOver(ndTerm2 nd3MRK)
+
+Executing: ndAllTerm = geomOr(ndTerm nd3Term)
+
+Executing: presCommonTerm2 = geomCat(pdAllTerm)
+
+Executing: nresCommonTerm2 = geomCat(ndAllTerm)
+
+Executing: nwTermInt3 = geomCat(ntubNotResbody)
+
+Executing: nwTermInt2_1 = geomAndNot(nwTermInt3 ndResMain)
+
+Executing: nwTermInt1_1 = geomAndNot(nwTermInt2_1 nwOrNw3Res)
+
+Executing: nwTermInt_1 = geomButtOrOver(nwTermInt1_1 nwOrNw3Res)
+
+Executing: nwTermRes1 = geomGetEdge(nwOrNw3Res butting ndResMain)
+
+Executing: nwTermRes2 = geomCat(nwTermRes1)
+
+Executing: nwTermRes1_1 = geomSize(nwTermRes1 0.05)
+
+Executing: nwTermRes2_1 = geomSize(nwTermRes2 0.05)
+
+Executing: nwTermDevBig = geomOr(nwTermRes2_1 nwTermRes1_1)
+
+Executing: nwTermAll = geomOr(nwTermInt_1 nwTermDevBig)
+
+Executing: nwTerm = geomButtOrOver(nwTermAll nwResBody)
+
+Executing: nw3Term = geomButtOrOver(nwTermAll nw3ResBody)
+
+Executing: nwAllTerm = geomOr(nwTerm nw3Term)
+
+Executing: nresCommonTerm = geomOr(nwAllTerm nresCommonTerm2)
+
+Executing: presCommonTerm = geomCat(presCommonTerm2)
+
+Executing: ntubiNotRes = geomAvoiding(ntubNotRes pDiff)
+
+Executing: ntubNotRes_S = geomCat(ntubNotRes)
+
+Executing: ptubs_S = geomCat(ptubs)
+
+Executing: pPoly1 = geomAnd(POLY1 pplsOrShkNpls)
+
+Executing: nPoly1 = geomAndNot(POLY1 pPoly1)
+
+Executing: nPoly1Rec = geomAnd(rrecNotTerm nPoly1)
+
+Executing: nl3MRK_1 = geomGetTexted(nPoly1Rec RESTXT "nl3")
+
+Executing: nl3ResBody_1 = geomAnd(nPoly1 nl3MRK_1)
+
+Executing: nlMRK_1 = geomGetTexted(nPoly1Rec RESTXT "nl")
+
+Executing: nlMRK_2 = geomOr(p1RES nlMRK_1)
+
+Executing: nlMRK = geomAndNot(nlMRK_2 nl3MRK_1)
+
+Executing: nl3MRK = geomAndNot(nl3MRK_1 nlMRK)
+
+Executing: nlResBody = geomAnd(nPoly1 nlMRK)
+
+Executing: poly1ResBody = geomOr(nlResBody nl3ResBody_1)
+
+Executing: poly1NoRes = geomAndNot(POLY1 poly1ResBody)
+
+Executing: nP1Term = geomAndNot(nPoly1 poly1ResBody)
+
+Executing: nl3Term_1 = geomButtOrOver(nP1Term nl3MRK)
+
+Executing: nlTerm = geomButtOrOver(nP1Term nlMRK)
+
+Executing: p2Cnt = geomAnd(CNT POLY2)
+
+Executing: cntNotP2 = geomAndNot(CNT p2Cnt)
+
+Executing: p1Cnt = geomAnd(cntNotP2 POLY1)
+
+Executing: cntNotP2P1 = geomAndNot(cntNotP2 p1Cnt)
+
+Executing: actCnt = geomAnd(cntNotP2P1 ACT)
+
+Executing: paaCnt = geomAnd(actCnt pplsOrShkNpls)
+
+Executing: naaCnt = geomAndNot(actCnt paaCnt)
+
+Executing: p2Rec = geomAnd(rrecNotTerm p2NotPpls)
+
+Executing: hyRec = geomAnd(p2Rec HIRES)
+
+Executing: hy3MRK = geomGetTexted(hyRec RESTXT "hy3")
+
+Executing: hy3ResBody_1 = geomAnd(p2NotPpls hy3MRK)
+
+Executing: hyMRKDrac = geomAnd(p2RES HIRES)
+
+Executing: nyMRKDrac = geomAndNot(p2RES hyMRKDrac)
+
+Executing: hyMRK_1 = geomGetTexted(hyRec RESTXT "hy")
+
+Executing: hyMRK = geomOr(hyMRKDrac hyMRK_1)
+
+Executing: hyResBody_1 = geomAnd(p2NotPpls hyMRK)
+
+Executing: nyRec = geomAndNot(p2Rec hyRec)
+
+Executing: ny3MRK = geomGetTexted(nyRec RESTXT "ny3")
+
+Executing: ny3ResBody_1 = geomAnd(p2NotPpls ny3MRK)
+
+Executing: nyMRK_1 = geomGetTexted(nyRec RESTXT "ny")
+
+Executing: nyMRK_2 = geomOr(nyMRKDrac nyMRK_1)
+
+Executing: nyMRK = geomAndNot(nyMRK_2 ny3MRK)
+
+Executing: nyResBody = geomAnd(p2NotPpls nyMRK)
+
+Executing: cpmacMRK = geomGetTexted(drecNotTerm DRECTXT "cpmac")
+
+Executing: cnmacMRK = geomGetTexted(drecNotTerm DRECTXT "cnmac")
+
+Executing: ppMRK_1 = geomGetTexted(drecNotTerm DRECTXT "pp")
+
+Executing: ppMRK = geomOr(CREC ppMRK_1)
+
+Executing: ppMacMRK = geomOr(cpmacMRK cnmacMRK)
+
+Executing: ppOrMacMRK = geomOr(ppMacMRK ppMRK)
+
+Executing: ppBotCap = geomOverlap(POLY1 ppOrMacMRK)
+
+Executing: ppTopCap = geomOverlap(POLY2 ppOrMacMRK)
+
+Executing: hy3ResPreBody = geomAnd(hy3ResBody_1 HIRES)
+
+Executing: hyResBody_3 = geomAnd(hyResBody_1 HIRES)
+
+Executing: poly2ResBody_1 = geomOr(nyResBody hyResBody_3)
+
+Executing: poly2Res3Body = geomOr(ny3ResBody_1 hy3ResPreBody)
+
+Executing: poly2ResBody = geomOr(poly2ResBody_1 poly2Res3Body)
+
+Executing: poly2NoRes = geomAndNot(POLY2 poly2ResBody)
+
+Executing: pP2NotRes = geomAnd(p2NotPpls poly2NoRes)
+
+Executing: poly2Term = geomButting(pP2NotRes poly2ResBody)
+
+Executing: hyTerm = geomButtOrOver(poly2Term hyMRK)
+
+Executing: hy3Term_1 = geomButtOrOver(poly2Term hy3MRK)
+
+Executing: nyTerm = geomButtOrOver(poly2Term nyMRK)
+
+Executing: ny3Term_1 = geomButtOrOver(poly2Term ny3MRK)
+
+Executing: m1RrecNoTerm = geomAnd(rrecNotTerm M1)
+
+Executing: m2RrecNoTerm = geomAnd(rrecNotTerm M2)
+
+Executing: m3RrecNoTerm = geomAnd(rrecNotTerm M3)
+
+Executing: m1thruMRK = geomGetTexted(m1RrecNoTerm RESTXT "m1thru")
+
+Executing: m2thruMRK = geomGetTexted(m2RrecNoTerm RESTXT "m2thru")
+
+Executing: m3thruMRK = geomGetTexted(m3RrecNoTerm RESTXT "m3thru")
+
+Executing: mrMRK_1 = geomGetTexted(m1RrecNoTerm RESTXT "mr")
+
+Executing: m1MRKDrac_1 = geomAndNot(RESM1 TERM)
+
+Executing: m1MRKDrac = geomAnd(m1MRKDrac_1 M1)
+
+Executing: mrMRK = geomOr(m1MRKDrac mrMRK_1)
+
+Executing: orMRK_1 = geomGetTexted(m2RrecNoTerm RESTXT "or")
+
+Executing: m2MRKDrac = geomAndNot(RESM2 TERM)
+
+Executing: orMRK = geomOr(m2MRKDrac orMRK_1)
+
+Executing: qrMRK_1 = geomGetTexted(m3RrecNoTerm RESTXT "qr")
+
+Executing: m3MRKDrac = geomAndNot(RESM3 TERM)
+
+Executing: qrMRK = geomOr(m3MRKDrac qrMRK_1)
+
+Executing: m1ResBody = geomAnd(M1 mrMRK)
+
+Executing: m2ResBody = geomAnd(M2 orMRK)
+
+Executing: m3ResBody = geomAnd(M3 qrMRK)
+
+Executing: m1ThruBody = geomAnd(M1 m1thruMRK)
+
+Executing: m2ThruBody = geomAnd(M2 m2thruMRK)
+
+Executing: m3ThruBody = geomAnd(M3 m3thruMRK)
+
+Executing: m1ResBodyOrThru = geomOr(m1ResBody m1ThruBody)
+
+Executing: m2ResBodyOrThru = geomOr(m2ResBody m2ThruBody)
+
+Executing: m3ResBodyOrThru = geomOr(m3ResBody m3ThruBody)
+
+Executing: m1NoRes = geomAndNot(M1 m1ResBodyOrThru)
+
+Executing: m2NoRes = geomAndNot(M2 m2ResBodyOrThru)
+
+Executing: m3NoRes = geomAndNot(M3 m3ResBodyOrThru)
+
+Executing: m1Term = geomButtOrOver(m1NoRes m1ResBody)
+
+Executing: m2Term = geomButtOrOver(m2NoRes m2ResBody)
+
+Executing: m3Term = geomButtOrOver(m3NoRes m3ResBody)
+
+Executing: pfield = geomAndNot(NWELL NCHAN)
+
+Executing: pfieldTie = geomAnd(psd_1 pfield)
+
+Executing: drec2AndM1 = geomAnd(DREC2 M1)
+
+Executing: drec2AndM2 = geomAnd(DREC2 M2)
+
+Executing: drec2AndM3 = geomAnd(DREC2 M3)
+
+Executing: v5M1MRK = geomGetTexted(drec2AndM1 DREC2TXT "m1v5")
+
+Executing: v5M2MRK = geomGetTexted(drec2AndM2 DREC2TXT "m2v5")
+
+Executing: v5M3MRK = geomGetTexted(drec2AndM3 DREC2TXT "m3v5")
+
+Executing: v40M1MRK = geomGetTexted(drec2AndM1 DREC2TXT "m1v40")
+
+Executing: v40M2MRK = geomGetTexted(drec2AndM2 DREC2TXT "m2v40")
+
+Executing: v40M3MRK = geomGetTexted(drec2AndM3 DREC2TXT "m3v40")
+
+Executing: v20M1MRK = geomGetTexted(drec2AndM1 DREC2TXT "m1v20")
+
+Executing: v20M2MRK = geomGetTexted(drec2AndM2 DREC2TXT "m2v20")
+
+Executing: v20M3MRK = geomGetTexted(drec2AndM3 DREC2TXT "m3v20")
+
+Executing: v12M1MRK = geomGetTexted(drec2AndM1 DREC2TXT "m1v12")
+
+Executing: v12M2MRK = geomGetTexted(drec2AndM2 DREC2TXT "m2v12")
+
+Executing: v12M3MRK = geomGetTexted(drec2AndM3 DREC2TXT "m3v12")
+
+Executing: extM1MRK = geomGetTexted(drec2AndM1 DREC2TXT "m1ext")
+
+Executing: extM2MRK = geomGetTexted(drec2AndM2 DREC2TXT "m2ext")
+
+Executing: extM3MRK = geomGetTexted(drec2AndM3 DREC2TXT "m3ext")
+
+Executing: pMosResSd = geomGetEdge(pP1Gate inside pDiffResMRK)
+
+Executing: pmosButtRes1 = geomSize(pMosResSd 0.05)
+
+Executing: pSdDev = geomButting(psd_1 pP1Gate)
+
+Executing: pmosButtPsd = geomOr(pmosButtRes1 pSdDev)
+
+Executing: nMosResSd = geomGetEdge(nP1Gate inside nDiffResMRK)
+
+Executing: nmosButtRes1 = geomSize(nMosResSd 0.05)
+
+Executing: nSdDev = geomButting(nsd_1 nP1Gate)
+
+Executing: nmosButtNsd = geomOr(nmosButtRes1 nSdDev)
+
+Executing: nsd = geomOr(nsd_1 nresCommonTerm nmosButtNsd)
+
+Executing: psd = geomOr(psd_1 presCommonTerm pmosButtPsd)
+
+Executing: geomConnect((via nTubTie ntubiNotRes nsd) (via nTubTie ntubNotRes_S nsd) (via...
+ See the label report in "zxw_bstest.erc" file for details.
+
+
+Executing: hyTerm_S = geomCat(hyTerm)
+
+Executing: geomStamp(hyTerm_S poly2NoRes)
+
+Executing: nlTerm_S = geomCat(nlTerm)
+
+Executing: geomStamp(nlTerm_S poly1NoRes)
+
+Executing: m1Term_S = geomCat(m1Term)
+
+Executing: geomStamp(m1Term_S m1NoRes)
+
+Executing: m2Term_S = geomCat(m2Term)
+
+Executing: geomStamp(m2Term_S m2NoRes)
+
+Executing: m3Term_S = geomCat(m3Term)
+
+Executing: geomStamp(m3Term_S m3NoRes)
+
+Executing: probeM1MRK = geomGetTexted(drec2AndM1 DREC2TXT "m1probe")
+
+Executing: probeM2MRK = geomGetTexted(drec2AndM2 DREC2TXT "m2probe")
+
+Executing: probeM3MRK = geomGetTexted(drec2AndM3 DREC2TXT "m3probe")
+
+Executing: probeM1 = geomOverlap(m1NoRes probeM1MRK)
+
+Executing: probeM2 = geomOverlap(m2NoRes probeM2MRK)
+
+Executing: probeM3 = geomOverlap(m3NoRes probeM3MRK)
+
+Executing: cnvarMRK = geomGetTexted(drecNotTerm DRECTXT "cnvar")
+
+Executing: cnMRK = geomGetTexted(drecNotTerm DRECTXT "cn")
+
+Executing: cpMRK = geomGetTexted(drecNotTerm DRECTXT "cp")
+
+Executing: esqMRK = geomGetTexted(drecNotTerm DRECTXT "esq")
+
+Executing: pnpMRK = geomGetTexted(drecNotTerm DRECTXT "pnp")
+
+Executing: nvP1Gate = geomOverlap(nP1Gate nvMRK)
+
+Executing: nuP1Gate = geomOverlap(nP1Gate nuMRK)
+
+Executing: nvuP1Gate = geomOr(nvP1Gate nuP1Gate)
+
+Executing: nvDiff = geomOverlap(nDiff nvMRK)
+
+Executing: nuDiff = geomOverlap(nDiff nuMRK)
+
+Executing: nvuDiff = geomOr(nvDiff nuDiff)
+
+Executing: nvuP1GateNoNwell = geomAndNot(nvuP1Gate nvuNwell)
+
+Executing: nvuSd = geomAndNot(nvuDiff nvuP1GateNoNwell)
+
+Executing: nvuDrain = geomButtOrOver(nvuSd NPBLK)
+
+Executing: nvuSource = geomAndNot(nvuSd nvuDrain)
+
+Executing: nvMos = geomOverlap(nvuP1GateNoNwell nvMRK)
+
+Executing: nuMos = geomOverlap(nvuP1GateNoNwell nuMRK)
+
+Executing: pvuMRK = geomOr(pvMRK puMRK)
+
+Executing: pvuSd = geomOverlap(psd pvuMRK)
+
+Executing: pvuDrain = geomButtOrOver(pvuSd PPBLK)
+
+Executing: pvMos = geomOverlap(pP1Gate pvMRK)
+
+Executing: puMos = geomOverlap(pP1Gate puMRK)
+
+Executing: pvuSource = geomAndNot(pvuSd pvuDrain)
+
+Executing: ntP1Gate = geomButtOrOver(nP1Gate ntMRK)
+
+Executing: ntExdif = geomButtOrOver(EXDIF ntMRK)
+
+Executing: ntP1GateNoNwell = geomAndNot(ntP1Gate ntNwell)
+
+Executing: ntMos = geomOverlap(ntP1GateNoNwell ntMRK)
+
+Executing: ntPoly1 = geomOverlap(POLY1 ntMRK)
+
+Executing: p1NOTntPoly = geomAndNot(POLY1 ntPoly1)
+
+Executing: diffNot = geomAndNot(diff p1NOTntPoly)
+
+Executing: ntSd_1 = geomOverlap(diffNot ntMRK)
+
+Executing: ntSd = geomAndNot(ntSd_1 ntP1GateNoNwell)
+
+Executing: ntDrain = geomButtOrOver(ntSd ntExdif)
+
+Executing: ntSource = geomAndNot(ntSd ntDrain)
+
+Executing: nzxExdif = geomOverlap(EXDIF nzxMRK)
+
+Executing: nzxDiff = geomOverlap(nDiff nzxMRK)
+
+Executing: nzP1Gate = geomOverlap(nP1Gate nzMRK)
+
+Executing: nzthnP1Gate = geomOverlap(nP1Gate nzthnMRK)
+
+Executing: nxP1Gate = geomOverlap(nP1Gate nxMRK)
+
+Executing: nzxP1Gate = geomOr(nzP1Gate nxP1Gate nzthnP1Gate)
+
+Executing: nzxP1GateNoNwell = geomAndNot(nzxP1Gate nzxNwell)
+
+Executing: nzMos = geomOverlap(nzxP1GateNoNwell nzMRK)
+
+Executing: nzthnMos = geomOverlap(nzxP1GateNoNwell nzthnMRK)
+
+Executing: nxMos = geomOverlap(nzxP1GateNoNwell nxMRK)
+
+Executing: nzxSd = geomAndNot(nzxDiff nzxP1GateNoNwell)
+
+Executing: nzxDrain = geomButtOrOver(nzxSd nzxExdif)
+
+Executing: nzxSource = geomAndNot(nzxSd nzxDrain)
+
+Executing: pzxtExdif = geomOverlap(EXDIF pzxtMRK)
+
+Executing: pzxtP1Gate = geomOverlap(pP1Gate pzxtMRK)
+
+Executing: pzxtPOLY1 = geomOverlap(POLY1 pzxtMRK)
+
+Executing: p1NOTpzxtP1 = geomAndNot(POLY1 pzxtPOLY1)
+
+Executing: pDiffNot = geomAndNot(pDiff p1NOTpzxtP1)
+
+Executing: pzxtDiff = geomOverlap(pDiffNot pzxtMRK)
+
+Executing: pzxtP1GateNoExdif = geomAndNot(pzxtP1Gate pzxtExdif)
+
+Executing: pzxtSd = geomAndNot(pzxtDiff pzxtP1GateNoExdif)
+
+Executing: pzxtDrain1 = geomButtOrOver(pzxtSd pzxtExdif)
+
+Executing: pzxtDrain = geomAvoiding(pzxtDrain1 NCHAN)
+
+Executing: pzxtSource = geomAndNot(pzxtSd pzxtDrain)
+
+Executing: pzthnMos = geomOverlap(pzxtP1GateNoExdif pzthnMRK)
+
+Executing: pzMos = geomOverlap(pzxtP1GateNoExdif pzMRK)
+
+Executing: pxMos = geomOverlap(pzxtP1GateNoExdif pxMRK)
+
+Executing: ptMos = geomOverlap(pzxtP1GateNoExdif ptMRK)
+
+Executing: shkNwell = geomOverlap(NWELL dschottkyMRK)
+
+Executing: shkPDiff = geomOverlap(pDiff dschottkyMRK)
+
+Executing: shkNDiff = geomOverlap(nDiff dschottkyMRK)
+
+Executing: shkAnode = geomAnd(shkPDiff shkNwell)
+
+Executing: shkCath = geomAndNot(shkNDiff shkAnode)
+
+Executing: mp40vMRK = geomGetTexted(DREC DRECTXT "mp40v")
+
+Executing: mp40vAct_1 = geomOverlap(ACT mp40vMRK)
+
+Executing: mp40vPoly1 = geomOverlap(POLY1 mp40vMRK)
+
+Executing: mp40vPwb = geomOverlap(PWB mp40vMRK)
+
+Executing: mp40vDnw = geomOverlap(DNW mp40vMRK)
+
+Executing: mp40vPchrs = geomOverlap(PCHRS mp40vMRK)
+
+Executing: mp40vNchan = geomOverlap(NCHAN mp40vMRK)
+
+Executing: mp40vThkgt = geomOverlap(THKGT mp40vMRK)
+
+Executing: mn40vMRK = geomGetTexted(DREC DRECTXT "mn40v")
+
+Executing: mn40vAct = geomOverlap(ACT mn40vMRK)
+
+Executing: mn40vNwell = geomOverlap(NWELL mn40vMRK)
+
+Executing: mn40vPoly1 = geomOverlap(POLY1 mn40vMRK)
+
+Executing: mn40vPwb = geomOverlap(PWB mn40vMRK)
+
+Executing: mn40vDnw = geomOverlap(DNW mn40vMRK)
+
+Executing: mn40vNchan = geomOverlap(NCHAN mn40vMRK)
+
+Executing: mn40vPpls = geomOverlap(pplsOrShkNpls mn40vMRK)
+
+Executing: pnpNwell = geomOverlap(NWELL pnpMRK)
+
+Executing: pnpPDiff = geomAnd(pDiff pnpMRK)
+
+Executing: pnpBase = geomOverlap(nDiff pnpMRK)
+
+Executing: pnpEmitter = geomAnd(pnpPDiff pnpNwell)
+
+Executing: pnpBulk = geomOr(pnpNwell ptubs)
+
+Executing: pnpPdif2 = geomSize(pnpPDiff 0.05)
+
+Executing: pnpFakeBase = geomAnd(pnpNwell pnpPdif2)
+
+Executing: pnpCollector1 = geomAndNot(pnpBulk pnpFakeBase)
+
+Executing: pnpCollector2 = geomButtOrOver(pnpPDiff pnpCollector1)
+
+Executing: pnpCollector = geomOr(pnpCollector1 pnpCollector2)
+
+Executing: probeM1_S = geomCat(probeM1)
+
+Executing: geomStamp(probeM1_S m1NoRes)
+
+Executing: probeM2_S = geomCat(probeM2)
+
+Executing: geomStamp(probeM2_S m2NoRes)
+
+Executing: probeM3_S = geomCat(probeM3)
+
+Executing: geomStamp(probeM3_S m3NoRes)
+
+Executing: extractDevice(amiUpOrLowCase("probe") probeM1MRK (probeM1_S "vin") flagMalfor...
+
+Executing: extractDevice(amiUpOrLowCase("probe") probeM2MRK (probeM2_S "vin") flagMalfor...
+
+Executing: extractDevice(amiUpOrLowCase("probe") probeM3MRK (probeM3_S "vin") flagMalfor...
+
+Executing: m1ThruTerm = geomButtOrOver(m1NoRes m1ThruBody)
+
+Executing: m2ThruTerm = geomButtOrOver(m2NoRes m2ThruBody)
+
+Executing: m3ThruTerm = geomButtOrOver(m3NoRes m3ThruBody)
+
+Executing: m1ThruTerm_S = geomCat(m1ThruTerm)
+
+Executing: geomStamp(m1ThruTerm_S m1NoRes)
+
+Executing: m2ThruTerm_S = geomCat(m2ThruTerm)
+
+Executing: geomStamp(m2ThruTerm_S m2NoRes)
+
+Executing: m3ThruTerm_S = geomCat(m3ThruTerm)
+
+Executing: geomStamp(m3ThruTerm_S m3NoRes)
+
+Executing: extractDevice(amiUpOrLowCase("thru") m1ThruBody (m1ThruTerm_S "TERM1" "TERM2"...
+
+Executing: extractDevice(amiUpOrLowCase("thru") m2ThruBody (m2ThruTerm_S "TERM1" "TERM2"...
+
+Executing: extractDevice(amiUpOrLowCase("thru") m3ThruBody (m3ThruTerm_S "TERM1" "TERM2"...
+
+Executing: v5M1 = geomAnd(m1NoRes v5M1MRK)
+
+Executing: v5M2 = geomAnd(m2NoRes v5M2MRK)
+
+Executing: v5M3 = geomAnd(m3NoRes v5M3MRK)
+
+Executing: v5M1_S = geomCat(v5M1)
+
+Executing: geomStamp(v5M1_S m1NoRes)
+
+Executing: v5M2_S = geomCat(v5M2)
+
+Executing: geomStamp(v5M2_S m2NoRes)
+
+Executing: v5M3_S = geomCat(v5M3)
+
+Executing: geomStamp(v5M3_S m3NoRes)
+
+Executing: extractDevice(amiUpOrLowCase("v5") v5M1MRK (v5M1_S "vin") flagMalformed)
+
+Executing: extractDevice(amiUpOrLowCase("v5") v5M2MRK (v5M2_S "vin") flagMalformed)
+
+Executing: extractDevice(amiUpOrLowCase("v5") v5M3MRK (v5M3_S "vin") flagMalformed)
+
+Executing: v12M1 = geomAnd(m1NoRes v12M1MRK)
+
+Executing: v12M2 = geomAnd(m2NoRes v12M2MRK)
+
+Executing: v12M3 = geomAnd(m3NoRes v12M3MRK)
+
+Executing: v12M1_S = geomCat(v12M1)
+
+Executing: geomStamp(v12M1_S m1NoRes)
+
+Executing: v12M2_S = geomCat(v12M2)
+
+Executing: geomStamp(v12M2_S m2NoRes)
+
+Executing: v12M3_S = geomCat(v12M3)
+
+Executing: geomStamp(v12M3_S m3NoRes)
+
+Executing: extractDevice(amiUpOrLowCase("v12") v12M1MRK (v12M1_S "vin") flagMalformed)
+
+Executing: extractDevice(amiUpOrLowCase("v12") v12M2MRK (v12M2_S "vin") flagMalformed)
+
+Executing: extractDevice(amiUpOrLowCase("v12") v12M3MRK (v12M3_S "vin") flagMalformed)
+
+Executing: v20M1 = geomAnd(m1NoRes v20M1MRK)
+
+Executing: v20M2 = geomAnd(m2NoRes v20M2MRK)
+
+Executing: v20M3 = geomAnd(m3NoRes v20M3MRK)
+
+Executing: v20M1_S = geomCat(v20M1)
+
+Executing: geomStamp(v20M1_S m1NoRes)
+
+Executing: v20M2_S = geomCat(v20M2)
+
+Executing: geomStamp(v20M2_S m2NoRes)
+
+Executing: v20M3_S = geomCat(v20M3)
+
+Executing: geomStamp(v20M3_S m3NoRes)
+
+Executing: extractDevice(amiUpOrLowCase("v20") v20M1MRK (v20M1_S "vin") flagMalformed)
+
+Executing: extractDevice(amiUpOrLowCase("v20") v20M2MRK (v20M2_S "vin") flagMalformed)
+
+Executing: extractDevice(amiUpOrLowCase("v20") v20M3MRK (v20M3_S "vin") flagMalformed)
+
+Executing: v40M1 = geomAnd(m1NoRes v40M1MRK)
+
+Executing: v40M2 = geomAnd(m2NoRes v40M2MRK)
+
+Executing: v40M3 = geomAnd(m3NoRes v40M3MRK)
+
+Executing: v40M1_S = geomCat(v40M1)
+
+Executing: geomStamp(v40M1_S m1NoRes)
+
+Executing: v40M2_S = geomCat(v40M2)
+
+Executing: geomStamp(v40M2_S m2NoRes)
+
+Executing: v40M3_S = geomCat(v40M3)
+
+Executing: geomStamp(v40M3_S m3NoRes)
+
+Executing: extractDevice(amiUpOrLowCase("v40") v40M1MRK (v40M1_S "vin") flagMalformed)
+
+Executing: extractDevice(amiUpOrLowCase("v40") v40M2MRK (v40M2_S "vin") flagMalformed)
+
+Executing: extractDevice(amiUpOrLowCase("v40") v40M3MRK (v40M3_S "vin") flagMalformed)
+
+Executing: extM1 = geomAnd(m1NoRes extM1MRK)
+
+Executing: extM2 = geomAnd(m2NoRes extM2MRK)
+
+Executing: extM3 = geomAnd(m3NoRes extM3MRK)
+
+Executing: extM1_S = geomCat(extM1)
+
+Executing: geomStamp(extM1_S m1NoRes)
+
+Executing: extM2_S = geomCat(extM2)
+
+Executing: geomStamp(extM2_S m2NoRes)
+
+Executing: extM3_S = geomCat(extM3)
+
+Executing: geomStamp(extM3_S m3NoRes)
+
+Executing: extractDevice(amiUpOrLowCase("ext") extM1MRK (extM1_S "vin") flagMalformed)
+
+Executing: extractDevice(amiUpOrLowCase("ext") extM2MRK (extM2_S "vin") flagMalformed)
+
+Executing: extractDevice(amiUpOrLowCase("ext") extM3MRK (extM3_S "vin") flagMalformed)
+
+Executing: nDiffAndTerm1 = geomAnd(nDiff TERM)
+
+Executing: nDiffAndTerm = geomOr(nDiffAndTerm1 ndTermDevBig)
+
+Executing: pDiffAndTerm1 = geomAnd(pDiff TERM)
+
+Executing: pDiffAndTerm = geomOr(pDiffAndTerm1 pdTermDevBig)
+
+Executing: nwAndTerm1 = geomAnd(NWELL TERM)
+
+Executing: nwAndTerm = geomOr(nwAndTerm1 nwTermDevBig)
+
+Executing: poly1AndTerm = geomAnd(POLY1 TERM)
+
+Executing: poly2AndTerm = geomAnd(poly2NoRes TERM)
+
+Executing: nyTerm_S = geomCat(nyTerm)
+
+Executing: geomStamp(nyTerm_S poly2NoRes)
+
+Executing: ndTerm_S = geomCat(ndTerm)
+
+Executing: geomStamp(ndTerm_S nsd)
+
+Executing: nwTermAll_S = geomCat(nwTermAll)
+
+Executing: geomStamp(nwTermAll_S nsd)
+
+Executing: pdTerm_S = geomCat(pdTerm)
+
+Executing: geomStamp(pdTerm_S psd)
+
+Executing: nd3Term_S = geomCat(nd3Term)
+
+Executing: geomStamp(nd3Term_S nsd)
+
+Executing: pd3Term_S = geomCat(pd3Term)
+
+Executing: geomStamp(pd3Term_S psd)
+
+Executing: pdResBody = geomAndNot(pdRes DELDIF)
+
+Executing: ndResBody = geomAndNot(ndRes DELDIF)
+
+Executing: pd3ResBody = geomAndNot(pd3Res DELDIF)
+
+Executing: nd3ResBody = geomAndNot(nd3Res DELDIF)
+
+Executing: extractRES(amiDf2OrCdl("pres-3" "pd3") pd3ResBody (pd3Term_S "PLUS" "MINUS") ...
+
+Executing: attachParameter(pd3_3Width "w" pd3ResBody)
+
+Executing: attachParameter(pd3_3Length "l" pd3ResBody)
+
+Executing: attachParameter(squares "squares" pd3ResBody)
+
+Executing: attachParameter(squares "VALUE" pd3ResBody)
+
+Executing: saveProperty(pd3ResBody "dmodel" "dpd3")
+
+Executing: saveProperty(pd3ResBody "rmodel" "rpd3")
+
+Executing: saveProperty(pd3ResBody "model" "pd3")
+
+Executing: saveProperty(pd3ResBody "cdlModel" "pd3")
+
+Executing: saveProperty(pd3ResBody "resType" "pd3Term_S")
+
+Executing: extractRES(amiDf2OrCdl("res" "pd") pdResBody (pdTerm_S "PLUS" "MINUS") flagMa...
+
+Executing: attachParameter(pdWidth "w" pdResBody)
+
+Executing: attachParameter(pdLength "l" pdResBody)
+
+Executing: attachParameter(squares "squares" pdResBody)
+
+Executing: attachParameter(squares "VALUE" pdResBody)
+
+Executing: saveProperty(pdResBody "model" "pd")
+
+Executing: saveProperty(pdResBody "cdlModel" "pd")
+
+Executing: saveProperty(pdResBody "resType" "pdTerm_S")
+
+Executing: extractRES(amiDf2OrCdl("res-3" "nd3") nd3ResBody (nd3Term_S "PLUS" "MINUS") (...
+
+Executing: attachParameter(nd3_3Width "w" nd3ResBody)
+
+Executing: attachParameter(nd3_3Length "l" nd3ResBody)
+
+Executing: attachParameter(squares "squares" nd3ResBody)
+
+Executing: attachParameter(squares "VALUE" nd3ResBody)
+
+Executing: saveProperty(nd3ResBody "dmodel" "dnd3")
+
+Executing: saveProperty(nd3ResBody "rmodel" "rnd3")
+
+Executing: saveProperty(nd3ResBody "model" "nd3")
+
+Executing: saveProperty(nd3ResBody "cdlModel" "nd3")
+
+Executing: saveProperty(nd3ResBody "resType" "nd3Term_S")
+
+Executing: extractRES(amiDf2OrCdl("res" "nd") ndResBody (ndTerm_S "PLUS" "MINUS") flagMa...
+
+Executing: attachParameter(ndWidth "w" ndResBody)
+
+Executing: attachParameter(ndLength "l" ndResBody)
+
+Executing: attachParameter(squares "squares" ndResBody)
+
+Executing: attachParameter(squares "VALUE" ndResBody)
+
+Executing: saveProperty(ndResBody "model" "nd")
+
+Executing: saveProperty(ndResBody "cdlModel" "nd")
+
+Executing: saveProperty(ndResBody "resType" "ndTerm_S")
+
+Executing: extractRES(amiDf2OrCdl("res-3" "nw3") nw3ResBody (nwTermAll_S "PLUS" "MINUS")...
+
+Executing: attachParameter(nw3_3Width "w" nw3ResBody)
+
+Executing: attachParameter(nw3_3Length "l" nw3ResBody)
+
+Executing: attachParameter(squares "squares" nw3ResBody)
+
+Executing: attachParameter(squares "VALUE" nw3ResBody)
+
+Executing: saveProperty(nw3ResBody "dmodel" "dnw3")
+
+Executing: saveProperty(nw3ResBody "rmodel" "rnw3")
+
+Executing: saveProperty(nw3ResBody "model" "nw3")
+
+Executing: saveProperty(nw3ResBody "cdlModel" "nw3")
+
+Executing: saveProperty(nw3ResBody "resType" "nwTermAll_S")
+
+Executing: extractRES(amiDf2OrCdl("res" "nw") nwResBody (nwTermAll_S "PLUS" "MINUS") fla...
+
+Executing: attachParameter(nwWidth "w" nwResBody)
+
+Executing: attachParameter(nwLength "l" nwResBody)
+
+Executing: attachParameter(squares "squares" nwResBody)
+
+Executing: attachParameter(squares "VALUE" nwResBody)
+
+Executing: saveProperty(nwResBody "model" "nw")
+
+Executing: saveProperty(nwResBody "cdlModel" "nw")
+
+Executing: saveProperty(nwResBody "resType" "nwTermAll_S")
+
+Executing: nl3NWResBody = geomAnd(nl3ResBody_1 PNwell)
+
+Executing: nl3ResBody = geomAndNot(nl3ResBody_1 nl3NWResBody)
+
+Executing: nl3NWTerm = geomAnd(nl3Term_1 PNwell)
+
+Executing: nl3Term = geomAndNot(nl3Term_1 nl3NWTerm)
+
+Executing: nl3NWTerm_S = geomCat(nl3NWTerm)
+
+Executing: geomStamp(nl3NWTerm_S poly1NoRes)
+
+Executing: nl3Term_S = geomCat(nl3Term)
+
+Executing: geomStamp(nl3Term_S poly1NoRes)
+
+Executing: extractRES(amiDf2OrCdl("res-3" "nl3") nl3ResBody (nl3Term_S "PLUS" "MINUS") (...
+
+Executing: attachParameter(nl3_3Width "w" nl3ResBody)
+
+Executing: attachParameter(nl3_3Length "l" nl3ResBody)
+
+Executing: attachParameter(squares "squares" nl3ResBody)
+
+Executing: attachParameter(squares "VALUE" nl3ResBody)
+
+Executing: saveProperty(nl3ResBody "dmodel" "dnl3")
+
+Executing: saveProperty(nl3ResBody "rmodel" "rnl3")
+
+Executing: saveProperty(nl3ResBody "model" "nl3")
+
+Executing: saveProperty(nl3ResBody "cdlModel" "nl3")
+
+Executing: saveProperty(nl3ResBody "resType" "nl3Term_S")
+
+Executing: extractRES(amiDf2OrCdl("res-3" "nl3") nl3NWResBody (nl3NWTerm_S "PLUS" "MINUS...
+
+Executing: attachParameter(nl3_3Width "w" nl3NWResBody)
+
+Executing: attachParameter(nl3_3Length "l" nl3NWResBody)
+
+Executing: attachParameter(squares "squares" nl3NWResBody)
+
+Executing: attachParameter(squares "VALUE" nl3NWResBody)
+
+Executing: saveProperty(nl3NWResBody "dmodel" "dnl3")
+
+Executing: saveProperty(nl3NWResBody "rmodel" "rnl3")
+
+Executing: saveProperty(nl3NWResBody "model" "nl3")
+
+Executing: saveProperty(nl3NWResBody "cdlModel" "nl3")
+
+Executing: saveProperty(nl3NWResBody "resType" "nl3NWTerm_S")
+
+Executing: extractRES(amiDf2OrCdl("res" "nl") nlResBody (nlTerm_S "PLUS" "MINUS") flagMa...
+
+Executing: attachParameter(nlWidth "w" nlResBody)
+
+Executing: attachParameter(nlLength "l" nlResBody)
+
+Executing: attachParameter(squares "squares" nlResBody)
+
+Executing: attachParameter(squares "VALUE" nlResBody)
+
+Executing: saveProperty(nlResBody "model" "nl")
+
+Executing: saveProperty(nlResBody "cdlModel" "nl")
+
+Executing: saveProperty(nlResBody "resType" "nlTerm_S")
+
+Executing: ny3NWResBody = geomAnd(ny3ResBody_1 PNwell)
+
+Executing: ny3ResBody = geomAndNot(ny3ResBody_1 ny3NWResBody)
+
+Executing: ny3NWTerm = geomAnd(ny3Term_1 PNwell)
+
+Executing: ny3Term = geomAndNot(ny3Term_1 ny3NWTerm)
+
+Executing: ny3Term_S = geomCat(ny3Term)
+
+Executing: geomStamp(ny3Term_S poly2NoRes)
+
+Executing: ny3NWTerm_S = geomCat(ny3NWTerm)
+
+Executing: geomStamp(ny3NWTerm_S poly2NoRes)
+
+Executing: extractRES(amiDf2OrCdl("res-3" "ny3") ny3ResBody (ny3Term_S "PLUS" "MINUS") (...
+
+Executing: attachParameter(ny3_3Width "w" ny3ResBody)
+
+Executing: attachParameter(ny3_3Length "l" ny3ResBody)
+
+Executing: attachParameter(squares "squares" ny3ResBody)
+
+Executing: attachParameter(squares "VALUE" ny3ResBody)
+
+Executing: saveProperty(ny3ResBody "dmodel" "dny3")
+
+Executing: saveProperty(ny3ResBody "rmodel" "rny3")
+
+Executing: saveProperty(ny3ResBody "model" "ny3")
+
+Executing: saveProperty(ny3ResBody "cdlModel" "ny3")
+
+Executing: saveProperty(ny3ResBody "resType" "ny3Term_S")
+
+Executing: extractRES(amiDf2OrCdl("res-3" "ny3") ny3NWResBody (ny3NWTerm_S "PLUS" "MINUS...
+
+Executing: attachParameter(ny3_3Width "w" ny3NWResBody)
+
+Executing: attachParameter(ny3_3Length "l" ny3NWResBody)
+
+Executing: attachParameter(squares "squares" ny3NWResBody)
+
+Executing: attachParameter(squares "VALUE" ny3NWResBody)
+
+Executing: saveProperty(ny3NWResBody "dmodel" "dny3")
+
+Executing: saveProperty(ny3NWResBody "rmodel" "rny3")
+
+Executing: saveProperty(ny3NWResBody "model" "ny3")
+
+Executing: saveProperty(ny3NWResBody "cdlModel" "ny3")
+
+Executing: saveProperty(ny3NWResBody "resType" "ny3NWTerm_S")
+
+Executing: extractRES(amiDf2OrCdl("res" "ny") nyResBody (nyTerm_S "PLUS" "MINUS") flagMa...
+
+Executing: attachParameter(nyWidth "w" nyResBody)
+
+Executing: attachParameter(nyLength "l" nyResBody)
+
+Executing: attachParameter(squares "squares" nyResBody)
+
+Executing: attachParameter(squares "VALUE" nyResBody)
+
+Executing: saveProperty(nyResBody "model" "ny")
+
+Executing: saveProperty(nyResBody "cdlModel" "ny")
+
+Executing: saveProperty(nyResBody "resType" "nyTerm_S")
+
+Executing: hy3NWResBody = geomAnd(hy3ResPreBody PNwell)
+
+Executing: hy3ResBody = geomAndNot(hy3ResPreBody hy3NWResBody)
+
+Executing: hy3NWTerm = geomAnd(hy3Term_1 PNwell)
+
+Executing: hy3Term = geomAndNot(hy3Term_1 hy3NWTerm)
+
+Executing: hyResBody = geomAndNot(hyResBody_3 hy3ResPreBody)
+
+Executing: hy3Term_S = geomCat(hy3Term)
+
+Executing: geomStamp(hy3Term_S poly2NoRes)
+
+Executing: hy3NWTerm_S = geomCat(hy3NWTerm)
+
+Executing: geomStamp(hy3NWTerm_S poly2NoRes)
+
+Executing: extractRES(amiDf2OrCdl("res-3" "hy3") hy3ResBody (hy3Term_S "PLUS" "MINUS") (...
+
+Executing: attachParameter(hy3_3Width "w" hy3ResBody)
+
+Executing: attachParameter(hy3_3Length "l" hy3ResBody)
+
+Executing: attachParameter(squares "squares" hy3ResBody)
+
+Executing: attachParameter(squares "VALUE" hy3ResBody)
+
+Executing: saveProperty(hy3ResBody "dmodel" "dhy3")
+
+Executing: saveProperty(hy3ResBody "rmodel" "rhy3")
+
+Executing: saveProperty(hy3ResBody "model" "hy3")
+
+Executing: saveProperty(hy3ResBody "cdlModel" "hy3")
+
+Executing: saveProperty(hy3ResBody "resType" "hy3Term_S")
+
+Executing: extractRES(amiDf2OrCdl("res-3" "hy3") hy3NWResBody (hy3NWTerm_S "PLUS" "MINUS...
+
+Executing: attachParameter(hy3_3Width "w" hy3NWResBody)
+
+Executing: attachParameter(hy3_3Length "l" hy3NWResBody)
+
+Executing: attachParameter(squares "squares" hy3NWResBody)
+
+Executing: attachParameter(squares "VALUE" hy3NWResBody)
+
+Executing: saveProperty(hy3NWResBody "dmodel" "dhy3")
+
+Executing: saveProperty(hy3NWResBody "rmodel" "rhy3")
+
+Executing: saveProperty(hy3NWResBody "model" "hy3")
+
+Executing: saveProperty(hy3NWResBody "cdlModel" "hy3")
+
+Executing: saveProperty(hy3NWResBody "resType" "hy3NWTerm_S")
+
+Executing: extractRES(amiDf2OrCdl("res" "hy") hyResBody (hyTerm_S "PLUS" "MINUS") flagMa...
+
+Executing: attachParameter(hyWidth "w" hyResBody)
+
+Executing: attachParameter(hyLength "l" hyResBody)
+
+Executing: attachParameter(squares "squares" hyResBody)
+
+Executing: attachParameter(squares "VALUE" hyResBody)
+
+Executing: saveProperty(hyResBody "model" "hy")
+
+Executing: saveProperty(hyResBody "cdlModel" "hy")
+
+Executing: saveProperty(hyResBody "resType" "hyTerm_S")
+
+Executing: extractRES(amiDf2OrCdl("res" "mr") m1ResBody (m1Term_S "PLUS" "MINUS") flagMa...
+
+Executing: attachParameter(mrWidth "w" m1ResBody)
+
+Executing: attachParameter(mrLength "l" m1ResBody)
+
+Executing: attachParameter(squares "squares" m1ResBody)
+
+Executing: attachParameter(squares "VALUE" m1ResBody)
+
+Executing: saveProperty(m1ResBody "model" "mr")
+
+Executing: saveProperty(m1ResBody "cdlModel" "mr")
+
+Executing: saveProperty(m1ResBody "resType" "m1Term_S")
+
+Executing: extractRES(amiDf2OrCdl("res" "or") m2ResBody (m2Term_S "PLUS" "MINUS") flagMa...
+
+Executing: attachParameter(orWidth "w" m2ResBody)
+
+Executing: attachParameter(orLength "l" m2ResBody)
+
+Executing: attachParameter(squares "squares" m2ResBody)
+
+Executing: attachParameter(squares "VALUE" m2ResBody)
+
+Executing: saveProperty(m2ResBody "model" "or")
+
+Executing: saveProperty(m2ResBody "cdlModel" "or")
+
+Executing: saveProperty(m2ResBody "resType" "m2Term_S")
+
+Executing: extractRES(amiDf2OrCdl("res" "qr") m3ResBody (m3Term_S "PLUS" "MINUS") flagMa...
+
+Executing: attachParameter(qrWidth "w" m3ResBody)
+
+Executing: attachParameter(qrLength "l" m3ResBody)
+
+Executing: attachParameter(squares "squares" m3ResBody)
+
+Executing: attachParameter(squares "VALUE" m3ResBody)
+
+Executing: saveProperty(m3ResBody "model" "qr")
+
+Executing: saveProperty(m3ResBody "cdlModel" "qr")
+
+Executing: saveProperty(m3ResBody "resType" "m3Term_S")
+
+Executing: ppCapBody = geomAnd(ppTopCap ppBotCap)
+
+Executing: ppBotCap_S = geomCat(ppBotCap)
+
+Executing: geomStamp(ppBotCap_S poly1NoRes)
+
+Executing: ppTopCap_S = geomCat(ppTopCap)
+
+Executing: geomStamp(ppTopCap_S poly2NoRes)
+
+Executing: extractCAP(amiDf2OrCdl("cap" "pp") ppCapBody (ppTopCap_S "PLUS") (ppBotCap_S ...
+
+Executing: capA = measureParameter(area (ppCapBody))
+
+Executing: capP = measureParameter(perimeter (ppCapBody))
+
+Executing: capW = calculateParameter(((capP + (sqrt(((capP * capP) - (16 * capA))))) / 4))
+
+Executing: capL = calculateParameter((capA / capW))
+
+Executing: nameParameter(capW "w")
+
+Executing: nameParameter(capL "l")
+
+Executing: nameParameter(capA "VALUE")
+
+Executing: nameParameter(capA "area")
+
+Executing: saveProperty(ppCapBody "model" "pp")
+
+Executing: saveProperty(ppCapBody "cdlModel" "pp")
+
+Executing: saveProperty(ppCapBody "capType" "P2-P1")
+
+Executing: cnvarNmos = geomOverlap(cnvarMRK nP1Gate)
+
+Executing: extractDevice(amiUpOrLowCase("cnvar") cnvarNmos (poly1NoRes "G") (nsd "SD") (...
+
+Executing: cnvarWidth = measureParameter(length (cnvarNmos butting nsd butting ptubs_S) ...
+
+Executing: nameParameter(cnvarWidth "w")
+
+Executing: cnvarLength = measureParameter(length (cnvarNmos outside nsd outside ptubs_S)...
+
+Executing: nameParameter(cnvarLength "l")
+
+Executing: nMosRec_1 = geomAndNot(nP1Gate cnvarNmos)
+
+Executing: cnOrmacMRK = geomOr(cnMRK cnmacMRK)
+
+Executing: cnCapBody = geomOverlap(nP1Gate cnOrmacMRK)
+
+Executing: cnDiff = geomOverlap(nDiff cnOrmacMRK)
+
+Executing: cnDiff_S = geomCat(cnDiff)
+
+Executing: geomStamp(cnDiff_S nsd)
+
+Executing: extractCAP(amiUpOrLowCase("cn") cnCapBody (poly1NoRes "PLUS") (cnDiff_S "MINU...
+
+Executing: cnArea = measureParameter(area (cnCapBody) 1)
+
+Executing: nameParameter(cnArea "area")
+
+Executing: nameParameter(cnArea "VALUE")
+
+Executing: cnLength = calculateParameter(sqrt(cnArea))
+
+Executing: nameParameter(cnLength "l")
+
+Executing: cnWidth = calculateParameter(sqrt(cnArea))
+
+Executing: nameParameter(cnWidth "w")
+
+Executing: nMosRec_2 = geomAndNot(nMosRec_1 cnCapBody)
+
+Executing: cpOrmacMRK = geomOr(cpMRK cpmacMRK)
+
+Executing: cpCapBody = geomOverlap(pP1Gate cpOrmacMRK)
+
+Executing: cpDiff_2 = geomOverlap(pDiff cpOrmacMRK)
+
+Executing: cpDiff = geomOverlap(cpDiff_2 ptubs)
+
+Executing: cpDiff_S = geomCat(cpDiff)
+
+Executing: geomStamp(cpDiff_S psd)
+
+Executing: extractCAP(amiUpOrLowCase("cp") cpCapBody (poly1NoRes "PLUS") (cpDiff_S "MINU...
+
+Executing: cpArea = measureParameter(area (cpCapBody) 1)
+
+Executing: nameParameter(cpArea "area")
+
+Executing: nameParameter(cpArea "VALUE")
+
+Executing: cpLength = calculateParameter(sqrt(cpArea))
+
+Executing: nameParameter(cpLength "l")
+
+Executing: cpWidth = calculateParameter(sqrt(cpArea))
+
+Executing: nameParameter(cpWidth "w")
+
+Executing: pMosRec_1 = geomAndNot(pP1Gate cpCapBody)
+
+Executing: esqNwell = geomButtOrOver(NWELL esqMRK)
+
+Executing: esqNwell_S = geomCat(esqNwell)
+
+Executing: geomStamp(esqNwell_S nsd)
+
+Executing: esqPoly2 = geomOverlap(POLY2 esqMRK)
+
+Executing: esqPoly1 = geomAnd(POLY1 esqMRK)
+
+Executing: esqP1NotNwell = geomAndNot(esqPoly1 esqNwell)
+
+Executing: esqRec = geomCat(esqP1NotNwell esqPoly2)
+
+Executing: esqMos = geomOr(esqP1NotNwell esqPoly2)
+
+Executing: esqMos_S = geomCat(esqMos)
+
+Executing: geomStamp(esqMos_S poly2NoRes)
+
+Executing: esqNsd = geomButtOrOver(nsd esqMos)
+
+Executing: esqNsd_S = geomCat(esqNsd)
+
+Executing: geomStamp(esqNsd_S nsd)
+
+Executing: extractDevice(amiUpOrLowCase("esqNameMapping") esqRec (esqMos_S "G") (esqNsd_...
+
+Executing: nMosRec_3 = geomAndNot(nMosRec_2 esqPoly1)
+
+Executing: shkAnode_S = geomCat(shkAnode)
+
+Executing: geomStamp(shkAnode_S psd)
+
+Executing: shkCath_S = geomCat(shkCath)
+
+Executing: geomStamp(shkCath_S nsd)
+
+Executing: extractDevice(amiUpOrLowCase("dschottky") shkNwell (shkAnode_S "PLUS") (shkCa...
+
+Executing: pnpRec_1 = geomAndNot(pnpNwell pnpBase)
+
+Executing: pnpRec = geomOverlap(pnpRec_1 pnpEmitter)
+
+Executing: pnpBase_S = geomCat(pnpBase)
+
+Executing: geomStamp(pnpBase_S nsd)
+
+Executing: pnpEmitter_S = geomCat(pnpEmitter)
+
+Executing: geomStamp(pnpEmitter_S psd)
+
+Executing: pnpCollector_S = geomCat(pnpCollector)
+
+Executing: geomStamp(pnpCollector_S psd)
+
+Executing: extractBJT(amiUpOrLowCase("pnp") pnpRec (pnpCollector_S "C") (pnpBase_S "B") ...
+
+Executing: pnpArea = measureParameter(area (pnpRec over pnpEmitter_S))
+
+Executing: nameParameter(pnpArea "EA")
+
+Executing: pzxtDrain_S = geomCat(pzxtDrain)
+
+Executing: geomStamp(pzxtDrain_S psd)
+
+Executing: pzxtSource_S = geomCat(pzxtSource)
+
+Executing: geomStamp(pzxtSource_S psd)
+
+Executing: extractMOS(amiUpOrLowCase("pzthn") pzthnMos (poly1NoRes "G") (pzxtDrain_S "S"...
+
+Executing: pzthnWidth = measureParameter(length (pzthnMos butting pzxtDrain_S) 0.5)
+
+Executing: nameParameter(pzthnWidth "w")
+
+Executing: pzthnLength = measureParameter(length (pzthnMos outside pzxtDrain_S) 0.5)
+
+Executing: nameParameter(pzthnLength "l")
+
+Executing: extractMOS(amiUpOrLowCase("pz") pzMos (poly1NoRes "G") (pzxtDrain_S "S" "D") ...
+
+Executing: pzWidth = measureParameter(length (pzMos butting pzxtDrain_S) 0.5)
+
+Executing: nameParameter(pzWidth "w")
+
+Executing: pzLength = measureParameter(length (pzMos outside pzxtDrain_S) 0.5)
+
+Executing: nameParameter(pzLength "l")
+
+Executing: extractLDD(amiUpOrLowCase("px") pxMos (poly1NoRes "G") (pzxtSource_S "S") (pz...
+
+Executing: pxWidth = measureParameter(length (pxMos butting pzxtSource_S) 1.0)
+
+Executing: nameParameter(pxWidth "w")
+
+Executing: pxLength = measureParameter(length (pxMos outside pzxtSource_S outside pzxtDr...
+
+Executing: nameParameter(pxLength "l")
+
+Executing: extractLDD(amiUpOrLowCase("pt") ptMos (poly1NoRes "G") (pzxtSource_S "S") (pz...
+
+Executing: ptWidth = measureParameter(length (ptMos butting pzxtSource_S) 1.0)
+
+Executing: nameParameter(ptWidth "w")
+
+Executing: ptLength = measureParameter(length (ptMos outside pzxtSource_S outside pzxtDr...
+
+Executing: nameParameter(ptLength "l")
+
+Executing: pMosRec_2 = geomAndNot(pMosRec_1 pzxtP1Gate)
+
+Executing: pvuDrain_S = geomCat(pvuDrain)
+
+Executing: geomStamp(pvuDrain_S psd)
+
+Executing: pvuSource_S = geomCat(pvuSource)
+
+Executing: geomStamp(pvuSource_S psd)
+
+Executing: extractMOS(amiUpOrLowCase("pv") pvMos (poly1NoRes "G") (pvuDrain_S "S" "D") (...
+
+Executing: pvWidth = measureParameter(length (pvMos butting pvuDrain_S) 0.5)
+
+Executing: nameParameter(pvWidth "w")
+
+Executing: pvLength = measureParameter(length (pvMos outside pvuDrain_S) 0.5)
+
+Executing: nameParameter(pvLength "l")
+
+Executing: extractLDD(amiUpOrLowCase("pu") puMos (poly1NoRes "G") (pvuSource_S "S") (pvu...
+
+Executing: puWidth = measureParameter(length (puMos butting pvuSource_S) 1.0)
+
+Executing: nameParameter(puWidth "w")
+
+Executing: puLength = measureParameter(length (puMos outside pvuSource_S outside pvuDrai...
+
+Executing: nameParameter(puLength "l")
+
+Executing: pMosRec_3 = geomAndNot(pMosRec_2 pvMos)
+
+Executing: pMosRec_4 = geomAndNot(pMosRec_3 puMos)
+
+Executing: nzxDrain_S = geomCat(nzxDrain)
+
+Executing: geomStamp(nzxDrain_S nsd)
+
+Executing: nzxSource_S = geomCat(nzxSource)
+
+Executing: geomStamp(nzxSource_S nsd)
+
+Executing: extractMOS(amiUpOrLowCase("nz") nzMos (poly1NoRes "G") (nzxDrain_S "S" "D") (...
+
+Executing: nzWidth = measureParameter(length (nzMos butting nzxDrain_S) 0.5)
+
+Executing: nameParameter(nzWidth "w")
+
+Executing: nzLength = measureParameter(length (nzMos outside nzxDrain_S) 0.5)
+
+Executing: nameParameter(nzLength "l")
+
+Executing: extractMOS(amiUpOrLowCase("nzthn") nzthnMos (poly1NoRes "G") (nzxDrain_S "S" ...
+
+Executing: nzthnWidth = measureParameter(length (nzthnMos butting nzxDrain_S) 0.5)
+
+Executing: nameParameter(nzthnWidth "w")
+
+Executing: nzthnLength = measureParameter(length (nzthnMos outside nzxDrain_S) 0.5)
+
+Executing: nameParameter(nzthnLength "l")
+
+Executing: extractLDD(amiUpOrLowCase("nx") nxMos (poly1NoRes "G") (nzxSource_S "S") (nzx...
+
+Executing: nxWidth = measureParameter(length (nxMos butting nzxSource_S) 1.0)
+
+Executing: nameParameter(nxWidth "w")
+
+Executing: nxLength = measureParameter(length (nxMos outside nzxSource_S outside nzxDrai...
+
+Executing: nameParameter(nxLength "l")
+
+Executing: nMosRec_4 = geomAndNot(nMosRec_3 nzxP1Gate)
+
+Executing: ntDrain_S = geomCat(ntDrain)
+
+Executing: geomStamp(ntDrain_S nsd)
+
+Executing: ntSource_S = geomCat(ntSource)
+
+Executing: geomStamp(ntSource_S nsd)
+
+Executing: extractLDD(amiUpOrLowCase("nt") ntMos (poly1NoRes "G") (ntSource_S "S") (ntDr...
+
+Executing: ntWidth = measureParameter(length (ntMos butting ntSource_S) 1.0)
+
+Executing: nameParameter(ntWidth "w")
+
+Executing: ntLength = measureParameter(length (ntMos outside ntSource_S outside ntDrain_...
+
+Executing: nameParameter(ntLength "l")
+
+Executing: nMosRec_5 = geomAndNot(nMosRec_4 ntP1Gate)
+
+Executing: nvuDrain_S = geomCat(nvuDrain)
+
+Executing: geomStamp(nvuDrain_S nsd)
+
+Executing: nvuSource_S = geomCat(nvuSource)
+
+Executing: geomStamp(nvuSource_S nsd)
+
+Executing: extractMOS(amiUpOrLowCase("nv") nvMos (poly1NoRes "G") (nvuDrain_S "S" "D") (...
+
+Executing: nvWidth = measureParameter(length (nvMos butting nvuDrain_S) 0.5)
+
+Executing: nameParameter(nvWidth "w")
+
+Executing: nvLength = measureParameter(length (nvMos outside nvuDrain_S) 0.5)
+
+Executing: nameParameter(nvLength "l")
+
+Executing: extractLDD(amiUpOrLowCase("nu") nuMos (poly1NoRes "G") (nvuSource_S "S") (nvu...
+
+Executing: nuWidth = measureParameter(length (nuMos butting nvuSource_S) 1.0)
+
+Executing: nameParameter(nuWidth "w")
+
+Executing: nuLength = measureParameter(length (nuMos outside nvuSource_S outside nvuDrai...
+
+Executing: nameParameter(nuLength "l")
+
+Executing: nMosRec_6 = geomAndNot(nMosRec_5 nvuP1Gate)
+
+Executing: mp2llMRK = geomGetTexted(DREC DRECTXT "mp2ll")
+
+Executing: mp2llNwell = geomOverlap(NWELL mp2llMRK)
+
+Executing: mp2llNchan = geomOverlap(NCHAN mp2llMRK)
+
+Executing: mp2llPsd = geomOverlap(psd mp2llMRK)
+
+Executing: mp2llNsd_1 = geomOverlap(nsd mp2llMRK)
+
+Executing: mp2llPoly2 = geomOverlap(poly2NoRes mp2llMRK)
+
+Executing: mp2llPminus_1 = geomAndNot(mp2llNwell mp2llNchan)
+
+Executing: mp2llPminus = geomAndNot(mp2llPminus_1 mp2llNsd_1)
+
+Executing: mp2llSD = geomOverlap(mp2llPminus mp2llPsd)
+
+Executing: mp2llSD_S = geomCat(mp2llSD)
+
+Executing: geomStamp(mp2llSD_S psd)
+
+Executing: mp2llNsd = geomAnd(mp2llNsd_1 NPLS)
+
+Executing: mp2llGate_1 = geomAnd(mp2llNsd mp2llPoly2)
+
+Executing: mp2llChannel = geomAnd(mp2llNsd mp2llNchan)
+
+Executing: mp2llGate = geomOverlap(mp2llGate_1 mp2llChannel)
+
+Executing: mp2llGate_S = geomCat(mp2llGate)
+
+Executing: geomStamp(mp2llGate_S poly2NoRes)
+
+Executing: mp2llRec = geomCat(mp2llGate)
+
+Executing: extractMOS(amiUpOrLowCase("mp2llNameMapping") mp2llRec (mp2llGate_S "G") (mp2...
+
+Executing: mp2llWidth = measureParameter(length (mp2llRec butting mp2llSD_S) 0.5)
+
+Executing: nameParameter(mp2llWidth "w")
+
+Executing: mp2llLength = measureParameter(length (mp2llRec outside mp2llSD_S) 0.5)
+
+Executing: nameParameter(mp2llLength "l")
+
+Executing: mp40vAct_2 = geomNoHoles(mp40vAct_1)
+
+Executing: mp40vAct_3 = geomAnd(mp40vDnw mp40vAct_2)
+
+Executing: mp40vAct_4 = geomAnd(mp40vNchan mp40vAct_3)
+
+Executing: mp40vAct = geomAnd(mp40vThkgt mp40vAct_4)
+
+Executing: mp40vSd = geomAndNot(mp40vAct mp40vPoly1)
+
+Executing: mp40vDrain = geomAnd(mp40vSd mp40vPchrs)
+
+Executing: mp40vSource = geomAnd(mp40vSd mp40vPwb)
+
+Executing: mp40vRec = geomCat(mp40vPoly1)
+
+Executing: mp40vSource_S = geomCat(mp40vSource)
+
+Executing: geomStamp(mp40vSource_S psd)
+
+Executing: mp40vDrain_S = geomCat(mp40vDrain)
+
+Executing: geomStamp(mp40vDrain_S psd)
+
+Executing: mp40vPoly1_S = geomCat(mp40vPoly1)
+
+Executing: geomStamp(mp40vPoly1_S poly1NoRes)
+
+Executing: extractLDD(amiUpOrLowCase("mp40v") mp40vRec (mp40vPoly1_S "G") (mp40vSource_S...
+
+Executing: attachParameter(mp40vWidth "w" mp40vRec)
+
+Executing: attachParameter(mp40vLength "l" mp40vRec)
+
+Executing: pMosRec_5 = geomAndNot(pMosRec_4 mp40vRec)
+
+Executing: mn40vActNoHole = geomNoHoles(mn40vAct)
+
+Executing: mn40vActNotDnw = geomAndNot(mn40vActNoHole mn40vDnw)
+
+Executing: mn40vGate = geomAnd(mn40vActNotDnw mn40vPoly1)
+
+Executing: mn40vDnwOverDif = geomOverlap(mn40vDnw mn40vAct)
+
+Executing: mn40vDifOrNwellOrDnw = geomOverlap(mn40vDnwOverDif mn40vNwell)
+
+Executing: mn40vAddNfieldToDrain = geomAnd(mn40vDifOrNwellOrDnw mn40vNchan)
+
+Executing: mn40vDrain = geomAnd(mn40vAddNfieldToDrain mn40vPwb)
+
+Executing: mn40vDifNotPpls = geomAndNot(mn40vAct mn40vPpls)
+
+Executing: mn40vDifNotPplsNotNwell = geomAndNot(mn40vDifNotPpls mn40vNwell)
+
+Executing: mn40vSource = geomAndNot(mn40vDifNotPplsNotNwell mn40vGate)
+
+Executing: mn40vMos = geomCat(mn40vGate)
+
+Executing: mn40vGate_S = geomCat(mn40vGate)
+
+Executing: geomStamp(mn40vGate_S poly1NoRes)
+
+Executing: mn40vDrain_S = geomCat(mn40vDrain)
+
+Executing: geomStamp(mn40vDrain_S nsd)
+
+Executing: mn40vSource_S = geomCat(mn40vSource)
+
+Executing: geomStamp(mn40vSource_S nsd)
+
+Executing: extractLDD(amiUpOrLowCase("mn40v") mn40vMos (mn40vGate_S "G") (mn40vSource_S ...
+
+Executing: attachParameter(mn40vWidth "w" mn40vMos)
+
+Executing: attachParameter(mn40vLength "l" mn40vMos)
+
+Executing: nMosRec_7 = geomAndNot(nMosRec_6 mn40vGate)
+
+Executing: nMosRec_8 = geomCat(nMosRec_7)
+
+Executing: pMosRec_6 = geomCat(pMosRec_5)
+
+Executing: pMosRec_7 = geomCat(pMosRec_6)
+
+Executing: nMosRec_9 = geomCat(nMosRec_8)
+
+Executing: pMosRec_8 = geomCat(pMosRec_7)
+
+Executing: nMosRec_10 = geomCat(nMosRec_9)
+
+Executing: pMosRec_9 = geomCat(pMosRec_8)
+
+Executing: nMos = geomAndNot(nMosRec_10 DELDIF)
+
+Executing: pMos = geomAndNot(pMosRec_9 DELDIF)
+
+Executing: nmosSd = geomCat(nmosButtNsd)
+
+Executing: nmosSd_S = geomCat(nmosSd)
+
+Executing: geomStamp(nmosSd_S nsd)
+
+Executing: pmosSd = geomCat(pmosButtPsd)
+
+Executing: pmosSd_S = geomCat(pmosSd)
+
+Executing: geomStamp(pmosSd_S psd)
+
+Executing: extractMOS(amiUpOrLowCase("nmos") nMos (poly1NoRes "G") (nmosSd_S "S" "D") (p...
+         6 'nmos' created in cell 'zxw_mux2 layout zxw_lib'.
+        19 'nmos' created in cell 'zxw_dff layout zxw_lib'.
+         6 'nmos' created in cell 'zxw_xor2 layout zxw_lib'.
+         2 'nmos' created in cell 'zxw_nand2 layout zxw_lib'.
+
+Executing: nWidth = measureParameter(length (nMos butting nmosSd_S) 0.5)
+
+Executing: nameParameter(nWidth "w")
+
+Executing: nLength = measureParameter(length (nMos outside nmosSd_S) 0.5)
+
+Executing: nameParameter(nLength "l")
+
+Executing: extractMOS(amiUpOrLowCase("pmos") pMos (poly1NoRes "G") (pmosSd_S "S" "D") (n...
+         6 'pmos' created in cell 'zxw_mux2 layout zxw_lib'.
+        19 'pmos' created in cell 'zxw_dff layout zxw_lib'.
+         6 'pmos' created in cell 'zxw_xor2 layout zxw_lib'.
+         2 'pmos' created in cell 'zxw_nand2 layout zxw_lib'.
+
+Executing: pWidth = measureParameter(length (pMos butting pmosSd_S) 0.5)
+
+Executing: nameParameter(pWidth "w")
+
+Executing: pLength = measureParameter(length (pMos outside pmosSd_S) 0.5)
+
+Executing: nameParameter(pLength "l")
+
+Executing: (saveInterconnect (ntubNotRes "TUB"))
+
+Executing: (saveInterconnect (nsd "NPLS"))
+
+Executing: (saveInterconnect (psd "PPLS"))
+
+Executing: (saveInterconnect (poly1NoRes "POLY1"))
+
+Executing: (saveInterconnect (poly2NoRes "POLY2"))
+
+Executing: (saveInterconnect (m1NoRes "M1"))
+
+Executing: (saveInterconnect (m2NoRes "M2"))
+
+Executing: (saveInterconnect (m3NoRes "M3"))
+
+Finished running rules. Task processor time in main process:
+cpu: 0.54  elap: 1  pf: 0  in: 0  out: 0  virt: 0M  phys: 0M
+
+No output post-processing: This is not a DRC run
+
+Finished building the persistent database.
+cpu: 0.01  elap: 0  pf: 0  in: 0  out: 0  virt: 0M  phys: 0M
+
+
+*****  aveng terminated normally  *****
+
+
+Finished /tools/cadence/ASSURA/current/tools/assura/bin/aveng
+
+Starting /tools/cadence/ASSURA/current/tools/assura/bin/avrpt /home/zxw6805/ee620/zxw_bstest.rsf
+@(#)$CDS: avrpt version av3.2:Production:dfII5.1.41:5.10.41_USR6.18 11/06/2008 11:00 (logavt05) $
+sub-version 3.2_USR1_HF1, integ signature 2008-11-05-1153
+
+run on vlsi-legacy from /tools/cadence/ASSURA/3.2-5141/tools.lnx86/assura/bin/32bit/avrpt on Wed Nov  5 18:48:02 2014
+
+
+   Creating Error Database 'zxw_bstest'...
+
+   Reading VDB ...
+--------------------------------------------------------------------------------
+Rule      Message                                    FlatCount     RealCount
+--------------------------------------------------------------------------------
+(    1)  dataAuditErrors                                     0            0
+(    2)  malformed device probeM1MRK                         0            0
+(    3)  malformed device probeM2MRK                         0            0
+(    4)  malformed device probeM3MRK                         0            0
+(    5)  malformed device m1ThruBody                         0            0
+(    6)  malformed device m2ThruBody                         0            0
+(    7)  malformed device m3ThruBody                         0            0
+(    8)  malformed device v5M1MRK                            0            0
+(    9)  malformed device v5M2MRK                            0            0
+(   10)  malformed device v5M3MRK                            0            0
+(   11)  malformed device v12M1MRK                           0            0
+(   12)  malformed device v12M2MRK                           0            0
+(   13)  malformed device v12M3MRK                           0            0
+(   14)  malformed device v20M1MRK                           0            0
+(   15)  malformed device v20M2MRK                           0            0
+(   16)  malformed device v20M3MRK                           0            0
+(   17)  malformed device v40M1MRK                           0            0
+(   18)  malformed device v40M2MRK                           0            0
+(   19)  malformed device v40M3MRK                           0            0
+(   20)  malformed device extM1MRK                           0            0
+(   21)  malformed device extM2MRK                           0            0
+(   22)  malformed device extM3MRK                           0            0
+(   23)  malformed device pd3ResBody                         0            0
+(   24)  malformed device pdResBody                          0            0
+(   25)  malformed device nd3ResBody                         0            0
+(   26)  malformed device ndResBody                          0            0
+(   27)  malformed device nw3ResBody                         0            0
+(   28)  malformed device nwResBody                          0            0
+(   29)  malformed device nl3ResBody                         0            0
+(   30)  malformed device nl3NWResBody                       0            0
+(   31)  malformed device nlResBody                          0            0
+(   32)  malformed device ny3ResBody                         0            0
+(   33)  malformed device ny3NWResBody                       0            0
+(   34)  malformed device nyResBody                          0            0
+(   35)  malformed device hy3ResBody                         0            0
+(   36)  malformed device hy3NWResBody                       0            0
+(   37)  malformed device hyResBody                          0            0
+(   38)  malformed device m1ResBody                          0            0
+(   39)  malformed device m2ResBody                          0            0
+(   40)  malformed device m3ResBody                          0            0
+(   41)  malformed device ppCapBody                          0            0
+(   42)  malformed device cnvarNmos                          0            0
+(   43)  malformed device cnCapBody                          0            0
+(   44)  malformed device cpCapBody                          0            0
+(   45)  malformed device esqRec                             0            0
+(   46)  malformed device shkNwell                           0            0
+(   47)  malformed device pnpRec                             0            0
+(   48)  malformed device pzthnMos                           0            0
+(   49)  malformed device pzMos                              0            0
+(   50)  malformed device pxMos                              0            0
+(   51)  malformed device ptMos                              0            0
+(   52)  malformed device pvMos                              0            0
+(   53)  malformed device puMos                              0            0
+(   54)  malformed device nzMos                              0            0
+(   55)  malformed device nzthnMos                           0            0
+(   56)  malformed device nxMos                              0            0
+(   57)  malformed device ntMos                              0            0
+(   58)  malformed device nvMos                              0            0
+(   59)  malformed device nuMos                              0            0
+(   60)  malformed device mp2llRec                           0            0
+(   61)  malformed device mp40vRec                           0            0
+(   62)  malformed device mn40vMos                           0            0
+(   63)  malformed device nMos                               0            0
+(   64)  malformed device pMos                               0            0
+(   65)  unstable device for pMos_MOS_63                     0            0
+(   66)  unstable device for nMos_MOS_62                     0            0
+(   67)  unstable device for mn40vMos_LDD_61                 0            0
+(   68)  unstable device for mp40vRec_LDD_60                 0            0
+(   69)  unstable device for mp2llRec_MOS_59                 0            0
+(   70)  unstable device for nuMos_LDD_58                    0            0
+(   71)  unstable device for nvMos_MOS_57                    0            0
+(   72)  unstable device for ntMos_LDD_56                    0            0
+(   73)  unstable device for nxMos_LDD_55                    0            0
+(   74)  unstable device for nzthnMos_MOS_54                 0            0
+(   75)  unstable device for nzMos_MOS_53                    0            0
+(   76)  unstable device for puMos_LDD_52                    0            0
+(   77)  unstable device for pvMos_MOS_51                    0            0
+(   78)  unstable device for ptMos_LDD_50                    0            0
+(   79)  unstable device for pxMos_LDD_49                    0            0
+(   80)  unstable device for pzMos_MOS_48                    0            0
+(   81)  unstable device for pzthnMos_MOS_47                 0            0
+(   82)  unstable device for pnpRec_BJT_46                   0            0
+(   83)  unstable device for shkNwell_Device_45              0            0
+(   84)  unstable device for esqRec_Device_44                0            0
+(   85)  unstable device for cpCapBody_CAP_43                0            0
+(   86)  unstable device for cnCapBody_CAP_42                0            0
+(   87)  unstable device for cnvarNmos_Device_41             0            0
+(   88)  unstable device for ppCapBody_CAP_40                0            0
+(   89)  unstable device for m3ResBody_RES_39                0            0
+(   90)  unstable device for m2ResBody_RES_38                0            0
+(   91)  unstable device for m1ResBody_RES_37                0            0
+(   92)  unstable device for hyResBody_RES_36                0            0
+(   93)  unstable device for hy3NWResBody_RES_35             0            0
+(   94)  unstable device for hy3ResBody_RES_34               0            0
+(   95)  unstable device for nyResBody_RES_33                0            0
+(   96)  unstable device for ny3NWResBody_RES_32             0            0
+(   97)  unstable device for ny3ResBody_RES_31               0            0
+(   98)  unstable device for nlResBody_RES_30                0            0
+(   99)  unstable device for nl3NWResBody_RES_29             0            0
+(  100)  unstable device for nl3ResBody_RES_28               0            0
+(  101)  unstable device for nwResBody_RES_27                0            0
+(  102)  unstable device for nw3ResBody_RES_26               0            0
+(  103)  unstable device for ndResBody_RES_25                0            0
+(  104)  unstable device for nd3ResBody_RES_24               0            0
+(  105)  unstable device for pdResBody_RES_23                0            0
+(  106)  unstable device for pd3ResBody_RES_22               0            0
+(  107)  unstable device for extM3MRK_Device_21              0            0
+(  108)  unstable device for extM2MRK_Device_20              0            0
+(  109)  unstable device for extM1MRK_Device_19              0            0
+(  110)  unstable device for v40M3MRK_Device_18              0            0
+(  111)  unstable device for v40M2MRK_Device_17              0            0
+(  112)  unstable device for v40M1MRK_Device_16              0            0
+(  113)  unstable device for v20M3MRK_Device_15              0            0
+(  114)  unstable device for v20M2MRK_Device_14              0            0
+(  115)  unstable device for v20M1MRK_Device_13              0            0
+(  116)  unstable device for v12M3MRK_Device_12              0            0
+(  117)  unstable device for v12M2MRK_Device_11              0            0
+(  118)  unstable device for v12M1MRK_Device_10              0            0
+(  119)  unstable device for v5M3MRK_Device_9                0            0
+(  120)  unstable device for v5M2MRK_Device_8                0            0
+(  121)  unstable device for v5M1MRK_Device_7                0            0
+(  122)  unstable device for m3ThruBody_Device_6             0            0
+(  123)  unstable device for m2ThruBody_Device_5             0            0
+(  124)  unstable device for m1ThruBody_Device_4             0            0
+(  125)  unstable device for probeM3MRK_Device_3             0            0
+(  126)  unstable device for probeM2MRK_Device_2             0            0
+(  127)  unstable device for probeM1MRK_Device_1             0            0
+--------------------------------------------------------------------------------
+Total  errors:                                               0            0
+--------------------------------------------------------------------------------
+
+   Finished creating Error Database ...
+
+   Writing Report into ./zxw_bstest.err ...
+
+avrpt cpu sec:    0.10  elapsed:     1  virtual:    39M
+
+Finished /tools/cadence/ASSURA/current/tools/assura/bin/avrpt
+
+Starting /tools/cadence/ASSURA/current/tools/assura/bin/avcallproc /home/zxw6805/ee620/zxw_bstest.rsf -exec1 -LVS -cdslib /home/zxw6805/ee620/cds.lib
+
+Finished /tools/cadence/ASSURA/current/tools/assura/bin/avcallproc
+
+Starting /tools/cadence/ASSURA/current/tools/assura/bin/avnx /home/zxw6805/ee620/zxw_bstest.rsf -exec1 -LVS -cdslib /home/zxw6805/ee620/cds.lib
+Checking out license for Assura_LVS 3.10
+@(#)$CDS: avnx version av3.2:Production:dfII5.1.41:5.10.41_USR6.18 11/06/2008 11:00 (logavt05) $
+sub-version 3.2_USR1_HF1, integ signature 2008-11-05-1153
+
+run on vlsi-legacy from /tools/cadence/ASSURA/3.2-5141/tools.lnx86/assura/bin/32bit/avnx on Wed Nov  5 18:48:03 2014
+
+avnx started...
+cpu: 0.13  elap: 0  pf: 0  in: 0  out: 0  virt: 0M  phys: 0M
+
+Run time =  1.00 seconds
+CPU time =  0.15 seconds
+
+                  End of Summary Report
+
+************************************************************************
+cpu: 0.01  elap: 0  pf: 0  in: 0  out: 0  virt: 0M  phys: 0M
+***** avnx terminated normally ***** 
+
+
+Finished /tools/cadence/ASSURA/current/tools/assura/bin/avnx
+
+Starting /tools/cadence/ASSURA/current/tools/assura/bin/nvn /home/zxw6805/ee620/zxw_bstest.rsf -postExtract -exec1 -cdslib /home/zxw6805/ee620/cds.lib
+@(#)$CDS: nvn version av3.2:Production:dfII5.1.41:5.10.41_USR6.18 11/06/2008 11:06 (logavt05) $
+sub-version 3.2_USR1_HF1, integ signature 2008-11-05-1153
+run on vlsi-legacy at Wed Nov  5 18:48:04 2014
+Reading schematic network
+Reading layout network
+ inputting network zxw_bstest.ldb
+Preprocessing schematic network phase 1
+Preprocessing layout network phase 1
+Preprocessing schematic network phase 2
+Preprocessing layout network phase 2
+Comparing zxw_mux2 schematic zxw_lib vs zxw_mux2 layout zxw_lib
+Comparing zxw_dff schematic zxw_lib vs zxw_dff layout zxw_lib
+Comparing zxw_bsc schematic zxw_lib vs zxw_bsc layout zxw_lib
+Comparing zxw_bsr5 schematic zxw_lib vs zxw_bsr5 layout zxw_lib
+Comparing zxw_nand2 schematic zxw_lib vs zxw_nand2 layout zxw_lib
+Comparing zxw_xor2 schematic zxw_lib vs zxw_xor2 layout zxw_lib
+Comparing zxw_fa schematic zxw_lib vs zxw_fa layout zxw_lib
+Top cell  zxw_bstest schematic zxw_lib vs zxw_bstest layout zxw_lib
+Schematic and Layout Match
+cpu=0.00m  wall=0.00m  mem=15.02mb
+
+Finished /tools/cadence/ASSURA/current/tools/assura/bin/nvn
+
+Starting /tools/cadence/ASSURA/current/tools/assura/bin/vldbToRpa zxw_bstest.snn zxw_bstest.tre zxw_bstest.cel
+
+Finished /tools/cadence/ASSURA/current/tools/assura/bin/vldbToRpa
+
+Starting /tools/cadence/ASSURA/current/tools/assura/bin/ercChk /home/zxw6805/ee620/zxw_bstest.rsf
+
+Finished /tools/cadence/ASSURA/current/tools/assura/bin/ercChk
+
+Starting /tools/cadence/ASSURA/current/tools/assura/bin/avcallproc /home/zxw6805/ee620/zxw_bstest.rsf -trp -exec1
+
+Finished /tools/cadence/ASSURA/current/tools/assura/bin/avcallproc
+
+
+Assura LVS terminated normally.
+
+
+
+Run ended: Wed Nov  5 18:48:05 2014
+
+*****  Assura terminated normally  *****
+

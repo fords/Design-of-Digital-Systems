@@ -1,0 +1,64 @@
+# (c) Copyright 1999-2014  Cadence Design Systems, Inc.  All Rights Reserved.
+# DFII-VCAR Interface Version : sub-version 5.10.41.500.6.137
+# Virtuoso Version           : version 5.1.0 07/26/2009 22:40 (cicln04) $
+# VCAR Version                : 11.1.33
+# Date Created   : Wed Nov  5 10:17:45 2014
+# VCAR File Name  : /home/zxw6805/ee620/zxw_bssum.wir (wiring)
+# Rules Template : /classes/ee620/ami05_vcr.rule
+(wiring
+ (wire
+  (rect M2 -13.55 12.05 -12.55 13.05)
+  (net gnd!)
+  (io_port normal gnd!_gnd!)
+  (property (signal_direction inout))
+ )
+ (wire
+  (rect M2 116.75 389.05 117.75 390.05)
+  (net mode)
+  (io_port normal mode_mode)
+  (property (signal_direction input))
+ )
+ (wire
+  (rect M2 12.55 389.05 13.55 390.05)
+  (net UDR2)
+  (io_port normal UDR2_UDR2)
+  (property (signal_direction input))
+ )
+ (wire
+  (rect M2 38.6 389.05 39.6 390.05)
+  (net UDR1)
+  (io_port normal UDR1_UDR1)
+  (property (signal_direction input))
+ )
+ (wire
+  (rect M2 142.8 389.05 143.8 390.05)
+  (net ShiftIn)
+  (io_port normal ShiftIn_ShiftIn)
+  (property (signal_direction input))
+ )
+ (wire
+  (rect M2 168.85 389.05 169.85 390.05)
+  (net ShiftDR)
+  (io_port normal ShiftDR_ShiftDR)
+  (property (signal_direction input))
+ )
+ (wire
+  (rect M2 64.65 389.05 65.65 390.05)
+  (net CDR2)
+  (io_port normal CDR2_CDR2)
+  (property (signal_direction input))
+ )
+ (wire
+  (rect M2 90.7 389.05 91.7 390.05)
+  (net CDR1)
+  (io_port normal CDR1_CDR1)
+  (property (signal_direction input))
+ )
+ (wire
+  (rect M2 90.7 0 91.7 1)
+  (net Shiftout)
+  (io_port normal Shiftout_Shiftout)
+  (property (signal_direction output))
+ )
+)
+# end wiring

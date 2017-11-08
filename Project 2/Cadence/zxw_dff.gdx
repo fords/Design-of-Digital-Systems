@@ -1,0 +1,44 @@
+# 0
+pmos(MOS): pmos(MOS)
+# 0
+nmos(MOS): nmos(MOS)
+# 38
+zxw_dff schematic zxw_lib: zxw_dff layout zxw_lib
+D M43 avD62_14
+D M44 avD62_13
+S M45 avD62_11
+S M46 avD62_12
+S M47 avD62_16
+D M34 avD62_17
+D M36 avD62_6
+S M31 avD62_9
+D M30 avD62_10
+S M22 avD62_18
+D M24 avD62_19
+S M27 avD62_7
+S M20 avD62_15
+S M10 avD62_5
+D M49 avD62_3
+S M50 avD62_1
+S M51 avD62_2
+D M26 avD62_8
+D M48 avD62_4
+S M38 avD63_14
+S M39 avD63_11
+D M40 avD63_12
+D M41 avD63_13
+S M42 avD63_16
+D M35 avD63_17
+D M37 avD63_6
+S M32 avD63_9
+D M33 avD63_10
+S M23 avD63_18
+D M25 avD63_19
+S M21 avD63_15
+D M28 avD63_8
+S M29 avD63_7
+S M52 avD63_4
+S M15 avD63_5
+S M53 avD63_1
+D M54 avD63_2
+D M55 avD63_3

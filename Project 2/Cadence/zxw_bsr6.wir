@@ -1,0 +1,118 @@
+# (c) Copyright 1999-2014  Cadence Design Systems, Inc.  All Rights Reserved.
+# DFII-VCAR Interface Version : sub-version 5.10.41.500.6.137
+# Virtuoso Version           : version 5.1.0 07/26/2009 22:40 (cicln04) $
+# VCAR Version                : 11.1.33
+# Date Created   : Wed Nov  5 00:21:25 2014
+# VCAR File Name  : /home/zxw6805/ee620/zxw_bsr6.wir (wiring)
+# Rules Template : /classes/ee620/ami05_vcr.rule
+(wiring
+ (wire
+  (rect M2 166.7 0 167.7 1)
+  (net ShiftOut)
+  (io_port normal ShiftOut_ShiftOut)
+  (property (signal_direction output))
+ )
+ (wire
+  (rect M2 136.3 0 137.3 1)
+  (net out2)
+  (io_port normal out2_out2)
+  (property (signal_direction output))
+ )
+ (wire
+  (rect M2 105.9 0 106.9 1)
+  (net out4)
+  (io_port normal out4_out4)
+  (property (signal_direction output))
+ )
+ (wire
+  (rect M2 75.5 0 76.5 1)
+  (net out3)
+  (io_port normal out3_out3)
+  (property (signal_direction output))
+ )
+ (wire
+  (rect M2 45.1 0 46.1 1)
+  (net out5)
+  (io_port normal out5_out5)
+  (property (signal_direction output))
+ )
+ (wire
+  (rect M2 14.7 0 15.7 1)
+  (net out1)
+  (io_port normal out1_out1)
+  (property (signal_direction output))
+ )
+ (wire
+  (rect M2 174.3 310.9 175.3 311.9)
+  (net ShiftDR)
+  (io_port normal ShiftDR_ShiftDR)
+  (property (signal_direction input))
+ )
+ (wire
+  (rect M2 159.1 310.9 160.1 311.9)
+  (net in5)
+  (io_port normal in5_in5)
+  (property (signal_direction input))
+ )
+ (wire
+  (rect M2 143.9 310.9 144.9 311.9)
+  (net shiftIn)
+  (io_port normal shiftIn_shiftIn)
+  (property (signal_direction input))
+ )
+ (wire
+  (rect M2 128.7 310.9 129.7 311.9)
+  (net mode)
+  (io_port normal mode_mode)
+  (property (signal_direction input))
+ )
+ (wire
+  (rect M2 113.5 310.9 114.5 311.9)
+  (net in4)
+  (io_port normal in4_in4)
+  (property (signal_direction input))
+ )
+ (wire
+  (rect M2 98.3 310.9 99.3 311.9)
+  (net in3)
+  (io_port normal in3_in3)
+  (property (signal_direction input))
+ )
+ (wire
+  (rect M2 83.1 310.9 84.1 311.9)
+  (net in1)
+  (io_port normal in1_in1)
+  (property (signal_direction input))
+ )
+ (wire
+  (rect M2 67.9 310.9 68.9 311.9)
+  (net in2)
+  (io_port normal in2_in2)
+  (property (signal_direction input))
+ )
+ (wire
+  (rect M2 52.7 310.9 53.7 311.9)
+  (net CDR1)
+  (io_port normal CDR1_CDR1)
+  (property (signal_direction input))
+ )
+ (wire
+  (rect M2 37.5 310.9 38.5 311.9)
+  (net CDR2)
+  (io_port normal CDR2_CDR2)
+  (property (signal_direction input))
+ )
+ (wire
+  (rect M2 22.3 310.9 23.3 311.9)
+  (net UDR1)
+  (io_port normal UDR1_UDR1)
+  (property (signal_direction input))
+ )
+ (wire
+  (rect M2 7.1 310.9 8.1 311.9)
+  (net UDR2)
+  (io_port normal UDR2_UDR2)
+  (property (signal_direction input))
+ )
+)
+# end wiring

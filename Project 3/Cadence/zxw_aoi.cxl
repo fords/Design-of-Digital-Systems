@@ -1,0 +1,32 @@
+C nmos(MOS) nmos(MOS)
+N D D
+N G G
+N S S
+N B B
+
+C pmos(MOS) pmos(MOS)
+N D D
+N G G
+N S S
+N B B
+
+C "zxw_aoi schematic zxw_lib" "zxw_aoi layout zxw_lib"
+N net21 avC10
+N net33 avC9
+N net12 avC8
+N out1 out1
+N in4 in4
+N in3 in3
+N in2 in2
+N in1 in1
+N gnd! gnd!
+N vdd! vdd!
+I M8 avD63_4
+I M7 avD63_3
+I M6 avD63_2
+I M5 avD63_1
+I M4 avD62_2
+I M3 avD62_3
+I M1 avD62_4
+I M0 avD62_1
+

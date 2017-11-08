@@ -1,0 +1,51 @@
+
+***** Begin Label Report *****
+
+ Label in cell 'fliptesting layout zxw_lib':
+  info: Assign net label "in1" at (28.850, 13.250) to layer `m3NoRes'.
+  info: Assign net label "in3" at (45.650, 13.050) to layer `m3NoRes'.
+  info: Assign net label "in2" at (47.950, 22.750) to layer `m3NoRes'.
+  info: Assign net label "out1" at (38.400, 12.950) to layer `m3NoRes'.
+  info: Assign net label "out1" at (11.950, 12.950) to layer `m3NoRes'.
+  WARN: Nets C7 and C6 are associated with the same label "out1".
+        Net label "out1" at (11.950, 12.950) renamed out1_avC7.
+  info: Assign net label "in2" at (21.500, 22.750) to layer `m3NoRes'.
+  WARN: Nets C8 and C5 are associated with the same label "in2".
+        Net label "in2" at (21.500, 22.750) renamed in2_avC8.
+  info: Assign net label "in3" at (19.200, 13.050) to layer `m3NoRes'.
+  WARN: Nets C9 and C4 are associated with the same label "in3".
+        Net label "in3" at (19.200, 13.050) renamed in3_avC9.
+  info: Assign net label "in1" at (2.400, 13.250) to layer `m3NoRes'.
+  WARN: Nets C10 and C3 are associated with the same label "in1".
+        Net label "in1" at (2.400, 13.250) renamed in1_avC10.
+  info: Assign net label "vdd!" at (31.750, 26.250) to layer `m1NoRes'.
+  info: Assign net label "gnd!" at (32.900, 5.300) to layer `m1NoRes'.
+  info: Assign net label "gnd!" at (6.450, 5.300) to layer `m1NoRes'.
+  info: Assign net label "vdd!" at (5.300, 26.250) to layer `m1NoRes'.
+  info: Assign pin label "in1" at (28.850, 13.250) to layer `m3NoRes'.
+  info: Assign pin label "in3" at (45.650, 13.050) to layer `m3NoRes'.
+  info: Assign pin label "in2" at (47.950, 22.750) to layer `m3NoRes'.
+  info: Assign pin label "out1" at (38.400, 12.950) to layer `m3NoRes'.
+  info: Assign pin label "out1" at (11.950, 12.950) to layer `m3NoRes'.
+  WARN: Nets C7 and C6 are associated with the same label "out1".
+        Net label "out1" at (11.950, 12.950) renamed out1_avC7.
+  info: Assign pin label "in2" at (21.500, 22.750) to layer `m3NoRes'.
+  WARN: Nets C8 and C5 are associated with the same label "in2".
+        Net label "in2" at (21.500, 22.750) renamed in2_avC8.
+  info: Assign pin label "in3" at (19.200, 13.050) to layer `m3NoRes'.
+  WARN: Nets C9 and C4 are associated with the same label "in3".
+        Net label "in3" at (19.200, 13.050) renamed in3_avC9.
+  info: Assign pin label "in1" at (2.400, 13.250) to layer `m3NoRes'.
+  WARN: Nets C10 and C3 are associated with the same label "in1".
+        Net label "in1" at (2.400, 13.250) renamed in1_avC10.
+  info: Assign pin label "vdd!" at (31.750, 26.250) to layer `m1NoRes'.
+  info: Assign pin label "gnd!" at (32.900, 5.300) to layer `m1NoRes'.
+  info: Assign pin label "gnd!" at (6.450, 5.300) to layer `m1NoRes'.
+  info: Assign pin label "vdd!" at (5.300, 26.250) to layer `m1NoRes'.
+        Net label "in1" is renamed to in1_avC3 on net C3.
+        Net label "in3" is renamed to in3_avC4 on net C4.
+        Net label "in2" is renamed to in2_avC5 on net C5.
+        Net label "out1" is renamed to out1_avC6 on net C6.
+
+***** End of Label Report *****
+

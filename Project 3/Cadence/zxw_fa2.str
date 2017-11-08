@@ -1,0 +1,145 @@
+# (c) Copyright 1999-2014  Cadence Design Systems, Inc.  All Rights Reserved.
+# DFII-VCAR Interface Version : sub-version 5.10.41.500.6.137
+# Virtuoso Version           : version 5.1.0 07/26/2009 22:40 (cicln04) $
+# VCAR Version                : 11.1.33
+# Date Created   : Mon Nov  3 19:29:26 2014
+# VCAR File Name  : /home/zxw6805/ee620/zxw_fa2.str (structure)
+# Rules Template : /classes/ee620/ami05_vcr.rule
+(structure
+ (unit um)
+ (grid wire 0.05)
+ (grid via 0.05)
+ (grid place 0.05)
+ (grid manufacturing 0.05)
+ (layer M3
+  (type signal)
+  (function metal)
+  (direction horizontal)
+  (rule (width 0.8)
+   (clearance 0.7)
+   (min_process_width 0.8)
+  )
+ )
+ (layer VIA2
+  (type signal)
+  (function cut)
+  (direction off)
+  (escape_distance 0)
+  (rule (width 0.5)
+   (clearance 0.8)
+   (min_process_width 0.5)
+  )
+ )
+ (layer M2
+  (type signal)
+  (function metal)
+  (direction vertical)
+  (rule (width 0.7)
+   (clearance 0.7)
+   (min_process_width 0.7)
+  )
+ )
+ (layer VIA
+  (type signal)
+  (function cut)
+  (direction off)
+  (escape_distance 0)
+  (rule (width 0.5)
+   (clearance 0.6)
+   (min_process_width 0.5)
+  )
+ )
+ (layer M1
+  (type signal)
+  (function metal)
+  (direction horizontal)
+  (rule (width 0.6)
+   (clearance 0.6)
+   (min_process_width 0.6)
+  )
+ )
+ (layer CNT
+  (type signal)
+  (function cut)
+  (direction off)
+  (escape_distance 0)
+  (rule (width 0.5)
+   (clearance 0.5)
+   (min_process_width 0.5)
+  )
+ )
+ (layer POLY1
+  (type signal)
+  (function polysilicon)
+  (direction orthogonal)
+  (rule (width 0.6)
+   (clearance 0.6)
+   (min_process_width 0.6)
+  )
+ )
+ (layer TUB
+  (type signal)
+  (direction off)
+  (escape_distance 0)
+  (rule (width 2.5)
+   (clearance 4)
+   (min_process_width 2.5)
+  )
+ )
+ (layer DIF
+  (type signal)
+  (direction off)
+  (escape_distance 0)
+  (rule (width 0.5)
+   (clearance 0.9)
+   (min_process_width 0.5)
+  )
+ )
+ (rule
+  (inter_layer_clearance 0.4 (layer_pair CNT POLY1))
+ )
+ (rule
+  (inter_layer_clearance 0.2 (layer_pair POLY1 DIF))
+ )
+ (rule
+  (inter_layer_clearance 1.5 (layer_pair TUB DIF))
+ )
+ (boundary
+  (rect M3 0 0 88.8 46.8)
+  (rule (clear 0.35))
+ )
+ (boundary
+  (rect VIA2 0 0 88.8 46.8)
+  (rule (clear 0.35))
+ )
+ (boundary
+  (rect M2 0 0 88.8 46.8)
+  (rule (clear 0.35))
+ )
+ (boundary
+  (rect VIA 0 0 88.8 46.8)
+  (rule (clear 0.3))
+ )
+ (boundary
+  (rect M1 0 0 88.8 46.8)
+  (rule (clear 0.3))
+ )
+ (boundary
+  (rect CNT 0 0 88.8 46.8)
+  (rule (clear 0.25))
+ )
+ (boundary
+  (rect POLY1 0 0 88.8 46.8)
+  (rule (clear 0.3))
+ )
+ (boundary
+  (rect TUB 0 0 88.8 46.8)
+  (rule (clear 0))
+ )
+ (boundary
+  (rect DIF 0 0 88.8 46.8)
+  (rule (clear 0))
+ )
+ (via VIA2 VIA M1PLY)
+)
+# end structure

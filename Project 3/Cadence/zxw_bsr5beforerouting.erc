@@ -1,0 +1,87 @@
+
+***** Begin Label Report *****
+
+ Label in cell 'zxw_bsc layout zxw_lib':
+  info: Assign net label "Mode_control" at (125.400, 46.300) to layer `m2NoRes'.
+  info: Assign net label "UpdateDR2" at (11.400, 46.300) to layer `m2NoRes'.
+  info: Assign net label "UpdateDR" at (34.200, 46.300) to layer `m2NoRes'.
+  info: Assign net label "ClockDR2" at (57.000, 46.300) to layer `m2NoRes'.
+  info: Assign net label "ClockDR" at (79.800, 46.300) to layer `m2NoRes'.
+  info: Assign net label "ShiftDR" at (171.000, 46.300) to layer `m2NoRes'.
+  info: Assign net label "SIN" at (148.200, 46.300) to layer `m2NoRes'.
+  info: Assign net label "In" at (102.600, 46.300) to layer `m2NoRes'.
+  info: Assign net label "Sout" at (45.600, 0.500) to layer `m2NoRes'.
+  info: Assign net label "out" at (136.800, 0.500) to layer `m2NoRes'.
+  info: Assign net label "gnd!" at (2.000, 9.600) to layer `m1NoRes'.
+  info: Assign net label "vdd!" at (181.100, 35.300) to layer `m1NoRes'.
+  info: Assign pin label "Mode_control" at (125.400, 46.300) to layer `m2NoRes'.
+  info: Assign pin label "UpdateDR2" at (11.400, 46.300) to layer `m2NoRes'.
+  info: Assign pin label "UpdateDR" at (34.200, 46.300) to layer `m2NoRes'.
+  info: Assign pin label "ClockDR2" at (57.000, 46.300) to layer `m2NoRes'.
+  info: Assign pin label "ClockDR" at (79.800, 46.300) to layer `m2NoRes'.
+  info: Assign pin label "ShiftDR" at (171.000, 46.300) to layer `m2NoRes'.
+  info: Assign pin label "SIN" at (148.200, 46.300) to layer `m2NoRes'.
+  info: Assign pin label "In" at (102.600, 46.300) to layer `m2NoRes'.
+  info: Assign pin label "Sout" at (45.600, 0.500) to layer `m2NoRes'.
+  info: Assign pin label "out" at (136.800, 0.500) to layer `m2NoRes'.
+  info: Assign pin label "gnd!" at (2.000, 9.600) to layer `m1NoRes'.
+  info: Assign pin label "vdd!" at (181.100, 35.300) to layer `m1NoRes'.
+  info: Assign net label "Q_zxw_dff_avC_1" at (57.550, 24.850) to layer `m3NoRes'.
+  info: Assign net label "Q_zxw_dff_avC_2" at (124.750, 24.850) to layer `m3NoRes'.
+  info: Assign net label "phi1_zxw_dff_avC_1" at (45.900, 20.950) to layer `m3NoRes'.
+  info: Assign net label "phi1_zxw_dff_avC_2" at (113.100, 20.950) to layer `m3NoRes'.
+  info: Assign net label "phi2_zxw_dff_avC_1" at (19.100, 15.350) to layer `m3NoRes'.
+  info: Assign net label "phi2_zxw_dff_avC_2" at (86.300, 15.350) to layer `m3NoRes'.
+  info: Assign net label "D_zxw_dff_avC_1" at (16.900, 16.050) to layer `m3NoRes'.
+  info: Assign net label "D_zxw_dff_avC_2" at (84.100, 16.050) to layer `m3NoRes'.
+  info: Assign net label "Qbar_zxw_dff_avC_1" at (60.450, 25.700) to layer `m3NoRes'.
+  info: Assign net label "Qbar_zxw_dff_avC_2" at (127.650, 25.700) to layer `m3NoRes'.
+  info: Assign net label "S_zxw_mux2_avC_3" at (148.750, 23.500) to layer `m3NoRes'.
+  info: Assign net label "S_zxw_mux2_avC_4" at (172.750, 23.500) to layer `m3NoRes'.
+  info: Assign net label "out1_zxw_mux2_avC_3" at (153.950, 23.100) to layer `m3NoRes'.
+  info: Assign net label "out1_zxw_mux2_avC_4" at (177.950, 23.100) to layer `m3NoRes'.
+  info: Assign net label "D1_zxw_mux2_avC_3" at (146.400, 18.950) to layer `m3NoRes'.
+  info: Assign net label "D1_zxw_mux2_avC_4" at (170.400, 18.950) to layer `m3NoRes'.
+  info: Assign net label "D0_zxw_mux2_avC_3" at (136.850, 20.950) to layer `m3NoRes'.
+  info: Assign net label "D0_zxw_mux2_avC_4" at (160.850, 20.950) to layer `m3NoRes'.
+
+ Label in cell 'zxw_bsr5beforerouting layout zxw_lib':
+  info: Floating label discarded:  "CDR1" at (68.400, 310.750).
+  info: Floating label discarded:  "out3" at (136.800, 1.250).
+  info: Floating label discarded:  "shiftIn" at (159.600, 310.750).
+  info: Floating label discarded:  "CDR2" at (53.200, 310.750).
+  info: Floating label discarded:  "ShiftDR" at (174.800, 310.750).
+  info: Floating label discarded:  "in2" at (38.000, 310.750).
+  info: Floating label discarded:  "in5" at (144.400, 310.750).
+  info: Floating label discarded:  "out1" at (15.200, 1.250).
+  info: Floating label discarded:  "out5" at (45.600, 1.250).
+  info: Floating label discarded:  "in1" at (98.800, 310.750).
+  info: Floating label discarded:  "mode" at (129.200, 310.750).
+  info: Floating label discarded:  "out4" at (106.400, 1.250).
+  info: Floating label discarded:  "in4" at (114.000, 310.750).
+  info: Floating label discarded:  "UDR1" at (22.800, 310.750).
+  info: Floating label discarded:  "out2" at (76.000, 1.250).
+  info: Floating label discarded:  "in3" at (83.600, 310.750).
+  info: Floating label discarded:  "UDR2" at (7.600, 310.750).
+  info: Floating label discarded:  "ShiftOut" at (167.200, 1.250).
+  info: Floating label discarded:  "CDR1" at (68.400, 310.750).
+  info: Floating label discarded:  "out3" at (136.800, 1.250).
+  info: Floating label discarded:  "shiftIn" at (159.600, 310.750).
+  info: Floating label discarded:  "CDR2" at (53.200, 310.750).
+  info: Floating label discarded:  "ShiftDR" at (174.800, 310.750).
+  info: Floating label discarded:  "in2" at (38.000, 310.750).
+  info: Floating label discarded:  "in5" at (144.400, 310.750).
+  info: Floating label discarded:  "out1" at (15.200, 1.250).
+  info: Floating label discarded:  "out5" at (45.600, 1.250).
+  info: Floating label discarded:  "in1" at (98.800, 310.750).
+  info: Floating label discarded:  "mode" at (129.200, 310.750).
+  info: Floating label discarded:  "out4" at (106.400, 1.250).
+  info: Floating label discarded:  "in4" at (114.000, 310.750).
+  info: Floating label discarded:  "UDR1" at (22.800, 310.750).
+  info: Floating label discarded:  "out2" at (76.000, 1.250).
+  info: Floating label discarded:  "in3" at (83.600, 310.750).
+  info: Floating label discarded:  "UDR2" at (7.600, 310.750).
+  info: Floating label discarded:  "ShiftOut" at (167.200, 1.250).
+
+***** End of Label Report *****
+

@@ -1,0 +1,25 @@
+# 4
+pmos(MOS): pmos(MOS)
+= D D B
+= G G B
+= S S B
+= B B B
+# 4
+nmos(MOS): nmos(MOS)
+= D D B
+= G G B
+= S S B
+= B B B
+# 11
+zxw_xor2 schematic zxw_lib: zxw_xor2 layout zxw_lib
+= net1 avC6
+= net16 avC10
+= net17 avC11
+= net5 avC7
+= net44 avC8
+= net33 avC9
+= vdd! vdd! I
+= gnd! gnd! I
+= A A I
+= B B I
+= Y Y O

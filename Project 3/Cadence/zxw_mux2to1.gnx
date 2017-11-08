@@ -1,0 +1,24 @@
+# 4
+pmos(MOS): pmos(MOS)
+= D D B
+= G G B
+= S S B
+= B B B
+# 4
+nmos(MOS): nmos(MOS)
+= D D B
+= G G B
+= S S B
+= B B B
+# 10
+zxw_mux2to1 schematic zxw_lib: zxw_mux2to1 layout2 zxw_lib
+= net16 avC10
+= net4 avC7
+= net089 avC8
+= net43 avC9
+= vdd! vdd! I
+= gnd! gnd! I
+= in1 in1 I
+= in2 in2 I
+= in3 in3 I
+= out1 out1 O

@@ -1,0 +1,18 @@
+;----------------------------------------------------------------------------
+; @(#)$CDS: assura version av3.2:Production:dfII5.1.41:5.10.41_USR6.18 11/06/08 10:14 (logavt05) $
+; sub-version 3.2_USR1_HF1
+;----------------------------------------------------------------------------
+
+
+;----------------------------------------------------------------------------
+; avParameter Section
+; Created by the Assura UI
+;----------------------------------------------------------------------------
+
+avParameters(
+  ?inputLayout ( "df2" "zxw_lib" )
+  ?cellName "backupfa"
+  ?viewName "layout"
+  ?rulesFile "/classes/ee620/ami500hakx.6.11/Rev6.11/assura/assuraDRCc5.rul"
+  ?avrpt t
+)

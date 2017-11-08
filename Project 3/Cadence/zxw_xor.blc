@@ -1,0 +1,4 @@
+"pmos(MOS)" "pmos(MOS)"
+"nmos(MOS)" "nmos(MOS)"
+"zxw_xor layout zxw_lib" "zxw_xor schematic zxw_lib" "nmos(MOS)" "pmos(MOS)"
+Devices filtered from layout

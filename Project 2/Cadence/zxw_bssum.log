@@ -1,0 +1,3071 @@
+
+            Assura (tm) Physical Verification Version av3.2:Production:dfII5.1.41:5.10.41_USR6.18
+            Release 3.2_USR1_HF1
+
+Copyright (c) Cadence Design Systems. All rights reserved.
+@(#)$CDS: assura version av3.2:Production:dfII5.1.41:5.10.41_USR6.18 11/06/2008 10:57 (logavt05) $
+sub-version 3.2_USR1_HF1, integ signature 2008-11-05-1153
+
+run on vlsi-legacy from /tools/cadence/ASSURA/3.2-5141/tools.lnx86/assura/bin/32bit/assura on Wed Nov  5 13:27:02 2014
+
+
+Starting /tools/cadence/ASSURA/current/tools/assura/bin/aveng /home/zxw6805/ee620/zxw_bssum.rsf -restart -cdslib /home/zxw6805/ee620/cds.lib
+@(#)$CDS: aveng version av3.2:Production:dfII5.1.41:5.10.41_USR6.18 11/06/2008 10:59 (logavt05) $
+sub-version 3.2_USR1_HF1, integ signature 2008-11-05-1153
+
+run on vlsi-legacy from /tools/cadence/ASSURA/3.2-5141/tools.lnx86/assura/bin/32bit/aveng on Wed Nov  5 13:27:02 2014
+
+ Summary Report: zxw_bssum.sum
+ RSF           : /home/zxw6805/ee620/zxw_bssum.rsf
+ Library Name  : zxw_lib
+ CDSLIB Path   : "/home/zxw6805/ee620/cds.lib"
+ Cell Name     : zxw_bssum
+ View Name     : layout
+ Rules File    : /classes/ee620/ami500hakx.6.11/Rev6.11/assura/assuraDRCc5.rul
+ Options       : -restart -cdslib /home/zxw6805/ee620/cds.lib 
+ Work Directory: .
+ Operating Mode: Legacy Mode is Off
+     Increased use of dataReduction is On
+     New hierarchical select is On
+
+Checking out license for Assura_DRC 3.10
+Restarting with VDB Build 2 
+
+Building the VDB part 2 in background mode.
+
+Building the VDB part 3 in background mode.
+
+
+Running in restart mode.
+
+
+Finished building the VDB. VDB build times for main process:
+cpu: 0.20  elap: 1  pf: 0  in: 0  out: 0  virt: 0M  phys: 0M
+
+Running the Task Processor, 4 cells, 3163 steps...
+
+Top Cell is 'zxw_bssum layout zxw_lib'
+
+Executing: BULK = geomBkgnd()
+
+Executing: M1 = geomOr(M1PIN M1)
+
+Executing: M2 = geomOr(M2PIN M2)
+
+Executing: M3 = geomOr(M3PIN M3)
+
+Executing: drecNotTerm = geomAndNot(DREC TERM)
+
+Executing: resNotTerm = geomAndNot(RES TERM)
+
+Executing: rrecNotTerm = geomOr(drecNotTerm resNotTerm)
+
+Executing: resMRK = geomGetTexted(resNotTerm RESTXT "*")
+
+Executing: dresNotTerm = geomAndNot(resNotTerm resMRK)
+
+Executing: aaRES = geomAnd(dresNotTerm ACT)
+
+Executing: RESn = geomAndNot(dresNotTerm aaRES)
+
+Executing: p1RES = geomAnd(RESn POLY1)
+
+Executing: RESn = geomAndNot(RESn p1RES)
+
+Executing: p2NotPpls = geomAndNot(POLY2 PPLS)
+
+Executing: p2RES = geomAnd(RESn p2NotPpls)
+
+Executing: RESn = geomAndNot(RESn p2RES)
+
+Executing: nwRES = geomAnd(RESn NWELL)
+
+Executing: pzthnMRK = geomGetTexted(drecNotTerm DRECTXT "pzthn")
+
+Executing: pzMRK = geomGetTexted(drecNotTerm DRECTXT "pz")
+
+Executing: pxMRK = geomGetTexted(drecNotTerm DRECTXT "px")
+
+Executing: ptMRK = geomGetTexted(drecNotTerm DRECTXT "pt")
+
+Executing: puMRK = geomGetTexted(drecNotTerm DRECTXT "pu")
+
+Executing: pvMRK = geomGetTexted(drecNotTerm DRECTXT "pv")
+
+Executing: pzxMRK = geomOr(pzMRK pxMRK)
+
+Executing: pzxtMRK = geomOr(pzxMRK ptMRK)
+
+Executing: pzxtMRK = geomOr(pzxtMRK pzthnMRK)
+
+Executing: nwRec = geomAnd(rrecNotTerm NWELL)
+
+Executing: nwMRK = geomGetTexted(nwRec RESTXT "nw")
+
+Executing: nwMRK = geomOr(nwRES nwMRK)
+
+Executing: nwResBodyWNdiff = geomAnd(NWELL nwMRK)
+
+Executing: nDiffForNwTerm = geomAndNot(ACT PPLS)
+
+Executing: nwResBody = geomAndNot(nwResBodyWNdiff nDiffForNwTerm)
+
+Executing: nw3MRK = geomGetTexted(nwRec RESTXT "nw3")
+
+Executing: nw3ResBodyWNdiff = geomAnd(NWELL nw3MRK)
+
+Executing: nw3ResBody = geomAndNot(nw3ResBodyWNdiff nDiffForNwTerm)
+
+Executing: nwOrNw3Res = geomOr(nw3ResBody nwResBody)
+
+Executing: ntubNotRes = geomAndNot(NWELL nwOrNw3Res)
+
+Executing: ndiffRes = geomAnd(nDiffForNwTerm RES)
+
+Executing: nwTermInt2 = geomAndNot(ntubNotRes ndiffRes)
+
+Executing: nwTermInt1 = geomAndNot(nwTermInt2 nwResBody)
+
+Executing: nwTermInt = geomButtOrOver(nwTermInt1 nwOrNw3Res)
+
+Executing: nwTermRes1 = geomGetEdge(nwResBody butting nDiffForNwTerm)
+
+Executing: nwTermRes2 = geomGetEdge(nwResBody butting nDiffForNwTerm)
+
+Executing: nwTermDev = geomOr(nwTermRes2 nwTermRes1)
+
+Executing: nwTermDevBig = geomSize(nwTermDev 0.05)
+
+Executing: nwTermAll = geomOr(nwTermInt nwTermDevBig)
+
+Executing: CNT = geomAndNot(CNT DELDIF)
+
+Executing: DELDIF = geomAndNot(DELDIF TERM)
+
+Executing: TERM = geomAndNot(TERM DELDIF)
+
+Executing: diff = geomOr(ACT EXDIF)
+
+Executing: dschottkyMRK = geomGetTexted(drecNotTerm DRECTXT "dschottky")
+
+Executing: shkNpls = geomOverlap(NPLS dschottkyMRK)
+
+Executing: ppls = geomOr(PPLS shkNpls)
+
+Executing: pDiff = geomAnd(diff ppls)
+
+Executing: nDiff = geomAndNot(diff pDiff)
+
+Executing: p1Gate = geomAnd(POLY1 ACT)
+
+Executing: pP1Gate = geomAnd(p1Gate PPLS)
+
+Executing: nP1Gate = geomAndNot(p1Gate pP1Gate)
+
+Executing: nuMRK = geomGetTexted(drecNotTerm DRECTXT "nu")
+
+Executing: nvMRK = geomGetTexted(drecNotTerm DRECTXT "nv")
+
+Executing: nvuMRK = geomOr(nvMRK nuMRK)
+
+Executing: nvuNwell = geomOverlap(NWELL nvuMRK)
+
+Executing: ntMRK = geomGetTexted(drecNotTerm DRECTXT "nt")
+
+Executing: nzMRK = geomGetTexted(drecNotTerm DRECTXT "nz")
+
+Executing: nxMRK = geomGetTexted(drecNotTerm DRECTXT "nx")
+
+Executing: nzxMRK = geomOr(nzMRK nxMRK)
+
+Executing: ntNwell = geomOverlap(NWELL ntMRK)
+
+Executing: nzxNwell = geomOverlap(NWELL nzxMRK)
+
+Executing: nwMRKs = geomOr(nwMRK nw3MRK)
+
+Executing: nwNwell = geomOverlap(NWELL nwMRKs)
+
+Executing: Nnwell = geomOr(nzxNwell nvuNwell ntNwell nwNwell)
+
+Executing: PNwell = geomAndNot(NWELL Nnwell)
+
+Executing: PNwell = geomOr(DNW PNwell)
+
+Executing: ptubs = geomAndNot(BULK PNwell)
+
+Executing: ndMRK = geomGetTexted(rrecNotTerm RESTXT "nd")
+
+Executing: nsMRK = geomGetTexted(rrecNotTerm RESTXT "ns")
+
+Executing: ndMRK = geomOr(aaRES ndMRK)
+
+Executing: nsMRK = geomOr(aaRES nsMRK)
+
+Executing: nd3MRK = geomGetTexted(rrecNotTerm RESTXT "nd3")
+
+Executing: ns3MRK = geomGetTexted(rrecNotTerm RESTXT "ns3")
+
+Executing: pdMRK = geomGetTexted(rrecNotTerm RESTXT "pd")
+
+Executing: psMRK = geomGetTexted(rrecNotTerm RESTXT "ps")
+
+Executing: pdMRK = geomOr(aaRES pdMRK)
+
+Executing: psMRK = geomOr(aaRES psMRK)
+
+Executing: pd3MRK = geomGetTexted(rrecNotTerm RESTXT "pd3")
+
+Executing: ps3MRK = geomGetTexted(rrecNotTerm RESTXT "ps3")
+
+Executing: nDiffResMRK = geomOr(ndMRK nd3MRK nsMRK ns3MRK)
+
+Executing: pDiffResMRK = geomOr(pdMRK pd3MRK psMRK ps3MRK)
+
+Executing: diffResMRK = geomOr(nDiffResMRK pDiffResMRK)
+
+Executing: diffNotRes = geomAndNot(diff diffResMRK)
+
+Executing: sdAndRes = geomAndNot(diff POLY1)
+
+Executing: sd = geomAndNot(diffNotRes POLY1)
+
+Executing: gateDiff = geomButtOrOver(diff POLY1)
+
+Executing: psd = geomAnd(sd ppls)
+
+Executing: nsd = geomAndNot(sd psd)
+
+Executing: psdAndRes = geomAnd(sdAndRes ppls)
+
+Executing: nsdAndRes = geomAndNot(sdAndRes psd)
+
+Executing: plug = geomAndNot(diff gateDiff)
+
+Executing: pPlug = geomAnd(plug ppls)
+
+Executing: allPoly = geomOr(POLY1 POLY2)
+
+Executing: p1P2Act = geomOr(ACT allPoly)
+
+Executing: nDiffForTerm = geomButtOrOver(nsd nDiffResMRK)
+
+Executing: nDiffTerm = geomCat(nDiffForTerm)
+
+Executing: nDiffOCnt = geomOverlap(nDiff CNT)
+
+Executing: pDiffOCnt = geomOverlap(pDiff CNT)
+
+Executing: nTubTie = geomAnd(nDiffOCnt ntubNotRes)
+
+Executing: pTubTie = geomAnd(pDiffOCnt ptubs)
+
+Executing: pDiffForTerm = geomButtOrOver(psd pDiffResMRK)
+
+Executing: pDiffTerm = geomAnd(pDiffForTerm ntubNotRes)
+
+Executing: nResDiff = geomAndNot(nDiff p1Gate)
+
+Executing: pResDiff = geomAndNot(pDiff p1Gate)
+
+Executing: ndRes = geomAnd(nResDiff ndMRK)
+
+Executing: pdRes = geomAnd(pResDiff pdMRK)
+
+Executing: nd3Res = geomAnd(nResDiff nd3MRK)
+
+Executing: pd3Res = geomAnd(pResDiff pd3MRK)
+
+Executing: nDiffRes = geomOr(ndRes nd3Res)
+
+Executing: pDiffRes = geomOr(pdRes pd3Res)
+
+Executing: allDiffRes = geomOr(pDiffRes nDiffRes)
+
+Executing: pPoly1 = geomAnd(POLY1 ppls)
+
+Executing: nPoly1 = geomAndNot(POLY1 pPoly1)
+
+Executing: nPoly1Rec = geomAnd(rrecNotTerm nPoly1)
+
+Executing: nl3MRK = geomGetTexted(nPoly1Rec RESTXT "nl3")
+
+Executing: nl3ResBody = geomAnd(nPoly1 nl3MRK)
+
+Executing: nlMRK = geomGetTexted(nPoly1Rec RESTXT "nl")
+
+Executing: nlMRK = geomOr(p1RES nlMRK)
+
+Executing: nlResBody = geomAnd(nPoly1 nlMRK)
+
+Executing: poly1ResBody = geomOr(nlResBody nl3ResBody)
+
+Executing: poly1NoRes = geomAndNot(POLY1 poly1ResBody)
+
+Executing: poly1Term = geomButtOrOver(poly1NoRes poly1ResBody)
+
+Executing: p2Cnt = geomAnd(CNT POLY2)
+
+Executing: cntNotP2 = geomAndNot(CNT p2Cnt)
+
+Executing: p1Cnt = geomAnd(cntNotP2 POLY1)
+
+Executing: cntNotP2P1 = geomAndNot(cntNotP2 p1Cnt)
+
+Executing: actCnt = geomAnd(cntNotP2P1 ACT)
+
+Executing: paaCnt = geomAnd(actCnt ppls)
+
+Executing: naaCnt = geomAndNot(actCnt paaCnt)
+
+Executing: p2Rec = geomAnd(rrecNotTerm p2NotPpls)
+
+Executing: hyRec = geomAnd(p2Rec HIRES)
+
+Executing: hy3MRK = geomGetTexted(hyRec RESTXT "hy3")
+
+Executing: hy3ResBody = geomAnd(p2NotPpls hy3MRK)
+
+Executing: hyMRKDrac = geomAnd(p2RES HIRES)
+
+Executing: nyMRKDrac = geomAndNot(p2RES hyMRKDrac)
+
+Executing: hyMRK = geomGetTexted(hyRec RESTXT "hy")
+
+Executing: hyMRK = geomOr(hyMRKDrac hyMRK)
+
+Executing: hyResBody = geomAnd(p2NotPpls hyMRK)
+
+Executing: nyRec = geomAndNot(p2Rec hyRec)
+
+Executing: ny3MRK = geomGetTexted(nyRec RESTXT "ny3")
+
+Executing: ny3ResBody = geomAnd(p2NotPpls ny3MRK)
+
+Executing: nyMRK = geomGetTexted(nyRec RESTXT "ny")
+
+Executing: nyMRK = geomOr(nyMRKDrac nyMRK)
+
+Executing: nyResBody = geomAnd(p2NotPpls nyMRK)
+
+Executing: cpmacMRK = geomGetTexted(drecNotTerm DRECTXT "cpmac")
+
+Executing: cnmacMRK = geomGetTexted(drecNotTerm DRECTXT "cnmac")
+
+Executing: ppMRK = geomGetTexted(drecNotTerm DRECTXT "pp")
+
+Executing: ppMRK = geomOr(CAPM ppMRK)
+
+Executing: ppMacMRK = geomOr(cpmacMRK cnmacMRK)
+
+Executing: ppOrMacMRK = geomOr(ppMacMRK ppMRK)
+
+Executing: ppBotCap = geomOverlap(POLY1 ppOrMacMRK)
+
+Executing: ppTopCap = geomOverlap(POLY2 ppOrMacMRK)
+
+Executing: p2CapCnt = geomAnd(p2Cnt ppTopCap)
+
+Executing: hy3ResBody = geomAnd(hy3ResBody HIRES)
+
+Executing: hyResBody = geomAnd(hyResBody HIRES)
+
+Executing: poly2ResBody = geomOr(nyResBody hyResBody)
+
+Executing: poly2Res3Body = geomOr(ny3ResBody hy3ResBody)
+
+Executing: poly2ResBody = geomOr(poly2ResBody poly2Res3Body)
+
+Executing: poly2NoRes = geomAndNot(POLY2 poly2ResBody)
+
+Executing: pP2NotRes = geomAnd(p2NotPpls poly2NoRes)
+
+Executing: poly2Term = geomButting(pP2NotRes poly2ResBody)
+
+Executing: m1RrecNoTerm = geomAnd(rrecNotTerm M1)
+
+Executing: m2RrecNoTerm = geomAnd(rrecNotTerm M2)
+
+Executing: m3RrecNoTerm = geomAnd(rrecNotTerm M3)
+
+Executing: m1thruMRK = geomGetTexted(m1RrecNoTerm RESTXT "m1thru")
+
+Executing: m2thruMRK = geomGetTexted(m2RrecNoTerm RESTXT "m2thru")
+
+Executing: m3thruMRK = geomGetTexted(m3RrecNoTerm RESTXT "m3thru")
+
+Executing: mrMRK = geomGetTexted(m1RrecNoTerm RESTXT "mr")
+
+Executing: m1MRKDrac = geomAndNot(RESM1 TERM)
+
+Executing: mrMRK = geomOr(m1MRKDrac mrMRK)
+
+Executing: orMRK = geomGetTexted(m2RrecNoTerm RESTXT "or")
+
+Executing: m2MRKDrac = geomAndNot(RESM2 TERM)
+
+Executing: orMRK = geomOr(m2MRKDrac orMRK)
+
+Executing: qrMRK = geomGetTexted(m3RrecNoTerm RESTXT "qr")
+
+Executing: m3MRKDrac = geomAndNot(RESM3 TERM)
+
+Executing: qrMRK = geomOr(m3MRKDrac qrMRK)
+
+Executing: m1ResBody = geomAnd(M1 mrMRK)
+
+Executing: m2ResBody = geomAnd(M2 orMRK)
+
+Executing: m3ResBody = geomAnd(M3 qrMRK)
+
+Executing: m1ThruBody = geomAnd(M1 m1thruMRK)
+
+Executing: m2ThruBody = geomAnd(M2 m2thruMRK)
+
+Executing: m3ThruBody = geomAnd(M3 m3thruMRK)
+
+Executing: m1ResBodyOrThru = geomOr(m1ResBody m1ThruBody)
+
+Executing: m2ResBodyOrThru = geomOr(m2ResBody m2ThruBody)
+
+Executing: m3ResBodyOrThru = geomOr(m3ResBody m3ThruBody)
+
+Executing: m1NoRes = geomAndNot(M1 m1ResBodyOrThru)
+
+Executing: m2NoRes = geomAndNot(M2 m2ResBodyOrThru)
+
+Executing: m3NoRes = geomAndNot(M3 m3ResBodyOrThru)
+
+Executing: m1Term = geomButtOrOver(m1NoRes m1ResBody)
+
+Executing: m2Term = geomButtOrOver(m2NoRes m2ResBody)
+
+Executing: m3Term = geomButtOrOver(m3NoRes m3ResBody)
+
+Executing: drec2AndM1 = geomAnd(DREC2 M1)
+
+Executing: drec2AndM2 = geomAnd(DREC2 M2)
+
+Executing: drec2AndM3 = geomAnd(DREC2 M3)
+
+Executing: drec2AndNwell = geomAnd(DREC2 NWELL)
+
+Executing: v20NwMRK = geomGetTexted(drec2AndNwell DREC2TXT "nwv20")
+
+Executing: v20MRKDrac = geomOverlap(NWELL V20)
+
+Executing: v20NwMRK = geomOr(v20NwMRK v20MRKDrac)
+
+Executing: v20M1MRK = geomGetTexted(drec2AndM1 DREC2TXT "m1v20")
+
+Executing: v20M2MRK = geomGetTexted(drec2AndM2 DREC2TXT "m2v20")
+
+Executing: v20M3MRK = geomGetTexted(drec2AndM3 DREC2TXT "m3v20")
+
+Executing: v12M1MRK = geomGetTexted(drec2AndM1 DREC2TXT "m1v12")
+
+Executing: v12M2MRK = geomGetTexted(drec2AndM2 DREC2TXT "m2v12")
+
+Executing: v12M3MRK = geomGetTexted(drec2AndM3 DREC2TXT "m3v12")
+
+Executing: extM1MRK = geomGetTexted(drec2AndM1 DREC2TXT "m1ext")
+
+Executing: extM2MRK = geomGetTexted(drec2AndM2 DREC2TXT "m2ext")
+
+Executing: extM3MRK = geomGetTexted(drec2AndM3 DREC2TXT "m3ext")
+
+Executing: NZENER = geomButting(nsd psd)
+
+Executing: PZENER = geomButting(psd nsd)
+
+Executing: wideM1 = geomWidth(M1 (keep > 10))
+
+Executing: wideM2 = geomWidth(M2 (keep > 10))
+
+Executing: wideM3 = geomWidth(M3 (keep > 10))
+
+Executing: geomConnect((via nTubTie ntubNotRes nsd) (via pTubTie ptubs psd) (via paaCnt ...
+ See the label report in "zxw_bssum.erc" file for details.
+
+
+Executing: probeM1MRK = geomGetTexted(drec2AndM1 DREC2TXT "m1probe")
+
+Executing: probeM2MRK = geomGetTexted(drec2AndM2 DREC2TXT "m2probe")
+
+Executing: probeM3MRK = geomGetTexted(drec2AndM3 DREC2TXT "m3probe")
+
+Executing: probeM1 = geomOverlap(m1NoRes probeM1MRK)
+
+Executing: probeM2 = geomOverlap(m2NoRes probeM2MRK)
+
+Executing: probeM3 = geomOverlap(m3NoRes probeM3MRK)
+
+Executing: pnpMRK = geomGetTexted(drecNotTerm DRECTXT "pnp")
+
+Executing: nvP1Gate = geomOverlap(nP1Gate nvMRK)
+
+Executing: nuP1Gate = geomOverlap(nP1Gate nuMRK)
+
+Executing: nvuP1Gate = geomOr(nvP1Gate nuP1Gate)
+
+Executing: nvDiff = geomOverlap(nDiff nvMRK)
+
+Executing: nuDiff = geomOverlap(nDiff nuMRK)
+
+Executing: nvuDiff = geomOr(nvDiff nuDiff)
+
+Executing: nvuGateDiff = geomOverlap(gateDiff nvuMRK)
+
+Executing: nvuP1GateNoNwell = geomAndNot(nvuP1Gate nvuNwell)
+
+Executing: nvuSd = geomAndNot(nvuDiff nvuP1GateNoNwell)
+
+Executing: nvuDrain = geomButtOrOver(nvuSd NPBLK)
+
+Executing: nvMos = geomOverlap(nvuP1GateNoNwell nvMRK)
+
+Executing: nuMos = geomOverlap(nvuP1GateNoNwell nuMRK)
+
+Executing: pvuMRK = geomOr(pvMRK puMRK)
+
+Executing: pvuSd = geomOverlap(psd pvuMRK)
+
+Executing: pvuDrain = geomButtOrOver(pvuSd PPBLK)
+
+Executing: ntNfield = geomOverlap(NCHAN ntMRK)
+
+Executing: ntP1Gate = geomButtOrOver(nP1Gate ntMRK)
+
+Executing: ntExdif = geomButtOrOver(EXDIF ntMRK)
+
+Executing: ntP1GateNoNwell = geomAndNot(ntP1Gate ntNwell)
+
+Executing: ntMos = geomOverlap(ntP1GateNoNwell ntMRK)
+
+Executing: ntPoly1 = geomOverlap(POLY1 ntMRK)
+
+Executing: p1NOT = geomAndNot(POLY1 ntPoly1)
+
+Executing: diffNot = geomAndNot(diff p1NOT)
+
+Executing: ntSd = geomOverlap(diffNot ntMRK)
+
+Executing: ntSd = geomAndNot(ntSd ntP1GateNoNwell)
+
+Executing: ntDrain = geomButtOrOver(ntSd ntExdif)
+
+Executing: ntSource = geomAndNot(ntSd ntDrain)
+
+Executing: nzxNfield = geomOverlap(NCHAN nzxMRK)
+
+Executing: nzxExdif = geomOverlap(EXDIF nzxMRK)
+
+Executing: nzxDiff = geomOverlap(nDiff nzxMRK)
+
+Executing: nzP1Gate = geomOverlap(nP1Gate nzMRK)
+
+Executing: nxP1Gate = geomOverlap(nP1Gate nxMRK)
+
+Executing: nzxP1Gate = geomOr(nzP1Gate nxP1Gate)
+
+Executing: nzxP1GateNoNwell = geomAndNot(nzxP1Gate nzxNwell)
+
+Executing: nzMos = geomOverlap(nzxP1GateNoNwell nzMRK)
+
+Executing: nxMos = geomOverlap(nzxP1GateNoNwell nxMRK)
+
+Executing: nzxSd = geomAndNot(nzxDiff nzxP1GateNoNwell)
+
+Executing: nzxDrain = geomButtOrOver(nzxSd nzxExdif)
+
+Executing: nzxSource = geomAndNot(nzxSd nzxDrain)
+
+Executing: pzxtExdif = geomOverlap(EXDIF pzxtMRK)
+
+Executing: pzxtP1Gate = geomOverlap(pP1Gate pzxtMRK)
+
+Executing: pzxtPOLY1 = geomOverlap(POLY1 pzxtMRK)
+
+Executing: p1NOT = geomAndNot(POLY1 pzxtPOLY1)
+
+Executing: pDiffNot = geomAndNot(pDiff p1NOT)
+
+Executing: pzxtDiff = geomOverlap(pDiffNot pzxtMRK)
+
+Executing: pzxtP1GateNoExdif = geomAndNot(pzxtP1Gate pzxtExdif)
+
+Executing: pzxtSd = geomAndNot(pzxtDiff pzxtP1GateNoExdif)
+
+Executing: pzxtDrain1 = geomButtOrOver(pzxtSd pzxtExdif)
+
+Executing: pzxtDrain = geomAvoiding(pzxtDrain1 NCHAN)
+
+Executing: shkNwell = geomOverlap(NWELL dschottkyMRK)
+
+Executing: shkPDiff = geomOverlap(pDiff dschottkyMRK)
+
+Executing: shkNDiff = geomOverlap(nDiff dschottkyMRK)
+
+Executing: shkAnode = geomAnd(shkPDiff shkNwell)
+
+Executing: shkCath = geomAndNot(shkNDiff shkAnode)
+
+Executing: mp40vMRK = geomGetTexted(DREC DRECTXT "mp40v")
+
+Executing: mp40vAct = geomOverlap(ACT mp40vMRK)
+
+Executing: mp40vPoly1 = geomOverlap(POLY1 mp40vMRK)
+
+Executing: mp40vPwb = geomOverlap(PWB mp40vMRK)
+
+Executing: mp40vDnw = geomOverlap(DNW mp40vMRK)
+
+Executing: mp40vPchrs = geomOverlap(PCHRS mp40vMRK)
+
+Executing: mp40vNchan = geomOverlap(NCHAN mp40vMRK)
+
+Executing: mp40vNwell = geomOverlap(NWELL mp40vMRK)
+
+Executing: mp40vTubtie = geomOverlap(nTubTie mp40vMRK)
+
+Executing: mn40vMRK = geomGetTexted(DREC DRECTXT "mn40v")
+
+Executing: mn40vAct = geomOverlap(ACT mn40vMRK)
+
+Executing: mn40vNwell = geomOverlap(NWELL mn40vMRK)
+
+Executing: mn40vPoly1 = geomOverlap(POLY1 mn40vMRK)
+
+Executing: mn40vPwb = geomOverlap(PWB mn40vMRK)
+
+Executing: mn40vDnw = geomOverlap(DNW mn40vMRK)
+
+Executing: mn40vNchan = geomOverlap(NCHAN mn40vMRK)
+
+Executing: mn40vPpls = geomOverlap(ppls mn40vMRK)
+
+Executing: pnpNwell = geomOverlap(NWELL pnpMRK)
+
+Executing: pnpPDiff = geomAnd(pDiff pnpMRK)
+
+Executing: pnpBase = geomOverlap(nDiff pnpMRK)
+
+Executing: pnpEmitter = geomAnd(pnpPDiff pnpNwell)
+
+Executing: pnpBulk = geomOr(pnpNwell ptubs)
+
+Executing: pnpPdif2 = geomSize(pnpPDiff 0.05)
+
+Executing: pnpFakeBase = geomAnd(pnpNwell pnpPdif2)
+
+Executing: pnpCollector1 = geomAndNot(pnpBulk pnpFakeBase)
+
+Executing: pnpCollector2 = geomButtOrOver(pnpPDiff pnpCollector1)
+
+Executing: gndPadMRK = geomGetTexted(LREC LRECTXT "gndpad")
+
+Executing: pwrPadMRK = geomGetTexted(LREC LRECTXT "pwrpad")
+
+Executing: pwrOrGndPadMRK = geomOr(pwrPadMRK gndPadMRK)
+
+Executing: probePadM1 = geomOverlap(PAD probeM1MRK)
+
+Executing: probePadM2 = geomOverlap(PAD probeM2MRK)
+
+Executing: probePadM3 = geomOverlap(PAD probeM3MRK)
+
+Executing: probePad = geomOr(probePadM1 probePadM2 probePadM3)
+
+Executing: padNotProbe = geomAndNot(PAD probePad)
+
+Executing: geomStamp(extM1MRK M1)
+
+Executing: geomStamp(extM2MRK M2)
+
+Executing: geomStamp(extM3MRK M3)
+
+Executing: pbusMRK = geomGetTexted(drecNotTerm DRECTXT "perbus" "pbus")
+
+Executing: pbusPpls = geomOverlap(ppls pbusMRK)
+
+Executing: pbus = geomOr(pbusPpls pbusMRK PBUS)
+
+Executing: pbusAct = geomAnd(ACT pbus)
+
+Executing: pbusCnt = geomOverlap(CNT pbusAct)
+
+Executing: pbusM1 = geomAnd(M1 pbus)
+
+Executing: pbusVia = geomOverlap(VIA pbusM1)
+
+Executing: pbusM2 = geomAnd(M2 pbus)
+
+Executing: fBulk = geomOverlap(BULK PAD)
+
+Executing: scribe = geomSize(fBulk 0.3 edges)
+
+Executing: pbusM1_M1EOPC = drc(pbusM1 pbusCnt (enc < 1.0))
+	   errorLayer(pbusM1_M1EOPC "M1EOPC -- Min M1 Enclosure Of Pbus-Cnt < 1.00")
+
+Executing: M1EOPC_2 = geomOverlap(pbusCnt pbusM1)
+
+Executing: pbusM1_M1EOPC_3 = geomAndNot(M1EOPC_2 pbusM1)
+	   errorLayer(pbusM1_M1EOPC_3 "M1EOPC -- Layer pbusCnt is not enclosed by pbusM1")
+
+Executing: pbusM1_M1EOPV = drc(pbusM1 pbusVia (enc < 1.0))
+	   errorLayer(pbusM1_M1EOPV "M1EOPV -- Min M1 Enclosure Of Pbus Via < 1.0")
+
+Executing: M1EOPV_2 = geomOverlap(pbusVia pbusM1)
+
+Executing: pbusM1_M1EOPV_3 = geomAndNot(M1EOPV_2 pbusM1)
+	   errorLayer(pbusM1_M1EOPV_3 "M1EOPV -- Layer pbusVia is not enclosed by pbusM1")
+
+Executing: pbusM2_M2EOPV = drc(pbusM2 pbusVia (enc < 1.0))
+	   errorLayer(pbusM2_M2EOPV "M2EOPV -- Min M2 Enclosure Of Pbus-Via < 1.00")
+
+Executing: M2EOPV_2 = geomOverlap(pbusVia pbusM2)
+
+Executing: pbusM2_M2EOPV_3 = geomAndNot(M2EOPV_2 pbusM2)
+	   errorLayer(pbusM2_M2EOPV_3 "M2EOPV -- Layer pbusVia is not enclosed by pbusM2")
+
+Executing: pbusM2_1 = drc(pbusM2 scribe (sep == 3.0))
+
+Executing: pbusM2_2 = drc(pbusM2 scribe (sep < 12.0) opposite)
+
+Executing: M2SCSP = geomAndNot(pbusM2_2 pbusM2_1)
+	   errorLayer(M2SCSP "M2SCSP -- Mandatory M2 to SCribe-lane SPacing M2SCSP")
+
+Executing: pbusAct_PBAEOC = drc(pbusAct pbusCnt (enc < 1.0))
+	   errorLayer(pbusAct_PBAEOC "PBAEOC -- Min PBus-Act Enclosure Of Cnt < 1.00")
+
+Executing: PBAEOC_2 = geomOverlap(pbusCnt pbusAct)
+
+Executing: pbusAct_PBAEOC_3 = geomAndNot(PBAEOC_2 pbusAct)
+	   errorLayer(pbusAct_PBAEOC_3 "PBAEOC -- Layer pbusCnt is not enclosed by pbusAct")
+
+Executing: pbusAct_1 = drc(pbusAct scribe (sep == 5.0))
+
+Executing: pbusAct_2 = drc(pbusAct scribe (sep < 20.0) opposite)
+
+Executing: PBASCE = geomAndNot(pbusAct_2 pbusAct_1)
+	   errorLayer(PBASCE "PBASCE -- Man PBus-Active to SCribe Edge PBASCE")
+
+Executing: pbusAct_PBSACW_1 = drc(pbusAct (width < 14.0))
+	   errorLayer(pbusAct_PBSACW_1 "PBSACW -- Min Per-BuS-ACtive Width < 14.00")
+
+Executing: PDSTPB_1 = drc(pbusAct PAD (sep < 10.0))
+	   errorLayer(PDSTPB_1 "PDSTPB -- PaD to STart of PerBus  < 10.00")
+
+Executing: PDSTPB_2 = geomAnd(pbusAct PAD)
+	   errorLayer(PDSTPB_2 "PDSTPB -- Layer pbusAct not allowed to overlap PAD")
+
+Executing: PPL2SC = geomAnd(pbusPpls scribe)
+	   errorLayer(PPL2SC "PPL2SC -- PPLs to (defines) SCribe edge PPL2SC")
+
+Executing: pbusM1_1 = drc(pbusM1 scribe (sep == 5.0))
+
+Executing: pbusM1_2 = drc(pbusM1 scribe (sep < 20.0) opposite)
+
+Executing: SCRM1S = geomAndNot(pbusM1_2 pbusM1_1)
+	   errorLayer(SCRM1S "SCRM1S -- Man SCRibe-lane to M1 Spacing SCRM1S")
+
+Executing: nvuNpblk = geomOverlap(NPBLK nvuMRK)
+
+Executing: nvuNcnt = geomOverlap(naaCnt nvuMRK)
+
+Executing: nstNsd = geomAndNot(nvuDrain nvuNpblk)
+
+Executing: nvPoly1 = geomOverlap(POLY1 nvMRK)
+
+Executing: nuPoly1 = geomOverlap(POLY1 nuMRK)
+
+Executing: nvuPoly1 = geomOr(nvPoly1 nuPoly1)
+
+Executing: nvuDrainDRC = geomAndNot(nvuDrain nvuPoly1)
+
+Executing: nvuDrainDRC_ACENND = geomSize(nstNsd 0.5)
+
+Executing: nvuDrainDRC_ACENND = geomXor(nvuDrainDRC nvuDrainDRC_ACENND)
+	   errorLayer(nvuDrainDRC_ACENND "ACENND -- Man ACtive Enclosure of Nested-N-Drain == 0.50")
+
+Executing: nstNsd_1 = drc(nstNsd (width == 0.9))
+
+Executing: nstNsd_2 = geomAndNot(nstNsd nstNsd_1)
+
+Executing: nstNsd_3 = drc(nstNsd_2 (width == 0.9))
+
+Executing: nstNsd_4 = geomAndNot(nstNsd_2 nstNsd_3)
+	   errorLayer(nstNsd_4 "NNDRNW -- Man Nested-N-DRaiN Width NNDRNW")
+
+Executing: nvuPoly1 = geomOverlap(POLY1 nvuMRK)
+
+Executing: nvuSdDRC = geomAndNot(nvuGateDiff nvuPoly1)
+
+Executing: nvuNwell_NNDWEA = geomSize(nvuDrainDRC 0.5)
+
+Executing: nvuNwell_NNDWEA = geomXor(nvuNwell nvuNwell_NNDWEA)
+	   errorLayer(nvuNwell_NNDWEA "NNDWEA -- Man Nested-N-Drain-Well Enclosure of Active == 0.50")
+
+Executing: nvuSdDRC_1 = geomGetEdge(nvuSdDRC butting nvuP1Gate)
+
+Executing: nvuSdDRC_2 = geomGetLength(nvuSdDRC_1 (keep < 4.0) contiguous)
+
+Executing: nvuSdDRC_3 = geomSize(nvuSdDRC_2 0.05)
+	   errorLayer(nvuSdDRC_3 "NNDCHW -- Min Nested-N-Drain-CHannel Width  4.00")
+
+Executing: nstNsd_NNDEOC = drc(nstNsd nvuNcnt (enc < 0.2))
+	   errorLayer(nstNsd_NNDEOC "NNDEOC -- Min Nested-N-Drain Enclosure Of Contact < 0.20")
+
+Executing: NNDEOC_2 = geomOverlap(nvuNcnt nstNsd)
+
+Executing: nstNsd_NNDEOC_3 = geomAndNot(NNDEOC_2 nstNsd)
+	   errorLayer(nstNsd_NNDEOC_3 "NNDEOC -- Layer nvuNcnt is not enclosed by nstNsd")
+
+Executing: nstNsd_1 = drc(nstNsd nvuP1Gate (sep == 0.5))
+
+Executing: nstNsd_2 = drc(nstNsd nvuP1Gate (sep < 2.0) opposite)
+
+Executing: NNDGTS = geomAndNot(nstNsd_2 nstNsd_1)
+	   errorLayer(NNDGTS "NNDGTS -- Man Nested-N-Drain to Gate Spacing NNDGTS")
+
+Executing: nvuNwellAndP1Gate = geomAnd(nvuNwell nvuP1Gate)
+
+Executing: nvuNwellAndP1Gate_1 = drc(nvuNwellAndP1Gate (width == 0.5))
+
+Executing: nvuNwellAndP1Gate_2 = geomAndNot(nvuNwellAndP1Gate nvuNwellAndP1Gate_1)
+
+Executing: nvuNwellAndP1Gate_3 = drc(nvuNwellAndP1Gate_2 (width == 0.5))
+
+Executing: nvuNwellAndP1Gate_4 = geomAndNot(nvuNwellAndP1Gate_2 nvuNwellAndP1Gate_3)
+	   errorLayer(nvuNwellAndP1Gate_4 "NNDWOG -- Man Nested-N-Drain-Well Overlap of Gate NNDWOG")
+
+Executing: geomHoles(nvuNpblk)
+
+Executing: nvuNpblkOrHole = geomOr(nvuNpblkHole nvuNpblk)
+
+Executing: nvuNpblkOrHole_NPBEAC = drc(nvuNpblkOrHole nvuSd (enc < 0.3))
+	   errorLayer(nvuNpblkOrHole_NPBEAC "NPBEAC -- Min NPBlk Enclosure of ACtive < 0.30")
+
+Executing: NPBEAC_2 = geomOverlap(nvuSd nvuNpblkOrHole)
+
+Executing: nvuNpblkOrHole_NPBEAC_3 = geomAndNot(NPBEAC_2 nvuNpblkOrHole)
+	   errorLayer(nvuNpblkOrHole_NPBEAC_3 "NPBEAC -- Layer nvuSd is not enclosed by nvuNpblkOrHole")
+
+Executing: NVCHL_1 = geomGetEdge(nvMos coincident nvuDiff)
+
+Executing: NVCHL_2 = geomGetLength(NVCHL_1 (keep < 5.0) contiguous)
+
+Executing: NVCHL_3 = geomSize(NVCHL_2 0.05)
+	   errorLayer(NVCHL_3 "NVCHL -- Min. NV-type nested-drain-CHannel-Length  5.00")
+
+Executing: npblkAndNvuGate = geomAnd(nvuP1Gate nvuNpblk)
+
+Executing: npblkAndNvuGate_NPBOGT_1 = drc(npblkAndNvuGate (width < 1.5))
+	   errorLayer(npblkAndNvuGate_NPBOGT_1 "NPBOGT -- Min NPBlk Overlap of GaTe < 1.50")
+
+Executing: nvuSource = geomAvoiding(nvuSd nvuNpblk)
+
+Executing: NPBSRC_s2o = drc(nvuSource nvuNpblk (sep < 1.5))
+	   errorLayer(NPBSRC_s2o "NPBSRC -- Min NPBlk to SourRCe spacing  < 1.50")
+
+Executing: NUCHL_1 = geomGetEdge(nuMos coincident nvuDiff)
+
+Executing: NUCHL_2 = geomGetLength(NUCHL_1 (keep < 3.0) contiguous)
+
+Executing: NUCHL_3 = geomSize(NUCHL_2 0.05)
+	   errorLayer(NUCHL_3 "NUCHL -- Min NU-type nested-drain CHannel Length  3.00")
+
+Executing: pvuNwell = geomOverlap(NWELL pvuMRK)
+
+Executing: pvuPpblk = geomOverlap(PPBLK pvuMRK)
+
+Executing: pvPsd = geomOverlap(psd pvMRK)
+
+Executing: puPsd = geomOverlap(psd puMRK)
+
+Executing: pvuPsd = geomOr(pvPsd puPsd)
+
+Executing: pvuPcnt = geomOverlap(paaCnt pvuMRK)
+
+Executing: pvPgate = geomOverlap(pP1Gate pvMRK)
+
+Executing: puPgate = geomOverlap(pP1Gate puMRK)
+
+Executing: pvuPgate = geomOr(pvPgate puPgate)
+
+Executing: nstPsd = geomAndNot(pvuDrain pvuPpblk)
+
+Executing: pvuDrain_ACENPD = geomSize(nstPsd 0.7)
+
+Executing: pvuDrain_ACENPD = geomXor(pvuDrain pvuDrain_ACENPD)
+	   errorLayer(pvuDrain_ACENPD "ACENPD -- Man ACtive Enclosure of Nested-P-Drain == 0.70")
+
+Executing: pvuPsd_1 = geomGetEdge(pvuPsd butting pvuPgate)
+
+Executing: pvuPsd_2 = geomGetLength(pvuPsd_1 (keep < 2.3) contiguous)
+
+Executing: pvuPsd_3 = geomSize(pvuPsd_2 0.05)
+	   errorLayer(pvuPsd_3 "NPDCHW -- Min Nested-P-Drain CHannel Width  2.30")
+
+Executing: nstPsd_NPDEOC = drc(nstPsd pvuPcnt (enc < 0.2))
+	   errorLayer(nstPsd_NPDEOC "NPDEOC -- Min Nested-P-Drain Enclosure Of Contact < 0.20")
+
+Executing: NPDEOC_2 = geomOverlap(pvuPcnt nstPsd)
+
+Executing: nstPsd_NPDEOC_3 = geomAndNot(NPDEOC_2 nstPsd)
+	   errorLayer(nstPsd_NPDEOC_3 "NPDEOC -- Layer pvuPcnt is not enclosed by nstPsd")
+
+Executing: nstPsd_1 = drc(nstPsd pvuPgate (sep == 0.7))
+
+Executing: nstPsd_2 = drc(nstPsd pvuPgate (sep < 2.8) opposite)
+
+Executing: NPDGTS = geomAndNot(nstPsd_2 nstPsd_1)
+	   errorLayer(NPDGTS "NPDGTS -- Man Nested-P-Drain to GaTe Spacing NPDGTS")
+
+Executing: nstPsd_1 = drc(nstPsd (width == 0.9))
+
+Executing: nstPsd_2 = geomAndNot(nstPsd nstPsd_1)
+
+Executing: nstPsd_3 = drc(nstPsd_2 (width == 0.9))
+
+Executing: nstPsd_4 = geomAndNot(nstPsd_2 nstPsd_3)
+	   errorLayer(nstPsd_4 "NPDRNW -- Man Nested-P-DRaiN Width NPDRNW")
+
+Executing: pvuPoly1 = geomOverlap(POLY1 pvuMRK)
+
+Executing: pvuDiff = geomOverlap(gateDiff pvuMRK)
+
+Executing: pvuDrainDRC = geomAndNot(pvuDrain pvuPoly1)
+
+Executing: pvuNwell_NPDWEA = drc(pvuNwell pvuDrainDRC (enc < 2.0))
+	   errorLayer(pvuNwell_NPDWEA "NPDWEA -- Min Nested-P-Drain-Well Enclosure of Active < 2.00")
+
+Executing: NPDWEA_2 = geomOverlap(pvuDrainDRC pvuNwell)
+
+Executing: pvuNwell_NPDWEA_3 = geomAndNot(NPDWEA_2 pvuNwell)
+	   errorLayer(pvuNwell_NPDWEA_3 "NPDWEA -- Layer pvuDrainDRC is not enclosed by pvuNwell")
+
+Executing: geomHoles(pvuPpblk)
+
+Executing: pvuPpblkOrHole = geomOr(pvuPpblkHole pvuPpblk)
+
+Executing: pvuPpblkOrHole_PPBEAC = drc(pvuPpblkOrHole pvuPsd (enc < 0.3))
+	   errorLayer(pvuPpblkOrHole_PPBEAC "PPBEAC -- Min PPBlk Enclosure of ACtive < 0.30")
+
+Executing: PPBEAC_2 = geomOverlap(pvuPsd pvuPpblkOrHole)
+
+Executing: pvuPpblkOrHole_PPBEAC_3 = geomAndNot(PPBEAC_2 pvuPpblkOrHole)
+	   errorLayer(pvuPpblkOrHole_PPBEAC_3 "PPBEAC -- Layer pvuPsd is not enclosed by pvuPpblkOrHole")
+
+Executing: PVCHL_1 = geomGetEdge(pvPgate coincident pvuDiff)
+
+Executing: PVCHL_2 = geomGetLength(PVCHL_1 (keep < 3.0) contiguous)
+
+Executing: PVCHL_3 = geomSize(PVCHL_2 0.05)
+	   errorLayer(PVCHL_3 "PVCHL -- Min. PV-type nested-drain CHannel-Length  3.00")
+
+Executing: ppblkAndPvuGate = geomAnd(pvuPgate pvuPpblk)
+
+Executing: ppblkAndPvuGate_PPBOGT_1 = drc(ppblkAndPvuGate (width < 1.5))
+	   errorLayer(ppblkAndPvuGate_PPBOGT_1 "PPBOGT -- Min PPBlk Overlap of GaTe < 1.50")
+
+Executing: pvuSource = geomAvoiding(pvuPsd pvuPpblk)
+
+Executing: PPBSRC_s2o = drc(pvuSource pvuPpblk (sep < 1.5))
+	   errorLayer(PPBSRC_s2o "PPBSRC -- Min PPBlk to SouRCe spacing < 1.50")
+
+Executing: PUCHL_1 = geomGetEdge(puPgate coincident pvuDiff)
+
+Executing: PUCHL_2 = geomGetLength(PUCHL_1 (keep < 3.0) contiguous)
+
+Executing: PUCHL_3 = geomSize(PUCHL_2 0.05)
+	   errorLayer(PUCHL_3 "PUCHL -- Min PU-type nested-drain CHannel Length  3.00")
+
+Executing: v12Cnts = geomAnd(paaCnt pvuDrain)
+
+Executing: v12M1MRKs = geomOr(v12M1MRK v12Cnts)
+
+Executing: v12M1 = geomOverlap(m1NoRes v12M1MRKs)
+
+Executing: v12M2 = geomOverlap(m2NoRes v12M2MRK)
+
+Executing: v12M3 = geomOverlap(m3NoRes v12M3MRK)
+
+Executing: geomStamp(v12M1 M1)
+
+Executing: geomStamp(v12M2 M2)
+
+Executing: geomStamp(v12M3 M3)
+
+Executing: v12M1NodeM1 = geomNodeRelate(M1 v12M1 conn)
+
+Executing: v12M1NodeM2 = geomNodeRelate(M1 v12M2 conn)
+
+Executing: v12M1NodeM3 = geomNodeRelate(M1 v12M3 conn)
+
+Executing: v12M1All = geomOr(v12M1NodeM1 v12M1NodeM2 v12M1NodeM3)
+
+Executing: v12NCnt = geomAnd(naaCnt v12M1All)
+
+Executing: v12PCnt = geomAnd(paaCnt v12M1All)
+
+Executing: v12Nsd = geomOverlap(nsdAndRes v12NCnt)
+
+Executing: v12Psd = geomOverlap(psdAndRes v12PCnt)
+
+Executing: v12Sd = geomOr(v12Nsd v12Psd)
+
+Executing: v12SdP12v = geomAnd(v12Sd PPBLK)
+
+Executing: v12NNwell = geomOverlap(NWELL v12Nsd)
+
+Executing: v12PNwell = geomOverlap(NWELL v12Psd)
+
+Executing: v12Nwell = geomOr(v12NNwell v12PNwell)
+
+Executing: geomStamp(v12Nwell ntubNotRes)
+
+Executing: NPBACS_s2o = drc(NPBLK ACT (sep < 0.3))
+	   errorLayer(NPBACS_s2o "NPBACS -- Min NPBlk to ACtive Spacing < 0.30")
+
+Executing: PPBACS_s2o = drc(PPBLK ACT (sep < 0.3))
+	   errorLayer(PPBACS_s2o "PPBACS -- Min PPBlk to ACtive Spacing < 0.30")
+
+Executing: T12TBS_blk = drc(v12Nwell ntubNotRes (sep < 6.0) diffNet)
+
+Executing: T12TBS_2 = geomAndNot(T12TBS_blk nvPoly1)
+	   errorLayer(T12TBS_2 "T12TBS -- Tub-12v to TuB Spacing < 6.00")
+
+Executing: P12PDS_s2o = drc(v12SdP12v pDiff (sep < 2.0))
+	   errorLayer(P12PDS_s2o "P12PDS -- Min P-act-12v to P-Diffusion Spacing < 2.00")
+
+Executing: T12END = drc(v12NNwell v12Nsd (enc < 0.5))
+	   errorLayer(T12END "T12END -- Tub-12v Enclosure of N-Diffusion < 0.50")
+
+Executing: T12END_1 = geomStraddle(v12Nsd v12NNwell)
+
+Executing: T12END_2 = geomAndNot(T12END_1 v12NNwell)
+	   errorLayer(T12END_2 "T12END -- Layer v12Nsd is not enclosed by v12NNwell")
+
+Executing: T12EPD = drc(v12PNwell v12Psd (enc < 2.0))
+	   errorLayer(T12EPD "T12EPD -- Tub-12v Enclosure of P-Diffusion < 2.00")
+
+Executing: T12EPD_1 = geomStraddle(v12Psd v12PNwell)
+
+Executing: T12EPD_2 = geomAndNot(T12EPD_1 v12PNwell)
+	   errorLayer(T12EPD_2 "T12EPD -- Layer v12Psd is not enclosed by v12PNwell")
+
+Executing: T12NDS_s2o = drc(v12Nwell nDiff (sep < 2.0))
+	   errorLayer(T12NDS_s2o "T12NDS -- Tub-12v to N-Diffusion Spacing < 2.00")
+
+Executing: T12PDS_s2o = drc(v12Nwell pDiff (sep < 0.5))
+	   errorLayer(T12PDS_s2o "T12PDS -- Tub-12v to P-Diffusion Spacing < 0.50")
+
+Executing: nzPoly1 = geomOverlap(POLY1 nzMRK)
+
+Executing: nxPoly1 = geomOverlap(POLY1 nxMRK)
+
+Executing: nzxPoly1 = geomOr(nxPoly1 nzPoly1)
+
+Executing: nzxSzSource = geomSize(nzxSource 1.0)
+
+Executing: nzxSZSourceOrExdif = geomOr(nzxSzSource nzxExdif)
+
+Executing: nzxDiffNotSd = geomAndNot(nzxDiff nzxSZSourceOrExdif)
+
+Executing: nzxSd_1 = geomGetEdge(nzxSd butting nzxP1Gate)
+
+Executing: nzxSd_2 = geomGetLength(nzxSd_1 (keep < 5.0) contiguous)
+
+Executing: nzxSd_3 = geomSize(nzxSd_2 0.05)
+	   errorLayer(nzxSd_3 "EXNCHW -- Min EXtended-N-drain CHannel Width  5.00")
+
+Executing: nzxNwellAndGate = geomAnd(nzxNwell nzxP1Gate)
+
+Executing: nzxNwellAndGate_1 = drc(nzxNwellAndGate (width == 0.5))
+
+Executing: nzxNwellAndGate_2 = geomAndNot(nzxNwellAndGate nzxNwellAndGate_1)
+
+Executing: nzxNwellAndGate_3 = drc(nzxNwellAndGate_2 (width == 0.5))
+
+Executing: nzxNwellAndGate_4 = geomAndNot(nzxNwellAndGate_2 nzxNwellAndGate_3)
+	   errorLayer(nzxNwellAndGate_4 "MWONXG -- Man Well Overlaps NX-type Gate MWONXG")
+
+Executing: nzxExdifOrPoly1 = geomOr(nzxExdif nzxPoly1)
+
+Executing: nzxDrainDRC = geomAndNot(nzxDrain nzxExdifOrPoly1)
+
+Executing: nzxDrainDRC_1 = drc(nzxDrainDRC (width == 1.1))
+
+Executing: nzxDrainDRC_2 = geomAndNot(nzxDrainDRC nzxDrainDRC_1)
+
+Executing: nzxDrainDRC_3 = drc(nzxDrainDRC_2 (width == 1.1))
+
+Executing: nzxDrainDRC_4 = geomAndNot(nzxDrainDRC_2 nzxDrainDRC_3)
+	   errorLayer(nzxDrainDRC_4 "MXPNDW -- Man eXtended-P/N-Drain active Width MXPNDW")
+
+Executing: nzxNfield_NCEXDW = geomSize(nzxNwell 0.5)
+
+Executing: nzxNfield_NCEXDW = geomXor(nzxNfield nzxNfield_NCEXDW)
+	   errorLayer(nzxNfield_NCEXDW "NCEXDW -- Man N-Chan-field Enclosure of eXtended-Drain-Well == 0.50")
+
+Executing: nzxNwell_NWEXND = drc(nzxNwell nzxDrainDRC (enc < 1.0))
+	   errorLayer(nzxNwell_NWEXND "NWEXND -- Min NWell Enclosure of eXtended-N-Drain  < 1.00")
+
+Executing: NWEXND_2 = geomOverlap(nzxDrainDRC nzxNwell)
+
+Executing: nzxNwell_NWEXND_3 = geomAndNot(NWEXND_2 nzxNwell)
+	   errorLayer(nzxNwell_NWEXND_3 "NWEXND -- Layer nzxDrainDRC is not enclosed by nzxNwell")
+
+Executing: nzxDif = geomOverlap(ACT nzxMRK)
+
+Executing: nzxDrift = geomAndNot(nzxExdif nzxDif)
+
+Executing: nzxDrift = geomOr(nzxDrift nzxNwellAndGate)
+
+Executing: nzxDrift_1 = drc(nzxDrift (width == 3.0))
+
+Executing: nzxDrift_2 = geomAndNot(nzxDrift nzxDrift_1)
+
+Executing: nzxDrift_3 = drc(nzxDrift_2 (width == 3.0))
+
+Executing: nzxDrift_4 = geomAndNot(nzxDrift_2 nzxDrift_3)
+	   errorLayer(nzxDrift_4 "NXDRFT -- Man NX-type extended-drain DRiFT  length NXDRFT")
+
+Executing: NZCHL_1 = geomGetEdge(nzMos coincident nzxDiff)
+
+Executing: NZCHL_2 = geomGetLength(NZCHL_1 (keep < 5.0) contiguous)
+
+Executing: NZCHL_3 = geomSize(NZCHL_2 0.05)
+	   errorLayer(NZCHL_3 "NZCHL -- Min NZ-type extended-drain CHannel Length  5.00")
+
+Executing: nzxPoly1_PXBXNG = drc(nzxPoly1 nzxDiffNotSd (enc < 1.0))
+	   errorLayer(nzxPoly1_PXBXNG "PXBXNG -- Min Poly eXtends Beyond eXtended-N-Gate < 1.00")
+
+Executing: PXBXNG_2 = geomOverlap(nzxDiffNotSd nzxPoly1)
+
+Executing: nzxPoly1_PXBXNG_3 = geomAndNot(PXBXNG_2 nzxPoly1)
+	   errorLayer(nzxPoly1_PXBXNG_3 "PXBXNG -- Layer nzxDiffNotSd is not enclosed by nzxPoly1")
+
+Executing: NXCHL_1 = geomGetEdge(nxMos coincident nzxDiff)
+
+Executing: NXCHL_2 = geomGetLength(NXCHL_1 (keep < 5.0) contiguous)
+
+Executing: NXCHL_3 = geomSize(NXCHL_2 0.05)
+	   errorLayer(NXCHL_3 "NXCHL -- Min NX-type extended-drain CHannel Length  5.00")
+
+Executing: ntDiff = geomButtOrOver(diff ntMRK)
+
+Executing: ntP1Gate1 = geomButtOrOver(p1Gate ntMRK)
+
+Executing: ntP1Gate = geomAndNot(ntP1Gate1 ntExdif)
+
+Executing: ntPoly1 = geomButtOrOver(POLY1 ntMRK)
+
+Executing: ntPoly1AndExdif = geomAnd(ntPoly1 ntExdif)
+
+Executing: ntNwellAndGate = geomAnd(ntNwell ntP1Gate)
+
+Executing: ntNwellAndGate_1 = drc(ntNwellAndGate (width == 0.5))
+
+Executing: ntNwellAndGate_2 = geomAndNot(ntNwellAndGate ntNwellAndGate_1)
+
+Executing: ntNwellAndGate_3 = drc(ntNwellAndGate_2 (width == 0.5))
+
+Executing: ntNwellAndGate_4 = geomAndNot(ntNwellAndGate_2 ntNwellAndGate_3)
+	   errorLayer(ntNwellAndGate_4 "MWONTG -- Man Well Overlaps NT-type Gate MWONTG")
+
+Executing: ntExdifOrPoly1 = geomOr(ntExdif ntPoly1)
+
+Executing: ntDrainDRC = geomAndNot(ntDrain ntExdifOrPoly1)
+
+Executing: ntDrainDRC_1 = drc(ntDrainDRC (width == 1.1))
+
+Executing: ntDrainDRC_2 = geomAndNot(ntDrainDRC ntDrainDRC_1)
+
+Executing: ntDrainDRC_3 = drc(ntDrainDRC_2 (width == 1.1))
+
+Executing: ntDrainDRC_4 = geomAndNot(ntDrainDRC_2 ntDrainDRC_3)
+	   errorLayer(ntDrainDRC_4 "MXPNDW -- Man eXtended-P/N-Drain active Width MXPNDW")
+
+Executing: ntNfield_NCEXDW = geomSize(ntNwell 0.5)
+
+Executing: ntNfield_NCEXDW = geomXor(ntNfield ntNfield_NCEXDW)
+	   errorLayer(ntNfield_NCEXDW "NCEXDW -- Man N-Chan-field Enclosure of eXtended-Drain-Well == 0.50")
+
+Executing: NTCHL_1 = geomGetEdge(ntMos coincident ntDiff)
+
+Executing: NTCHL_2 = geomGetLength(NTCHL_1 (keep < 5.0) contiguous)
+
+Executing: NTCHL_3 = geomSize(NTCHL_2 0.05)
+	   errorLayer(NTCHL_3 "NTCHL -- Min NT-type extended-drain CHannel Length  5.00")
+
+Executing: ntSource_1 = geomGetEdge(ntSource butting ntMos)
+
+Executing: ntSource_2 = geomGetLength(ntSource_1 (keep < 5.0) contiguous)
+
+Executing: ntSource_3 = geomSize(ntSource_2 0.05)
+	   errorLayer(ntSource_3 "NTCHW -- Min NT-type extended-drain CHannel Width  5.00")
+
+Executing: ntDrift = geomOr(ntExdif ntNwellAndGate)
+
+Executing: ntDrift_1 = drc(ntDrift (width == 3.0))
+
+Executing: ntDrift_2 = geomAndNot(ntDrift ntDrift_1)
+
+Executing: ntDrift_3 = drc(ntDrift_2 (width == 3.0))
+
+Executing: ntDrift_4 = geomAndNot(ntDrift_2 ntDrift_3)
+	   errorLayer(ntDrift_4 "NTDRFT -- Man NT-type ext-drain DRiFT  length for model accuracy only NTDRFT")
+
+Executing: ntNwell_NWEXND = drc(ntNwell ntDrainDRC (enc < 1.0))
+	   errorLayer(ntNwell_NWEXND "NWEXND -- Min NWell Enclosure of eXtended-N-Drain  < 1.00")
+
+Executing: NWEXND_2 = geomOverlap(ntDrainDRC ntNwell)
+
+Executing: ntNwell_NWEXND_3 = geomAndNot(NWEXND_2 ntNwell)
+	   errorLayer(ntNwell_NWEXND_3 "NWEXND -- Layer ntDrainDRC is not enclosed by ntNwell")
+
+Executing: ntPoly1AndExdif_PXBXNG_1 = drc(ntPoly1AndExdif (width < 1.0))
+	   errorLayer(ntPoly1AndExdif_PXBXNG_1 "PXBXNG -- Min Poly eXtends Beyond eXtended-N-Gate < 1.00")
+
+Executing: pzxtAct = geomOverlap(ACT pzxtMRK)
+
+Executing: pzthnPgate = geomOverlap(pP1Gate pzthnMRK)
+
+Executing: pzPgate = geomOverlap(pP1Gate pzMRK)
+
+Executing: pxPgate = geomOverlap(pP1Gate pxMRK)
+
+Executing: ptPgate = geomOverlap(pP1Gate ptMRK)
+
+Executing: pzxtPgate = geomOr(pzPgate pxPgate ptPgate pzthnPgate)
+
+Executing: pzthnPsd = geomOverlap(psd pzthnMRK)
+
+Executing: pzPsd = geomOverlap(psd pzMRK)
+
+Executing: pxPsd = geomOverlap(psd pxMRK)
+
+Executing: ptPsd = geomOverlap(psd ptMRK)
+
+Executing: pzxtPsd = geomOr(pzPsd pxPsd ptPsd pzthnPsd)
+
+Executing: pzxtNwell = geomOverlap(NWELL pzxtMRK)
+
+Executing: pzxtNfield = geomOverlap(NCHAN pzxtMRK)
+
+Executing: geomHoles(pzxtNfield)
+
+Executing: pzxtNfieldOrPfield = geomOr(pzxtPfield pzxtNfield)
+
+Executing: pzxtDrainDRC = geomAndNot(pzxtDrain pzxtExdif)
+
+Executing: pzxtDrainDRC1 = geomAndNot(pzxtDrain1 pzxtExdif)
+
+Executing: pzxtPoly1 = geomButtOrOver(POLY1 pzxtMRK)
+
+Executing: pzxtPoly1AndExdif = geomAnd(pzxtPoly1 pzxtExdif)
+
+Executing: pzxtPsd_1 = geomGetEdge(pzxtPsd butting pzxtPgate)
+
+Executing: pzxtPsd_2 = geomGetLength(pzxtPsd_1 (keep < 5.0) contiguous)
+
+Executing: pzxtPsd_3 = geomSize(pzxtPsd_2 0.05)
+	   errorLayer(pzxtPsd_3 "EXPCHW -- Min EXtended-P-drain CHannel Width  5.0")
+
+Executing: pzxtDrainPfield = geomEnclose(pzxtPfield pzxtDrainDRC (keep == 1))
+
+Executing: EXPGER_1 = geomAvoiding(pzxtPgate pzxtDrainPfield)
+
+Executing: pzxtPfieldNotEncDrainAct = geomAndNot(pzxtPfield pzxtDrainPfield)
+
+Executing: pzGateNoSD = geomButtOrOver(pzPgate pzxtDrain (keep < 2))
+
+Executing: EXPGER = geomOr(EXPGER_1 pzxtPfieldNotEncDrainAct pzGateNoSD)
+	   errorLayer(EXPGER "EXPGER -- Extended P gate requires pfield  ")
+
+Executing: pzxtDrainDRC_1 = drc(pzxtDrainDRC (width == 1.1))
+
+Executing: pzxtDrainDRC_2 = geomAndNot(pzxtDrainDRC pzxtDrainDRC_1)
+
+Executing: pzxtDrainDRC_3 = drc(pzxtDrainDRC_2 (width == 1.1))
+
+Executing: pzxtDrainDRC_4 = geomAndNot(pzxtDrainDRC_2 pzxtDrainDRC_3)
+	   errorLayer(pzxtDrainDRC_4 "MXPNDW -- Man eXtended-P/N-Drain active Width MXPNDW")
+
+Executing: pzxtNfieldOrPfield_NCEXDW = geomSize(pzxtNwell 0.5)
+
+Executing: pzxtNfieldOrPfield_NCEXDW = geomXor(pzxtNfieldOrPfield pzxtNfieldOrPfield_NCE...
+	   errorLayer(pzxtNfieldOrPfield_NCEXDW "NCEXDW -- Man N-Chan-field Enclosure of eXtended-Drain-Well == 0.50")
+
+Executing: NWEOPF_1 = drc(pzxtNwell pzxtPfield (enc < 3.0))
+	   errorLayer(NWEOPF_1 "NWEOPF -- Min NWell Enclosure Of PField < 3.00")
+
+Executing: NWEOPF = geomAndNot(pzxtPfield pzxtNwell)
+	   errorLayer(NWEOPF "NWEOPF -- Min NWell Enclosure Of PField NWEOPF")
+
+Executing: PFEODA_1 = drc(pzxtPfield pzxtDrainDRC1 (enc < 1.0))
+	   errorLayer(PFEODA_1 "PFEODA -- Min PField Enclosure of ext-Drain-Active < 1.00")
+
+Executing: PFEODA = geomAndNot(pzxtDrain1 pzxtPfield)
+	   errorLayer(PFEODA "PFEODA -- Min PField Enclosure of ext-Drain-Active PFEODA")
+
+Executing: PFNDSP = geomAnd(pzxtPfield nDiff)
+	   errorLayer(PFNDSP "PFNDSP -- Min P-Field to NDiff SPacing PFNDSP")
+
+Executing: PFNDSP_s2o = drc(pzxtPfield nDiff (sep < 1.0))
+	   errorLayer(PFNDSP_s2o "PFNDSP -- Min P-Field to NDiff SPacing < 1.00")
+
+Executing: pzxtPfieldAndGate = geomAnd(pzxtPfield pzxtPgate)
+
+Executing: pzxtPfieldAndGate_1 = drc(pzxtPfieldAndGate (width == 0.3))
+
+Executing: pzxtPfieldAndGate_2 = geomAndNot(pzxtPfieldAndGate pzxtPfieldAndGate_1)
+
+Executing: pzxtPfieldAndGate_3 = drc(pzxtPfieldAndGate_2 (width == 0.3))
+
+Executing: pzxtPfieldAndGate_4 = geomAndNot(pzxtPfieldAndGate_2 pzxtPfieldAndGate_3)
+	   errorLayer(pzxtPfieldAndGate_4 "PFOLXP -- Man P-Field OverLap of eXtended-P-gate PFOLXP")
+
+Executing: pzxtPoly1AndExdif_PXBXNG_1 = drc(pzxtPoly1AndExdif (width < 1.0))
+	   errorLayer(pzxtPoly1AndExdif_PXBXNG_1 "PXBXNG -- Min Poly eXtends Beyond eXtended-N-Gate < 1.00")
+
+Executing: pzxtDrift = geomAndNot(pzxtExdif pzxtAct)
+
+Executing: pzxtDrift_1 = drc(pzxtDrift (width == 3.0))
+
+Executing: pzxtDrift_2 = geomAndNot(pzxtDrift pzxtDrift_1)
+
+Executing: pzxtDrift_3 = drc(pzxtDrift_2 (width == 3.0))
+
+Executing: pzxtDrift_4 = geomAndNot(pzxtDrift_2 pzxtDrift_3)
+	   errorLayer(pzxtDrift_4 "PXDRFT -- Man PX-type extended-drain DRiFT  length PXDRFT")
+
+Executing: EXPCHL_1 = geomGetEdge(pzxtPgate coincident pzxtPsd)
+
+Executing: EXPCHL_2 = geomGetLength(EXPCHL_1 (keep < 5.0) contiguous)
+
+Executing: EXPCHL_3 = geomSize(EXPCHL_2 0.05)
+	   errorLayer(EXPCHL_3 "EXPCHL -- EXPCHL_DESC  5.0")
+
+Executing: PZCHL_1 = geomGetEdge(pzPgate coincident pzxtDiff)
+
+Executing: PZCHL_2 = geomGetLength(PZCHL_1 (keep < 5.0) contiguous)
+
+Executing: PZCHL_3 = geomSize(PZCHL_2 0.05)
+	   errorLayer(PZCHL_3 "PZCHL -- Min PZ-type extended-drain CHannel Length  5.00")
+
+Executing: PXCHL_1 = geomGetEdge(pxPgate coincident pzxtDiff)
+
+Executing: PXCHL_2 = geomGetLength(PXCHL_1 (keep < 5.0) contiguous)
+
+Executing: PXCHL_3 = geomSize(PXCHL_2 0.05)
+	   errorLayer(PXCHL_3 "PXCHL -- Min PX-type extended-drain CHannel Length  5.00")
+
+Executing: PTCHL_1 = geomGetEdge(ptPgate coincident pzxtDiff)
+
+Executing: PTCHL_2 = geomGetLength(PTCHL_1 (keep < 5.0) contiguous)
+
+Executing: PTCHL_3 = geomSize(PTCHL_2 0.05)
+	   errorLayer(PTCHL_3 "PTCHL -- Min PT-type extended-drain CHannelLength  5.00")
+
+Executing: ptPsd_1 = geomGetEdge(ptPsd butting ptPgate)
+
+Executing: ptPsd_2 = geomGetLength(ptPsd_1 (keep < 5.0) contiguous)
+
+Executing: ptPsd_3 = geomSize(ptPsd_2 0.05)
+	   errorLayer(ptPsd_3 "PTCHW -- Min PT-dev-type extended-drain CHannel Width  5.00")
+
+Executing: v20Nw = geomOverlap(ntubNotRes v20NwMRK)
+
+Executing: v20M1 = geomOverlap(m1NoRes v20M1MRK)
+
+Executing: v20M2 = geomOverlap(m2NoRes v20M2MRK)
+
+Executing: v20M3 = geomOverlap(m3NoRes v20M3MRK)
+
+Executing: geomStamp(v20M1 M1)
+
+Executing: geomStamp(v20M2 M2)
+
+Executing: geomStamp(v20M3 M3)
+
+Executing: v20M1NodeM1 = geomNodeRelate(M1 v20M1 conn)
+
+Executing: v20M1NodeM2 = geomNodeRelate(M1 v20M2 conn)
+
+Executing: v20M1NodeM3 = geomNodeRelate(M1 v20M3 conn)
+
+Executing: v20M1All = geomOr(v20M1NodeM1 v20M1NodeM2 v20M1NodeM3)
+
+Executing: v20NCnt = geomAnd(naaCnt v20M1All)
+
+Executing: v20PCnt = geomAnd(paaCnt v20M1All)
+
+Executing: v20Nsd = geomOverlap(nsdAndRes v20NCnt)
+
+Executing: v20Psd = geomOverlap(psdAndRes v20PCnt)
+
+Executing: v20NNwell = geomOverlap(NWELL v20Nsd)
+
+Executing: v20PNwell = geomOverlap(NWELL v20Psd)
+
+Executing: v20Nwell = geomOr(v20NNwell v20PNwell)
+
+Executing: v20Nwell = geomOr(v20Nwell v20Nw)
+
+Executing: nwV20Nwell = geomOverlap(nwNwell v20Nsd)
+
+Executing: v20Nchan = geomOverlap(NCHAN v20Nwell)
+
+Executing: geomHoles(NCHAN)
+
+Executing: pfield2 = geomAndNot(NWELL NCHAN)
+
+Executing: pfield = geomAnd(pfield2 pfield1)
+
+Executing: psdNoPfield = geomAvoiding(psdAndRes pfield)
+
+Executing: PFLDSPsno_1 = drc(pfield (sepNotch < 4.0))
+	   errorLayer(PFLDSPsno_1 "PFLDSP -- Min P-FieLD to P-FieLD SPacing < 4.00")
+
+Executing: PFPDSP_blk = drc(pfield psdNoPfield (sep < 3.0))
+
+Executing: PFPDSP_2 = geomAndNot(PFPDSP_blk POLY1)
+	   errorLayer(PFPDSP_2 "PFPDSP -- Min P-Field to PDiffusion SPacing < 3.00")
+
+Executing: v20NNwell_T20END = drc(v20NNwell v20Nsd (enc < 1.0))
+	   errorLayer(v20NNwell_T20END "T20END -- Tub-20v Enclosure Of N-Diffusion < 1.00")
+
+Executing: T20END_2 = geomOverlap(v20Nsd v20NNwell)
+
+Executing: v20NNwell_T20END_3 = geomAndNot(T20END_2 v20NNwell)
+	   errorLayer(v20NNwell_T20END_3 "T20END -- Layer v20Nsd is not enclosed by v20NNwell")
+
+Executing: v20PNwell_T20EPD = drc(v20PNwell v20Psd (enc < 3.0))
+	   errorLayer(v20PNwell_T20EPD "T20EPD -- Tub-20v Enclosure Of P-Diffusion < 3.00")
+
+Executing: T20EPD_2 = geomOverlap(v20Psd v20PNwell)
+
+Executing: v20PNwell_T20EPD_3 = geomAndNot(T20EPD_2 v20PNwell)
+	   errorLayer(v20PNwell_T20EPD_3 "T20EPD -- Layer v20Psd is not enclosed by v20PNwell")
+
+Executing: T20NDS_s2o = drc(v20Nwell nDiff (sep < 3.0))
+	   errorLayer(T20NDS_s2o "T20NDS -- Tub-20v to N-Diffusion Spacing < 3.00")
+
+Executing: T20PDS_s2o = drc(v20Nwell pDiff (sep < 1.0))
+	   errorLayer(T20PDS_s2o "T20PDS -- Tub-20v to P-Diffusion Spacing < 1.00")
+
+Executing: geomStamp(v20Nwell ntubNotRes)
+
+Executing: T20TBS_blk = drc(v20Nwell ntubNotRes (sep < 6.0) diffNet)
+
+Executing: T20TBS_2 = geomAndNot(T20TBS_blk nzPoly1)
+	   errorLayer(T20TBS_2 "T20TBS -- Tub-20v to TuB Spacing < 6.00")
+
+Executing: T20TBSsnl_1 = drc(nwV20Nwell (sepNotch < 6.0) (length > 0.2))
+	   errorLayer(T20TBSsnl_1 "T20TBS -- Tub-20v to TuB Spacing < 6.00")
+
+Executing: mn40vDrain_1 = geomAvoiding(mn40vAct mn40vPpls)
+
+Executing: mn40vDrain = geomAvoiding(mn40vDrain_1 mn40vPoly1)
+
+Executing: mn40vDrain_1 = drc(mn40vDrain (area == 26.01))
+
+Executing: mn40vDrain_2 = geomAndNot(mn40vDrain mn40vDrain_1)
+	   errorLayer(mn40vDrain_2 "MN40DRAREA -- N-device Drain Area mn40vDrain 26.01")
+
+Executing: mn40vPoly1NotDnw = geomAndNot(mn40vPoly1 mn40vDnw)
+
+Executing: mn40vPoly1NotDnw_1 = drc(mn40vPoly1NotDnw (width == 6.0))
+
+Executing: mn40vPoly1NotDnw_2 = geomAndNot(mn40vPoly1NotDnw mn40vPoly1NotDnw_1)
+
+Executing: mn40vPoly1NotDnw_3 = drc(mn40vPoly1NotDnw_2 (width == 6.0))
+
+Executing: mn40vPoly1NotDnw_4 = geomAndNot(mn40vPoly1NotDnw_2 mn40vPoly1NotDnw_3)
+	   errorLayer(mn40vPoly1NotDnw_4 "MN40LC -- Poly enclosure of Deep N Well towards source MN40LC")
+
+Executing: mn40vDnwNotDrain = geomAndNot(mn40vDnw mn40vDrain)
+
+Executing: mn40vDnwNotDrain_1 = drc(mn40vDnwNotDrain (width == 4.0))
+
+Executing: mn40vDnwNotDrain_2 = geomAndNot(mn40vDnwNotDrain mn40vDnwNotDrain_1)
+
+Executing: mn40vDnwNotDrain_3 = drc(mn40vDnwNotDrain_2 (width == 4.0))
+
+Executing: mn40vDnwNotDrain_4 = geomAndNot(mn40vDnwNotDrain_2 mn40vDnwNotDrain_3)
+	   errorLayer(mn40vDnwNotDrain_4 "MN40LD -- Deep N Well enclosure of drain active area MN40LD")
+
+Executing: mn40vPoly1NotDnwAct = geomAndNot(mn40vPoly1NotDnw mn40vAct)
+
+Executing: mn40vPoly1NotDnwAct_1 = drc(mn40vPoly1NotDnwAct (width == 1.5))
+
+Executing: mn40vPoly1NotDnwAct_2 = geomAndNot(mn40vPoly1NotDnwAct mn40vPoly1NotDnwAct_1)
+
+Executing: mn40vPoly1NotDnwAct_3 = drc(mn40vPoly1NotDnwAct_2 (width == 1.5))
+
+Executing: mn40vPoly1NotDnwAct_4 = geomAndNot(mn40vPoly1NotDnwAct_2 mn40vPoly1NotDnwAct_3)
+	   errorLayer(mn40vPoly1NotDnwAct_4 "MN40LG1 -- Deep N Well space of channel active MN40LG1")
+
+Executing: mn40vDnwNotNwell = geomAndNot(mn40vDnw mn40vNwell)
+
+Executing: mn40vChannel = geomOr(mn40vDnwNotNwell mn40vPoly1NotDnwAct)
+
+Executing: mn40vChannel_1 = drc(mn40vChannel (width == 5.5))
+
+Executing: mn40vChannel_2 = geomAndNot(mn40vChannel mn40vChannel_1)
+
+Executing: mn40vChannel_3 = drc(mn40vChannel_2 (width == 5.5))
+
+Executing: mn40vChannel_4 = geomAndNot(mn40vChannel_2 mn40vChannel_3)
+	   errorLayer(mn40vChannel_4 "MN40LG2 -- N Well space of channel active MN40LG2")
+
+Executing: mn40vDnwNotDrainPoly1 = geomAndNot(mn40vDnwNotDrain mn40vPoly1)
+
+Executing: mn40vDnwNotDrainPoly1_1 = drc(mn40vDnwNotDrainPoly1 (width == 0.5))
+
+Executing: mn40vDnwNotDrainPoly1_2 = geomAndNot(mn40vDnwNotDrainPoly1 mn40vDnwNotDrainPo...
+
+Executing: mn40vDnwNotDrainPoly1_3 = drc(mn40vDnwNotDrainPoly1_2 (width == 0.5))
+
+Executing: mn40vDnwNotDrainPoly1_4 = geomAndNot(mn40vDnwNotDrainPoly1_2 mn40vDnwNotDrain...
+	   errorLayer(mn40vDnwNotDrainPoly1_4 "MN40LP -- Poly space drain MN40LP")
+
+Executing: mn40vPwb_MN40LS = geomSize(mn40vDnw 3.5)
+
+Executing: mn40vPwb_MN40LS = geomXor(mn40vPwb mn40vPwb_MN40LS)
+	   errorLayer(mn40vPwb_MN40LS "MN40LS -- P Well Block enclosure of Deep N Well == 3.5")
+
+Executing: mn40vPwb_MN40PBEONF = geomSize(mn40vNchan 1.0)
+
+Executing: mn40vPwb_MN40PBEONF = geomXor(mn40vPwb mn40vPwb_MN40PBEONF)
+	   errorLayer(mn40vPwb_MN40PBEONF "MN40PBEONF -- P Well Block enclosure of N Channel Field == 1.0")
+
+Executing: mp40vNwellNoHoles = geomNoHoles(mp40vNwell)
+
+Executing: mp40vDnw_DNW40EONW = geomSize(mp40vNwellNoHoles 2.0)
+
+Executing: mp40vDnw_DNW40EONW = geomXor(mp40vDnw mp40vDnw_DNW40EONW)
+	   errorLayer(mp40vDnw_DNW40EONW "DNW40EONW -- 40 volt Deep N Well enclosure of N Well == 2.0")
+
+Executing: mp40vDrain = geomAvoiding(mp40vAct mp40vPoly1)
+
+Executing: mp40vDrain = geomAnd(mp40vDrain mp40vPchrs)
+
+Executing: mp40vDrain_1 = drc(mp40vDrain (area == 26.01))
+
+Executing: mp40vDrain_2 = geomAndNot(mp40vDrain mp40vDrain_1)
+	   errorLayer(mp40vDrain_2 "MP40DRAREA -- P-device Drain Area mp40vDrain 26.01")
+
+Executing: mp40vPoly1NotPwb = geomAnd(mp40vPoly1 mp40vPwb)
+
+Executing: mp40vPoly1NotPwb_1 = drc(mp40vPoly1NotPwb (width == 6.0))
+
+Executing: mp40vPoly1NotPwb_2 = geomAndNot(mp40vPoly1NotPwb mp40vPoly1NotPwb_1)
+
+Executing: mp40vPoly1NotPwb_3 = drc(mp40vPoly1NotPwb_2 (width == 6.0))
+
+Executing: mp40vPoly1NotPwb_4 = geomAndNot(mp40vPoly1NotPwb_2 mp40vPoly1NotPwb_3)
+	   errorLayer(mp40vPoly1NotPwb_4 "MP40LC -- P Well Block enclosure of source poly edge towards drain MP40LC")
+
+Executing: mp40vDrain_1 = drc(mp40vDrain mp40vPwb (sep == 3.0))
+
+Executing: mp40vDrain_2 = drc(mp40vDrain mp40vPwb (sep < 12.0) opposite)
+
+Executing: MP40LD = geomAndNot(mp40vDrain_2 mp40vDrain_1)
+	   errorLayer(MP40LD "MP40LD -- P Well Block space to drain active MP40LD")
+
+Executing: mp40vPoly1NotAct = geomAndNot(mp40vPoly1 mp40vAct)
+
+Executing: mp40vChannel = geomAnd(mp40vPoly1NotAct mp40vPwb)
+
+Executing: mp40vChannel_1 = drc(mp40vChannel (width == 3.3))
+
+Executing: mp40vChannel_2 = geomAndNot(mp40vChannel mp40vChannel_1)
+
+Executing: mp40vChannel_3 = drc(mp40vChannel_2 (width == 3.3))
+
+Executing: mp40vChannel_4 = geomAndNot(mp40vChannel_2 mp40vChannel_3)
+	   errorLayer(mp40vChannel_4 "MP40LG1 -- P Well Block Block enclosure of channel active towards drain MP40LG1")
+
+Executing: mp40vChannelNoHoles = geomNoHoles(mp40vChannel)
+
+Executing: mp40vPchrs_MP40LG2 = geomSize(mp40vChannelNoHoles 1.0)
+
+Executing: mp40vPchrs_MP40LG2 = geomXor(mp40vPchrs mp40vPchrs_MP40LG2)
+	   errorLayer(mp40vPchrs_MP40LG2 "MP40LG2 -- Pch Resurf overlap of channel active == 1.0")
+
+Executing: mp40vDrain_1 = drc(mp40vDrain mp40vPoly1 (sep == 1.0))
+
+Executing: mp40vDrain_2 = drc(mp40vDrain mp40vPoly1 (sep < 4.0) opposite)
+
+Executing: MP40LP = geomAndNot(mp40vDrain_2 mp40vDrain_1)
+	   errorLayer(MP40LP "MP40LP -- Poly space drain MP40LP")
+
+Executing: mp40vPwb_MP40LS = geomSize(mp40vNwell 4.0)
+
+Executing: mp40vPwb_MP40LS = geomXor(mp40vPwb mp40vPwb_MP40LS)
+	   errorLayer(mp40vPwb_MP40LS "MP40LS -- P Well Block overlap of nwell == 4.0")
+
+Executing: mp40vTubtieNoHoles = geomNoHoles(mp40vTubtie)
+
+Executing: mp40vNwellNoHoles_MP40NWEOWT = geomSize(mp40vTubtieNoHoles 2.0)
+
+Executing: mp40vNwellNoHoles_MP40NWEOWT = geomXor(mp40vNwellNoHoles mp40vNwellNoHoles_MP...
+	   errorLayer(mp40vNwellNoHoles_MP40NWEOWT "MP40NWEOWT -- N Well overlap of source-well active WellTie == 2.0")
+
+Executing: NA40VPGSP_s2o = drc(mp40vAct nDiff (sep < 1.0))
+	   errorLayer(NA40VPGSP_s2o "NA40VPGSP -- N+Active to Hard P+Guardbar of 40 Volt DeepNwell < 1.0")
+
+Executing: mp40vNchan_NCFEO40DNW = geomSize(mp40vDnw 4.0)
+
+Executing: mp40vNchan_NCFEO40DNW = geomXor(mp40vNchan mp40vNchan_NCFEO40DNW)
+	   errorLayer(mp40vNchan_NCFEO40DNW "NCFEO40DNW -- NchannelField overlap 40 Volt DeepNwell == 4.0")
+
+Executing: nwellNot40v = geomAndNot(NWELL mp40vNwell)
+
+Executing: NW40VPGSP_s2o = drc(mp40vAct nwellNot40v (sep < 2.0))
+	   errorLayer(NW40VPGSP_s2o "NW40VPGSP -- Nwell to Hard P+Guardbar of 40 Volt DeepNwell < 2.0")
+
+Executing: shkCnt = geomOverlap(CNT dschottkyMRK)
+
+Executing: shkAnodeCnt = geomAnd(shkCnt shkAnode)
+
+Executing: shkDiff = geomOr(shkCath shkAnode)
+
+Executing: shkAnode_1 = drc(shkAnode shkCath (sep == 0.9))
+
+Executing: shkAnode_2 = drc(shkAnode shkCath (sep < 3.6) opposite)
+
+Executing: SKACSP = geomAndNot(shkAnode_2 shkAnode_1)
+	   errorLayer(SKACSP "SKACSP -- Schottky ACtive SPacing SKACSP")
+
+Executing: shkNwell_SKTEOA = geomSize(shkDiff 1.0)
+
+Executing: shkNwell_SKTEOA = geomXor(shkNwell shkNwell_SKTEOA)
+	   errorLayer(shkNwell_SKTEOA "SKTEOA -- Schottky Tub Enclosure Of Active == 1.00")
+
+Executing: shkPpls = geomOverlap(PPLS dschottkyMRK)
+
+Executing: shkNplsNotPpls = geomAndNot(shkNpls shkPpls)
+
+Executing: shkHoleInPplsMissing_1 = geomAvoiding(shkAnode shkNplsNotPpls)
+	   errorLayer(shkHoleInPplsMissing_1 "shkHoleInPplsMissing -- The Ppls requires a hole in it above the anode diffusion to form the dschottky device.  ")
+
+Executing: shkPplsMissing_1 = geomAvoiding(shkAnode shkPpls)
+	   errorLayer(shkPplsMissing_1 "shkPplsMissing -- Ppls above the anode diffusion is required to form the dschottky.  ")
+
+Executing: shkAnode_1 = drc(shkAnode (width == 2.4))
+
+Executing: shkAnode_2 = geomAndNot(shkAnode shkAnode_1)
+
+Executing: shkAnode_3 = drc(shkAnode_2 (width == 2.4))
+
+Executing: shkAnode_4 = geomAndNot(shkAnode_2 shkAnode_3)
+	   errorLayer(shkAnode_4 "SKANW -- Schottky ANode Width SKANW")
+
+Executing: shkCath_1 = drc(shkCath (width == 1.1))
+
+Executing: shkCath_2 = geomAndNot(shkCath shkCath_1)
+
+Executing: shkCath_3 = drc(shkCath_2 (width == 1.1))
+
+Executing: shkCath_4 = geomAndNot(shkCath_2 shkCath_3)
+	   errorLayer(shkCath_4 "SKCAW -- Schottky CAthode Width SKCAW")
+
+Executing: shkAnodeCnt_1 = drc(shkAnodeCnt shkPpls (sep == 0.2))
+
+Executing: shkAnodeCnt_2 = drc(shkAnodeCnt shkPpls (sep < 0.8) opposite)
+
+Executing: SKCTPPS = geomAndNot(shkAnodeCnt_2 shkAnodeCnt_1)
+	   errorLayer(SKCTPPS "SKCTPPS -- Schottky ConTact P+ Spacing SKCTPPS")
+
+Executing: SKL = geomContactCheck(shkAnodeCnt (length == 20.2) (width == 0.7) ignore)
+	   errorLayer(SKL "SKL -- Schottky contact Length  20.20")
+
+Executing: NVOSKCT1 = geomOverlap(VIA shkAnodeCnt)
+
+Executing: NVOSKCT2 = geomOverlap(VI2 shkAnodeCnt)
+
+Executing: viasOverShk = geomOr(NVOSKCT1 NVOSKCT2)
+
+Executing: NVOSKCT = geomAnd(shkAnodeCnt viasOverShk)
+	   errorLayer(NVOSKCT "NVOSKCT -- No nested vias over schottky contact NVOSKCT")
+
+Executing: poly2Exist = geomOverlap(BULK POLY2)
+
+Executing: SKRP2 = geomAndNot(shkAnodeCnt poly2Exist)
+	   errorLayer(SKRP2 "SKRP2 -- Schottky requires Poly 2 process SKRP2")
+
+Executing: resblk = geomGetTexted(LREC LRECTXT "resblk")
+
+Executing: resblk = geomOr(RESBLK resblk)
+
+Executing: mp2llMRK = geomGetTexted(DREC DRECTXT "mp2ll")
+
+Executing: mp2llNwell = geomOverlap(NWELL mp2llMRK)
+
+Executing: mp2llNchan = geomOverlap(NCHAN mp2llMRK)
+
+Executing: mp2llPoly2 = geomOverlap(poly2NoRes mp2llMRK)
+
+Executing: mp2llNsd = geomOverlap(nsd mp2llMRK)
+
+Executing: mp2llNsd = geomAnd(mp2llNsd NPLS)
+
+Executing: mp2llGate = geomAnd(mp2llNsd mp2llPoly2)
+
+Executing: mp2llPpls = geomOverlap(NPLS mp2llMRK)
+
+Executing: nplsNotPpls = geomOverlap(mp2llPpls mp2llGate)
+
+Executing: pplsCoin = geomOr(ppls nplsNotPpls)
+
+Executing: nwNotMp2ll = geomAndNot(NWELL mp2llNwell)
+
+Executing: nchNotMp2ll = geomAndNot(NCHAN mp2llNchan)
+
+Executing: nwNot40v_1 = geomAndNot(nwNotMp2ll mp40vNwell)
+
+Executing: nwNot40v = geomAndNot(nwNot40v_1 mn40vNwell)
+
+Executing: nwNotHV = geomAndNot(nwNot40v v20Nwell)
+
+Executing: nwNotHV_1 = geomAndNot(nwNotHV pzxtNwell)
+
+Executing: nwNotHV_2 = geomAndNot(nwNotHV_1 nzxNwell)
+
+Executing: nwNotHV = geomAndNot(nwNotHV_2 ntNwell)
+
+Executing: nchNotHV = geomAndNot(nchNotMp2ll v20Nchan)
+
+Executing: nchNotHV_1 = geomAndNot(nchNotHV pzxtNfield)
+
+Executing: nchNotHV_2 = geomAndNot(nchNotHV_1 nzxNfield)
+
+Executing: nchNotHV_3 = geomAndNot(nchNotHV_2 ntNfield)
+
+Executing: nchNotHV_4 = geomAndNot(nchNotHV_3 mp40vNchan)
+
+Executing: nchNotHV = geomAndNot(nchNotHV_4 mn40vNchan)
+
+Executing: NCHNER = geomXor(nwNotHV nchNotHV)
+	   errorLayer(NCHNER "NCHNER -- NCHaN ERror if nchan is not identical to tub == ")
+
+Executing: nwHV = geomAndNot(NWELL nwNotHV)
+
+Executing: nchHV = geomAndNot(NCHAN nchNotHV)
+
+Executing: nchHvNoHoles = geomNoHoles(nchHV)
+
+Executing: hvNCHNER = geomAndNot(nwHV nchHvNoHoles)
+
+Executing: hvNCHNER_1 = drc(hvNCHNER (width == 0.5))
+
+Executing: hvNCHNER_2 = geomAndNot(hvNCHNER hvNCHNER_1)
+
+Executing: hvNCHNER_3 = drc(hvNCHNER_2 (width == 0.5))
+
+Executing: hvNCHNER_4 = geomAndNot(hvNCHNER_2 hvNCHNER_3)
+	   errorLayer(hvNCHNER_4 "NCEXDW -- Man N-Chan-field Enclosure of eXtended-Drain-Well NCEXDW")
+
+Executing: resblkUp = geomSize(resblk 0.05)
+
+Executing: allDiffTerm = geomOr(pDiffTerm nDiffTerm)
+
+Executing: diffTermOrRes = geomOr(allDiffTerm allDiffRes)
+
+Executing: diffTermOrResNotLrec2 = geomAndNot(diffTermOrRes LREC2)
+
+Executing: resBlkAndDifRes = geomAnd(resblk allDiffRes)
+
+Executing: diffResNotBlk = geomAndNot(diffTermOrResNotLrec2 resBlkAndDifRes)
+
+Executing: diffResNotBlk_DIFRW_1 = drc(diffResNotBlk (width < 0.8))
+	   errorLayer(diffResNotBlk_DIFRW_1 "DIFRW -- WARNING - Resistors narrower than 0.8 u wide are not modeled accurately in simulation - WARNING < 0.8")
+
+Executing: ACT_DIFW_1 = drc(ACT (width < 0.5))
+	   errorLayer(ACT_DIFW_1 "DIFW -- Min DIFfusion Width < 0.50")
+
+Executing: diffTermOrResNotLrec2_wlDIFCRW = drc(diffTermOrResNotLrec2 (width < 0.736) (l...
+	   errorLayer(diffTermOrResNotLrec2_wlDIFCRW "WARNING - Resistor corners narrower than 0.8 u wide are not modeled accurately in simulation - WARNING")
+
+Executing: resblkUpNotDiffRes = geomAndNot(resblkUp diffTermOrRes)
+
+Executing: insideDiffArc = geomAndNot(resblkUpNotDiffRes resblk)
+
+Executing: diffResRec = geomGetRectangle(insideDiffArc)
+
+Executing: resblkNotDiffRes = geomAndNot(resblk diffTermOrRes)
+
+Executing: diffResSurround = geomGetPolygon(insideDiffArc)
+
+Executing: diffResNotArc = geomButting(resblkNotDiffRes diffResSurround)
+
+Executing: diffResArc_1 = geomButting(resblkNotDiffRes diffResRec (keep < 2))
+
+Executing: diffResArc = geomAndNot(diffResArc_1 diffResNotArc)
+
+Executing: diffOrArc = geomOr(diffResArc ACT)
+
+Executing: DIFSPsno_1 = drc(diffOrArc (sepNotch < 0.9))
+	   errorLayer(DIFSPsno_1 "DIFSP -- Min DIFfusion SPacing < 0.90")
+
+Executing: TBEOPD = drc(nwNot40v pDiff (enc < 1.5))
+	   errorLayer(TBEOPD "TBEOPD -- TuB Enclosure Of P-Diffusion < 1.50")
+
+Executing: TBEOPD_1 = geomStraddle(pDiff nwNot40v)
+
+Executing: TBEOPD_2 = geomAndNot(TBEOPD_1 nwNot40v)
+	   errorLayer(TBEOPD_2 "TBEOPD -- Layer pDiff is not enclosed by nwNot40v")
+
+Executing: TBNDSP_1 = drc(nDiff NWELL (sep < 1.5))
+
+Executing: TBNDSP_2 = geomStraddle(TBNDSP_1 NWELL)
+
+Executing: TBNDSP_3 = geomAndNot(TBNDSP_1 TBNDSP_2)
+	   errorLayer(TBNDSP_3 "TBNDSP -- TuB to N-Diffusion SPacing < 1.50")
+
+Executing: sd_1 = geomGetEdge(sd butting p1Gate)
+
+Executing: sd_2 = geomGetLength(sd_1 (keep < 0.8) contiguous)
+
+Executing: sd_3 = geomSize(sd_2 0.05)
+	   errorLayer(sd_3 "TRANW -- Minimum TRANsistor Width  0.80")
+
+Executing: nTubTie_TBEOND_1 = drc(nTubTie (width < 0.5))
+	   errorLayer(nTubTie_TBEOND_1 "TBEOND -- Active area overlap on nwell < 0.50")
+
+Executing: TBPDSP_1 = geomStraddle(pPlug NWELL)
+	   errorLayer(TBPDSP_1 "TBPDSP -- TuB to P-Diffusion SPacing  0.00")
+
+Executing: padWellMRK = geomOr(padNotProbe pwrOrGndPadMRK)
+
+Executing: padNwell = geomOverlap(NWELL padWellMRK)
+
+Executing: hrdptie = geomAnd(pTubTie CNT)
+
+Executing: hrdntie = geomAnd(nTubTie CNT)
+
+Executing: nwellNotPad = geomAndNot(NWELL padNwell)
+
+Executing: floatingNwell = geomAvoiding(nwellNotPad hrdntie)
+
+Executing: FLOTNW = geomEnclose(floatingNwell paaCnt)
+	   errorLayer(FLOTNW "FLOTNW -- FLOaTing N-Wells  ")
+
+Executing: floatingPwell = geomAvoiding(ptubs hrdptie)
+
+Executing: FLOTPW = geomEnclose(floatingPwell naaCnt)
+	   errorLayer(FLOTPW "FLOTPW -- FLOaTing P-Wells  ")
+
+Executing: nwellTermOrRes = geomOr(nwTermAll nwOrNw3Res)
+
+Executing: resBlkAndTubRes = geomAnd(resblk nwellTermOrRes)
+
+Executing: nwResNotBlk = geomAndNot(nwellTermOrRes resBlkAndTubRes)
+
+Executing: nwResNotBlk_edge = geomGetEdge(nwResNotBlk)
+
+Executing: nwResNotBlk_edgeNot = geomAndNot(nwResNotBlk_edge nwTermAll)
+
+Executing: nwResNotBlk_edgeNot_TUBRW_1 = drc(nwResNotBlk_edgeNot (width < 5.0))
+	   errorLayer(nwResNotBlk_edgeNot_TUBRW_1 "TUBRW -- WARNING - Resistors narrower than 5.00 u wide are not modeled accurately in simulation - WARNING < 5.00")
+
+Executing: resBlkAndTubRes_wlTUBCRW = drc(resBlkAndTubRes (width < 4.936) (length > 0.05))
+	   errorLayer(resBlkAndTubRes_wlTUBCRW "WARNING - Resistor corners narrower than 5.00 u wide are not modeled accurately in simulation - WARNING")
+
+Executing: nwellNotNt = geomAndNot(NWELL ntNwell)
+
+Executing: nwellNot = geomAndNot(nwellNotNt resBlkAndTubRes)
+
+Executing: nwellNot_TUBW_1 = drc(nwellNot (width < 2.5))
+	   errorLayer(nwellNot_TUBW_1 "TUBW -- Min TUB Width < 2.50")
+
+Executing: resblkUpNotNwellRes = geomAndNot(resblkUp nwellTermOrRes)
+
+Executing: insideNwArc = geomAndNot(resblkUpNotNwellRes resblk)
+
+Executing: nwellResRec = geomGetRectangle(insideNwArc)
+
+Executing: resblkNotNwellRes = geomAndNot(resblk nwellTermOrRes)
+
+Executing: nwellResSurround = geomGetPolygon(insideNwArc)
+
+Executing: nwellResNotArc = geomButting(resblkNotNwellRes nwellResSurround)
+
+Executing: nwellResArc_1 = geomButting(resblkNotNwellRes nwellResRec (keep < 2))
+
+Executing: nwellResArc = geomAndNot(nwellResArc_1 nwellResNotArc)
+
+Executing: nwellOrArc = geomOr(nwellResArc NWELL)
+
+Executing: nwellTermOrResSd = geomButtOrOver(ntubNotRes nwellTermOrRes)
+
+Executing: nwellResOrArc = geomOr(nwellResArc nwellTermOrRes nwellTermOrResSd)
+
+Executing: nwNotResTermArc_1 = geomAndNot(NWELL nwellResOrArc)
+
+Executing: nwNotResTermArc = geomCat(nwNotResTermArc_1)
+
+Executing: geomStamp(nwNotResTermArc nTubTie)
+
+Executing: TUBSPRsno_1 = drc(nwellOrArc (sepNotch < 2.0))
+	   errorLayer(TUBSPRsno_1 "TUBSPR -- Min TUB Spacing related < 2.00")
+
+Executing: TUBSPsno_1 = drc(nwellResOrArc (sepNotch < 4.0))
+	   errorLayer(TUBSPsno_1 "TUBSP -- Min TUB SPacing < 4.00")
+
+Executing: TUBSP_so = drc(nwNotResTermArc (sep < 4.0) diffNet)
+	   errorLayer(TUBSP_so "TUBSP -- Min TUB SPacing < 4.00")
+
+Executing: TUBSP_s2o = drc(nwNotResTermArc nwellResOrArc (sep < 4.0))
+	   errorLayer(TUBSP_s2o "TUBSP -- Min TUB SPacing < 4.00")
+
+Executing: ACXBPY_1 = drc(ACT POLY1 (enc < 0.65))
+	   errorLayer(ACXBPY_1 "ACXBPY -- Min ACtive eXtension Beyond PolY < 0.65")
+
+Executing: p1GateUp = geomSize(p1Gate 0.05)
+
+Executing: p1GateUpAndACT = geomAnd(p1GateUp ACT)
+
+Executing: PYXBAC_1 = drc(POLY1 p1GateUpAndACT (enc < 0.5) opposite)
+	   errorLayer(PYXBAC_1 "PYXBAC -- Min PolY eXtension Beyond ACtive < 0.50")
+
+Executing: PYACSP_s2o = drc(POLY1 ACT (sep < 0.2))
+	   errorLayer(PYACSP_s2o "PYACSP -- Min PolY to ACtive SPacing < 0.20")
+
+Executing: poly1TermOrRes = geomOr(poly1Term poly1ResBody)
+
+Executing: resBlkAndPolyRes = geomAnd(resblk poly1ResBody)
+
+Executing: poly1NotBlk = geomAndNot(POLY1 resBlkAndPolyRes)
+
+Executing: poly1NotBlk_POLYW_1 = drc(poly1NotBlk (width < 0.6))
+	   errorLayer(poly1NotBlk_POLYW_1 "POLYW -- Min POLY Width < 0.60")
+
+Executing: poly1TermOrRes_wlPOLYCRW = drc(poly1TermOrRes (width < 0.536) (length > 0.05))
+	   errorLayer(poly1TermOrRes_wlPOLYCRW "WARNING - Resistor corners narrower than 0.60 u wide are not modeled accurately in simulation - WARNING")
+
+Executing: resblkUpNotPoly1Res = geomAndNot(resblkUp poly1TermOrRes)
+
+Executing: insideP1Arc = geomAndNot(resblkUpNotPoly1Res resblk)
+
+Executing: poly1ResRec = geomGetRectangle(insideP1Arc)
+
+Executing: resblkNotPoly1Res = geomAndNot(resblk poly1TermOrRes)
+
+Executing: poly1ResSurround = geomGetPolygon(insideP1Arc)
+
+Executing: poly1ResNotArc = geomButting(resblkNotPoly1Res poly1ResSurround)
+
+Executing: poly1ResArc_1 = geomButting(resblkNotPoly1Res poly1ResRec (keep < 2))
+
+Executing: poly1ResArc = geomAndNot(poly1ResArc_1 poly1ResNotArc)
+
+Executing: poly1OrArc = geomOr(poly1ResArc POLY1)
+
+Executing: POLYSPsno_1 = drc(poly1OrArc (sepNotch < 0.6))
+	   errorLayer(POLYSPsno_1 "POLYSP -- Min POLY SPacing < 0.60")
+
+Executing: NDEOGT_1 = drc(nDiff allPoly (enc < 0.65))
+	   errorLayer(NDEOGT_1 "NDEOGT -- Min N-Diffusion Enclosure Of GaTe < 0.65")
+
+Executing: nPCoin = geomXor(pplsCoin NPLS)
+	   errorLayer(nPCoin "NPCOIN -- Nplus/Pplus COINcide  == ")
+
+Executing: ZENER_s2o = drc(NZENER PZENER (sep < 0.9) diffNet)
+	   errorLayer(ZENER_s2o "ZENER -- P/N Active not at the same potential < 0.90")
+
+Executing: nDiffNotZENER = geomAndNot(nDiff NZENER)
+
+Executing: pDiffNotZENER = geomAndNot(pDiff PZENER)
+
+Executing: PDEOGT_1 = drc(pDiff allPoly (enc < 0.65))
+	   errorLayer(PDEOGT_1 "PDEOGT -- Min P-Diffusion Enclosure Of GaTe < 0.65")
+
+Executing: PPACSP_s2o = drc(nDiffNotZENER ppls (sep < 0.3))
+	   errorLayer(PPACSP_s2o "PPACSP -- Min PPls to ACtive SPacing < 0.30")
+
+Executing: PPEOAC_1 = drc(ppls pDiffNotZENER (enc < 0.3))
+	   errorLayer(PPEOAC_1 "PPEOAC -- Min PPls Enclosure Of ACtive < 0.30")
+
+Executing: PPLSSPsno_1 = drc(ppls (sepNotch < 0.7))
+	   errorLayer(PPLSSPsno_1 "PPLSSP -- Min PPLS SPacing < 0.70")
+
+Executing: ppls_PPLSW_1 = drc(ppls (width < 0.7))
+	   errorLayer(ppls_PPLSW_1 "PPLSW -- Min PPLS Width < 0.70")
+
+Executing: ACT_ACEOCT = drc(ACT CNT (enc < 0.3))
+	   errorLayer(ACT_ACEOCT "ACEOCT -- Min ACtive Enclosure Of CnT < 0.30")
+
+Executing: ACEOCT_2 = geomOverlap(CNT ACT)
+
+Executing: ACT_ACEOCT_3 = geomAndNot(ACEOCT_2 ACT)
+	   errorLayer(ACT_ACEOCT_3 "ACEOCT -- Layer CNT is not enclosed by ACT")
+
+Executing: ACTPYS_1 = drc(actCnt allPoly (sep < 0.4))
+	   errorLayer(ACTPYS_1 "ACTPYS -- Min Active-ConTacts to any PolY Spacing < 0.40")
+
+Executing: ACTPYS_2 = geomAnd(actCnt allPoly)
+	   errorLayer(ACTPYS_2 "ACTPYS -- Layer actCnt not allowed to overlap allPoly")
+
+Executing: POLY1_APEOCT = drc(POLY1 p1Cnt (enc < 0.2))
+	   errorLayer(POLY1_APEOCT "APEOCT -- Min All-Poly Enclosure Of CnT < 0.20")
+
+Executing: APEOCT_2 = geomOverlap(p1Cnt POLY1)
+
+Executing: POLY1_APEOCT_3 = geomAndNot(APEOCT_2 POLY1)
+	   errorLayer(POLY1_APEOCT_3 "APEOCT -- Layer p1Cnt is not enclosed by POLY1")
+
+Executing: POLY2_AP2EOCT = drc(POLY2 p2Cnt (enc < 0.2))
+	   errorLayer(POLY2_AP2EOCT "AP2EOCT -- Min Poly2 Enclosure Of Cnt < 0.2")
+
+Executing: AP2EOCT_2 = geomOverlap(p2Cnt POLY2)
+
+Executing: POLY2_AP2EOCT_3 = geomAndNot(AP2EOCT_2 POLY2)
+	   errorLayer(POLY2_AP2EOCT_3 "AP2EOCT -- Layer p2Cnt is not enclosed by POLY2")
+
+Executing: butCnt = geomButting(paaCnt naaCnt)
+
+Executing: BUTCNA = geomEnclose(CNT butCnt)
+	   errorLayer(BUTCNA "BUTCNA -- BUTted Cnts Not Allowed  ")
+
+Executing: CNTSP_so = drc(CNT (sep < 0.5))
+	   errorLayer(CNTSP_so "CNTSP -- Min CNT SPacing < 0.50")
+
+Executing: cntwNotSchtky = geomAndNot(CNT shkAnodeCnt)
+
+Executing: cntwNotSchtky_CNTW = geomContactCheck(cntwNotSchtky (length == 0.5) (width ==...
+	   errorLayer(cntwNotSchtky_CNTW "CNTW -- Man CNT Width  0.50")
+
+Executing: CTOFLD = geomAndNot(CNT p1P2Act)
+	   errorLayer(CTOFLD "CTOFLD -- CnT Over FieLD CTOFLD")
+
+Executing: CTOVGT = geomAnd(p1Cnt ACT)
+	   errorLayer(CTOVGT "CTOVGT -- CnT OVer GaTe poly CTOVGT")
+
+Executing: PCTACS_1 = drc(p1Cnt ACT (sep < 0.4))
+	   errorLayer(PCTACS_1 "PCTACS -- Min Poly-ConTacts to ACtive Spacing < 0.40")
+
+Executing: CTNOM1 = geomAndNot(CNT M1)
+	   errorLayer(CTNOM1 "CTNOM1 -- CnT with NO M1 cover CTNOM1")
+
+Executing: M1_M1EOCT = drc(M1 CNT (enc < 0.2))
+	   errorLayer(M1_M1EOCT "M1EOCT -- Min M1 Enclosure Of CnT < 0.20")
+
+Executing: M1EOCT_2 = geomOverlap(CNT M1)
+
+Executing: M1_M1EOCT_3 = geomAndNot(M1EOCT_2 M1)
+	   errorLayer(M1_M1EOCT_3 "M1EOCT -- Layer CNT is not enclosed by M1")
+
+Executing: m1TermOrRes = geomOr(m1Term m1ResBody)
+
+Executing: resBlkAndM1Res = geomAnd(resblk m1ResBody)
+
+Executing: m1NotBlk = geomAndNot(M1 resBlkAndM1Res)
+
+Executing: m1NotBlk_M1W_1 = drc(m1NotBlk (width < 0.6))
+	   errorLayer(m1NotBlk_M1W_1 "M1W -- Min M1 Width < 0.60")
+
+Executing: m1TermOrRes_wlM1CRW = drc(m1TermOrRes (width < 0.536) (length > 0.05))
+	   errorLayer(m1TermOrRes_wlM1CRW "WARNING - Resistor corners narrower than 0.60 u wide are not modeled accurately in simulation - WARNING")
+
+Executing: resblkUpNotM1Res = geomAndNot(resblkUp m1TermOrRes)
+
+Executing: insideM1Arc = geomAndNot(resblkUpNotM1Res resblk)
+
+Executing: m1ResRec = geomGetRectangle(insideM1Arc)
+
+Executing: resblkNotM1Res = geomAndNot(resblk m1TermOrRes)
+
+Executing: m1ResSurround = geomGetPolygon(insideM1Arc)
+
+Executing: m1ResNotArc = geomButting(resblkNotM1Res m1ResSurround)
+
+Executing: m1ResArc_1 = geomButting(resblkNotM1Res m1ResRec (keep < 2))
+
+Executing: m1ResArc = geomAndNot(m1ResArc_1 m1ResNotArc)
+
+Executing: m1OrArc = geomOr(m1ResArc M1)
+
+Executing: M1SPsno_1 = drc(m1OrArc (sepNotch < 0.6))
+	   errorLayer(M1SPsno_1 "M1SP -- Min M1 SPacing < 0.60")
+
+Executing: WDM1SP_blk = drc(wideM1 M1 (sep < 1.2) diffNet)
+
+Executing: WDM1SP_2 = geomAndNot(WDM1SP_blk M1)
+	   errorLayer(WDM1SP_2 "WDM1SP -- Min WiDe M1 to M1 SPacing < 1.20")
+
+Executing: M1_M1EOVI = drc(M1 VIA (enc < 0.2))
+	   errorLayer(M1_M1EOVI "M1EOVI -- Min M1 Enclosure Of VIa < 0.20")
+
+Executing: M1EOVI_2 = geomOverlap(VIA M1)
+
+Executing: M1_M1EOVI_3 = geomAndNot(M1EOVI_2 M1)
+	   errorLayer(M1_M1EOVI_3 "M1EOVI -- Layer VIA is not enclosed by M1")
+
+Executing: VIASPsno_1 = drc(VIA (sepNotch < 0.6))
+	   errorLayer(VIASPsno_1 "VIASP -- Min VIA SPacing < 0.60")
+
+Executing: VIA_VIAW = geomContactCheck(VIA (length == 0.5) (width == 0.5) ignore)
+	   errorLayer(VIA_VIAW "VIAW -- Man VIA Width  0.50")
+
+Executing: VINOM1 = geomAndNot(VIA M1)
+	   errorLayer(VINOM1 "VINOM1 -- VIa with NO M1 under VINOM1")
+
+Executing: M2_M2EOVI = drc(M2 VIA (enc < 0.2))
+	   errorLayer(M2_M2EOVI "M2EOVI -- Min M2 Enclosure Of VIa < 0.20")
+
+Executing: M2EOVI_2 = geomOverlap(VIA M2)
+
+Executing: M2_M2EOVI_3 = geomAndNot(M2EOVI_2 M2)
+	   errorLayer(M2_M2EOVI_3 "M2EOVI -- Layer VIA is not enclosed by M2")
+
+Executing: VINOM2 = geomAndNot(VIA M2)
+	   errorLayer(VINOM2 "VINOM2 -- VIa with NO M2 cover VINOM2")
+
+Executing: m2TermOrRes = geomOr(m2Term m2ResBody)
+
+Executing: resBlkAndM2Res = geomAnd(resblk m2ResBody)
+
+Executing: m2NotBlk = geomAndNot(M2 resBlkAndM2Res)
+
+Executing: m2NotBlk_M2W_1 = drc(m2NotBlk (width < 0.7))
+	   errorLayer(m2NotBlk_M2W_1 "M2W -- Min M2 Width < 0.70")
+
+Executing: m2TermOrRes_wlM2CRW = drc(m2TermOrRes (width < 0.636) (length > 0.05))
+	   errorLayer(m2TermOrRes_wlM2CRW "WARNING - Resistor corners narrower than 0.70 u wide are not modeled accurately in simulation - WARNING")
+
+Executing: resblkUpNotM2Res = geomAndNot(resblkUp m2TermOrRes)
+
+Executing: insideM2Arc = geomAndNot(resblkUpNotM2Res resblk)
+
+Executing: m2ResRec = geomGetRectangle(insideM2Arc)
+
+Executing: resblkNotM2Res = geomAndNot(resblk m2TermOrRes)
+
+Executing: m2ResSurround = geomGetPolygon(insideM2Arc)
+
+Executing: m2ResNotArc = geomButting(resblkNotM2Res m2ResSurround)
+
+Executing: m2ResArc_1 = geomButting(resblkNotM2Res m2ResRec (keep < 2))
+
+Executing: m2ResArc = geomAndNot(m2ResArc_1 m2ResNotArc)
+
+Executing: m2OrArc = geomOr(m2ResArc M2)
+
+Executing: M2SPsno_1 = drc(m2OrArc (sepNotch < 0.7))
+	   errorLayer(M2SPsno_1 "M2SP -- Min M2 SPacing < 0.70")
+
+Executing: WDM2SP_blk = drc(wideM2 M2 (sep < 1.2) diffNet)
+
+Executing: WDM2SP_2 = geomAndNot(WDM2SP_blk M2)
+	   errorLayer(WDM2SP_2 "WDM2SP -- Min WiDe M2 to M2 SPacing < 1.20")
+
+Executing: lv_VIA_1 = geomAnd(M1 M2)
+
+Executing: lv_VIA_2 = drc(M1 VIA (enc < 0.7) edgeb opposite)
+
+Executing: lv_VIA_3 = geomAndNot(VIA lv_VIA_2)
+
+Executing: lv_VIA_4 = geomGetLength(lv_VIA_3 (keep > 0.35))
+
+Executing: lv_VIA_5 = drc(lv_VIA_4 (width == 0.5) opposite)
+
+Executing: lv_VIA_6 = geomOverlap(VIA lv_VIA_5)
+
+Executing: lv_VIA_7 = geomAndNot(VIA lv_VIA_6)
+
+Executing: lv_VIA_8 = drc(lv_VIA_2 M1 (sep <= 8) ((-1 < app) < 1) edgea)
+
+Executing: lv_VIA_9 = geomOr(lv_VIA_4 lv_VIA_8)
+
+Executing: lv_VIA_10 = drc(lv_VIA_9 (width == 0.5) opposite)
+
+Executing: lv_VIA_11 = geomAndNot(lv_VIA_7 lv_VIA_10)
+
+Executing: lv_VIA_12 = geomAndNot(VIA lv_VIA_11)
+
+Executing: lv_VIA_13 = geomOverlap(lv_VIA_1 lv_VIA_12)
+
+Executing: LNLYVIA1 = geomAndNot(lv_VIA_11 lv_VIA_13)
+	   errorLayer(LNLYVIA1 "LNLYVIA1 -- Lonely VIA1 needs redundancy extra metal or patterning LNLYVIA1")
+
+Executing: M2_M2EOV2 = drc(M2 VI2 (enc < 0.2))
+	   errorLayer(M2_M2EOV2 "M2EOV2 -- Min M2 Enclosure Of Via2 < 0.20")
+
+Executing: M2EOV2_2 = geomOverlap(VI2 M2)
+
+Executing: M2_M2EOV2_3 = geomAndNot(M2EOV2_2 M2)
+	   errorLayer(M2_M2EOV2_3 "M2EOV2 -- Layer VI2 is not enclosed by M2")
+
+Executing: V2NOM2 = geomAndNot(VI2 M2)
+	   errorLayer(V2NOM2 "V2NOM2 -- Via 2 with NO M2 under V2NOM2")
+
+Executing: VI2SPsno_1 = drc(VI2 (sepNotch < 0.8))
+	   errorLayer(VI2SPsno_1 "VI2SP -- Min VI2 SPacing < 0.80")
+
+Executing: VI2_VI2W = geomContactCheck(VI2 (length == 0.5) (width == 0.5) ignore)
+	   errorLayer(VI2_VI2W "VI2W -- Man VI2 Width  0.50")
+
+Executing: M3_M3EOV2 = drc(M3 VI2 (enc < 0.2))
+	   errorLayer(M3_M3EOV2 "M3EOV2 -- Min M3 Enclosure Of Via2 < 0.20")
+
+Executing: M3EOV2_2 = geomOverlap(VI2 M3)
+
+Executing: M3_M3EOV2_3 = geomAndNot(M3EOV2_2 M3)
+	   errorLayer(M3_M3EOV2_3 "M3EOV2 -- Layer VI2 is not enclosed by M3")
+
+Executing: V2NOM3 = geomAndNot(VI2 M3)
+	   errorLayer(V2NOM3 "V2NOM3 -- Via 2 with NO M3 covering V2NOM3")
+
+Executing: m3TermOrRes = geomOr(m3Term m3ResBody)
+
+Executing: resBlkAndM3Res = geomAnd(resblk m3ResBody)
+
+Executing: m3NotBlk = geomAndNot(M3 resBlkAndM3Res)
+
+Executing: m3NotBlk_M3W_1 = drc(m3NotBlk (width < 0.8))
+	   errorLayer(m3NotBlk_M3W_1 "M3W -- Min M3 Width < 0.80")
+
+Executing: m3TermOrRes_wlM3CRW = drc(m3TermOrRes (width < 0.736) (length > 0.05))
+	   errorLayer(m3TermOrRes_wlM3CRW "WARNING - Resistor corners narrower than 0.80 u wide are not modeled accurately in simulation - WARNING")
+
+Executing: resblkUpNotM3Res = geomAndNot(resblkUp m3TermOrRes)
+
+Executing: insideM3Arc = geomAndNot(resblkUpNotM3Res resblk)
+
+Executing: m3ResRec = geomGetRectangle(insideM3Arc)
+
+Executing: resblkNotM3Res = geomAndNot(resblk m3TermOrRes)
+
+Executing: m3ResSurround = geomGetPolygon(insideM3Arc)
+
+Executing: m3ResNotArc = geomButting(resblkNotM3Res m3ResSurround)
+
+Executing: m3ResArc_1 = geomButting(resblkNotM3Res m3ResRec (keep < 2))
+
+Executing: m3ResArc = geomAndNot(m3ResArc_1 m3ResNotArc)
+
+Executing: m3OrArc = geomOr(m3ResArc M3)
+
+Executing: M3SPsno_1 = drc(m3OrArc (sepNotch < 0.7))
+	   errorLayer(M3SPsno_1 "M3SP -- Min M3 SPacing < 0.70")
+
+Executing: WDM3SP_blk = drc(wideM3 M3 (sep < 1.2) diffNet)
+
+Executing: WDM3SP_2 = geomAndNot(WDM3SP_blk M3)
+	   errorLayer(WDM3SP_2 "WDM3SP -- Min WiDe M3 to M3 Spacing < 1.20")
+
+Executing: lv_VI2_1 = geomAnd(M2 M3)
+
+Executing: lv_VI2_2 = drc(M2 VI2 (enc < 0.7) edgeb opposite)
+
+Executing: lv_VI2_3 = geomAndNot(VI2 lv_VI2_2)
+
+Executing: lv_VI2_4 = geomGetLength(lv_VI2_3 (keep > 0.35))
+
+Executing: lv_VI2_5 = drc(lv_VI2_4 (width == 0.5) opposite)
+
+Executing: lv_VI2_6 = geomOverlap(VI2 lv_VI2_5)
+
+Executing: lv_VI2_7 = geomAndNot(VI2 lv_VI2_6)
+
+Executing: lv_VI2_8 = drc(lv_VI2_2 M2 (sep <= 8) ((-1 < app) < 1) edgea)
+
+Executing: lv_VI2_9 = geomOr(lv_VI2_4 lv_VI2_8)
+
+Executing: lv_VI2_10 = drc(lv_VI2_9 (width == 0.5) opposite)
+
+Executing: lv_VI2_11 = geomAndNot(lv_VI2_7 lv_VI2_10)
+
+Executing: lv_VI2_12 = geomAndNot(VI2 lv_VI2_11)
+
+Executing: lv_VI2_13 = geomOverlap(lv_VI2_1 lv_VI2_12)
+
+Executing: LNLYVIA2 = geomAndNot(lv_VI2_11 lv_VI2_13)
+	   errorLayer(LNLYVIA2 "LNLYVIA2 -- Lonely VIA2 needs redundancy extra metal or patterning LNLYVIA2")
+
+Executing: geomStamp(padNotProbe M1)
+
+Executing: M1_M1EOPD = drc(M1 padNotProbe (enc < 3.0))
+	   errorLayer(M1_M1EOPD "M1EOPD -- Min M1 Enclosure Of PaD < 3.00")
+
+Executing: M1EOPD_2 = geomOverlap(padNotProbe M1)
+
+Executing: M1_M1EOPD_3 = geomAndNot(M1EOPD_2 M1)
+	   errorLayer(M1_M1EOPD_3 "M1EOPD -- Layer padNotProbe is not enclosed by M1")
+
+Executing: M2_M2EOPD = drc(M2 padNotProbe (enc < 2.4))
+	   errorLayer(M2_M2EOPD "M2EOPD -- Min M2 Enclosure Of PaD < 2.40")
+
+Executing: M2EOPD_2 = geomOverlap(padNotProbe M2)
+
+Executing: M2_M2EOPD_3 = geomAndNot(M2EOPD_2 M2)
+	   errorLayer(M2_M2EOPD_3 "M2EOPD -- Layer padNotProbe is not enclosed by M2")
+
+Executing: M3_M3EOPD = drc(M3 padNotProbe (enc < 1.2))
+	   errorLayer(M3_M3EOPD "M3EOPD -- Min M3 Enclosure Of PaD < 1.20")
+
+Executing: M3EOPD_2 = geomOverlap(padNotProbe M3)
+
+Executing: M3_M3EOPD_3 = geomAndNot(M3EOPD_2 M3)
+	   errorLayer(M3_M3EOPD_3 "M3EOPD -- Layer padNotProbe is not enclosed by M3")
+
+Executing: PADSPsno_1 = drc(padNotProbe (sepNotch < 12.0))
+	   errorLayer(PADSPsno_1 "PADSP -- Min PAD SPacing < 12.00")
+
+Executing: PADTAC_1 = drc(padNotProbe ACT (sep < 10.0))
+	   errorLayer(PADTAC_1 "PADTAC -- PAD To ACtive spacing < 10.00")
+
+Executing: PADTAC_2 = geomAnd(padNotProbe ACT)
+	   errorLayer(PADTAC_2 "PADTAC -- Layer padNotProbe not allowed to overlap ACT")
+
+Executing: PADTM1_s2o = drc(padNotProbe M1 (sep < 8.0) diffNet)
+	   errorLayer(PADTM1_s2o "PADTM1 -- PAD To unrelated M1 < 8.00")
+
+Executing: PADTM2_s2o = drc(padNotProbe M2 (sep < 8.0) diffNet)
+	   errorLayer(PADTM2_s2o "PADTM2 -- PAD To unrelated M2 < 8.00")
+
+Executing: PADTM3_s2o = drc(padNotProbe M3 (sep < 8.0) diffNet)
+	   errorLayer(PADTM3_s2o "PADTM3 -- PAD To unrelated M3 < 8.00")
+
+Executing: PADTPY_1 = drc(padNotProbe poly1NoRes (sep < 10.0) diffNet)
+	   errorLayer(PADTPY_1 "PADTPY -- PAD To unrelated Poly < 10.00")
+
+Executing: PADTPY_2 = geomAnd(padNotProbe poly1NoRes)
+	   errorLayer(PADTPY_2 "PADTPY -- Layer padNotProbe not allowed to overlap poly1NoRes")
+
+Executing: PADTPY2_1 = drc(padNotProbe poly2NoRes (sep < 10.0) diffNet)
+	   errorLayer(PADTPY2_1 "PADTPY2 -- PAD To unrelated Poly2 < 10.0")
+
+Executing: PADTPY2_2 = geomAnd(padNotProbe poly2NoRes)
+	   errorLayer(PADTPY2_2 "PADTPY2 -- Layer padNotProbe not allowed to overlap poly2NoRes")
+
+Executing: padNotProbe_PADW_1 = drc(padNotProbe (width < 50.0))
+	   errorLayer(padNotProbe_PADW_1 "PADW -- Min PAD Width < 50.00")
+
+Executing: probePad_PBPADW_1 = drc(probePad (width < 5.0))
+	   errorLayer(probePad_PBPADW_1 "PBPADW -- ProBepoint PAD Width < 5.00")
+
+Executing: padVia = geomAnd(padNotProbe VIA)
+
+Executing: padVia2 = geomAnd(padNotProbe VI2)
+
+Executing: PDV1SPsno_1 = drc(padVia (sepNotch < 3.0))
+	   errorLayer(PDV1SPsno_1 "PDV1SP -- Pad/Via1 SPacing < 3.00")
+
+Executing: PDV1V2_1 = drc(padVia padVia2 (sep < 1.0))
+	   errorLayer(PDV1V2_1 "PDV1V2 -- Pad/V1 to pad/V2 SPacing < 1.00")
+
+Executing: PDV1V2_2 = geomAnd(padVia padVia2)
+	   errorLayer(PDV1V2_2 "PDV1V2 -- Layer padVia not allowed to overlap padVia2")
+
+Executing: PDV2SPsno_1 = drc(padVia2 (sepNotch < 3.0))
+	   errorLayer(PDV2SPsno_1 "PDV2SP -- Pad/Via2 SPacing < 3.00")
+
+Executing: probeM1_MOPBPD = drc(probeM1 probePadM1 (enc < 2.0))
+	   errorLayer(probeM1_MOPBPD "MOPBPD -- Metal Overlap of ProBPD < 2.00")
+
+Executing: MOPBPD_2 = geomOverlap(probePadM1 probeM1)
+
+Executing: probeM1_MOPBPD_3 = geomAndNot(MOPBPD_2 probeM1)
+	   errorLayer(probeM1_MOPBPD_3 "MOPBPD -- Layer probePadM1 is not enclosed by probeM1")
+
+Executing: probeM2_MOPBPD = drc(probeM2 probePadM2 (enc < 2.0))
+	   errorLayer(probeM2_MOPBPD "MOPBPD -- Metal Overlap of ProBPD < 2.00")
+
+Executing: MOPBPD_2 = geomOverlap(probePadM2 probeM2)
+
+Executing: probeM2_MOPBPD_3 = geomAndNot(MOPBPD_2 probeM2)
+	   errorLayer(probeM2_MOPBPD_3 "MOPBPD -- Layer probePadM2 is not enclosed by probeM2")
+
+Executing: probeM3_MOPBPD = drc(probeM3 probePadM3 (enc < 2.0))
+	   errorLayer(probeM3_MOPBPD "MOPBPD -- Metal Overlap of ProBPD < 2.00")
+
+Executing: MOPBPD_2 = geomOverlap(probePadM3 probeM3)
+
+Executing: probeM3_MOPBPD_3 = geomAndNot(MOPBPD_2 probeM3)
+	   errorLayer(probeM3_MOPBPD_3 "MOPBPD -- Layer probePadM3 is not enclosed by probeM3")
+
+Executing: probeNoM1 = geomAndNot(probePadM1 M1)
+	   errorLayer(probeNoM1 "PRBNOM -- PRoBpad with NO Metal PRBNOM")
+
+Executing: probeNoM2 = geomAndNot(probePadM2 M2)
+	   errorLayer(probeNoM2 "PRBNOM -- PRoBpad with NO Metal PRBNOM")
+
+Executing: probeNoM3 = geomAndNot(probePadM3 M3)
+	   errorLayer(probeNoM3 "PRBNOM -- PRoBpad with NO Metal PRBNOM")
+
+Executing: ppBotCap_BCEOTC = drc(ppBotCap ppTopCap (enc < 0.5))
+	   errorLayer(ppBotCap_BCEOTC "BCEOTC -- Min BotCap plate Enclosure Of TopCap plate < 0.50")
+
+Executing: BCEOTC_2 = geomOverlap(ppTopCap ppBotCap)
+
+Executing: ppBotCap_BCEOTC_3 = geomAndNot(BCEOTC_2 ppBotCap)
+	   errorLayer(ppBotCap_BCEOTC_3 "BCEOTC -- Layer ppTopCap is not enclosed by ppBotCap")
+
+Executing: P2ACSP_s2o = drc(POLY2 ACT (sep < 0.2))
+	   errorLayer(P2ACSP_s2o "P2ACSP -- Min Poly2 to ACtive SPacing < 0.20")
+
+Executing: poly2TermOrRes = geomOr(poly2Term poly2ResBody)
+
+Executing: resBlkAndPOLY2Res = geomAnd(resblk poly2ResBody)
+
+Executing: poly2NotBlk = geomAndNot(POLY2 resBlkAndPOLY2Res)
+
+Executing: p2NoEsqP2NotBlk = geomCat(poly2NotBlk)
+
+Executing: p2NoEsqP2NotBlk_POLY2W_1 = drc(p2NoEsqP2NotBlk (width < 2.0))
+	   errorLayer(p2NoEsqP2NotBlk_POLY2W_1 "POLY2W -- Min POLY2 Width < 2.00")
+
+Executing: poly2TermOrRes_wlPOLY2CRW = drc(poly2TermOrRes (width < 1.936) (length > 0.05))
+	   errorLayer(poly2TermOrRes_wlPOLY2CRW "WARNING - Resistor corners narrower than 2.00 u wide are not modeled accurately in simulation - WARNING")
+
+Executing: resblkUpNotPOLY2Res = geomAndNot(resblkUp poly2TermOrRes)
+
+Executing: insidePOLY2Arc = geomAndNot(resblkUpNotPOLY2Res resblk)
+
+Executing: poly2ResRec = geomGetRectangle(insidePOLY2Arc)
+
+Executing: resblkNotPOLY2Res = geomAndNot(resblk poly2TermOrRes)
+
+Executing: poly2ResSurround = geomGetPolygon(insidePOLY2Arc)
+
+Executing: poly2ResNotArc = geomButting(resblkNotPOLY2Res poly2ResSurround)
+
+Executing: poly2ResArc_1 = geomButting(resblkNotPOLY2Res poly2ResRec (keep < 2))
+
+Executing: poly2ResArc = geomAndNot(poly2ResArc_1 poly2ResNotArc)
+
+Executing: poly2OrArc = geomOr(poly2ResArc POLY2)
+
+Executing: PLY2SPsno_1 = drc(poly2OrArc (sepNotch < 0.8))
+	   errorLayer(PLY2SPsno_1 "PLY2SP -- Min POLY2 SPacing < 0.80")
+
+Executing: actNotppTopCap = geomOutside(ACT ppTopCap)
+
+Executing: TCACSP_1 = drc(ppTopCap actNotppTopCap (sep < 2.0))
+	   errorLayer(TCACSP_1 "TCACSP -- Min TopCap plate to ACtive SPace < 2.00")
+
+Executing: TCACSP_2 = geomAnd(ppTopCap actNotppTopCap)
+	   errorLayer(TCACSP_2 "TCACSP -- Layer ppTopCap not allowed to overlap actNotppTopCap")
+
+Executing: TCCTSP_s2o = drc(cntNotP2 ppTopCap (sep < 0.5))
+	   errorLayer(TCCTSP_s2o "TCCTSP -- Min TopCap plate to CnT SPacing  < 0.50")
+
+Executing: TCPPSP_s2o = drc(ppTopCap ppls (sep < 2.0))
+	   errorLayer(TCPPSP_s2o "TCPPSP -- Min TopCap to PPls SPace  < 2.00")
+
+Executing: P2OP1EC_1 = drc(ppTopCap p2CapCnt (enc < 0.3))
+	   errorLayer(P2OP1EC_1 "P2OP1EC -- Min Poly2 Over Poly1 Enclosure of Contact < 0.30")
+
+Executing: HIREOP_1 = drc(HIRES POLY2 (enc < 1.0))
+	   errorLayer(HIREOP_1 "HIREOP -- Min HIRes Enclosure Of Poly2 < 1.00")
+
+Executing: HIRES_HIRESW_1 = drc(HIRES (width < 2.0))
+	   errorLayer(HIRES_HIRESW_1 "HIRESW -- Min HIRES Width < 2.00")
+
+Executing: HIRMSPsno_1 = drc(HIRES (sepNotch < 1.0))
+	   errorLayer(HIRMSPsno_1 "HIRMSP -- Min HIRes Mask SPace < 1.00")
+
+Executing: poly2NotHiRes = geomAvoiding(POLY2 HIRES)
+
+Executing: HIRP2S_s2o = drc(HIRES poly2NotHiRes (sep < 1.0))
+	   errorLayer(HIRP2S_s2o "HIRP2S -- Min HIRes to Poly2 Space < 1.00")
+
+Executing: HRPCSP_1 = drc(HIRES p2Cnt (sep < 0.5))
+	   errorLayer(HRPCSP_1 "HRPCSP -- Min HiR over Poly2 to Cnt SPace < 0.50")
+
+Executing: HRPCSP_2 = geomAnd(HIRES p2Cnt)
+	   errorLayer(HRPCSP_2 "HRPCSP -- Min HiR over Poly2 to Cnt SPace < 0.50")
+
+Executing: THKGTSsno_1 = drc(THKGT (sepNotch < 0.7))
+	   errorLayer(THKGTSsno_1 "THKGTS -- Min THKGT Spacing < 0.70")
+
+Executing: THKGT_THKGTW_1 = drc(THKGT (width < 1.0))
+	   errorLayer(THKGT_THKGTW_1 "THKGTW -- Min THKGT Width < 1.00")
+
+Executing: thkgtAct = geomOverlap(ACT THKGT)
+
+Executing: actNotThkgt = geomAndNot(ACT thkgtAct)
+
+Executing: TKACSP_s2o = drc(actNotThkgt THKGT (sep < 0.3))
+	   errorLayer(TKACSP_s2o "TKACSP -- Min ThKgt to ACtive SPacing < 0.30")
+
+Executing: TKEOAC = drc(THKGT thkgtAct (enc < 0.3))
+	   errorLayer(TKEOAC "TKEOAC -- Min ThKgt Enclosure Of ACtive < 0.30")
+
+Executing: TKEOAC_1 = geomStraddle(thkgtAct THKGT)
+
+Executing: TKEOAC_2 = geomAndNot(TKEOAC_1 THKGT)
+	   errorLayer(TKEOAC_2 "TKEOAC -- Layer thkgtAct is not enclosed by THKGT")
+
+Executing: pnpEmitterSm = geomContactCheck(pnpEmitter (length <= 4.1) (width <= 4.1))
+
+Executing: pnpEmitterLg = geomAndNot(pnpEmitter pnpEmitterSm)
+
+Executing: EMTRSZ = geomContactCheck(pnpEmitterLg (length == 20.0) (width == 20.0) ignore)
+	   errorLayer(EMTRSZ "EMTRSZ -- Man Emitter diffusion Size ensures model performance  20.00")
+
+Executing: EMTRSZ_S = geomContactCheck(pnpEmitterSm (length == 4.1) (width == 4.1) ignore)
+	   errorLayer(EMTRSZ_S "EMTRSZ_S -- Man Emitter diffusion Size ensures model performance  4.1")
+
+Executing: pnpNwellLg = geomOverlap(pnpNwell pnpEmitterLg)
+
+Executing: pnpBaseLg = geomOverlap(pnpBase pnpNwellLg)
+
+Executing: pnpCollector2_BJTCW_1 = drc(pnpCollector2 (width < 1.1))
+	   errorLayer(pnpCollector2_BJTCW_1 "BJTCW -- Min Collector diffusion Width < 1.10")
+
+Executing: pnpBaseLg_1 = drc(pnpBaseLg pnpCollector2 (sep == 3.9))
+
+Executing: pnpBaseLg_2 = drc(pnpBaseLg pnpCollector2 (sep < 15.6) opposite)
+
+Executing: BJTBSC = geomAndNot(pnpBaseLg_2 pnpBaseLg_1)
+	   errorLayer(BJTBSC "BJTBSC -- Man Base diffusion to Collector diffusion ensures model performance BJTBSC")
+
+Executing: pnpBaseLg_1 = drc(pnpBaseLg (width == 2.6))
+
+Executing: pnpBaseLg_2 = geomAndNot(pnpBaseLg pnpBaseLg_1)
+
+Executing: pnpBaseLg_3 = drc(pnpBaseLg_2 (width == 2.6))
+
+Executing: pnpBaseLg_4 = geomAndNot(pnpBaseLg_2 pnpBaseLg_3)
+	   errorLayer(pnpBaseLg_4 "BJTBW -- Man Base diffusion Width ensures model performance BJTBW")
+
+Executing: pnpEmitterLg_1 = drc(pnpEmitterLg pnpBaseLg (sep == 2.0))
+
+Executing: pnpEmitterLg_2 = drc(pnpEmitterLg pnpBaseLg (sep < 8.0) opposite)
+
+Executing: BJTESB = geomAndNot(pnpEmitterLg_2 pnpEmitterLg_1)
+	   errorLayer(BJTESB "BJTESB -- Man Emitter diffusion to Base diffusion ensures model performance BJTESB")
+
+Executing: pnpNwellLg_BJTTOE = geomSize(pnpEmitterLg 7.0)
+
+Executing: pnpNwellLg_BJTTOE = geomXor(pnpNwellLg pnpNwellLg_BJTTOE)
+	   errorLayer(pnpNwellLg_BJTTOE "BJTTOE -- Man Tub Overlap to Emitter diffusion ensures model performance == 7.00")
+
+Executing: pnpBaseSm = geomAndNot(pnpBase pnpBaseLg)
+
+Executing: pnpEmitterSm = geomAndNot(pnpEmitter pnpEmitterLg)
+
+Executing: pnpNwellSm = geomAndNot(pnpNwell pnpNwellLg)
+
+Executing: pnpBaseSm_1 = drc(pnpBaseSm pnpCollector2 (sep == 0.9))
+
+Executing: pnpBaseSm_2 = drc(pnpBaseSm pnpCollector2 (sep < 3.6) opposite)
+
+Executing: BJTBSC_S = geomAndNot(pnpBaseSm_2 pnpBaseSm_1)
+	   errorLayer(BJTBSC_S "BJTBSC_S -- Man Base diffusion to Collector diffusion ensures model performance BJTBSC_S")
+
+Executing: pnpBaseSm_1 = drc(pnpBaseSm (width == 1.1))
+
+Executing: pnpBaseSm_2 = geomAndNot(pnpBaseSm pnpBaseSm_1)
+
+Executing: pnpBaseSm_3 = drc(pnpBaseSm_2 (width == 1.1))
+
+Executing: pnpBaseSm_4 = geomAndNot(pnpBaseSm_2 pnpBaseSm_3)
+	   errorLayer(pnpBaseSm_4 "BJTBW_S -- Man Base diffusion Width ensures model performance BJTBW_S")
+
+Executing: pnpEmitterSm_1 = drc(pnpEmitterSm pnpBaseSm (sep == 0.9))
+
+Executing: pnpEmitterSm_2 = drc(pnpEmitterSm pnpBaseSm (sep < 3.6) opposite)
+
+Executing: BJTESB_S = geomAndNot(pnpEmitterSm_2 pnpEmitterSm_1)
+	   errorLayer(BJTESB_S "BJTESB_S -- Man Emitter diffusion to Base diffusion ensures model performance BJTESB_S")
+
+Executing: pnpNwellSm_BJTTOE_S = geomSize(pnpEmitterSm 2.5)
+
+Executing: pnpNwellSm_BJTTOE_S = geomXor(pnpNwellSm pnpNwellSm_BJTTOE_S)
+	   errorLayer(pnpNwellSm_BJTTOE_S "BJTTOE_S -- Man Tub Overlap to Emitter diffusion ensures model performance == 2.50")
+
+Executing: PadM1_1 = geomNodeRelate(M1 extM1MRK conn)
+
+Executing: PadM1_2 = geomNodeRelate(M1 extM2MRK conn)
+
+Executing: PadM1_3 = geomNodeRelate(M1 extM3MRK conn)
+
+Executing: padM1 = geomOr(PadM1_1 PadM1_2 PadM1_3)
+
+Executing: padCnt = geomAnd(CNT padM1)
+
+Executing: endnCnted = geomButtOrOver(nsd padCnt)
+
+Executing: ENNWELL = geomButtOrOver(NWELL endnCnted)
+
+Executing: endnNoCnt1 = geomButtOrOver(nsd ENNWELL)
+
+Executing: endnNoCnt = geomButting(endnNoCnt1 p1Gate)
+
+Executing: ENDN = geomOr(endnCnted endnNoCnt)
+
+Executing: ENDIF = geomButtOrOver(nDiff ENDN)
+
+Executing: ENGAT = geomButtOrOver(p1Gate ENDIF)
+
+Executing: ENSC = geomAndNot(nsd ENDN)
+
+Executing: EPDN = geomButtOrOver(psd padCnt)
+
+Executing: EPDIF = geomButtOrOver(pDiff EPDN)
+
+Executing: EPGAT = geomButtOrOver(p1Gate EPDIF)
+
+Executing: EPSC = geomAndNot(EPDIF EPDN)
+
+Executing: EDIF = geomOr(ENDIF EPDIF)
+
+Executing: ECT = geomAnd(actCnt EDIF)
+
+Executing: ESC = geomOr(EPSC ENSC)
+
+Executing: ESCCT = geomAnd(ECT ESC)
+
+Executing: EPDNCT = geomAnd(ECT EPDN)
+
+Executing: ENDNCT = geomAnd(ECT ENDN)
+
+Executing: EGAT = geomOr(ENGAT EPGAT)
+
+Executing: EDIFaENW = geomAnd(NWELL ENDN)
+
+Executing: EDIF_EACEOC = drc(EDIF padCnt (enc < 2.0))
+	   errorLayer(EDIF_EACEOC "EACEOC -- EC ACtive Enclosure of Contact < 2.00")
+
+Executing: EACEOC_2 = geomOverlap(padCnt EDIF)
+
+Executing: EDIF_EACEOC_3 = geomAndNot(EACEOC_2 EDIF)
+	   errorLayer(EDIF_EACEOC_3 "EACEOC -- Layer padCnt is not enclosed by EDIF")
+
+Executing: EDIFaENW_EACEOT_1 = drc(EDIFaENW (width < 1.5))
+	   errorLayer(EDIFaENW_EACEOT_1 "EACEOT -- EC ACtive Overlap of Tub toward gate < 1.50")
+
+Executing: ENDN_1 = drc(ENDN (sep < 1.2))
+
+Executing: ENDN_sbo = geomAndNot(ENDN_1 p1Gate)
+	   errorLayer(ENDN_sbo "EACX -- EC ACtive Spacing < 1.20")
+
+Executing: ENCTGX_s2o = drc(ENDNCT ENGAT (sep < 6.2))
+	   errorLayer(ENCTGX_s2o "ENCTGX -- EC N-device drain Contact To Gate Spacing < 6.20")
+
+Executing: EPCTGX_s2o = drc(EPDNCT EPGAT (sep < 4.6))
+	   errorLayer(EPCTGX_s2o "EPCTGX -- EC P-device drain Contact To Gate Spacing    < 4.60")
+
+Executing: ESCTGX_s2o = drc(ESCCT EGAT (sep < 1.35))
+	   errorLayer(ESCTGX_s2o "ESCTGX -- EC Source Contact To Gate Spacing < 1.35")
+
+Executing: ENNWELL_ETBEOC = drc(ENNWELL padCnt (enc < 1.0))
+	   errorLayer(ENNWELL_ETBEOC "ETBEOC -- EC NTuB Enclosure of Contact < 1.00")
+
+Executing: ETBEOC_2 = geomOverlap(padCnt ENNWELL)
+
+Executing: ENNWELL_ETBEOC_3 = geomAndNot(ETBEOC_2 ENNWELL)
+	   errorLayer(ENNWELL_ETBEOC_3 "ETBEOC -- Layer padCnt is not enclosed by ENNWELL")
+
+Executing: ETBGAX_s2o = drc(ENNWELL ENGAT (sep < 1.5))
+	   errorLayer(ETBGAX_s2o "ETBGAX -- EC TuB to GAte Spacing < 1.50")
+
+Executing: cntrcMRK = geomGetTexted(LREC LRECTXT "ecntrc")
+
+Executing: padSDCnt1 = geomAnd(padCnt sd)
+
+Executing: padSDCnt = geomAndNot(padSDCnt1 cntrcMRK)
+
+Executing: CNTRC_1 = drc(padSDCnt (sep < 1.0))
+
+Executing: CNTRC_2 = drc(CNTRC_1 (sep < 1.0))
+
+Executing: CNTRC_3 = geomOr(CNTRC_1 CNTRC_2)
+
+Executing: CNTRC_4 = geomOr(padSDCnt CNTRC_3)
+
+Executing: CNTRC_5 = geomGetHoled(CNTRC_4)
+
+Executing: CNTRC_6 = geomAndNot(padSDCnt CNTRC_5)
+	   errorLayer(CNTRC_6 "CNTRC -- Contacts should be in a double row and column < 0.50")
+
+Executing: antCNT = geomCat(p1Gate)
+
+Executing: geomConnect((via antCNT p1Gate POLY1))
+
+Executing: processAntenna(((gate (p1Gate POLY1)) (antenna topMostOnly POLY1) (KEEP = ((P...
+running in speedup mode
+
+Executing: POLY1PANTOUT = geomCat(PANT_p1Gate PANT_POLY1)
+	   errorLayer(POLY1PANTOUT "PY1ANT -- PolY1 ANTenna check (100:1 ratio)  100.00")
+
+Executing: geomConnect((via antCNT p1Gate POLY1) (via p1Cnt POLY1 M1) (via actCnt sd M1)...
+
+Executing: processAntenna(((gate (p1Gate POLY1)) (antenna topMostOnly POLY1 POLY2 M1) (d...
+running in speedup mode
+
+Executing: M1PANTOUT = geomCat(PANT_p1Gate PANT_POLY1 PANT_POLY2 PANT_M1)
+	   errorLayer(M1PANTOUT "M1PANT -- Metal 1 to Poly gate ANTenna  1000.00")
+
+Executing: geomConnect((via antCNT p1Gate POLY1) (via p1Cnt POLY1 M1) (via VIA M1 M2) (v...
+
+Executing: processAntenna(((gate (p1Gate POLY1)) (antenna topMostOnly POLY1 POLY2 M1 M2)...
+running in speedup mode
+
+Executing: M2PANTOUT = geomCat(PANT_p1Gate PANT_POLY1 PANT_POLY2 PANT_M1 PANT_M2)
+	   errorLayer(M2PANTOUT "M2PANT -- Metal 2 to Poly gate ANTenna  1000.00")
+
+Executing: geomConnect((via antCNT p1Gate POLY1) (via p1Cnt POLY1 M1) (via VIA M1 M2) (v...
+
+Executing: processAntenna(((gate (p1Gate POLY1)) (antenna topMostOnly POLY1 POLY2 M1 M2 ...
+running in speedup mode
+
+Executing: M3PANTOUT = geomCat(PANT_p1Gate PANT_POLY1 PANT_POLY2 PANT_M1 PANT_M2 PANT_M3)
+	   errorLayer(M3PANTOUT "M3PANT -- Metal 3 to Poly gate ANTenna  1000.0")
+
+Finished running rules. Task processor time in main process:
+cpu: 0.75  elap: 0  pf: 0  in: 0  out: 0  virt: 0M  phys: 0M
+
+Started output post-processing ...
+
+Nothing to postprocess: No grid cells in the design
+
+Finished output post-processing
+cpu: 0.09  elap: 1  pf: 0  in: 0  out: 0  virt: 0M  phys: 0M
+
+Finished building the persistent database.
+cpu: 0.01  elap: 0  pf: 0  in: 0  out: 0  virt: 0M  phys: 0M
+
+
+*****  aveng terminated normally  *****
+
+
+Finished /tools/cadence/ASSURA/current/tools/assura/bin/aveng
+
+Starting /tools/cadence/ASSURA/current/tools/assura/bin/avrpt /home/zxw6805/ee620/zxw_bssum.rsf
+@(#)$CDS: avrpt version av3.2:Production:dfII5.1.41:5.10.41_USR6.18 11/06/2008 11:00 (logavt05) $
+sub-version 3.2_USR1_HF1, integ signature 2008-11-05-1153
+
+run on vlsi-legacy from /tools/cadence/ASSURA/3.2-5141/tools.lnx86/assura/bin/32bit/avrpt on Wed Nov  5 13:27:04 2014
+
+
+   Creating Error Database 'zxw_bssum'...
+
+   Reading VDB ...
+--------------------------------------------------------------------------------
+Rule      Message                                    FlatCount     RealCount
+--------------------------------------------------------------------------------
+(    1)  dataAuditErrors                                     0            0
+(    2)  M1EOPC -- Min M1 Enclosure Of Pbus-Cnt <            0            0
+(    3)  M1EOPC -- Layer pbusCnt is not enclosed             0            0
+(    4)  M1EOPV -- Min M1 Enclosure Of Pbus Via <            0            0
+(    5)  M1EOPV -- Layer pbusVia is not enclosed             0            0
+(    6)  M2EOPV -- Min M2 Enclosure Of Pbus-Via <            0            0
+(    7)  M2EOPV -- Layer pbusVia is not enclosed             0            0
+(    8)  M2SCSP -- Mandatory M2 to SCribe-lane SP            0            0
+(    9)  PBAEOC -- Min PBus-Act Enclosure Of Cnt             0            0
+(   10)  PBAEOC -- Layer pbusCnt is not enclosed             0            0
+(   11)  PBASCE -- Man PBus-Active to SCribe Edge            0            0
+(   12)  PBSACW -- Min Per-BuS-ACtive Width < 14.            0            0
+(   13)  PDSTPB -- PaD to STart of PerBus  < 10.0            0            0
+(   14)  PDSTPB -- Layer pbusAct not allowed to o            0            0
+(   15)  PPL2SC -- PPLs to (defines) SCribe edge             0            0
+(   16)  SCRM1S -- Man SCRibe-lane to M1 Spacing             0            0
+(   17)  ACENND -- Man ACtive Enclosure of Nested            0            0
+(   18)  NNDRNW -- Man Nested-N-DRaiN Width NNDRN            0            0
+(   19)  NNDWEA -- Man Nested-N-Drain-Well Enclos            0            0
+(   20)  NNDCHW -- Min Nested-N-Drain-CHannel Wid            0            0
+(   21)  NNDEOC -- Min Nested-N-Drain Enclosure O            0            0
+(   22)  NNDEOC -- Layer nvuNcnt is not enclosed             0            0
+(   23)  NNDGTS -- Man Nested-N-Drain to Gate Spa            0            0
+(   24)  NNDWOG -- Man Nested-N-Drain-Well Overla            0            0
+(   25)  NPBEAC -- Min NPBlk Enclosure of ACtive             0            0
+(   26)  NPBEAC -- Layer nvuSd is not enclosed by            0            0
+(   27)  NVCHL -- Min. NV-type nested-drain-CHann            0            0
+(   28)  NPBOGT -- Min NPBlk Overlap of GaTe < 1.            0            0
+(   29)  NPBSRC -- Min NPBlk to SourRCe spacing              0            0
+(   30)  NUCHL -- Min NU-type nested-drain CHanne            0            0
+(   31)  ACENPD -- Man ACtive Enclosure of Nested            0            0
+(   32)  NPDCHW -- Min Nested-P-Drain CHannel Wid            0            0
+(   33)  NPDEOC -- Min Nested-P-Drain Enclosure O            0            0
+(   34)  NPDEOC -- Layer pvuPcnt is not enclosed             0            0
+(   35)  NPDGTS -- Man Nested-P-Drain to GaTe Spa            0            0
+(   36)  NPDRNW -- Man Nested-P-DRaiN Width NPDRN            0            0
+(   37)  NPDWEA -- Min Nested-P-Drain-Well Enclos            0            0
+(   38)  NPDWEA -- Layer pvuDrainDRC is not enclo            0            0
+(   39)  PPBEAC -- Min PPBlk Enclosure of ACtive             0            0
+(   40)  PPBEAC -- Layer pvuPsd is not enclosed b            0            0
+(   41)  PVCHL -- Min. PV-type nested-drain CHann            0            0
+(   42)  PPBOGT -- Min PPBlk Overlap of GaTe < 1.            0            0
+(   43)  PPBSRC -- Min PPBlk to SouRCe spacing <             0            0
+(   44)  PUCHL -- Min PU-type nested-drain CHanne            0            0
+(   45)  NPBACS -- Min NPBlk to ACtive Spacing <             0            0
+(   46)  PPBACS -- Min PPBlk to ACtive Spacing <             0            0
+(   47)  T12TBS -- Tub-12v to TuB Spacing < 6.00             0            0
+(   48)  P12PDS -- Min P-act-12v to P-Diffusion S            0            0
+(   49)  T12END -- Tub-12v Enclosure of N-Diffusi            0            0
+(   50)  T12END -- Layer v12Nsd is not enclosed b            0            0
+(   51)  T12EPD -- Tub-12v Enclosure of P-Diffusi            0            0
+(   52)  T12EPD -- Layer v12Psd is not enclosed b            0            0
+(   53)  T12NDS -- Tub-12v to N-Diffusion Spacing            0            0
+(   54)  T12PDS -- Tub-12v to P-Diffusion Spacing            0            0
+(   55)  EXNCHW -- Min EXtended-N-drain CHannel W            0            0
+(   56)  MWONXG -- Man Well Overlaps NX-type Gate            0            0
+(   57)  MXPNDW -- Man eXtended-P/N-Drain active             0            0
+(   58)  NCEXDW -- Man N-Chan-field Enclosure of             0            0
+(   59)  NWEXND -- Min NWell Enclosure of eXtende            0            0
+(   60)  NWEXND -- Layer nzxDrainDRC is not enclo            0            0
+(   61)  NXDRFT -- Man NX-type extended-drain DRi            0            0
+(   62)  NZCHL -- Min NZ-type extended-drain CHan            0            0
+(   63)  PXBXNG -- Min Poly eXtends Beyond eXtend            0            0
+(   64)  PXBXNG -- Layer nzxDiffNotSd is not encl            0            0
+(   65)  NXCHL -- Min NX-type extended-drain CHan            0            0
+(   66)  MWONTG -- Man Well Overlaps NT-type Gate            0            0
+(   67)  MXPNDW -- Man eXtended-P/N-Drain active             0            0
+(   68)  NCEXDW -- Man N-Chan-field Enclosure of             0            0
+(   69)  NTCHL -- Min NT-type extended-drain CHan            0            0
+(   70)  NTCHW -- Min NT-type extended-drain CHan            0            0
+(   71)  NTDRFT -- Man NT-type ext-drain DRiFT  l            0            0
+(   72)  NWEXND -- Min NWell Enclosure of eXtende            0            0
+(   73)  NWEXND -- Layer ntDrainDRC is not enclos            0            0
+(   74)  PXBXNG -- Min Poly eXtends Beyond eXtend            0            0
+(   75)  EXPCHW -- Min EXtended-P-drain CHannel W            0            0
+(   76)  EXPGER -- Extended P gate requires pfiel            0            0
+(   77)  MXPNDW -- Man eXtended-P/N-Drain active             0            0
+(   78)  NCEXDW -- Man N-Chan-field Enclosure of             0            0
+(   79)  NWEOPF -- Min NWell Enclosure Of PField             0            0
+(   80)  NWEOPF -- Min NWell Enclosure Of PField             0            0
+(   81)  PFEODA -- Min PField Enclosure of ext-Dr            0            0
+(   82)  PFEODA -- Min PField Enclosure of ext-Dr            0            0
+(   83)  PFNDSP -- Min P-Field to NDiff SPacing P            0            0
+(   84)  PFNDSP -- Min P-Field to NDiff SPacing <            0            0
+(   85)  PFOLXP -- Man P-Field OverLap of eXtende            0            0
+(   86)  PXBXNG -- Min Poly eXtends Beyond eXtend            0            0
+(   87)  PXDRFT -- Man PX-type extended-drain DRi            0            0
+(   88)  EXPCHL -- EXPCHL_DESC  5.0                          0            0
+(   89)  PZCHL -- Min PZ-type extended-drain CHan            0            0
+(   90)  PXCHL -- Min PX-type extended-drain CHan            0            0
+(   91)  PTCHL -- Min PT-type extended-drain CHan            0            0
+(   92)  PTCHW -- Min PT-dev-type extended-drain             0            0
+(   93)  PFLDSP -- Min P-FieLD to P-FieLD SPacing            0            0
+(   94)  PFPDSP -- Min P-Field to PDiffusion SPac            0            0
+(   95)  T20END -- Tub-20v Enclosure Of N-Diffusi            0            0
+(   96)  T20END -- Layer v20Nsd is not enclosed b            0            0
+(   97)  T20EPD -- Tub-20v Enclosure Of P-Diffusi            0            0
+(   98)  T20EPD -- Layer v20Psd is not enclosed b            0            0
+(   99)  T20NDS -- Tub-20v to N-Diffusion Spacing            0            0
+(  100)  T20PDS -- Tub-20v to P-Diffusion Spacing            0            0
+(  101)  T20TBS -- Tub-20v to TuB Spacing < 6.00             0            0
+(  102)  T20TBS -- Tub-20v to TuB Spacing < 6.00             0            0
+(  103)  MN40DRAREA -- N-device Drain Area mn40vD            0            0
+(  104)  MN40LC -- Poly enclosure of Deep N Well             0            0
+(  105)  MN40LD -- Deep N Well enclosure of drain            0            0
+(  106)  MN40LG1 -- Deep N Well space of channel             0            0
+(  107)  MN40LG2 -- N Well space of channel activ            0            0
+(  108)  MN40LP -- Poly space drain MN40LP                   0            0
+(  109)  MN40LS -- P Well Block enclosure of Deep            0            0
+(  110)  MN40PBEONF -- P Well Block enclosure of             0            0
+(  111)  DNW40EONW -- 40 volt Deep N Well enclosu            0            0
+(  112)  MP40DRAREA -- P-device Drain Area mp40vD            0            0
+(  113)  MP40LC -- P Well Block enclosure of sour            0            0
+(  114)  MP40LD -- P Well Block space to drain ac            0            0
+(  115)  MP40LG1 -- P Well Block Block enclosure             0            0
+(  116)  MP40LG2 -- Pch Resurf overlap of channel            0            0
+(  117)  MP40LP -- Poly space drain MP40LP                   0            0
+(  118)  MP40LS -- P Well Block overlap of nwell             0            0
+(  119)  MP40NWEOWT -- N Well overlap of source-w            0            0
+(  120)  NA40VPGSP -- N+Active to Hard P+Guardbar            0            0
+(  121)  NCFEO40DNW -- NchannelField overlap 40 V            0            0
+(  122)  NW40VPGSP -- Nwell to Hard P+Guardbar of            0            0
+(  123)  SKACSP -- Schottky ACtive SPacing SKACSP            0            0
+(  124)  SKTEOA -- Schottky Tub Enclosure Of Acti            0            0
+(  125)  shkHoleInPplsMissing -- The Ppls require            0            0
+(  126)  shkPplsMissing -- Ppls above the anode d            0            0
+(  127)  SKANW -- Schottky ANode Width SKANW                 0            0
+(  128)  SKCAW -- Schottky CAthode Width SKCAW               0            0
+(  129)  SKCTPPS -- Schottky ConTact P+ Spacing S            0            0
+(  130)  SKL -- Schottky contact Length  20.20               0            0
+(  131)  NVOSKCT -- No nested vias over schottky             0            0
+(  132)  SKRP2 -- Schottky requires Poly 2 proces            0            0
+(  133)  NCHNER -- NCHaN ERror if nchan is not id            0            0
+(  134)  NCEXDW -- Man N-Chan-field Enclosure of             0            0
+(  135)  DIFRW -- WARNING - Resistors narrower th            0            0
+(  136)  DIFW -- Min DIFfusion Width < 0.50                  0            0
+(  137)  WARNING - Resistor corners narrower than            0            0
+(  138)  DIFSP -- Min DIFfusion SPacing < 0.90               0            0
+(  139)  TBEOPD -- TuB Enclosure Of P-Diffusion <            0            0
+(  140)  TBEOPD -- Layer pDiff is not enclosed by            0            0
+(  141)  TBNDSP -- TuB to N-Diffusion SPacing < 1            0            0
+(  142)  TRANW -- Minimum TRANsistor Width  0.80             0            0
+(  143)  TBEOND -- Active area overlap on nwell <            0            0
+(  144)  TBPDSP -- TuB to P-Diffusion SPacing  0.            0            0
+(  145)  FLOTNW -- FLOaTing N-Wells                          0            0
+(  146)  FLOTPW -- FLOaTing P-Wells                          0            0
+(  147)  TUBRW -- WARNING - Resistors narrower th            0            0
+(  148)  WARNING - Resistor corners narrower than            0            0
+(  149)  TUBW -- Min TUB Width < 2.50                        0            0
+(  150)  TUBSPR -- Min TUB Spacing related < 2.00            0            0
+(  151)  TUBSP -- Min TUB SPacing < 4.00                     0            0
+(  152)  TUBSP -- Min TUB SPacing < 4.00                     0            0
+(  153)  TUBSP -- Min TUB SPacing < 4.00                     0            0
+(  154)  ACXBPY -- Min ACtive eXtension Beyond Po            0            0
+(  155)  PYXBAC -- Min PolY eXtension Beyond ACti            0            0
+(  156)  PYACSP -- Min PolY to ACtive SPacing < 0            0            0
+(  157)  POLYW -- Min POLY Width < 0.60                      0            0
+(  158)  WARNING - Resistor corners narrower than            0            0
+(  159)  POLYSP -- Min POLY SPacing < 0.60                   0            0
+(  160)  NDEOGT -- Min N-Diffusion Enclosure Of G            0            0
+(  161)  NPCOIN -- Nplus/Pplus COINcide  ==                  0            0
+(  162)  ZENER -- P/N Active not at the same pote            0            0
+(  163)  PDEOGT -- Min P-Diffusion Enclosure Of G            0            0
+(  164)  PPACSP -- Min PPls to ACtive SPacing < 0            0            0
+(  165)  PPEOAC -- Min PPls Enclosure Of ACtive <            0            0
+(  166)  PPLSSP -- Min PPLS SPacing < 0.70                   0            0
+(  167)  PPLSW -- Min PPLS Width < 0.70                      0            0
+(  168)  ACEOCT -- Min ACtive Enclosure Of CnT <             0            0
+(  169)  ACEOCT -- Layer CNT is not enclosed by A            0            0
+(  170)  ACTPYS -- Min Active-ConTacts to any Pol            0            0
+(  171)  ACTPYS -- Layer actCnt not allowed to ov            0            0
+(  172)  APEOCT -- Min All-Poly Enclosure Of CnT             0            0
+(  173)  APEOCT -- Layer p1Cnt is not enclosed by            0            0
+(  174)  AP2EOCT -- Min Poly2 Enclosure Of Cnt <             0            0
+(  175)  AP2EOCT -- Layer p2Cnt is not enclosed b            0            0
+(  176)  BUTCNA -- BUTted Cnts Not Allowed                   0            0
+(  177)  CNTSP -- Min CNT SPacing < 0.50                     0            0
+(  178)  CNTW -- Man CNT Width  0.50                         0            0
+(  179)  CTOFLD -- CnT Over FieLD CTOFLD                     0            0
+(  180)  CTOVGT -- CnT OVer GaTe poly CTOVGT                 0            0
+(  181)  PCTACS -- Min Poly-ConTacts to ACtive Sp            0            0
+(  182)  PCTACS -- Layer p1Cnt not allowed to ove            0            0
+(  183)  CTNOM1 -- CnT with NO M1 cover CTNOM1               0            0
+(  184)  M1EOCT -- Min M1 Enclosure Of CnT < 0.20            0            0
+(  185)  M1EOCT -- Layer CNT is not enclosed by M            0            0
+(  186)  M1W -- Min M1 Width < 0.60                          0            0
+(  187)  WARNING - Resistor corners narrower than            0            0
+(  188)  M1SP -- Min M1 SPacing < 0.60                       0            0
+(  189)  WDM1SP -- Min WiDe M1 to M1 SPacing < 1.            0            0
+(  190)  M1EOVI -- Min M1 Enclosure Of VIa < 0.20            0            0
+(  191)  M1EOVI -- Layer VIA is not enclosed by M            0            0
+(  192)  VIASP -- Min VIA SPacing < 0.60                     0            0
+(  193)  VIAW -- Man VIA Width  0.50                         0            0
+(  194)  VINOM1 -- VIa with NO M1 under VINOM1               0            0
+(  195)  M2EOVI -- Min M2 Enclosure Of VIa < 0.20            0            0
+(  196)  M2EOVI -- Layer VIA is not enclosed by M            0            0
+(  197)  VINOM2 -- VIa with NO M2 cover VINOM2               0            0
+(  198)  M2W -- Min M2 Width < 0.70                          0            0
+(  199)  WARNING - Resistor corners narrower than            0            0
+(  200)  M2SP -- Min M2 SPacing < 0.70                       0            0
+(  201)  WDM2SP -- Min WiDe M2 to M2 SPacing < 1.            0            0
+(  202)  LNLYVIA1 -- Lonely VIA1 needs redundancy            0            0
+(  203)  M2EOV2 -- Min M2 Enclosure Of Via2 < 0.2            0            0
+(  204)  M2EOV2 -- Layer VI2 is not enclosed by M            0            0
+(  205)  V2NOM2 -- Via 2 with NO M2 under V2NOM2             0            0
+(  206)  VI2SP -- Min VI2 SPacing < 0.80                     0            0
+(  207)  VI2W -- Man VI2 Width  0.50                         0            0
+(  208)  M3EOV2 -- Min M3 Enclosure Of Via2 < 0.2            0            0
+(  209)  M3EOV2 -- Layer VI2 is not enclosed by M            0            0
+(  210)  V2NOM3 -- Via 2 with NO M3 covering V2NO            0            0
+(  211)  M3W -- Min M3 Width < 0.80                          0            0
+(  212)  WARNING - Resistor corners narrower than            0            0
+(  213)  M3SP -- Min M3 SPacing < 0.70                       0            0
+(  214)  WDM3SP -- Min WiDe M3 to M3 Spacing < 1.            0            0
+(  215)  LNLYVIA2 -- Lonely VIA2 needs redundancy            0            0
+(  216)  M1EOPD -- Min M1 Enclosure Of PaD < 3.00            0            0
+(  217)  M1EOPD -- Layer padNotProbe is not enclo            0            0
+(  218)  M2EOPD -- Min M2 Enclosure Of PaD < 2.40            0            0
+(  219)  M2EOPD -- Layer padNotProbe is not enclo            0            0
+(  220)  M3EOPD -- Min M3 Enclosure Of PaD < 1.20            0            0
+(  221)  M3EOPD -- Layer padNotProbe is not enclo            0            0
+(  222)  PADSP -- Min PAD SPacing < 12.00                    0            0
+(  223)  PADTAC -- PAD To ACtive spacing < 10.00             0            0
+(  224)  PADTAC -- Layer padNotProbe not allowed             0            0
+(  225)  PADTM1 -- PAD To unrelated M1 < 8.00                0            0
+(  226)  PADTM2 -- PAD To unrelated M2 < 8.00                0            0
+(  227)  PADTM3 -- PAD To unrelated M3 < 8.00                0            0
+(  228)  PADTPY -- PAD To unrelated Poly < 10.00             0            0
+(  229)  PADTPY -- Layer padNotProbe not allowed             0            0
+(  230)  PADTPY2 -- PAD To unrelated Poly2 < 10.0            0            0
+(  231)  PADTPY2 -- Layer padNotProbe not allowed            0            0
+(  232)  PADW -- Min PAD Width < 50.00                       0            0
+(  233)  PBPADW -- ProBepoint PAD Width < 5.00               0            0
+(  234)  PDV1SP -- Pad/Via1 SPacing < 3.00                   0            0
+(  235)  PDV1V2 -- Pad/V1 to pad/V2 SPacing < 1.0            0            0
+(  236)  PDV1V2 -- Layer padVia not allowed to ov            0            0
+(  237)  PDV2SP -- Pad/Via2 SPacing < 3.00                   0            0
+(  238)  MOPBPD -- Metal Overlap of ProBPD < 2.00            0            0
+(  239)  MOPBPD -- Layer probePadM1 is not enclos            0            0
+(  240)  MOPBPD -- Metal Overlap of ProBPD < 2.00            0            0
+(  241)  MOPBPD -- Layer probePadM2 is not enclos            0            0
+(  242)  MOPBPD -- Metal Overlap of ProBPD < 2.00            0            0
+(  243)  MOPBPD -- Layer probePadM3 is not enclos            0            0
+(  244)  PRBNOM -- PRoBpad with NO Metal PRBNOM              0            0
+(  245)  PRBNOM -- PRoBpad with NO Metal PRBNOM              0            0
+(  246)  PRBNOM -- PRoBpad with NO Metal PRBNOM              0            0
+(  247)  BCEOTC -- Min BotCap plate Enclosure Of             0            0
+(  248)  BCEOTC -- Layer ppTopCap is not enclosed            0            0
+(  249)  P2ACSP -- Min Poly2 to ACtive SPacing <             0            0
+(  250)  POLY2W -- Min POLY2 Width < 2.00                    0            0
+(  251)  WARNING - Resistor corners narrower than            0            0
+(  252)  PLY2SP -- Min POLY2 SPacing < 0.80                  0            0
+(  253)  TCACSP -- Min TopCap plate to ACtive SPa            0            0
+(  254)  TCACSP -- Layer ppTopCap not allowed to             0            0
+(  255)  TCCTSP -- Min TopCap plate to CnT SPacin            0            0
+(  256)  TCPPSP -- Min TopCap to PPls SPace  < 2.            0            0
+(  257)  P2OP1EC -- Min Poly2 Over Poly1 Enclosur            0            0
+(  258)  HIREOP -- Min HIRes Enclosure Of Poly2 <            0            0
+(  259)  HIRESW -- Min HIRES Width < 2.00                    0            0
+(  260)  HIRMSP -- Min HIRes Mask SPace < 1.00               0            0
+(  261)  HIRP2S -- Min HIRes to Poly2 Space < 1.0            0            0
+(  262)  HRPCSP -- Min HiR over Poly2 to Cnt SPac            0            0
+(  263)  HRPCSP -- Min HiR over Poly2 to Cnt SPac            0            0
+(  264)  THKGTS -- Min THKGT Spacing < 0.70                  0            0
+(  265)  THKGTW -- Min THKGT Width < 1.00                    0            0
+(  266)  TKACSP -- Min ThKgt to ACtive SPacing <             0            0
+(  267)  TKEOAC -- Min ThKgt Enclosure Of ACtive             0            0
+(  268)  TKEOAC -- Layer thkgtAct is not enclosed            0            0
+(  269)  EMTRSZ -- Man Emitter diffusion Size ens            0            0
+(  270)  EMTRSZ_S -- Man Emitter diffusion Size e            0            0
+(  271)  BJTCW -- Min Collector diffusion Width <            0            0
+(  272)  BJTBSC -- Man Base diffusion to Collecto            0            0
+(  273)  BJTBW -- Man Base diffusion Width ensure            0            0
+(  274)  BJTESB -- Man Emitter diffusion to Base             0            0
+(  275)  BJTTOE -- Man Tub Overlap to Emitter dif            0            0
+(  276)  BJTBSC_S -- Man Base diffusion to Collec            0            0
+(  277)  BJTBW_S -- Man Base diffusion Width ensu            0            0
+(  278)  BJTESB_S -- Man Emitter diffusion to Bas            0            0
+(  279)  BJTTOE_S -- Man Tub Overlap to Emitter d            0            0
+(  280)  EACEOC -- EC ACtive Enclosure of Contact            0            0
+(  281)  EACEOC -- Layer padCnt is not enclosed b            0            0
+(  282)  EACEOT -- EC ACtive Overlap of Tub towar            0            0
+(  283)  EACX -- EC ACtive Spacing < 1.20                    0            0
+(  284)  ENCTGX -- EC N-device drain Contact To G            0            0
+(  285)  EPCTGX -- EC P-device drain Contact To G            0            0
+(  286)  ESCTGX -- EC Source Contact To Gate Spac            0            0
+(  287)  ETBEOC -- EC NTuB Enclosure of Contact <            0            0
+(  288)  ETBEOC -- Layer padCnt is not enclosed b            0            0
+(  289)  ETBGAX -- EC TuB to GAte Spacing < 1.50             0            0
+(  290)  CNTRC -- Contacts should be in a double             0            0
+(  291)  PY1ANT -- PolY1 ANTenna check (100:1 rat            0            0
+(  292)  M1PANT -- Metal 1 to Poly gate ANTenna              0            0
+(  293)  M2PANT -- Metal 2 to Poly gate ANTenna              0            0
+(  294)  M3PANT -- Metal 3 to Poly gate ANTenna              0            0
+--------------------------------------------------------------------------------
+Total  errors:                                               0            0
+--------------------------------------------------------------------------------
+
+   Finished creating Error Database ...
+
+   Writing Report into ./zxw_bssum.err ...
+
+avrpt cpu sec:    0.13  elapsed:     0  virtual:    39M
+
+Finished /tools/cadence/ASSURA/current/tools/assura/bin/avrpt
+
+Starting /tools/cadence/ASSURA/current/tools/assura/bin/avcallproc /home/zxw6805/ee620/zxw_bssum.rsf -restart -cdslib /home/zxw6805/ee620/cds.lib
+
+Finished /tools/cadence/ASSURA/current/tools/assura/bin/avcallproc
+
+
+Run ended: Wed Nov  5 13:27:05 2014
+
+*****  Assura terminated normally  *****
+

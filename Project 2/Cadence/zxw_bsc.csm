@@ -1,0 +1,7 @@
+Schematic                      | Layout                      | Status
+-------------------------------------------------------------------------------
+zxw_mux2 schematic zxw_lib     | zxw_mux2 layout zxw_lib     | matched      
+zxw_dff schematic zxw_lib      | zxw_dff layout zxw_lib      | matched      
+zxw_bsc schematic zxw_lib      | zxw_bsc layout zxw_lib      | matched      
+
+Schematic and Layout Match

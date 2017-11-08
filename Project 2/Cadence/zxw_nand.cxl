@@ -1,0 +1,24 @@
+C nmos(MOS) nmos(MOS)
+N D D
+N G G
+N S S
+N B B
+
+C pmos(MOS) pmos(MOS)
+N D D
+N G G
+N S S
+N B B
+
+C "zxw_nand schematic zxw_lib" "zxw_nand layout zxw_lib"
+N net037 avC6
+N out1 out1
+N in2 in2
+N in1 in1
+N gnd! gnd!
+N vdd! vdd!
+I M3 avD63_2
+I M2 avD63_1
+I M1 avD62_1
+I M0 avD62_2
+

@@ -1,0 +1,10 @@
+# 0
+nmos(MOS): nmos(MOS)
+# 0
+pmos(MOS): pmos(MOS)
+# 4
+zxw_nor schematic zxw_lib: zxw_nor layout zxw_lib
+D M4 avD63_2
+D M3 avD63_1
+S M1 avD62_1
+D M0 avD62_2

@@ -1,0 +1,37 @@
+C nmos(MOS) nmos(MOS)
+N D D
+N G G
+N S S
+N B B
+
+C pmos(MOS) pmos(MOS)
+N D D
+N G G
+N S S
+N B B
+
+C "zxw_mux2 schematic zxw_lib" "zxw_mux2 layout zxw_lib"
+N net29 avC7
+N net33 avC10
+N net41 avC11
+N net49 avC8
+N net8 avC9
+N D0 D0
+N S S
+N D1 D1
+N out1 out1
+N gnd! gnd!
+N vdd! vdd!
+I M0 avD63_4
+I M1 avD63_1
+I M2 avD63_2
+I M3 avD63_3
+I M8 avD63_5
+I M11 avD63_6
+I M4 avD62_4
+I M5 avD62_3
+I M6 avD62_1
+I M7 avD62_2
+I M10 avD62_6
+I M9 avD62_5
+

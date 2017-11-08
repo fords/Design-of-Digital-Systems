@@ -1,0 +1,15 @@
+
+***** Begin Label Report *****
+
+ Label in cell 'zxw_inv2 layout zxw_lib':
+  info: Floating label discarded:  "out1" at (8.300, 13.150).
+  info: Floating label discarded:  "in1" at (3.950, 13.400).
+  info: Assign net label "gnd!" at (1.750, 3.000) to layer `m1NoRes'.
+  info: Assign net label "vdd!" at (1.500, 26.800) to layer `m1NoRes'.
+  info: Floating label discarded:  "out1" at (8.300, 13.150).
+  info: Floating label discarded:  "in1" at (3.950, 13.400).
+  info: Assign pin label "gnd!" at (1.750, 3.000) to layer `m1NoRes'.
+  info: Assign pin label "vdd!" at (1.500, 26.800) to layer `m1NoRes'.
+
+***** End of Label Report *****
+

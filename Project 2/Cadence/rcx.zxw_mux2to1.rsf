@@ -1,0 +1,61 @@
+;----------------------------------------------------------------------------
+; @(#)$CDS: assura version av3.2:Production:dfII5.1.41:5.10.41_USR6.18 11/06/08 10:14 (logavt05) $
+; sub-version 3.2_USR1_HF1
+;----------------------------------------------------------------------------
+
+
+;----------------------------------------------------------------------------
+; avParameter Section
+; Created by the Assura UI
+;----------------------------------------------------------------------------
+
+avParameters(
+	?workingDirectory "/home/zxw6805/ee620/"
+	?runName "zxw_mux2to1"
+	?inputLayout ( "df2" "zxw_lib" )
+	?cellName "zxw_mux2to1"
+	?viewName "layout2"
+)
+
+
+
+;----------------------------------------------------------------------------
+; rcxParameter Section
+; Created by the Assura UI
+;----------------------------------------------------------------------------
+
+rcxParameters(
+	?rcxSetupDir "/classes/ee620/ami500hakx.6.11/Rev6.11/rcx3"
+	?outputFormat   "spice"
+	?output "zxw_mux2to1.sp"
+	?extractMosDiffusionAp	t
+	?extract    "both"
+	?netNameSpace   "layout"
+	?maxFractureLength  "infinite"
+	?fractureLengthUnits    "microns"
+	?temperature    25.0
+	?capExtractMode "coupled"
+	?capGround  "gnd!"
+	?capCouplingFactor  1.0
+	?type   "full"
+	?rcxfsType  "none"
+	?excludeSelfCaps       t
+	?minR  0.001
+	?minC  0.01e-15
+	?minCByPercentage  .1
+	?maxMergedViaSize  "auto"
+	?arrayViasSpacing  "auto"
+	?capModels  "no"
+	?parasiticCapModels  "no"
+	?resModels  "no"
+	?parasiticResModels  "no"
+	?outputNetNameSpace  "Schematic"
+	?subNodeChar  "#"
+	?hierarchyDelimiter  "/"
+	?deviceFingerDelimiter  "@"
+	?parasiticResWidth  nil
+	?parasiticResWidthDrawn  nil
+	?runName  "zxw_mux2to1"
+)
+setShellEnvVar("CDS_AUTO_CKOUT=all")
+avRCX()

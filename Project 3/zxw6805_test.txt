@@ -1,0 +1,213 @@
+
+X = 0x6; 
+LACK 1; 
+SACL X; 
+
+Y = 0x7; 
+LACK 0; 
+SACL Y; 
+
+Z = 0x8; 
+LACK 0; 
+SACL Z; 
+
+A= 0x9 
+LACK 1; 
+SACL A; 
+
+two =0x2; 
+;larp ar0, 0x40; 
+
+waitTime =0x1E; 
+;REGA  =0; 
+;LACK  0x40; 64 decmial value is stored in register A 
+;SACL REGA; 
+
+
+page0  = 0         ; 
+base_page0  = 0x000; 
+base_page1	=	0x080	; memory page 1 
+ptr    =21 
+rcc_ptr    =22 
+
+rcc_697Hz	= (0x00e0 & 0x07f)			; 
+rcc_770Hz	= (0x00e1 & 0x07f)			; 
+rcc_852Hz	= (0x00e2 & 0x07f)			; 
+rcc_941Hz	= (0x00e3 & 0x07f)			; 
+rcc_1209Hz	= (0x00e4 & 0x07f)			; 
+rcc_1336Hz	= (0x00e5 & 0x07f)			; 
+rcc_1477Hz	= (0x00e6 & 0x07f)			; 
+rcc_1633Hz	= (0x00e7 & 0x07f)			; 
+rcc_kick	= (0x00e8 & 0x07f)			; 
+rcc_len		= (rcc_kick - rcc_697Hz)	; 
+; 
+;pointer 
+
+;rc_697Hz	= 0x7fff * fp_rc_697Hz			; 
+;rc_770Hz	= 0x7fff * fp_rc_770Hz			; 
+;rc_852Hz	= 0x7fff * fp_rc_852Hz			; 
+;rc_941Hz	= 0x7fff * fp_rc_941Hz			; 
+;rc_1209Hz	= 0x7fff * fp_rc_1209Hz			; 
+;rc_1336Hz	= 0x7fff * fp_rc_1336Hz			; 
+;rc_1477Hz	= 0x7fff * fp_rc_1477Hz			; 
+;rc_1633Hz	= 0x7fff * fp_rc_1633Hz			; 
+
+powquiet1	=	60 
+powquiet2	=	61 
+powquiet3	=	62 
+powquiet4	=	63 
+powquiet5	=	64 
+powquiet6	=	65 
+powquiet7	=	66 
+powquiet8	=	67 
+
+pow1	=	68 
+pow2	=	69 
+pow3	=	70 
+pow4	=	71 
+pow5	=	72 
+pow6	=	73 
+pow7	=	74 
+pow8	=	75 
+
+LACK 0 
+sacl powquiet1 
+sacl powquiet2 
+sacl powquiet3 
+sacl powquiet4 
+sacl powquiet5 
+sacl powquiet6 
+sacl powquiet7 
+sacl powquiet8 
+sacl pow1 
+sacl pow2 
+sacl pow3 
+sacl pow5 
+sacl pow6 
+sacl pow8 
+
+bss= 0x3 
+csa= 0x4 
+lack 0x07 
+sacl bss 
+lack 0xff 
+sacl csa 
+ZALH bss 
+OR csa 
+sacl pow4 
+sacl pow7 
+
+
+larp ar0 
+lark ar0,0x40 
+
+loop:   
+ 	lt X          ; 
+	mpy X 
+	pac 
+	lt Z 
+	mpy two 
+	apac          ;loading X^2+2Z into accumualtor 
+	sub A 
+                        ; Y = X^2+(2*Z)-1 
+        SACL Y;   
+        LAC X; 
+        ADD A; 
+        SACL X;           X=X+1 
+
+        LAC Y ; 
+        SACL Z;  Z= Y	 
+	 
+        banz loop,*-,ar0;  	; use auxiliar register to loop 
+        
+      		 
+spectrum: 
+quiet:	lark	ar1,rcc_len		; length of rcc register block 
+			lark	ar0,(rcc_697Hz+base_page1)	; starting address 
+			sar		ar0,rcc_ptr 
+			lark	ar0,(powquiet1+base_page0) 
+			sar		ar0,ptr 
+quiet_l:	lar		ar0,ptr 
+			zals	*+ 
+			sar		ar0,ptr 
+			lar     ar0,rcc_ptr 
+			sacl	*+,ar1 
+			sar		ar0,rcc_ptr 
+			banz	quiet_l,*-,ar0        ; make quiet tone 
+
+quiet2:	lark	ar1,rcc_len		; length of rcc register block 
+			lark	ar0,(rcc_697Hz+base_page1)	; starting address 
+			sar		ar0,rcc_ptr 
+			lark	ar0,(powquiet1+base_page0) 
+			sar		ar0,ptr 
+quiet_2:	lar		ar0,ptr 
+			zals	*+ 
+			sar		ar0,ptr 
+			lar     ar0,rcc_ptr 
+			sacl	*+,ar1 
+			sar		ar0,rcc_ptr 
+			banz	quiet_2,*-,ar0        ; make quiet tone twice 
+	                lark ar0,waitTime     
+	    
+wait0:	   		banz wait0,*-,ar0	;create delay 
+
+
+poundsign1:	lark	ar1,rcc_len		; length of rcc register block 
+			lark	ar0,(rcc_697Hz+base_page1)	; starting address 
+			sar		ar0,rcc_ptr 
+			lark	ar0,(pow1+base_page0) 
+			sar		ar0,ptr 
+	 
+poundsign_1:	lar		ar0,ptr 
+			zals	*+ 
+			sar		ar0,ptr 
+			lar     ar0,rcc_ptr 
+			sacl	*+,ar1 
+			sar		ar0,rcc_ptr 
+			banz	poundsign_1,*-,ar0        ; make quiet tone 
+
+poundsign2:	lark	ar1,rcc_len		; length of rcc register block 
+			lark	ar0,(rcc_697Hz+base_page1)	; starting address 
+			sar		ar0,rcc_ptr 
+			lark	ar0,(pow1+base_page0) 
+			sar		ar0,ptr 
+poundsign_2:	lar		ar0,ptr 
+			zals	*+ 
+			sar		ar0,ptr 
+			lar     ar0,rcc_ptr 
+			sacl	*+,ar1 
+			sar		ar0,rcc_ptr 
+			banz	poundsign_2,*-,ar0        ; make #spectrum twice 
+
+			lark ar0,waitTime 
+wait1:             
+	   
+	   		banz wait1,*-,ar0	;wait for 30 cycles 
+
+quiet3:	lark	ar1,rcc_len		; length of rcc register block 
+			lark	ar0,(rcc_697Hz+base_page1)	; starting address 
+			sar		ar0,rcc_ptr 
+			lark	ar0,(powquiet1+base_page0) 
+			sar		ar0,ptr 
+quiet_3:	lar		ar0,ptr 
+			zals	*+ 
+			sar		ar0,ptr 
+			lar     ar0,rcc_ptr 
+			sacl	*+,ar1 
+			sar		ar0,rcc_ptr 
+			banz	quiet_3,*-,ar0     ; make quiet tone 
+
+
+quiet4:	lark	ar1,rcc_len		; length of rcc register block 
+			lark	ar0,(rcc_697Hz+base_page1)	; starting address 
+			sar		ar0,rcc_ptr 
+			lark	ar0,(powquiet1+base_page0) 
+			sar		ar0,ptr 
+quiet_4:	lar		ar0,ptr 
+			zals	*+ 
+			sar		ar0,ptr 
+			lar     ar0,rcc_ptr 
+			sacl	*+,ar1 
+			sar		ar0,rcc_ptr 
+			banz	quiet_4,*-,ar0     ; make quiet tone twice 
+stop:		b stop

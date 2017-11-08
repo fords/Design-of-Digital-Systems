@@ -1,0 +1,19 @@
+
+***** Begin Label Report *****
+
+ Label in cell 'zxw_dff layout zxw_lib':
+  info: Assign net label "Q" at (57.550, 17.050) to layer `m3NoRes'.
+  info: Assign net label "phi1" at (45.900, 13.150) to layer `m3NoRes'.
+  info: Assign net label "phi2" at (19.100, 7.550) to layer `m3NoRes'.
+  info: Assign net label "D" at (16.900, 8.250) to layer `m3NoRes'.
+  info: Assign net label "Qbar" at (60.450, 17.900) to layer `m3NoRes'.
+  info: Assign net label "gnd!" at (9.450, 5.300) to layer `m1NoRes'.
+  info: Assign pin label "Q" at (57.550, 17.050) to layer `m3NoRes'.
+  info: Assign pin label "phi1" at (45.900, 13.150) to layer `m3NoRes'.
+  info: Assign pin label "phi2" at (19.100, 7.550) to layer `m3NoRes'.
+  info: Assign pin label "D" at (16.900, 8.250) to layer `m3NoRes'.
+  info: Assign pin label "Qbar" at (60.450, 17.900) to layer `m3NoRes'.
+  info: Assign pin label "gnd!" at (9.450, 5.300) to layer `m1NoRes'.
+
+***** End of Label Report *****
+

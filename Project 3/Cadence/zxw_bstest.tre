@@ -1,0 +1,34 @@
+.SUBCIRCUIT =zxw_xor2 schematic zxw_lib
+.SUBCIRCUIT =zxw_nand2 schematic zxw_lib
+.SUBCIRCUIT =zxw_fa schematic zxw_lib
+zxw_xor2 schematic zxw_lib ( \
+I6 , \
+I5 )
+zxw_nand2 schematic zxw_lib ( \
+I2 , \
+I3 , \
+I4 )
+.SUBCIRCUIT =zxw_dff schematic zxw_lib
+.SUBCIRCUIT =zxw_mux2 schematic zxw_lib
+.SUBCIRCUIT =zxw_bsc schematic zxw_lib
+zxw_dff schematic zxw_lib ( \
+I2 , \
+I3 )
+zxw_mux2 schematic zxw_lib ( \
+I0 , \
+I1 )
+.SUBCIRCUIT =zxw_bsr5 schematic zxw_lib
+zxw_bsc schematic zxw_lib ( \
+I0 , \
+I1 , \
+I2 , \
+I3 , \
+I4 )
+.SUBCIRCUIT =zxw_bssum schematic zxw_lib
+zxw_fa schematic zxw_lib ( \
+I1 )
+zxw_bsr5 schematic zxw_lib ( \
+I0 )
+.SUBCIRCUIT =zxw_bstest schematic zxw_lib
+zxw_bssum schematic zxw_lib ( \
+I0 )

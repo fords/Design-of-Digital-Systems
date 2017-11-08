@@ -1,0 +1,33 @@
+*WARNING* Nets C9 and C8 are associated with the same label "out1" at (11.950, 12.950). See .erc file  for  details.
+*WARNING* Nets C10 and C7 are associated with the same label "in2" at (21.500, 22.750). See .erc file  for  details.
+*WARNING* Nets C11 and C6 are associated with the same label "in3" at (19.200, 13.050). See .erc file  for  details.
+*WARNING* Nets C12 and C5 are associated with the same label "in1" at (2.400, 13.250). See .erc file  for  details.
+*WARNING* Nets C3 and C2 are associated with the same label "gnd!" at (6.450, 5.300). See .erc file  for  details.
+*WARNING* Nets C4 and C1 are associated with the same label "vdd!" at (5.300, 26.250). See .erc file  for  details.
+*WARNING* Nets C9 and C8 are associated with the same label "out1" at (11.950, 12.950). See .erc file  for  details.
+*WARNING* Nets C10 and C7 are associated with the same label "in2" at (21.500, 22.750). See .erc file  for  details.
+*WARNING* Nets C11 and C6 are associated with the same label "in3" at (19.200, 13.050). See .erc file  for  details.
+*WARNING* Nets C12 and C5 are associated with the same label "in1" at (2.400, 13.250). See .erc file  for  details.
+*WARNING* Nets C3 and C2 are associated with the same label "gnd!" at (6.450, 5.300). See .erc file  for  details.
+*WARNING* Nets C4 and C1 are associated with the same label "vdd!" at (5.300, 26.250). See .erc file  for  details.
+*WARNING* 12 same-label  warnings found in cell 'fliptesting layout zxw_lib'.
+*WARNING* Nets C8 and C7 are associated with the same label "out1" at (11.950, 12.950). See .erc file  for  details.
+*WARNING* Nets C9 and C6 are associated with the same label "in2" at (21.500, 22.750). See .erc file  for  details.
+*WARNING* Nets C10 and C5 are associated with the same label "in3" at (19.200, 13.050). See .erc file  for  details.
+*WARNING* Nets C11 and C4 are associated with the same label "in1" at (2.400, 13.250). See .erc file  for  details.
+*WARNING* Nets C3 and C1 are associated with the same label "vdd!" at (5.300, 26.250). See .erc file  for  details.
+*WARNING* Nets C8 and C7 are associated with the same label "out1" at (11.950, 12.950). See .erc file  for  details.
+*WARNING* Nets C9 and C6 are associated with the same label "in2" at (21.500, 22.750). See .erc file  for  details.
+*WARNING* Nets C10 and C5 are associated with the same label "in3" at (19.200, 13.050). See .erc file  for  details.
+*WARNING* Nets C11 and C4 are associated with the same label "in1" at (2.400, 13.250). See .erc file  for  details.
+*WARNING* Nets C3 and C1 are associated with the same label "vdd!" at (5.300, 26.250). See .erc file  for  details.
+*WARNING* 10 same-label  warnings found in cell 'fliptesting layout zxw_lib'.
+*WARNING* Nets C7 and C6 are associated with the same label "out1" at (11.950, 12.950). See .erc file  for  details.
+*WARNING* Nets C8 and C5 are associated with the same label "in2" at (21.500, 22.750). See .erc file  for  details.
+*WARNING* Nets C9 and C4 are associated with the same label "in3" at (19.200, 13.050). See .erc file  for  details.
+*WARNING* Nets C10 and C3 are associated with the same label "in1" at (2.400, 13.250). See .erc file  for  details.
+*WARNING* Nets C7 and C6 are associated with the same label "out1" at (11.950, 12.950). See .erc file  for  details.
+*WARNING* Nets C8 and C5 are associated with the same label "in2" at (21.500, 22.750). See .erc file  for  details.
+*WARNING* Nets C9 and C4 are associated with the same label "in3" at (19.200, 13.050). See .erc file  for  details.
+*WARNING* Nets C10 and C3 are associated with the same label "in1" at (2.400, 13.250). See .erc file  for  details.
+*WARNING* 8 same-label  warnings found in cell 'fliptesting layout zxw_lib'.

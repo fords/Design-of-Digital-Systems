@@ -1,0 +1,4 @@
+"pmos(MOS)" "pmos(MOS)"
+"nmos(MOS)" "nmos(MOS)"
+"backupdiff layout zxw_lib" "backupdiff schematic zxw_lib" "nmos(MOS)" "pmos(MOS)"
+Devices filtered from layout

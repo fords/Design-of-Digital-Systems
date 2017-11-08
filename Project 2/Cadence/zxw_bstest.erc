@@ -1,0 +1,165 @@
+
+***** Begin Label Report *****
+
+ Label in cell 'zxw_mux2 layout zxw_lib':
+  info: Assign net label "S" at (14.350, 15.700) to layer `m3NoRes'.
+  info: Assign net label "out1" at (19.550, 15.300) to layer `m3NoRes'.
+  info: Assign net label "D1" at (12.000, 11.150) to layer `m3NoRes'.
+  info: Assign net label "D0" at (2.450, 13.150) to layer `m3NoRes'.
+  info: Assign net label "vdd!" at (5.300, 26.250) to layer `m1NoRes'.
+  info: Assign net label "gnd!" at (6.450, 5.300) to layer `m1NoRes'.
+  info: Assign pin label "S" at (14.350, 15.700) to layer `m3NoRes'.
+  info: Assign pin label "out1" at (19.550, 15.300) to layer `m3NoRes'.
+  info: Assign pin label "D1" at (12.000, 11.150) to layer `m3NoRes'.
+  info: Assign pin label "D0" at (2.450, 13.150) to layer `m3NoRes'.
+  info: Assign pin label "vdd!" at (5.300, 26.250) to layer `m1NoRes'.
+  info: Assign pin label "gnd!" at (6.450, 5.300) to layer `m1NoRes'.
+
+ Label in cell 'zxw_dff layout zxw_lib':
+  info: Assign net label "Q" at (57.550, 17.050) to layer `m3NoRes'.
+  info: Assign net label "phi1" at (45.900, 13.150) to layer `m3NoRes'.
+  info: Assign net label "phi2" at (19.100, 7.550) to layer `m3NoRes'.
+  info: Assign net label "D" at (16.900, 8.250) to layer `m3NoRes'.
+  info: Assign net label "Qbar" at (60.450, 17.900) to layer `m3NoRes'.
+  info: Assign net label "gnd!" at (9.450, 5.300) to layer `m1NoRes'.
+  info: Assign pin label "Q" at (57.550, 17.050) to layer `m3NoRes'.
+  info: Assign pin label "phi1" at (45.900, 13.150) to layer `m3NoRes'.
+  info: Assign pin label "phi2" at (19.100, 7.550) to layer `m3NoRes'.
+  info: Assign pin label "D" at (16.900, 8.250) to layer `m3NoRes'.
+  info: Assign pin label "Qbar" at (60.450, 17.900) to layer `m3NoRes'.
+  info: Assign pin label "gnd!" at (9.450, 5.300) to layer `m1NoRes'.
+
+ Label in cell 'zxw_xor2 layout zxw_lib':
+  info: Assign net label "A" at (4.850, 18.150) to layer `m3NoRes'.
+  info: Assign net label "B" at (19.200, 15.550) to layer `m3NoRes'.
+  info: Assign net label "Y" at (9.600, 13.050) to layer `m3NoRes'.
+  info: Assign net label "gnd!" at (6.000, 4.800) to layer `m1NoRes'.
+  info: Assign net label "vdd!" at (4.800, 26.400) to layer `m1NoRes'.
+  info: Assign pin label "A" at (4.850, 18.150) to layer `m3NoRes'.
+  info: Assign pin label "B" at (19.200, 15.550) to layer `m3NoRes'.
+  info: Assign pin label "Y" at (9.600, 13.050) to layer `m3NoRes'.
+  info: Assign pin label "gnd!" at (6.000, 4.800) to layer `m1NoRes'.
+  info: Assign pin label "vdd!" at (4.800, 26.400) to layer `m1NoRes'.
+
+ Label in cell 'zxw_nand2 layout zxw_lib':
+  info: Assign net label "out1" at (4.750, 15.650) to layer `m3NoRes'.
+  info: Assign net label "in2" at (7.200, 20.350) to layer `m3NoRes'.
+  info: Assign net label "in1" at (2.750, 18.000) to layer `m3NoRes'.
+  info: Assign net label "gnd!" at (4.000, 1.150) to layer `m1NoRes'.
+  info: Assign net label "vdd!" at (4.750, 26.550) to layer `m1NoRes'.
+  info: Assign pin label "out1" at (4.750, 15.650) to layer `m3NoRes'.
+  info: Assign pin label "in2" at (7.200, 20.350) to layer `m3NoRes'.
+  info: Assign pin label "in1" at (2.750, 18.000) to layer `m3NoRes'.
+  info: Assign pin label "gnd!" at (4.000, 1.150) to layer `m1NoRes'.
+  info: Assign pin label "vdd!" at (4.750, 26.550) to layer `m1NoRes'.
+
+ Label in cell 'zxw_bsc layout zxw_lib':
+  info: Assign net label "Mode_control" at (125.400, 46.300) to layer `m2NoRes'.
+  info: Assign net label "UpdateDR2" at (11.400, 46.300) to layer `m2NoRes'.
+  info: Assign net label "UpdateDR" at (34.200, 46.300) to layer `m2NoRes'.
+  info: Assign net label "ClockDR2" at (57.000, 46.300) to layer `m2NoRes'.
+  info: Assign net label "ClockDR" at (79.800, 46.300) to layer `m2NoRes'.
+  info: Assign net label "ShiftDR" at (171.000, 46.300) to layer `m2NoRes'.
+  info: Assign net label "SIN" at (148.200, 46.300) to layer `m2NoRes'.
+  info: Assign net label "In" at (102.600, 46.300) to layer `m2NoRes'.
+  info: Assign net label "Sout" at (45.600, 0.500) to layer `m2NoRes'.
+  info: Assign net label "out" at (136.800, 0.500) to layer `m2NoRes'.
+  info: Assign net label "gnd!" at (2.000, 9.600) to layer `m1NoRes'.
+  info: Assign net label "vdd!" at (181.100, 35.300) to layer `m1NoRes'.
+  info: Assign pin label "Mode_control" at (125.400, 46.300) to layer `m2NoRes'.
+  info: Assign pin label "UpdateDR2" at (11.400, 46.300) to layer `m2NoRes'.
+  info: Assign pin label "UpdateDR" at (34.200, 46.300) to layer `m2NoRes'.
+  info: Assign pin label "ClockDR2" at (57.000, 46.300) to layer `m2NoRes'.
+  info: Assign pin label "ClockDR" at (79.800, 46.300) to layer `m2NoRes'.
+  info: Assign pin label "ShiftDR" at (171.000, 46.300) to layer `m2NoRes'.
+  info: Assign pin label "SIN" at (148.200, 46.300) to layer `m2NoRes'.
+  info: Assign pin label "In" at (102.600, 46.300) to layer `m2NoRes'.
+  info: Assign pin label "Sout" at (45.600, 0.500) to layer `m2NoRes'.
+  info: Assign pin label "out" at (136.800, 0.500) to layer `m2NoRes'.
+  info: Assign pin label "gnd!" at (2.000, 9.600) to layer `m1NoRes'.
+  info: Assign pin label "vdd!" at (181.100, 35.300) to layer `m1NoRes'.
+
+ Label in cell 'zxw_fa layout zxw_lib':
+  info: Assign net label "SUM" at (22.450, 0.500) to layer `m2NoRes'.
+  info: Assign net label "Cout" at (67.300, 0.500) to layer `m2NoRes'.
+  info: Assign net label "B" at (44.850, 46.300) to layer `m2NoRes'.
+  info: Assign net label "A" at (14.950, 46.300) to layer `m2NoRes'.
+  info: Assign net label "Cin" at (74.800, 46.300) to layer `m2NoRes'.
+  info: Assign net label "gnd!" at (1.300, 10.350) to layer `m1NoRes'.
+  info: Assign net label "vdd!" at (87.200, 36.700) to layer `m1NoRes'.
+  info: Assign pin label "SUM" at (22.450, 0.500) to layer `m2NoRes'.
+  info: Assign pin label "Cout" at (67.300, 0.500) to layer `m2NoRes'.
+  info: Assign pin label "B" at (44.850, 46.300) to layer `m2NoRes'.
+  info: Assign pin label "A" at (14.950, 46.300) to layer `m2NoRes'.
+  info: Assign pin label "Cin" at (74.800, 46.300) to layer `m2NoRes'.
+  info: Assign pin label "gnd!" at (1.300, 10.350) to layer `m1NoRes'.
+  info: Assign pin label "vdd!" at (87.200, 36.700) to layer `m1NoRes'.
+
+ Label in cell 'zxw_bsr5 layout zxw_lib':
+  info: Assign net label "out3" at (106.400, 0.500) to layer `m2NoRes'.
+  info: Assign net label "out2" at (76.000, 0.500) to layer `m2NoRes'.
+  info: Assign net label "out5" at (167.200, 0.500) to layer `m2NoRes'.
+  info: Assign net label "out4" at (136.800, 0.500) to layer `m2NoRes'.
+  info: Assign net label "ShiftOut" at (15.200, 0.500) to layer `m2NoRes'.
+  info: Assign net label "out1" at (45.600, 0.500) to layer `m2NoRes'.
+  info: Assign net label "in5" at (144.400, 311.500) to layer `m2NoRes'.
+  info: Assign net label "in4" at (114.000, 311.500) to layer `m2NoRes'.
+  info: Assign net label "in3" at (83.600, 311.500) to layer `m2NoRes'.
+  info: Assign net label "in2" at (53.200, 311.500) to layer `m2NoRes'.
+  info: Assign net label "ShiftDR" at (174.800, 311.500) to layer `m2NoRes'.
+  info: Assign net label "UDR2" at (7.600, 311.500) to layer `m2NoRes'.
+  info: Assign net label "UDR1" at (22.800, 311.500) to layer `m2NoRes'.
+  info: Assign net label "shiftIn" at (159.600, 311.500) to layer `m2NoRes'.
+  info: Assign net label "mode" at (129.200, 311.500) to layer `m2NoRes'.
+  info: Assign net label "in1" at (98.800, 311.500) to layer `m2NoRes'.
+  info: Assign net label "CDR2" at (38.000, 311.500) to layer `m2NoRes'.
+  info: Assign net label "CDR1" at (68.400, 311.500) to layer `m2NoRes'.
+  info: Assign net label "gnd!" at (-19.900, 143.150) to layer `m1NoRes'.
+  info: Assign net label "vdd!" at (200.100, 239.700) to layer `m1NoRes'.
+  info: Assign pin label "out3" at (106.400, 0.500) to layer `m2NoRes'.
+  info: Assign pin label "out2" at (76.000, 0.500) to layer `m2NoRes'.
+  info: Assign pin label "out5" at (167.200, 0.500) to layer `m2NoRes'.
+  info: Assign pin label "out4" at (136.800, 0.500) to layer `m2NoRes'.
+  info: Assign pin label "ShiftOut" at (15.200, 0.500) to layer `m2NoRes'.
+  info: Assign pin label "out1" at (45.600, 0.500) to layer `m2NoRes'.
+  info: Assign pin label "in5" at (144.400, 311.500) to layer `m2NoRes'.
+  info: Assign pin label "in4" at (114.000, 311.500) to layer `m2NoRes'.
+  info: Assign pin label "in3" at (83.600, 311.500) to layer `m2NoRes'.
+  info: Assign pin label "in2" at (53.200, 311.500) to layer `m2NoRes'.
+  info: Assign pin label "ShiftDR" at (174.800, 311.500) to layer `m2NoRes'.
+  info: Assign pin label "UDR2" at (7.600, 311.500) to layer `m2NoRes'.
+  info: Assign pin label "UDR1" at (22.800, 311.500) to layer `m2NoRes'.
+  info: Assign pin label "shiftIn" at (159.600, 311.500) to layer `m2NoRes'.
+  info: Assign pin label "mode" at (129.200, 311.500) to layer `m2NoRes'.
+  info: Assign pin label "in1" at (98.800, 311.500) to layer `m2NoRes'.
+  info: Assign pin label "CDR2" at (38.000, 311.500) to layer `m2NoRes'.
+  info: Assign pin label "CDR1" at (68.400, 311.500) to layer `m2NoRes'.
+  info: Assign pin label "gnd!" at (-19.900, 143.150) to layer `m1NoRes'.
+  info: Assign pin label "vdd!" at (200.100, 239.700) to layer `m1NoRes'.
+
+ Label in cell 'zxw_bstest layout zxw_lib':
+  info: Assign net label "Shiftout" at (428.700, 135.800) to layer `m2NoRes'.
+  info: Assign net label "CDR1" at (428.700, 524.850) to layer `m2NoRes'.
+  info: Assign net label "CDR2" at (402.650, 524.850) to layer `m2NoRes'.
+  info: Assign net label "ShiftDR" at (506.850, 524.850) to layer `m2NoRes'.
+  info: Assign net label "ShiftIn" at (480.800, 524.850) to layer `m2NoRes'.
+  info: Assign net label "UDR1" at (376.600, 524.850) to layer `m2NoRes'.
+  info: Assign net label "UDR2" at (350.550, 524.850) to layer `m2NoRes'.
+  info: Assign net label "mode" at (454.750, 524.850) to layer `m2NoRes'.
+  info: Floating label discarded:  "gnd!" at (328.050, 147.850).
+  info: Assign net label "vdd!" at (537.050, 385.100) to layer `m1NoRes'.
+  info: Assign net label "gnd!" at (314.650, 234.000) to layer `m1NoRes'.
+  info: Assign pin label "Shiftout" at (428.700, 135.800) to layer `m2NoRes'.
+  info: Assign pin label "CDR1" at (428.700, 524.850) to layer `m2NoRes'.
+  info: Assign pin label "CDR2" at (402.650, 524.850) to layer `m2NoRes'.
+  info: Assign pin label "ShiftDR" at (506.850, 524.850) to layer `m2NoRes'.
+  info: Assign pin label "ShiftIn" at (480.800, 524.850) to layer `m2NoRes'.
+  info: Assign pin label "UDR1" at (376.600, 524.850) to layer `m2NoRes'.
+  info: Assign pin label "UDR2" at (350.550, 524.850) to layer `m2NoRes'.
+  info: Assign pin label "mode" at (454.750, 524.850) to layer `m2NoRes'.
+  info: Floating label discarded:  "gnd!" at (328.050, 147.850).
+  info: Assign pin label "vdd!" at (537.050, 385.100) to layer `m1NoRes'.
+  info: Assign pin label "gnd!" at (314.650, 234.000) to layer `m1NoRes'.
+
+***** End of Label Report *****
+

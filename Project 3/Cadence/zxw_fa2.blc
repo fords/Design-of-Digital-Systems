@@ -1,0 +1,6 @@
+"zxw_xor2 layout zxw_lib" "zxw_xor2 schematic zxw_lib" "nmos(MOS)" "pmos(MOS)"
+"zxw_nand2 layout zxw_lib" "zxw_nand2 schematic zxw_lib" "nmos(MOS)" "pmos(MOS)"
+"pmos(MOS)" "pmos(MOS)"
+"nmos(MOS)" "nmos(MOS)"
+"zxw_fa2 layout zxw_lib" "zxw_fa2 schematic zxw_lib"
+Devices filtered from layout

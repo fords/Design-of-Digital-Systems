@@ -1,0 +1,6 @@
+INCLUDE /tools/cadence/IC/5.1.41/share/cdssetup/cds.lib
+DEFINE zxw_lib /home/zxw6805/ee620/zxw_lib
+DEFINE avTech /tools/cadence/ASSURA/current/tools/assura/etc/avtech/avTech
+#Removed by ddDeleteObj: DEFINE zxw_inv10 /home/zxw6805/ee620/zxw_inv10
+DEFINE amis500cxakxx /classes/ee620/amis500cxakxx/current
+#Removed by ddDeleteObj: DEFINE zxw_tuto2 /home/zxw6805/ee620/zxw_tuto2

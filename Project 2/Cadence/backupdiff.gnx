@@ -1,0 +1,36 @@
+# 4
+pmos(MOS): pmos(MOS)
+= D D B
+= G G B
+= S S B
+= B B B
+# 4
+nmos(MOS): nmos(MOS)
+= D D B
+= G G B
+= S S B
+= B B B
+# 22
+backupdiff schematic zxw_lib: backupdiff layout zxw_lib
+= net076 avC15
+= net064 avC21
+= net0227 avC14
+= net0255 avC16
+= net0130 avC12
+= net0261 avC8
+= net16 avC22
+= net0132 avC11
+= net4 avC10
+= net0126 avC13
+= net0211 avC9
+= net0103 avC19
+= net0115 avC20
+= net089 avC17
+= net43 avC18
+= vdd! vdd! I
+= gnd! gnd! I
+= D D I
+= Q Q O
+= Qbar Qbar O
+= phi1 phi1 I
+= phi2 phi2 I

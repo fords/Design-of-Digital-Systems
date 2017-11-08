@@ -1,0 +1,379 @@
+*
+*
+*
+*                       LINUX           Fri Oct 31 23:00:11 2014
+*
+*
+*
+*  PROGRAM  advgen
+*
+*  CDL LIBRARY
+*
+*
+*
+
+*
+.SUBCKT zxw_xor2 vdd! gnd! A B Y
+*
+*
+*  caps2d version: 7
+*
+*
+*       TRANSISTOR CARDS
+*
+*
+M11	net1#2	A#6	gnd!#6	gnd!#2	nmos	L=0.6	W=2.4
++ AD=4.11	AS=4.11	PD=6.8	PS=6.8
+M7	Y#4	A#7	net16#2	gnd!#2	nmos	L=0.6	W=4.8
++ AD=3.93	AS=6.9	PD=2.1	PS=8.6
+M5	Y#4	net1#6	net17#2	gnd!#2	nmos	L=0.6	W=4.8
++ AD=3.93	AS=6.9	PD=2.1	PS=8.6
+M8	net16#4	B#3	gnd!#7	gnd!#2	nmos	L=0.6	W=4.8
++ AD=6.9	AS=3.93	PD=8.6	PS=2.1
+M6	net17#4	net5#2	gnd!#7	gnd!#2	nmos	L=0.6	W=4.8
++ AD=6.9	AS=3.93	PD=8.6	PS=2.1
+M9	net5#4	B#8	gnd!#1	gnd!#2	nmos	L=0.6	W=2.4
++ AD=4.11	AS=4.11	PD=6.8	PS=6.8
+M12	net1	A#8	vdd!#8	vdd!#2	pmos	L=0.6	W=4.8
++ AD=6.79	AS=7.03	PD=8.4	PS=8.5
+M0	net44	A#4	vdd!#7	vdd!#2	pmos	L=0.6	W=9.6
++ AD=12.48	AS=7.2	PD=12.2	PS=1.5
+M4	net33	net1#5	vdd!#7	vdd!#2	pmos	L=0.6	W=9.6
++ AD=7.2	AS=7.2	PD=1.5	PS=1.5
+M3	Y#3	B#1	net33	vdd!#2	pmos	L=0.6	W=9.6
++ AD=7.2	AS=7.2	PD=1.5	PS=1.5
+M2	Y#3	net5	net44#3	vdd!#2	pmos	L=0.6	W=9.6
++ AD=7.2	AS=12.48	PD=1.5	PS=12.2
+M10	net5#6	B#6	vdd!#1	vdd!#2	pmos	L=0.6	W=4.8
++ AD=6.79	AS=6.79	PD=8.4	PS=8.4
+*
+*
+*       RESISTOR AND CAP/DIODE CARDS
+*
+Re1	A#4	A#5	  424.8754
+Re2	A#5	A#1	   75.9090
+Re3	A#1	A#6	  225.7579
+Re4	A#5	A#7	  198.8517
+Re5	A#1	A#8	  203.0000
+Re6	net1#5	net1#6	  626.0237
+Re7	net1#6	net1#4	  584.4108
+Re8	B#1	B#2	  350.8333
+Re9	B#2	B#3	  185.0000
+Re10	B#6	B#7	  422.0797
+Re11	B#7	B#8	  241.2903
+Re12	B#4	B#7	   20.0000
+Re13	net5	net5#2	  552.5000
+Re14	net5#2	net5#3	  596.0237
+Rc1	net1	net1#3	   20.8906
+Rc2	net1#3	net1#4	   40.2550
+Rc3	net1#2	net1#3	   26.6667
+Rc4	A#1	A#2	   20.5000
+Rc5	net16	net16#2	   17.1889
+Rc6	net44	net44#2	   12.3944
+Rc7	net17	net17#2	   17.0000
+Rc8	net16#3	net16#4	   17.1889
+Rc9	Y#3	Y#1	   12.2321
+Rc10	Y#1	Y#4	   16.5406
+Rc11	net44#3	net44#4	   12.3944
+Rc12	net17#3	net17#4	   17.0000
+Rc14	B#4	B#2	   40.6758
+Rc15	net5#3	net5#5	    0.1703
+Rc16	net5#5	net5#6	   21.8228
+Rc17	net5#4	net5#5	   26.6667
+Rc18	vdd!#1	vdd!#3	   20.4164
+Rc19	vdd!#3	vdd!#4	    0.1203
+Rc20	vdd!#4	vdd!#5	4.272E-02
+Rc21	vdd!#5	vdd!#6	1.722E-02
+Rc22	vdd!#6	vdd!	1.403E-02
+Rc23	vdd!#4	vdd!#7	   11.6524
+Rc24	vdd!#6	vdd!#8	   20.7680
+Rc25	vdd!#2	vdd!#3	    7.2727
+Rc26	vdd!#2	vdd!#5	    6.6667
+Rc27	gnd!#1	gnd!#3	   26.8903
+Rc28	gnd!#3	gnd!#4	6.078E-02
+Rc29	gnd!#4	gnd!#5	    0.1022
+Rc30	gnd!#5	gnd!	1.451E-02
+Rc31	gnd!	gnd!#6	   27.0925
+Rc32	gnd!#4	gnd!#7	   16.3477
+Rc33	gnd!#2	gnd!#3	    9.0909
+Rc34	gnd!#2	gnd!#5	    8.3333
+Rb1	A#3	A#2	    0.5000
+Rb2	Y#1	Y	    1.0000
+Rb3	net16#3	net16	    0.5856
+Rb4	net44#4	net44#2	    0.7933
+Rb5	net17#3	net17	    0.5856
+Rb6	B#4	B#9	    1.0000
+Ra1	A	A#3	    0.2475
+Ra3	B	B#9	    0.1175
+*
+*       CAPACITOR CARDS
+*
+*
+C1	A	vdd!	2.349E-16
+C2	Y#4	net17#2	1.348E-16
+C3	Y#3	net1#5	1.032E-17
+C4	B#8	gnd!#2	4.540E-16
+C5	A	Y	2.615E-16
+C6	net44#4	Y#3	1.578E-16
+C7	A#3	Y#4	1.181E-17
+C8	net17#4	gnd!#1	1.248E-16
+C9	A#1	Y#4	9.148E-18
+C10	vdd!	gnd!#2	6.208E-17
+C11	net44#2	vdd!#2	4.438E-17
+C12	net5#2	gnd!#2	1.120E-15
+C13	net5#4	B#8	1.189E-16
+C14	Y#4	gnd!#2	6.971E-17
+C15	vdd!#7	net1#5	2.523E-16
+C16	A#1	vdd!#8	6.402E-17
+C17	gnd!#4	net16#3	1.863E-16
+C18	B#3	gnd!#2	4.560E-16
+C19	net17#3	gnd!#7	1.357E-16
+C20	A#3	vdd!#8	2.323E-17
+C21	gnd!#1	B#8	1.041E-16
+C22	B#9	gnd!#2	6.291E-16
+C23	net16#3	B#2	2.840E-17
+C24	A	net44#2	3.271E-17
+C25	Y	net1#6	1.012E-17
+C26	net16#3	Y#3	1.294E-17
+C27	B	net44#4	3.993E-17
+C28	Y#3	net44#3	3.015E-16
+C29	Y	B#2	1.890E-17
+C30	net1#6	gnd!#2	1.489E-15
+C31	net17#4	B#8	6.913E-18
+C32	vdd!#7	A#4	2.245E-16
+C33	gnd!#6	A#1	4.747E-17
+C34	net16#3	gnd!#7	1.921E-16
+C35	Y	net16#3	1.272E-16
+C36	net44#2	vdd!#4	6.903E-17
+C37	B	net5#6	1.530E-16
+C38	net1#4	net16#2	2.513E-17
+C39	A	vdd!#8	1.063E-16
+C40	B	vdd!#2	5.036E-16
+C41	Y	net44#2	1.281E-16
+C42	A#7	gnd!#2	5.601E-16
+C43	A#3	gnd!#6	1.104E-16
+C44	B	vdd!#1	1.190E-16
+C45	net17#4	net5#2	1.692E-16
+C46	A#3	gnd!#2	1.052E-16
+C47	B	net44#3	7.504E-17
+C48	net1#2	A#1	1.136E-16
+C49	net1#4	gnd!#6	7.925E-17
+C50	A#3	Y	2.996E-16
+C51	Y#3	net5#2	3.310E-17
+C52	Y	gnd!#2	4.397E-16
+C53	A	vdd!#6	1.008E-16
+C54	net1#5	B#1	1.810E-17
+C55	vdd!#4	B#1	5.727E-17
+C56	A#6	gnd!#2	3.897E-16
+C57	B#9	net5#4	1.246E-16
+C58	A#5	net1#5	1.173E-17
+C59	gnd!#7	net17#4	1.636E-16
+C60	gnd!#7	net5#2	1.454E-16
+C61	net17#4	B#3	2.397E-18
+C62	net44#2	vdd!#6	3.542E-17
+C63	A#4	net1#5	1.346E-17
+C64	vdd!#8	A#8	1.338E-16
+C65	net16#3	net17#2	2.798E-16
+C66	Y	gnd!#7	8.510E-18
+C67	net5#3	gnd!#2	1.512E-15
+C68	A#3	net1#2	6.553E-17
+C69	Y	net17#2	7.090E-17
+C70	Y	vdd!#7	1.459E-16
+C71	gnd!#7	B#3	1.191E-16
+C72	vdd!#4	net1#5	6.486E-17
+C73	B#9	gnd!#1	6.981E-17
+C74	vdd!#2	gnd!#2	1.242E-16
+C75	Y	A#5	6.362E-18
+C76	net1#2	gnd!#2	1.630E-16
+C77	net17#2	B#3	4.877E-18
+C78	Y	vdd!#4	3.383E-16
+C79	B#2	gnd!#2	3.697E-16
+C80	vdd!#4	A#4	6.409E-17
+C81	Y#1	net17#2	8.658E-17
+C82	net5#4	gnd!#2	3.525E-16
+C83	net5#6	vdd!#2	7.925E-17
+C84	net16#3	Y#1	2.489E-17
+C85	B#9	net17#4	3.303E-17
+C86	Y#3	vdd!#4	5.304E-17
+C87	net5#3	gnd!#1	2.657E-17
+C88	B#3	net5#2	1.818E-17
+C89	A#1	gnd!#2	5.492E-16
+C90	Y#1	vdd!#7	8.405E-17
+C91	net17#2	net1#6	1.880E-16
+C92	net1#5	B#2	1.456E-17
+C93	A#3	net1#4	2.240E-17
+C94	A#5	gnd!#2	3.131E-16
+C95	B#9	Y#3	1.212E-17
+C96	net44#4	B#1	2.835E-17
+C97	net1#4	gnd!#2	1.182E-15
+C98	net1#6	Y#4	2.128E-16
+C99	net5#3	B#8	3.001E-17
+C100	vdd!#1	net5#6	1.565E-16
+C101	net44#2	vdd!#7	1.362E-16
+C102	B#9	net17#3	5.579E-17
+C103	net1#6	A#7	4.159E-17
+C104	Y#4	A#7	1.202E-16
+C105	vdd!#7	A#5	2.526E-17
+C106	B#2	net5#2	1.091E-16
+C107	B#2	net44#3	1.711E-17
+C108	gnd!#4	net17#4	5.624E-17
+C109	net5#6	B#6	2.077E-16
+C110	Y#1	net1#5	6.670E-17
+C111	gnd!#2	net17#4	6.494E-17
+C112	vdd!#2	B#6	6.657E-17
+C113	net44#3	net5#6	2.730E-17
+C114	net17#4	B#2	3.152E-17
+C115	net44#2	net1#5	2.292E-17
+C116	vdd!#1	B#6	1.548E-16
+C117	net44#2	vdd!#8	8.897E-18
+C118	net17#3	gnd!#2	5.774E-17
+C119	net1#6	B#2	3.755E-17
+C120	Y#3	B#2	3.143E-16
+C121	net44#4	vdd!#4	5.049E-17
+C122	Y#4	A#5	7.456E-17
+C123	net44#2	A#4	2.564E-17
+C124	net44#4	vdd!#2	6.567E-17
+C125	net44#3	B#6	1.314E-17
+C126	net44#3	vdd!#2	1.144E-16
+C127	gnd!#1	net5#4	9.917E-17
+C128	gnd!#7	B#2	9.846E-17
+C129	net16#3	gnd!#2	6.264E-17
+C130	net17#3	net5#2	1.287E-17
+C131	A#5	net1#6	1.212E-17
+C132	net1#4	A#7	7.899E-18
+C133	net17#3	B#3	3.141E-18
+C134	gnd!#4	net5#2	1.313E-16
+C135	net44#4	vdd!#1	3.275E-17
+C136	gnd!#6	A#6	1.055E-16
+C137	A#3	Y#1	1.375E-17
+C138	net17#3	net5#4	7.890E-18
+C139	net16#3	B#3	1.286E-16
+C140	Y#1	net5#2	1.683E-17
+C141	Y#3	vdd!#2	6.124E-17
+C142	net44#3	B#1	4.581E-18
+C143	net17#4	net5#4	1.409E-17
+C144	net44#3	vdd!#1	2.121E-16
+C145	Y#1	gnd!#2	1.734E-17
+C146	net16#3	net1#6	4.695E-18
+C147	net1#2	A#6	1.250E-16
+C148	Y#3	B#1	2.115E-16
+C149	Y#1	A#5	8.544E-17
+C150	net1#2	gnd!#6	1.236E-16
+C151	gnd!#4	B#3	8.764E-17
+C152	net17#3	gnd!#1	4.353E-17
+C153	Y#1	net1#6	1.525E-16
+C154	gnd!#2	net17#2	8.405E-17
+C155	B#4	net44#3	3.045E-17
+C156	net16	Y#4	3.095E-16
+C157	Y#3	net33	3.289E-16
+C158	net16	A#7	1.565E-16
+C159	gnd!#6	net1	2.132E-17
+C160	net44#4	net33	8.494E-17
+C161	B#4	net5#4	3.272E-16
+C162	net16	A#6	5.237E-18
+C163	Y#3	net5	2.791E-16
+C164	net44	vdd!#7	2.609E-16
+C165	net44	A#5	6.164E-17
+C166	net16	vdd!#8	2.321E-17
+C167	B#4	gnd!#2	5.831E-16
+C168	Y#4	net44	3.004E-17
+C169	net17	gnd!#2	3.528E-17
+C170	net17#4	B#4	4.586E-17
+C171	gnd!#6	net16	1.994E-16
+C172	net17	Y#4	2.041E-17
+C173	net1	A#8	1.264E-16
+C174	vdd!#2	net5	5.758E-17
+C175	A	net44	2.356E-17
+C176	Y	net17	1.062E-16
+C177	net33	B#1	2.115E-16
+C178	vdd!#8	net44	2.781E-16
+C179	net16	A#1	1.472E-17
+C180	A#3	net1	5.332E-17
+C181	Y#1	net33	4.990E-17
+C182	A	net1	8.236E-17
+C183	vdd!#7	net33	3.015E-16
+C184	net5#6	B#4	8.669E-17
+C185	net1#2	net16	3.944E-18
+C186	net17	net16#3	2.622E-16
+C187	net16	net1#4	8.158E-18
+C188	Y	net33	7.590E-17
+C189	A#3	net44	3.660E-18
+C190	net33	net1#5	2.489E-16
+C191	net44#2	net33	8.506E-17
+C192	net17	B#3	8.877E-18
+C193	Y	net44	8.639E-17
+C194	A#3	net16	1.226E-16
+C195	vdd!#1	net5	8.944E-18
+C196	net17	net1#6	1.996E-17
+C197	net33	B#2	3.742E-17
+C198	gnd!#1	B#4	3.573E-17
+C199	net17	Y#1	5.609E-18
+C200	net16	A#5	3.629E-17
+C201	A#1	net1	6.994E-17
+C202	net16	gnd!#2	1.414E-16
+C203	net1	vdd!#8	1.427E-16
+C204	net44#4	net5	2.292E-17
+C205	B#1	net5	1.810E-17
+C206	vdd!#6	net44	6.915E-17
+C207	net33	vdd!#4	1.144E-16
+C208	net44	A#4	2.436E-16
+C209	net44#3	net5	2.708E-16
+C210	net44	vdd!#2	1.144E-16
+C211	vdd!#7	B#1	5.649E-18
+C212	Y#1	B#2	5.221E-18
+C213	net5	B#4	3.970E-18
+C214	net5#2	B#4	4.408E-18
+C215	B#2	net5	4.719E-18
+C216	B#9	net5#3	6.225E-18
+C217	Y	net5	3.738E-18
+C218	vdd!	gnd!	1.431E-15
+C219	A	gnd!	2.769E-16
+C220	B	gnd!	1.088E-16
+C221	Y	gnd!	4.030E-17
+C222	net17	gnd!	2.084E-18
+C223	net16	gnd!	9.878E-17
+C224	net33	gnd!	1.115E-17
+C225	net44	gnd!	2.466E-18
+C226	net5	gnd!	8.318E-16
+C227	net1	gnd!	3.211E-16
+C228	B#6	gnd!	7.448E-16
+C229	B#1	gnd!	6.058E-16
+C230	net1#5	gnd!	8.540E-16
+C231	A#4	gnd!	6.998E-16
+C232	A#8	gnd!	4.115E-16
+C233	B#8	gnd!	8.360E-19
+C234	net5#2	gnd!	1.930E-16
+C235	B#3	gnd!	1.891E-18
+C236	net1#6	gnd!	1.411E-16
+C237	A#7	gnd!	1.178E-17
+C238	A#6	gnd!	2.108E-17
+C239	net5#3	gnd!	8.450E-19
+C240	B#4	gnd!	7.051E-16
+C241	B#2	gnd!	3.846E-16
+C242	A#1	gnd!	4.817E-16
+C243	net1#4	gnd!	4.612E-16
+C244	net17#3	gnd!	1.318E-18
+C245	net16#3	gnd!	2.979E-18
+C246	Y#1	gnd!	1.308E-16
+C247	net44#2	gnd!	3.042E-17
+C248	B#9	gnd!	2.402E-17
+C249	A#3	gnd!	4.155E-16
+C250	net5#6	gnd!	3.304E-16
+C251	vdd!#2	gnd!	3.255E-15
+C252	net5#4	gnd!	1.382E-16
+C253	vdd!#1	gnd!	8.801E-18
+C254	net17#4	gnd!	9.736E-19
+C255	Y#3	gnd!	8.264E-17
+C256	net16#4	gnd!	1.991E-18
+C257	net17#2	gnd!	4.374E-18
+C258	vdd!#7	gnd!	8.597E-19
+C259	vdd!#8	gnd!	1.402E-16
+C260	net16#2	gnd!	7.149E-19
+C261	net1#2	gnd!	1.026E-16
+C262	A#5	gnd!	6.808E-16
+C263	vdd!#4	gnd!	9.648E-16
+C264	vdd!#6	gnd!	4.173E-16
+*
+*
+.ENDS zxw_xor2
+*

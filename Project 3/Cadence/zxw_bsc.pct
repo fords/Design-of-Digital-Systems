@@ -1,0 +1,6 @@
+pCellTable = list( nil
+	'subMasterTable '(
+		( "VIA2" 	"amis500cxakxx" 	"VIA2" 	"symbolic" 	(("yBias" "center" "string") ("xBias" "center" "string") ("yPitch" 1.3 "float") ("xPitch" 1.3 "float") ("column" 1 "int") ("row" 1 "int") ("l" 0.5 "float") ("w" 0.5 "float")) 	"nil" )
+		( "VIA" 	"amis500cxakxx" 	"VIA" 	"symbolic" 	(("yBias" "center" "string") ("xBias" "center" "string") ("yPitch" 1.1 "float") ("xPitch" 1.1 "float") ("column" 1 "int") ("row" 1 "int") ("l" 0.5 "float") ("w" 0.5 "float")) 	"nil" )
+	) ;End of subMasterTable
+) ;End of pCellTable

@@ -1,0 +1,38 @@
+text M1TEXTPIN attach m1NoRes
+text M2TEXTPIN attach m2NoRes
+text M3TEXTPIN attach m3NoRes
+text M1TEXT attach m1NoRes
+text M2TEXT attach m2NoRes
+text M3TEXT attach m3NoRes
+connect ntubNotRes nsd by nTubTie
+connect ptubs psd by pTubTie
+connect M1 psd by paaCnt
+connect M1 nsd by naaCnt
+connect M1 poly1NoRes by p1Cnt
+connect M2 M1 by VIA
+connect M3 M2 by VI2
+connect M1 poly2NoRes by p2Cnt
+connect nsd NZENER by NZENER
+connect psd PZENER by PZENER
+connect M1 wideM1 by wideM1
+connect M2 wideM2 by wideM2
+connect M3 wideM3 by wideM3
+stamp extM1MRK by M1
+stamp extM2MRK by M2
+stamp extM3MRK by M3
+stamp v12M1 by M1
+stamp v12M2 by M2
+stamp v12M3 by M3
+stamp v12Nwell by ntubNotRes
+stamp v20M1 by M1
+stamp v20M2 by M2
+stamp v20M3 by M3
+stamp v20Nwell by ntubNotRes
+stamp nwNotResTermArc by nTubTie
+stamp padNotProbe by M1
+connect p1Gate POLY1 by antCNT
+connect POLY1 M1 by p1Cnt
+connect sd M1 by actCnt
+connect POLY2 M1 by p2Cnt
+connect M1 M2 by VIA
+connect M2 M3 by VI2

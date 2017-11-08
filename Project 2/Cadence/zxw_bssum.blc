@@ -1,0 +1,11 @@
+"zxw_xor2 layout zxw_lib" "zxw_xor2 schematic zxw_lib" "nmos(MOS)" "pmos(MOS)"
+"zxw_nand2 layout zxw_lib" "zxw_nand2 schematic zxw_lib" "nmos(MOS)" "pmos(MOS)"
+"zxw_mux2 layout zxw_lib" "zxw_mux2 schematic zxw_lib" "nmos(MOS)" "pmos(MOS)"
+"zxw_fa layout zxw_lib" "zxw_fa schematic zxw_lib"
+"zxw_dff layout zxw_lib" "zxw_dff schematic zxw_lib" "nmos(MOS)" "pmos(MOS)"
+"zxw_bsr5 layout zxw_lib" "zxw_bsr5 schematic zxw_lib"
+"zxw_bsc layout zxw_lib" "zxw_bsc schematic zxw_lib"
+"pmos(MOS)" "pmos(MOS)"
+"nmos(MOS)" "nmos(MOS)"
+"zxw_bssum layout zxw_lib" "zxw_bssum schematic zxw_lib"
+Devices filtered from layout

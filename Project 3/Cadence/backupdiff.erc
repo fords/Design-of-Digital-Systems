@@ -1,0 +1,23 @@
+
+***** Begin Label Report *****
+
+ Label in cell 'backupdiff layout zxw_lib':
+  info: Assign net label "D" at (21.350, 13.200) to layer `m3NoRes'.
+  info: Assign net label "Q" at (62.350, 13.150) to layer `m3NoRes'.
+  info: Assign net label "phi1" at (31.000, 13.150) to layer `m3NoRes'.
+  info: Assign net label "phi2" at (2.300, 13.300) to layer `m3NoRes'.
+  info: Assign net label "Qbar" at (57.400, 17.900) to layer `m3NoRes'.
+  info: Floating label discarded:  "in2" at (18.250, 26.500).
+  info: Assign net label "gnd!" at (6.450, 5.300) to layer `m1NoRes'.
+  info: Assign net label "vdd!" at (5.300, 26.250) to layer `m1NoRes'.
+  info: Assign pin label "D" at (21.350, 13.200) to layer `m3NoRes'.
+  info: Assign pin label "Q" at (62.350, 13.150) to layer `m3NoRes'.
+  info: Assign pin label "phi1" at (31.000, 13.150) to layer `m3NoRes'.
+  info: Assign pin label "phi2" at (2.300, 13.300) to layer `m3NoRes'.
+  info: Assign pin label "Qbar" at (57.400, 17.900) to layer `m3NoRes'.
+  info: Floating label discarded:  "in2" at (18.250, 26.500).
+  info: Assign pin label "gnd!" at (6.450, 5.300) to layer `m1NoRes'.
+  info: Assign pin label "vdd!" at (5.300, 26.250) to layer `m1NoRes'.
+
+***** End of Label Report *****
+

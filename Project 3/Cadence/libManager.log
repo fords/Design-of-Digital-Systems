@@ -1,0 +1,20 @@
+\o Program:		@(#)$CDS: libManager.exe version Exp 03/23/2009 19:17 (ocelot-linux) $
+\o Sub version:		sub-version none
+\o Arguments:		-mpssession icfb25982 -mpshost vlsi-legacy 
+\o Working Directory:	vlsi-legacy:/home/zxw6805/ee620
+\o Extended color mode (TrueColor 32 0x41) in use.
+\o Cell filter set to ""
+\o View filter set to ""
+Main selection: <?>
+\o Warning: '/home/zxw6805/ee620/cds.lib', Line 8: Skipping: '' 
+\o Log file is "/home/zxw6805/ee620/libManager.log".
+Opening libManager window.
+No main selection
+\o Library Manager customization server connected.
+MPS service: map window
+Main selection: zxw_lib zxw_bstest layout
+\o Opening design file through session server.
+MPS request: edit design
+\o Warning: '/home/zxw6805/ee620/cds.lib', Line 8: Skipping: '' 
+MPS request: update library list
+\o libManager is exiting.

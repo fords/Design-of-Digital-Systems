@@ -1,0 +1,9 @@
+.SUBCIRCUIT =zxw_dff schematic zxw_lib
+.SUBCIRCUIT =zxw_mux2 schematic zxw_lib
+.SUBCIRCUIT =zxw_bsc schematic zxw_lib
+zxw_dff schematic zxw_lib ( \
+I2 , \
+I3 )
+zxw_mux2 schematic zxw_lib ( \
+I0 , \
+I1 )
