@@ -1,0 +1,19 @@
+
+***** Begin Label Report *****
+
+ Label in cell 'zxw_mux2to1 layout2 zxw_lib':
+  info: Assign net label "out1" at (16.350, 12.950) to layer `m3NoRes'.
+  info: Assign net label "in2" at (13.800, 13.150) to layer `m3NoRes'.
+  info: Assign net label "in3" at (18.600, 13.050) to layer `m3NoRes'.
+  info: Assign net label "in1" at (3.600, 13.250) to layer `m3NoRes'.
+  info: Assign net label "gnd!" at (6.450, 5.300) to layer `m1NoRes'.
+  info: Assign net label "vdd!" at (5.300, 26.250) to layer `m1NoRes'.
+  info: Assign pin label "out1" at (16.350, 12.950) to layer `m3NoRes'.
+  info: Assign pin label "in2" at (13.800, 13.150) to layer `m3NoRes'.
+  info: Assign pin label "in3" at (18.600, 13.050) to layer `m3NoRes'.
+  info: Assign pin label "in1" at (3.600, 13.250) to layer `m3NoRes'.
+  info: Assign pin label "gnd!" at (6.450, 5.300) to layer `m1NoRes'.
+  info: Assign pin label "vdd!" at (5.300, 26.250) to layer `m1NoRes'.
+
+***** End of Label Report *****
+

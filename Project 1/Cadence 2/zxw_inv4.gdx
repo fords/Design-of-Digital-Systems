@@ -1,0 +1,8 @@
+# 0
+nmos(MOS): nmos(MOS)
+# 0
+pmos(MOS): pmos(MOS)
+# 2
+zxw_inv4 schematic zxw_lib: zxw_inv4 layout zxw_lib
+D M4 avD63_1
+D M0 avD62_1

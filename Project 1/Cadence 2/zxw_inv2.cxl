@@ -1,0 +1,20 @@
+C nmos(MOS) nmos(MOS)
+N D D
+N G G
+N S S
+N B B
+
+C pmos(MOS) pmos(MOS)
+N D D
+N G G
+N S S
+N B B
+
+C "zxw_inv2 schematic zxw_lib" "zxw_inv2 layout zxw_lib"
+N in1 avC3
+N out1 avC4
+N gnd! gnd!
+N vdd! vdd!
+I M1 avD63_1
+I M0 avD62_1
+

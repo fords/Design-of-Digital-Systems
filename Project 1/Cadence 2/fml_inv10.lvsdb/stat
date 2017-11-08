@@ -1,0 +1,6 @@
+; Assura generated file -- DO NOT EDIT --
+; Do NOT rely on the content of this file, it may change.
+;
+2 filter reduce swap match
+1 1 ( ( "nmos" "nmos" "MOS" 1 1 1 1) ( "pmos" "pmos" "MOS" 1 1 1 1))
+1 3 ( ( "nmos" "nmos" "MOS" 1 1 0 0) ( "pmos" "pmos" "MOS" 1 1 0 0))

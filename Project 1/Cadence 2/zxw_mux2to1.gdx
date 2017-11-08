@@ -1,0 +1,16 @@
+# 0
+pmos(MOS): pmos(MOS)
+# 0
+nmos(MOS): nmos(MOS)
+# 10
+zxw_mux2to1 schematic zxw_lib: zxw_mux2to1 layout2 zxw_lib
+D M9 avD62_2
+D M7 avD62_5
+S M6 avD62_3
+S M5 avD62_4
+S M4 avD62_1
+D M8 avD63_2
+S M3 avD63_4
+S M2 avD63_5
+D M1 avD63_1
+D M0 avD63_3

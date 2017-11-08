@@ -1,0 +1,20 @@
+C nmos(MOS) nmos(MOS)
+N D D
+N G G
+N S S
+N B B
+
+C pmos(MOS) pmos(MOS)
+N D D
+N G G
+N S S
+N B B
+
+C "fml_inv10 schematic zxw_lib" "fml_inv10 layout zxw_lib"
+N out1 avC3
+N in1 avC1
+N gnd! avC2
+N vdd! avC4
+I M2 avD63_1
+I M0 avD62_1
+

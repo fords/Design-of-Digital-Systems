@@ -1,0 +1,20 @@
+# 4
+nmos(MOS): nmos(MOS)
+= D D B
+= G G B
+= S S B
+= B B B
+# 4
+pmos(MOS): pmos(MOS)
+= D D B
+= G G B
+= S S B
+= B B B
+# 6
+zxw_nand schematic zxw_lib: zxw_nand layout zxw_lib
+= net037 avC6
+= vdd! vdd! I
+= gnd! gnd! I
+= in1 in1 I
+= in2 in2 I
+= out1 out1 O

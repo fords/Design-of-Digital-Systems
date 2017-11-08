@@ -1,0 +1,8 @@
+vuiLVSdebugRunInfo = list( nil
+   'layoutLibrary "zxw_lib"
+   'layoutCell "zxw_mux2to1"
+   'layoutView "layout2"
+   'schematicLibrary "zxw_lib"
+   'schematicCell "zxw_mux2to1"
+   'schematicView "schematic"
+)

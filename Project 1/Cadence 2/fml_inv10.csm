@@ -1,0 +1,6 @@
+Schematic                   | Layout                   | Status
+-------------------------------------------------------------------------------
+fml_inv10 schematic zxw_lib | fml_inv10 layout zxw_lib | param and pin errs  *
+
+Mismatch between Schematic and Layout
+   1 cell matched with parameter and pin errors

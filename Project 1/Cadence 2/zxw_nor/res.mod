@@ -1,0 +1,9 @@
+np_rm3NoRes,0.040,m3(a)
++:t,1,1,1,rVI2
+np_rm2NoRes,0.085,m2(b)
++:t,1,1,1,rVIA
+np_rm1NoRes,0.085,m1(c)
++:t,100,100,100,rpaaCnt
++:t,80,80,80,rnaaCnt
++:t,40,40,40,rp1Cnt
+np_rpoly1NoRes,30.0,poly(e)

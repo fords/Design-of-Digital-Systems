@@ -1,0 +1,3 @@
+#!/bin/sh -f
+/tools/cadence/ASSURA/current/tools/assura/bin/assura /home/zxw6805/ee620/rcx.zxw_aoi.rsf -cdslib /home/zxw6805/ee620/cds.lib
+exit $?
