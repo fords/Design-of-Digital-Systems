@@ -1,0 +1,10 @@
+#
+zxw_lib zxw_inv2 symbol
+I1
+I0
+#ISCELL
+basic ipin symbol
+PIN0
+#ISCELL
+basic opin symbol
+PIN1

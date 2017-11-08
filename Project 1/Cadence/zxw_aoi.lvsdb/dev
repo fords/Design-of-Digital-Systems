@@ -1,0 +1,12 @@
+; Assura generated file -- DO NOT EDIT --
+; Do NOT rely on the content of this file, it may change.
+;
+2 unmatched connect pin
+1 1 ((S "M8" "pmos")(L "avD63_4" "pmos")(("G" "vdd!" "in2")))
+1 1 ((S "M8" "pmos")(L "avD63_4" "pmos")(("B" "in2" "vdd!")))
+1 1 ((S "M7" "pmos")(L "avD63_3" "pmos")(("G" "vdd!" "in4")))
+1 1 ((S "M7" "pmos")(L "avD63_3" "pmos")(("B" "in4" "vdd!")))
+1 1 ((S "M4" "nmos")(L "avD62_2" "nmos")(("G" "gnd!" "in4")))
+1 1 ((S "M4" "nmos")(L "avD62_2" "nmos")(("B" "in4" "gnd!")))
+1 1 ((S "M3" "nmos")(L "avD62_3" "nmos")(("G" "gnd!" "in3")))
+1 1 ((S "M3" "nmos")(L "avD62_3" "nmos")(("B" "in3" "gnd!")))

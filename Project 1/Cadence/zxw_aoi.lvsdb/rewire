@@ -1,0 +1,12 @@
+; Assura generated file -- DO NOT EDIT --
+; Do NOT rely on the content of this file, it may change.
+;
+2 terminal shorts opens
+1 0 ( "B" "avD62_2" "in4" "gnd!" "in4")
+1 0 ( "B" "avD63_3" "in4" "vdd!" "in4")
+1 0 ( "B" "avD62_3" "in3" "gnd!" "in3")
+1 0 ( "B" "avD63_4" "in2" "vdd!" "in2")
+1 0 ( "G" "avD62_3" "gnd!" "in3" "gnd!")
+1 0 ( "G" "avD62_2" "gnd!" "in4" "gnd!")
+1 0 ( "G" "avD63_3" "vdd!" "in4" "vdd!")
+1 0 ( "G" "avD63_4" "vdd!" "in2" "vdd!")

@@ -1,0 +1,16 @@
+#
+# Edit Lock-Stake file. CAUTION: Please do not change.
+#
+# Information about current Edit Lock Owner.
+#
+LockStakeVersion               1.1
+LoginName                      zxw6805
+HostName                       vlsi-legacy
+ProcessIdentifier              17881
+ProcessCreationTime_UTC        1411740055
+ProcessCreationTime_Readable   Fri Sep 26 10:00:55 2014 EDT
+AppIdentifier                  /tools/cadence/IC/current/tools/dfII/bin/icfb.exe
+OSType                         lnx86
+ReasonForPlacingEditLock       XXopen upgrade lock
+FilePathUsedToEditLock         /home/zxw6805/ee620/zxw_lib/zxw_inv4/symbol/symbol.cdb
+TimeEditLocked                 Fri Sep 26 10:01:35 2014 EDT

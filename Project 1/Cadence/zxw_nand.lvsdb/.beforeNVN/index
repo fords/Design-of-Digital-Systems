@@ -1,0 +1,8 @@
+; Assura generated file -- DO NOT EDIT --
+; Do NOT rely on the content of this file, it may change.
+;
+2 statistics extraction device net pin parameter rewire
+stat extr dev net pin param rewire 
+none matched expanded errors param_err pin_err empty_sch empty_lay not_run 
+00000001
+23 zxw_nand layout zxw_lib 1 0 0 0 1 135 1 159 1 183 1 207 1 231 1 255 1 279 1 300 1 321 1 342 1 364 1 386 1 408 1 430 1 452 1 474 1 496 1 518 1 540 1 562 1 584 1 606 1 630 1 653 1 677 1 700 1 724 1 747 1 771 1 797 1 820 1 844 1 870 1 893 1 917 1 943 1 966 1 989 1 1012 1 1035 1 1058 1 1081 1 1104 1 1127 1 1147 1 1169 1 1189 1 1211 1 1230 1 1249 1 1268 1 1287 1 1306 1 1325 1 1347 1 1366 1 1385 1 1404 1 1423 1 1445 1 1467 1 1489 1 1507

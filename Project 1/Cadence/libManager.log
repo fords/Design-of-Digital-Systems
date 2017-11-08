@@ -1,0 +1,22 @@
+\o Program:		@(#)$CDS: libManager.exe version Exp 03/23/2009 19:17 (ocelot-linux) $
+\o Sub version:		sub-version none
+\o Arguments:		-mpssession icfb17881 -mpshost vlsi-legacy 
+\o Working Directory:	vlsi-legacy:/home/zxw6805/ee620
+\o Cell filter set to ""
+\o View filter set to ""
+No main selection
+\o Log file is "/home/zxw6805/ee620/libManager.log".
+Opening libManager window.
+\o Library Manager customization server connected.
+MPS service: map window
+Main selection: zxw_lib zxw_inv4 schematic
+\o Opening design file through session server.
+MPS request: edit design
+MPS request: update library list
+Main selection: zxw_lib zxw_inv4 symbol
+\o Opening design file through session server.
+MPS request: edit design
+No main selection
+\o Auto refresh applied.
+Main selection: zxw_lib zxw_inv4 symbol
+Invoking command (fileNewCellView).

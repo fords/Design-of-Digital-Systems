@@ -1,0 +1,12 @@
+; Assura generated file -- DO NOT EDIT --
+; Do NOT rely on the content of this file, it may change.
+;
+2 missing mismatch
+1 1 ((L "avD63_4" "pmos") ()(S "M8" "pmos") () "Schematic is missing parameter wSchematic is missing parameter l")
+1 1 ((L "avD63_3" "pmos") ()(S "M7" "pmos") () "Schematic is missing parameter wSchematic is missing parameter l")
+1 1 ((L "avD63_2" "pmos") ()(S "M6" "pmos") () "Schematic is missing parameter wSchematic is missing parameter l")
+1 1 ((L "avD63_1" "pmos") ()(S "M5" "pmos") () "Schematic is missing parameter wSchematic is missing parameter l")
+1 1 ((L "avD62_2" "nmos") ()(S "M4" "nmos") () "Schematic is missing parameter wSchematic is missing parameter l")
+1 1 ((L "avD62_3" "nmos") ()(S "M3" "nmos") () "Schematic is missing parameter wSchematic is missing parameter l")
+1 1 ((L "avD62_4" "nmos") ()(S "M1" "nmos") () "Schematic is missing parameter wSchematic is missing parameter l")
+1 1 ((L "avD62_1" "nmos") ()(S "M0" "nmos") () "Schematic is missing parameter wSchematic is missing parameter l")

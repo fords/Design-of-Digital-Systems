@@ -1,0 +1,6 @@
+Schematic                      | Layout                      | Status
+-------------------------------------------------------------------------------
+zxw_aoi schematic zxw_lib      | zxw_aoi layout zxw_lib      | errors        *
+
+Mismatch between Schematic and Layout
+   1 cell with errors

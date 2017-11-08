@@ -1,0 +1,5 @@
+.SUBCIRCUIT =zxw_inv2 schematic zxw_lib
+.SUBCIRCUIT =zxw_inv3 schematic3 zxw_lib
+zxw_inv2 schematic zxw_lib ( \
+I0 , \
+I1 )

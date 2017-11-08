@@ -1,0 +1,21 @@
+
+***** Begin Label Report *****
+
+ Label in cell 'zxw_aoi layout zxw_lib':
+  info: Assign net label "out1" at (8.800, 12.950) to layer `m3NoRes'.
+  info: Assign net label "in4" at (11.450, 13.200) to layer `m3NoRes'.
+  info: Assign net label "in3" at (5.850, 13.350) to layer `m3NoRes'.
+  info: Assign net label "in2" at (13.850, 12.750) to layer `m3NoRes'.
+  info: Floating label discarded:  "in1" at (3.250, 11.850).
+  info: Assign net label "gnd!" at (6.450, 5.300) to layer `m1NoRes'.
+  info: Assign net label "vdd!" at (5.300, 26.250) to layer `m1NoRes'.
+  info: Assign pin label "out1" at (8.800, 12.950) to layer `m3NoRes'.
+  info: Assign pin label "in4" at (11.450, 13.200) to layer `m3NoRes'.
+  info: Assign pin label "in3" at (5.850, 13.350) to layer `m3NoRes'.
+  info: Assign pin label "in2" at (13.850, 12.750) to layer `m3NoRes'.
+  info: Floating label discarded:  "in1" at (3.250, 11.850).
+  info: Assign pin label "gnd!" at (6.450, 5.300) to layer `m1NoRes'.
+  info: Assign pin label "vdd!" at (5.300, 26.250) to layer `m1NoRes'.
+
+***** End of Label Report *****
+
